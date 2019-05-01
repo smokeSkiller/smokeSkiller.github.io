@@ -1,0 +1,117 @@
+//* Creativia buttons
+.creativia-btn{
+    transition: all .3s ease; 
+    color: #ffffff;
+    text-decoration: none;
+    @include flexbox(center, center);
+    border: 0;
+    cursor: pointer;
+    
+    &:hover{
+        background-color: #ff0036;
+    }
+} 
+
+.creativia-btn-black{
+    background-color: #131313;
+}
+
+.creativia-btn-light-black{
+    background-color: #262626;
+}
+
+.creativia-btn-gray{
+    background-color: #393939;
+}
+
+    //* Section title
+    .section-title{
+        font-family: "Raleway", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 0;
+
+        .red{
+            color: #ff0036;
+        }
+    }
+
+//* Introduction
+.introduction-component{
+    @include flexbox(flex-start, center, column);
+
+    @media (max-width: 805px) {
+        box-sizing: border-box;
+        padding: 0 25px;
+    }
+
+    .icon{
+        align-self: center;
+    }
+
+    .text{
+        color: #505050 default;
+        font-family: "Lato",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+        
+        .red{
+            color: #ff0036;
+        }
+    }
+}
+
+//* Actived accordion
+.actived-accordion{
+    .title{
+        color: #ff0036 !important;
+    }
+}
+
+//* Scroll bar
+.scroll-bar{
+    position: relative;
+    width: 515px;
+    height: 1px;
+
+    @media (max-width: 570px) {
+        width: 95%;
+    }
+
+    .img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.scroll-bar-gray{
+    background-color: #262626;
+}
+
+.scroll-bar-red{
+    background-color: #ff0036;
+}
+
+//* Overlay
+.overlay{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 222;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    opacity: 0;
+    @include flexbox(center, center, column);
+    transition: all .6s ease;
+}
+
+.actived-overlay{
+    opacity: 1;
+}

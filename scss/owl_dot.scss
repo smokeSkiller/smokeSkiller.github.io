@@ -1,0 +1,77 @@
+// Owl dots for home
+.owl-carousel-head{
+    width: 100%;
+    height: 100%;
+
+    .owl-nav{
+        @media (max-width: 1045px) {
+            align-self: center;
+        }
+    }
+
+    .owl-prev, .owl-next{
+        position: absolute;
+        outline: none;
+
+        i{
+            font-size: 2.5em;
+            color: #a4a4a4;
+            transition: all .3s ease;
+
+            &:hover{
+                color: #ff0036;
+            }
+        }
+    }
+
+    .owl-prev{
+        left: 36px;
+
+        @media (max-width: 1140px) {
+            left: 10px;
+        }
+        
+        @media (max-width: 460px) {
+            left: 5px;
+        }
+    }
+
+    .owl-next{
+        right: 36px;
+
+        @media (max-width: 1140px) {
+            right: 10px;
+        }
+        
+        @media (max-width: 460px) {
+            right: 5px;
+        }
+    }
+}
+
+// Owl dots for home
+.owl-carousel-clients-opinion{
+    position: relative;
+
+    .owl-dots {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .owl-dot{
+            width: 8px;
+            height: 8px;
+            background-color: #e0e0e0;
+            outline: none;
+            margin-left: 5px;
+
+            &:nth-child(1){
+                margin-left: 0px;
+            }
+
+            &.active{
+                background-color: #ff0036;
+            }
+        }
+    }
+}

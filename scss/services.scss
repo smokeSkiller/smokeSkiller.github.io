@@ -1,0 +1,108 @@
+//! Our services
+.our-services{
+    background-color: #272727;
+    padding-top: 100px;
+    @include flexbox(flex-start, center, column);
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+    }
+
+    .container{
+        margin-top: 100px;
+
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
+
+        .row{
+            @include flexbox();
+            margin-top: 57px;
+
+            @media (max-width: 595px) {
+                margin-top: 30px;
+            }
+
+            &:nth-child(1){
+                margin-top: 0;
+            }
+
+            @media (max-width: 1195px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service{
+                width: 570px;
+
+                @media (max-width: 595px) {
+                    width: 95%;
+                }
+
+                &:nth-child(2){
+                    margin-left: 30px;
+
+                    @media (max-width: 1195px) {
+                        margin-left: 0px;
+                        margin-top: 57px;
+                    }
+
+                    @media (max-width: 595px) {
+                        margin-top: 30px;
+                    }
+                }
+
+                .top-block{
+                    @include flexbox();
+                    width: 100%;
+
+                    .title{
+                        color: #ffffff;
+                        font-family: "Raleway", sans-serif;
+                        font-size: 20px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        margin-left: 33px;
+                    }
+                }
+
+                // Description 
+                .active{
+                    background-color: rgba(#ff0036, 0.1) !important;
+                }
+
+                .description{
+                    margin-top: 29px;
+                    padding-left: 35px;
+                    padding-top: 31px;
+                    padding-bottom: 34px;
+                    background-color: rgba(#a4a4a4, 0.1);
+
+                    @media (max-width: 767px) {
+                        padding-right: 35px;
+                    }
+
+                    @media (max-width: 595px) {
+                        padding: 15px;
+                    }
+            
+                    .text{
+                        color: #ffffff;
+                        font-family: "Lato", sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services-scroll-bar{
+        margin-top: 130px;
+
+        @media (max-width: 767px) {
+            margin-top: 50px;
+        }
+    }
+}

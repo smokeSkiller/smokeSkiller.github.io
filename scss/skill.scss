@@ -1,0 +1,103 @@
+//! Our skill
+.our-skill{
+    width: 100%;
+    padding-top: 100px;
+    @include flexbox(flex-start, center, column);
+    padding-bottom: 100px;
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .skills{
+        margin-top: 100px;
+        @include flexbox();
+
+        @media (max-width: 805px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
+
+        .row{
+            @include flexbox();
+            &:nth-child(2){
+                margin-left: 47px;
+
+                @media (max-width: 805px) {
+                    margin-left: 0;
+                    margin-top: 30px;
+                }
+
+                @media (max-width: 400px) {
+                    margin-top: 0px;
+                }
+            }
+
+            @media (max-width: 400px) {
+                flex-direction: column;
+            }
+
+            .skill{
+                @include flexbox(flex-start, center, column);
+                margin-left: 47px;
+
+                @media (max-width: 400px) {
+                    margin-left: 0;
+                }
+
+                &:nth-child(1){
+                    margin-left: 0;
+                }
+
+                .progress-bar{
+                    width: 145px;
+                    height: 145px;
+                    position: relative;
+                    @include flexbox();
+                    flex-direction: row-reverse;
+
+                    .percentage{
+                        position: absolute;
+                        left: 50%;
+                        margin-right: -50%;
+                        transform: translate(-50%);
+                        top: -7px;
+                        z-index: 222;
+                        font-family: "Lato", sans-serif;
+                        font-size: 40px;
+                        font-weight: 300;
+                        line-height: 94.88px;
+                        color: #000000;
+
+                        .red{
+                            color: #ff0036;
+                        }
+                    }
+                }
+
+                .title{
+                    color: #262626;
+                    font-family: "Raleway", sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-top: 25px;
+                }
+
+                .text{
+                    width: 153px;
+                    color: #505050;
+                    font-family: "Lato", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

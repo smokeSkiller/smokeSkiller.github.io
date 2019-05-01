@@ -1,0 +1,30 @@
+    //! Twitter banner
+    .twitter-banner{
+        width: 100%;
+        height: 294px;
+        position: relative;
+        padding-top: 100px;
+        box-sizing: border-box;
+        background-color: #272727;
+        @include flexbox(flex-start, center, column);
+
+        .text{
+            width: 642px;
+
+            @media(max-width: 700px){
+                width: auto;
+            }
+        }
+
+        .dark-twitter-icon{
+            position: absolute;
+            width: 183px;
+            height: 202px;
+            left: 29px;
+            bottom: 0;
+        }
+
+        .twitter-banner-scroll-bar{
+            margin-top: 87px;
+        }
+    }

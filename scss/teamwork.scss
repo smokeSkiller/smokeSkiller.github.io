@@ -1,0 +1,104 @@
+//! Our team
+.our-teamwork{
+    width: 100%;
+    padding-top: 94px - 35px;
+    @include flexbox(flex-start, center, column);
+
+    @media (max-width: 767px) {
+        padding-top: 35px;
+    }
+
+    .employers{
+        @include flexbox();
+        margin-top: 79px;
+        @media (max-width: 1195px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
+
+        .row{
+            @include flexbox();
+
+            @media (max-width: 595px) {
+                flex-direction: column;
+            }
+
+            &:nth-child(2){
+                margin-left: 30px;
+
+                @media (max-width: 1195px) {
+                    margin-left: 0;
+                    margin-top: 30px;
+                }
+
+                @media (max-width: 595px) {
+                    margin-top: 15px;
+                }
+            }
+
+            .employer{
+                border: 1px solid #e7e7e7;
+                width: 270px;
+                height: 361px;
+                @include flexbox(flex-start, center, column);
+
+                &:nth-child(2){
+                    margin-left: 30px;
+
+                    @media (max-width: 595px) {
+                        margin-left: 0;
+                        margin-top: 15px;
+                    }
+                }
+
+                .face{
+                    width: 100%;
+                    height: 240px;
+                    position: relative;
+                    border-bottom: 1px solid #e7e7e7;
+
+                    .soc-btns{
+                        @include flexbox();
+
+                        .soc-btn{
+                            margin-left: 10px;
+                            cursor: pointer;
+
+                            &:nth-child(1){
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .name{
+                    color: #262626 default;
+                    font-family: "Raleway", sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+
+                .job{
+                    color: #505050;
+                    font-family: "Lato", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    .teamwork-scroll-bar{
+        margin-top: 109px;
+
+        @media (max-width: 767px) {
+            margin-top: 40px;
+        }
+    }
+}
