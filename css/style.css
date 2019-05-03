@@ -1503,42 +1503,42 @@ body {
               height: 100%;
               padding: 40px 0;
               box-sizing: border-box; } }
-          body .head header .nav-menu ul .active {
+          body .head header .nav-menu ul .active a {
             color: #fff; }
-            body .head header .nav-menu ul .active:before {
-              position: absolute;
-              top: -28px;
-              left: 50%;
-              transform: translate(-50%, 0);
-              content: "";
-              width: 27px;
-              height: 3px;
-              background-color: #ff0036; }
-              @media (max-width: 1095px) {
-                body .head header .nav-menu ul .active:before {
-                  display: none; } }
-            body .head header .nav-menu ul .active:after {
-              content: "";
-              position: absolute;
-              width: 27px;
-              height: 2px;
-              background-color: #ff0036;
-              bottom: -19px;
-              left: 50%;
-              transform: translate(-50%, 0); }
-              @media (max-width: 1095px) {
-                body .head header .nav-menu ul .active:after {
-                  display: none; } }
+          body .head header .nav-menu ul .active:before {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            content: "";
+            width: 27px;
+            height: 3px;
+            background-color: #ff0036; }
+            @media (max-width: 1095px) {
+              body .head header .nav-menu ul .active:before {
+                display: none; } }
+          body .head header .nav-menu ul .active:after {
+            content: "";
+            position: absolute;
+            width: 27px;
+            height: 2px;
+            background-color: #ff0036;
+            bottom: -19px;
+            left: 50%;
+            transform: translate(-50%, 0); }
+            @media (max-width: 1095px) {
+              body .head header .nav-menu ul .active:after {
+                display: none; } }
           body .head header .nav-menu ul li {
             position: relative; }
             body .head header .nav-menu ul li a {
               text-decoration: none;
-              color: #a4a4a4;
               font-family: "Raleway", sans-serif;
               font-size: 18px;
               font-weight: 400;
               text-transform: uppercase;
-              transition: all .3s ease; }
+              transition: all .3s ease;
+              color: #a4a4a4; }
               body .head header .nav-menu ul li a:hover {
                 color: #fff; }
     body .head .slideshow {
