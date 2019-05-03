@@ -26,38 +26,15 @@ $(window).on("scroll", function () {
     }
 });
 
-//! changing active menu
-$(window).on("scroll", function () {
-    activeSections();
+//! auto selecting active menu
+// Bind to scroll
+$(window).scroll(function() {
+    autoSelect();
 });
 
 $(window).on("load", function () {
-    activeSections();
+    autoSelect();
 });
-
-$(menuItem).on("click", function () {
-    activeSections();
-});
-
-function activeSection(section) {
-    if ($(this).scrollTop() >= $("#" + section + "").position().top - 5
-    && $(this).scrollTop() <= $("#" + section + "").position().top + $("#"+ section + "").height()) {
-        $(menuItemLink).filter("#link-" + section + "").addClass("active");
-    }else{
-        $(menuItemLink).filter("#link-" + section + "").removeClass("active");
-    }
-}
-
-function activeSections(params) {
-    activeSection('home');
-    activeSection('about');
-    activeSection('portfolio');
-    activeSection('clients');
-    activeSection('team');
-    activeSection('services');
-    activeSection('blog');
-    activeSection('contact');
-}
 
 //! Responsive menu
 //* Sizing the height of menu
@@ -76,11 +53,11 @@ function changeMenuHeight() {
     if ($(window).width() <= 1095) {
         $(menu).height($(window).height() - 67);
         $(menu).css("display", "none");
-        $(menuItem).eq(0).children().removeClass("active"); // li > a.active
+        // $(menuItem).eq(0).removeClass("active"); // li > a.active
     }else{
         $(menu).height(70);
         $(menu).css("display", "flex");
-        $(menuItem).eq(0).children().addClass("active"); // li > a
+        // $(menuItem).eq(0).addClass("active"); // li > a
     }
 }
 
