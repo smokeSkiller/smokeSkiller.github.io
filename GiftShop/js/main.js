@@ -8,27 +8,14 @@ const dropdown = $(".dropdown");
 //! Variables
 let productsItems = 3;
 
+//! smooth scrolling
+$(function() {
+    // scrollSpeed(step, speed);
+    jQuery.scrollSpeed(100, 800);
+});
+
 //! Responsive menu
-//* sticky menu
-$(window).on("scroll", function () {
-    stickyMenu();
-});
-
-$(window).on("resize", function () {
-    stickyMenu();
-});
-
-function stickyMenu() {
-    if ($(window).width() <= 630 && $(window).height() >= 500) {
-        if ($(window).scrollTop() >= 110) {
-            $(header).css("position", "fixed");
-        } else {
-            $(header).css("position", "relative");
-        }
-    }
-}
-
-//* Change menu height
+//* It changes the menu height while resizing the window
 $(window).on("resize", function () {
     changeMenuHeight();
 });
@@ -41,7 +28,7 @@ function changeMenuHeight() {
     $(burgerBtn).removeClass("closed-burger");
 
     if ($(window).width() <= 630) {
-        $(topMenu).height($(window).height() - 105);
+        $(topMenu).height($(window).height() - 104);
         $(topMenu).css("display", "none");
     } else {
         $(topMenu).height(40);
@@ -61,11 +48,15 @@ $(burgerBtn).on("click", function (e) {
 
 //! Dropdown 
 $(categoryItem).on("mouseenter", function (e) {
-    $(e.currentTarget).children().next().slideDown();
+    if($(window).width() >= 1024){
+        $(e.currentTarget).children().next().slideDown();
+    }
 });
 
 $(categoryItem).on("mouseleave", function (e) {
-    $(e.currentTarget).children().next().slideUp();
+    if($(window).width() >= 1024){
+        $(e.currentTarget).children().next().slideUp();
+    }
 });
 
 //* Sliders
