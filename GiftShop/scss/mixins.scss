@@ -1,0 +1,76 @@
+//! FONT-FACE RULE
+@mixin font-face($name, $file) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url("../fonts/#{$file}.eot");
+        src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/#{$file}.woff") format("woff"),
+        url("../fonts/#{$file}.ttf") format("truetype"),
+        url("../fonts/#{$file}.svg?#webfont") format("svg");
+    }
+}
+
+//! ABSOLUTE POSITIONING 
+@mixin abs-position ($top, $right, $bottom, $left) {
+    position: absolute; 
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//! Box
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+//! Media queries
+@mixin screen($size) {
+    $desktop: "(min-width: 1170px)";
+    $tablet: "(max-width: 1170px)";
+    $mobile: "(max-width: 767px)";
+    $small-mobile: "(max-width: 630px)";
+    $xs-mobile: "(max-width: 425px)";
+
+    @if $size == desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
+    }
+    @else if $size == mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
+    }
+
+    @else if $size == small-mobile {
+        @media only screen and #{$small-mobile} {
+            @content;
+        }
+    }
+
+    @else if $size == xs-mobile {
+        @media only screen and #{$xs-mobile} {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and #{$size} {
+            @content;
+        }
+    }
+} 
+
+//! Centering a block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

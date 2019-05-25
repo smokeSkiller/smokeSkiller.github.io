@@ -1,0 +1,319 @@
+.blue {
+    background-color: $blue !important;
+}
+
+.dark-blue {
+    background-color: $dark-blue !important;
+}
+
+.red {
+    background-color: $red !important;
+}
+
+.dark {
+    background-color: $dark !important;
+}
+
+// Flex button
+.flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Banner
+.banner {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__filter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: rgba($color: #142251, $alpha: 0.59);
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        height: 41px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        padding-left: 15px;
+        padding-right: 12px;
+        padding-top: 7px;
+        color: #ffffff;
+        font-family: "Aparajita";
+        font-size: 21px;
+        background-color: rgba($color: #ef5966, $alpha: 0.88);
+
+        @include screen(xs-mobile) {
+            @include box(90%, auto);
+        }
+    }
+}
+
+.banner-description {
+    padding-left: 14px;
+    padding-right: 17px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    background-color: rgba($color: #362a4f, $alpha: 0.8);
+
+    &__title {
+        color: #ef5966;
+        font-family: "Aparajita", sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 0;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        color: #ffffff;
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+}
+
+// mix btns
+.mix-btns {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background-color: $blue;
+
+    &__title {
+        padding-left: 12px;
+        padding-right: 7px;
+        color: #ffffff;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1.44px;
+    }
+}
+
+.mix-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include box(53px, 55px);
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 0;
+    outline: none; 
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include box(86px, 100%);
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #323232;
+    cursor: pointer;
+}
+
+// Nav btns of sliders
+.owl-nav {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slide-btn {
+    @include box(70px, 79px);
+    background-color: #3c3c3c;
+    transition: all 0.3s ease;
+
+    &__icon {
+        color: #ffffff;
+        font-size: 2em;
+    }
+
+    &--red {
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &--blue {
+        &:hover {
+            background-color: $dark-blue;
+        }
+    }
+}
+
+.owl-next {
+    margin-left: 1px;
+}
+
+// Title-component
+.title-component {
+    margin-left: 27px;
+    padding-left: 3px;
+    padding-right: 11px;
+    border-bottom: 1px solid $red;
+
+    &__title {
+        color: $dark-blue;
+        font-family: "Lato", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 0;
+        text-transform: capitalize;
+    }
+} 
+
+.gray-line {    
+    position: absolute;  
+    top: 42px;  
+    z-index: -1;
+    display: block;
+    @include box(100%, 1px);
+}
+
+// Product section
+.product-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    &-container {
+        margin-top: 27px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 27px;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include screen(tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include screen(small-mobile) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+}
+
+// Event
+.event {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    @include box(80px, 34px);
+
+    span {
+        color: #ffffff;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1.26px;
+    }
+}
+
+// Subscribe
+.subscribe {
+    &__email-field {
+        @include box(375px, 71px);
+        color: $dark;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        font-weight: lighter;
+        line-height: 30px;
+        text-transform: uppercase;
+        border: 1px solid #dedede;
+        background-color: #ffffff;
+
+        @include screen(xs-mobile) {
+            width: 275px;
+        }
+    }
+
+    &__btn {
+        @include box(377px, 51px);
+        color: #ffffff;
+
+        @include screen(xs-mobile) {
+            width: 277px;
+        }
+    }
+}
+
+// Social buttons
+.social-btns {
+    margin-top: 8px;
+
+    &__container {
+        margin-top: -6px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        margin-left: 6px;
+    }
+
+    &__btn {
+        margin-left: 10px;
+        @include box(55px, 54px);
+        color: #ffffff;
+        font-size: 1.5em;
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &:hover {
+            .social-btns__icon{
+                transition: all 0.5s ease;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.rss-icon {
+    background-color: #f8bc2e;
+}
+
+.facebook-icon {
+    background-color: #39599f;
+}
+
+.twitter-icon {
+    background-color: #45b0e3;
+}
+
+.flickr-icon{
+    border: 1px solid #dbdbdb;
+}
+
+.google-icon {
+    background-color: #1872bf;
+}

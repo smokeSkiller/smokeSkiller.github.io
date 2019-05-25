@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "Aparajita";
+  src: url("../fonts/aparaj.eot");
+  src: url("../fonts/aparaj.eot?#iefix") format("embedded-opentype"), url("../fonts/aparaj.woff") format("woff"), url("../fonts/aparaj.ttf") format("truetype"), url("../fonts/aparaj.svg?#webfont") format("svg"); }
+
+.btn-blue {
+  background-color: #05aecc; }
+
+.btn-red {
+  background-color: red; }
+
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .banner__filter {
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(20, 34, 81, 0.05);
+    transition: all .3s ease; }
+    .banner__filter:hover {
+      background-color: rgba(20, 34, 81, 0.7); }
+  .banner-description {
+    padding-left: 14px;
+    padding-right: 17px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    background-color: rgba(54, 42, 79, 0.8); }
+    .banner-description__title {
+      color: #ef5966;
+      font-family: "Aparajita";
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 0; }
+    .banner-description__text {
+      color: #ffffff;
+      font-family: "Lato", sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0; }
+  .banner__subtitle {
+    height: 41px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 12px;
+    padding-top: 7px;
+    color: #fff;
+    font-family: "Aparajita";
+    font-size: 21px;
+    background-color: rgba(239, 89, 102, 0.88); }
+
+.mix-btns {
+  display: flex;
+  background-color: #05aecc;
+  align-items: center;
+  height: 55px; }
+  .mix-btns__title {
+    padding-left: 12px;
+    padding-right: 7px;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.44px; }
+
+.gift-btn {
+  width: 53px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a1be;
+  border: 0;
+  outline: none;
+  cursor: pointer; }
+
+.buy-btn {
+  width: 53px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0626e;
+  border: 0;
+  outline: none;
+  cursor: pointer; }
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 100%;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: #323232; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer; }
+
+body .wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 135px; }
+  body .wrapper .top-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 40px; }
+    body .wrapper .top-menu ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: 520px;
+      font-family: "Lato";
+      font-size: 1em;
+      font-weight: 400; }
+    body .wrapper .top-menu__link {
+      color: #434343; }
+  body .wrapper .header {
+    width: 100%;
+    height: 91px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: flex-end;
+    position: relative; }
+    body .wrapper .header__logo {
+      width: 153px;
+      height: 108px;
+      position: absolute;
+      left: 0;
+      top: -17px; }
+    body .wrapper .header .header-menu {
+      display: flex; }
+      body .wrapper .header .header-menu__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-left: 5px;
+        font-family: "Lato", sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        color: #fff; }
+        body .wrapper .header .header-menu__link:nth-child(1), body .wrapper .header .header-menu__link:nth-child(2) {
+          width: 116px; }
+        body .wrapper .header .header-menu__link:nth-child(3), body .wrapper .header .header-menu__link:nth-child(4) {
+          width: 142px; }
+        body .wrapper .header .header-menu__link:nth-child(1) {
+          margin-left: 0; }
+  body .wrapper .categories {
+    width: 100%;
+    height: 71px;
+    background-color: #05aecc;
+    padding: 0;
+    margin-top: 13px;
+    position: relative; }
+    body .wrapper .categories ul {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      list-style: none; }
+    body .wrapper .categories .category {
+      display: block; }
+      body .wrapper .categories .category:hover .category__link {
+        color: #ef5966;
+        background-color: #fff; }
+      body .wrapper .categories .category__link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 25px;
+        color: #fff;
+        transition: all .3s ease;
+        font-family: "Lato", sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        position: relative; }
+    body .wrapper .categories .dropdown {
+      display: none;
+      top: 76px;
+      position: absolute;
+      z-index: 111;
+      padding-top: 25px;
+      padding-left: 21px;
+      padding-right: 23px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.33);
+      background-color: #ffffff;
+      padding-bottom: 16px; }
+      body .wrapper .categories .dropdown hr {
+        background-color: #cacaca;
+        height: 1px;
+        display: block;
+        width: 100%;
+        border: 0; }
+      body .wrapper .categories .dropdown-item {
+        margin-top: 19px;
+        display: inline-flex;
+        padding-bottom: 18px; }
+        body .wrapper .categories .dropdown-item:nth-child(1) {
+          margin-top: 0px; }
+        body .wrapper .categories .dropdown-item__icon {
+          width: 72px;
+          height: 76px; }
+        body .wrapper .categories .dropdown-item__title {
+          color: #ef5966;
+          font-family: "Lato", sans-serif;
+          font-size: 1em;
+          font-weight: 400;
+          letter-spacing: 1.44px;
+          margin-top: -3px;
+          margin-bottom: -9px; }
+        body .wrapper .categories .dropdown-item__subtitle {
+          color: #454545;
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+          width: 134px; }
+        body .wrapper .categories .dropdown-item__detail-btn {
+          width: 117px;
+          height: 23px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+          font-family: "Lato", sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+          margin-top: -9px; }
+        body .wrapper .categories .dropdown-item-description {
+          margin-top: 0;
+          margin-left: 13px; }
+      body .wrapper .categories .dropdown__more-btn {
+        color: #ef5966;
+        font-family: "Lato", sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 1.44px; }
+
+body .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "mens-wear mens-wear womens-wear" "mens-wear mens-wear baby-shop" "search-product search-product jewelry" "crafts crafts jewelry";
+  grid-gap: 5px; }
+
+body .mens-wear {
+  grid-area: mens-wear;
+  background-image: url("../img/mens-wear.png");
+  height: 570px; }
+  body .mens-wear .banner__filter {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end; }
+  body .mens-wear .banner-description {
+    width: 348px;
+    height: 105px; }
+  body .mens-wear .banner-description__title {
+    font-size: 58px; }
+  body .mens-wear .banner-description__text {
+    margin-top: -21px; }
+
+body .womens-wear {
+  grid-area: womens-wear;
+  background-image: url("../img/womens-wear.png");
+  height: 320px; }
+  body .womens-wear .banner__filter {
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 8px; }
+  body .womens-wear .banner-description {
+    width: 267px;
+    height: 83px; }
+  body .womens-wear .banner-description__title {
+    font-size: 35px;
+    margin-top: 30px; }
+  body .womens-wear .banner-description__text {
+    margin-top: -11px; }
+
+body .baby-shop {
+  grid-area: baby-shop;
+  background-image: url("../img/baby-shop.png");
+  height: 245px; }
+  body .baby-shop .banner__filter {
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 28px; }
+
+body .search-product {
+  grid-area: search-product;
+  background-color: #f0626e;
+  height: 171px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  body .search-product input[name="search-input"] {
+    border: 0;
+    width: 485px;
+    height: 71px;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: #424242;
+    letter-spacing: 1.44px;
+    box-sizing: border-box;
+    padding-left: 23px; }
+  body .search-product__submit {
+    width: 53px;
+    height: 53px;
+    background-color: transparent;
+    margin-left: 21px; }
+
+body .crafts {
+  grid-area: crafts;
+  height: 335px;
+  background-image: url("../img/crafts.png");
+  align-items: flex-end;
+  justify-content: flex-end; }
+  body .crafts .banner__filter {
+    align-items: flex-end;
+    justify-content: flex-end; }
+  body .crafts__title {
+    width: 204px;
+    height: 55px;
+    background-color: rgba(54, 42, 79, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .crafts__title h1 {
+      color: #ffffff;
+      font-family: "Lato", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: uppercase; }
+
+body .jewelry {
+  grid-area: jewelry;
+  height: 510px;
+  background-image: url("../img/jewelry.png"); }
+  body .jewelry .banner__filter {
+    justify-content: flex-end; }
+  body .jewelry .jewelry__title {
+    display: flex;
+    width: 396px;
+    height: 87px;
+    background-color: rgba(54, 42, 79, 0.58);
+    position: absolute;
+    right: -154px;
+    top: 269px;
+    padding-left: 25px;
+    padding-right: 18px;
+    box-sizing: border-box;
+    transform: rotate(270deg);
+    justify-content: space-between; }
+    body .jewelry .jewelry__title h1 {
+      font-size: 4em;
+      color: #ffffff;
+      font-family: "Aparajita", sans-serif;
+      margin: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      align-self: center; }
+  body .jewelry .jewelry__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97px;
+    height: 86px;
+    background-color: #f0626e;
+    transform: rotate(90deg);
+    margin-top: -4px;
+    position: relative; }
+    body .jewelry .jewelry__icon-container img {
+      width: 53px;
+      height: 53px; }
+    body .jewelry .jewelry__icon-container:after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 10px 10px;
+      border-color: #c5515b transparent transparent transparent;
+      position: absolute; }
