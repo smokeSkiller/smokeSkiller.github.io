@@ -19,8 +19,8 @@ sameSliders.forEach( function (slider) {
         dots: true,
         dotsClass: "slider-dots",
         draggable: false,
-        prevArrow: '<button class="slick-prev"><img src="../img/ic_scroll-left.png" width="25px" height="48px"></button>',
-        nextArrow: '<button class="slick-next"><img src="../img/ic_scroll-right.png" width="25px" height="48px"></button>',
+        prevArrow: '<button class="slick-prev"><img src="img/ic_scroll-left.png" width="25px" height="48px"></button>',
+        nextArrow: '<button class="slick-next"><img src="img/ic_scroll-right.png" width="25px" height="48px"></button>',
         zIndex: 111,
         responsive: true
     });
