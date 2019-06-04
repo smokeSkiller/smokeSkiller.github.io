@@ -84,11 +84,11 @@
         }
 
         @include screen(mobile) {
-            left: 9px;
+            left: 15px;
         }
 
         @include screen(small-mobile) {
-            left: 2px;
+            left: 10px;
         }
     }
 
@@ -104,11 +104,11 @@
         }
 
         @include screen(mobile) {
-            right: 9px;
+            right: 15px;
         }
 
         @include screen(small-mobile) {
-            right: 2px;
+            right: 10px;
         }
     }
 
