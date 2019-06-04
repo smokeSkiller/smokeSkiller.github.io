@@ -329,6 +329,7 @@ body {
 
 //! Gallery
 .gallery {
+    @include flexbox(flex-start, center, column);
     padding-top: 60px;
     padding-bottom: 122px;
 
@@ -341,17 +342,17 @@ body {
         text-align: center;
     }
 
-    .container {
-        margin: 0 auto;
+    .gallery-slider {
         margin-top: 30px;
-        @include flexbox(center);
-        flex-wrap: wrap;
+        width: 100%;
         max-width: 1360px;
     }
 
     .gallery-item {
         position: relative;
-        @include box(340px, 230px);
+        height: 230px;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         &:hover {
             .filter {
