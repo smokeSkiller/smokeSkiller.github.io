@@ -1,0 +1,137 @@
+.slider {
+    .container {
+        outline: none;
+    }
+
+    // Prev, next buttons
+    .slick-prev, .slick-next {
+        position: absolute;
+        z-index: 999;
+        background-color: transparent;
+        opacity: 1;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        img {
+            @include screen(small-mobile) {
+                transform: scale(0.8);
+            }
+        }
+    }
+
+    // Dots
+    .slider-dots {
+        position: absolute;
+        align-self: flex-end;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @include flexbox();
+
+        li {
+            margin-left: 10px;
+            @include box(10px);
+            background-color: #dbdcdb;
+            border-radius: 50%; 
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+
+        .slick-active {
+            background-color: $lime-green;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+// Main slider
+.main-slider {
+    .slick-prev {
+        left: 100px;
+
+        @include screen(laptop) {
+            left: 50px;
+        }
+
+        @include screen(tablet) {
+            left: 30px;
+        }
+
+        @include screen(mobile) {
+            left: 9px;
+        }
+
+        @include screen(small-mobile) {
+            left: 2px;
+        }
+    }
+
+    .slick-next {
+        right: 100px;
+
+        @include screen(laptop) {
+            right: 50px;
+        }
+
+        @include screen(tablet) {
+            right: 30px;
+        }
+
+        @include screen(mobile) {
+            right: 9px;
+        }
+
+        @include screen(small-mobile) {
+            right: 2px;
+        }
+    }
+
+    .slider-dots {
+        bottom: 70px;
+
+        @media (max-height: 425px) {
+            bottom: 5%;
+        }
+    }
+}
+
+// Directions slider, gallery-slider
+.directions-slider, .gallery-slider {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-next, .slick-prev {
+        top: 50%;
+    }
+
+    .slick-prev {
+        left: 60px;
+
+        @include screen(laptop) {
+            left: 25px;
+        }
+    }
+
+    .slick-next {
+        right: 60px;
+
+        @include screen(laptop) {
+            right: 25px;
+        }
+    }
+
+    .slider-dots {
+        bottom: -30px;
+    }
+}
