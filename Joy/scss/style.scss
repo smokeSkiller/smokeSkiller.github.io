@@ -227,16 +227,20 @@ body {
         text-align: center;
     }
 
+    &-slider {
+        margin-top: 60px;
+
+        @include screen(tablet) {
+            margin-top: 30px;
+        }
+    }
+
     .container {
         margin: 0 auto;
-        margin-top: 31px;
+        margin-top: -30px;
         @include flexbox(center);
         flex-wrap: wrap;
         max-width: 1360px;
-
-        @include screen(tablet) {
-            margin-top: 0;
-        }
     }
 
     .card {
