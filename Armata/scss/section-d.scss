@@ -1,0 +1,25 @@
+.section-d {
+    .content {
+        margin-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .content-title {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        height: 376px;
+
+        .img {
+            @include flexbox(center, center);
+            @include box(120px);
+            background-color: $gold;
+    
+            img {
+                width: 75px;
+                max-height: 75px;
+            }
+        }
+    }
+}

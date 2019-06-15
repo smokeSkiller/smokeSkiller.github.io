@@ -1,0 +1,223 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+//! ≥1200px
+@include media-breakpoint-down(lg) {
+    .header {
+        height: auto;
+        padding-top: 90px;
+        padding-bottom: 40px;
+
+        .top-line {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 888;
+            padding: 15px 0;
+            background-color: rgba($color: $dark-blue, $alpha: 0.7);
+            background-image: none;
+        }
+
+        .main-menu {
+            position: relative;
+
+            .burger-btn {
+                display: block;
+            }
+    
+            ul {
+                top: 50px;
+                right: 0;
+                position: absolute;
+                z-index: 666;
+                display: none;
+                min-width: 260px;
+                background-color: $dark-blue;
+            }
+
+            a {
+                display: block;
+                @include box(100%);
+                padding: 10px 30px;
+                font-size: em(18px);
+                border-bottom: 1px solid $blue;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $blue;
+                }
+            }
+        }
+
+        .header-wrap {
+            margin: 0 !important;
+        }
+    }
+
+    .about-us .group-items {
+        padding-bottom: 30px;
+    }
+
+    footer .main-menu {
+        display: none
+    }
+}
+
+//! ≥992px
+@include media-breakpoint-down(md) {
+    .header {
+        .header-wrap {    
+            margin-top: 60px;
+            
+            .main-title {
+                margin-top: 0;
+            }
+        }
+
+        .forms {
+            margin-top: 30px;
+        }
+    }
+
+    // Section-A
+    .section-a {
+        .content {
+            background-size: cover;
+        }
+    }
+
+    // Section-C
+    .section-c {
+        .content {
+            padding-top: 0;
+            background-image: none;
+        }
+
+        .info-item-wrap {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            &:nth-child(5) {
+                display: none;
+            }
+        }
+
+        .img-container {
+            display: none;
+        }
+    }
+}
+
+//! ≥768px
+@include media-breakpoint-down(sm) {
+    // Components
+    .info-item {
+        margin-top: 30px !important;
+        max-width: 100%;
+    }
+
+    .card {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    // All sections
+    section {
+        padding-top: 30px !important;
+    }
+    
+    .section-b, .section-c, .section-d, .section-f, .team, .comments, .about-us {
+        .content {
+            padding-bottom: 30px !important;
+        }
+    }
+
+    // Section-A
+    .section-a .info-item-wrap {
+        margin: 0 !important;
+    }
+
+    .section-a .info-item {
+        padding: 0;
+    }
+
+    .scales-triangle {
+        display: none;
+    }
+
+    // Section-B
+    .section-b .content {
+        margin-top: 30px; 
+    }
+
+    // Section-C
+    .section-c .info-item {
+        padding: 0 10px;
+        border-bottom: 1px solid #ececec;
+    }
+
+    // About us
+    .about-us .group-items {
+        .item {
+            margin: 0 15px;
+            margin-top: 20px;
+        }
+    }
+}
+
+//! ≥576px
+@include media-breakpoint-down(xs) {
+    // Components
+    .gold-btn {
+        max-width: 90%;
+    }
+
+    .card {
+        margin-left: 0;
+        height: auto !important;
+    }
+
+    .section-footer {
+        @include box(100%, 150px);
+    }
+
+    .comment-slider {
+        .slick-prev {
+            left: 10px;
+        }
+    
+        .slick-next {
+            right: 10px;
+        }
+    }
+
+    // Header
+    .header {
+        .cellphone-number {
+            font-size: em(16px);
+        }
+    }
+
+    // Section-D
+    .section-d .content {
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    // Section-F
+    .section-f {
+        .tc-triangle {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+
+    // Tean
+    .team {
+        .content {
+            margin-top: 10px !important;
+        }
+    }
+}

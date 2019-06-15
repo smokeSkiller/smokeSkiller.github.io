@@ -1,0 +1,19 @@
+.team {
+    .content {
+        margin-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .card {
+        height: 347px;
+
+        .img {
+            @include box(116px);
+            border: 4px solid #d6d6d6;
+
+            img {
+                @include box(100%);
+            }
+        }
+    }
+}

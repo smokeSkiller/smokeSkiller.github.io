@@ -1,0 +1,61 @@
+.section-f {
+    color: #ffffff;
+    background-color: $dark-blue;
+
+    .content {
+        margin-top: 73px;
+        padding-bottom: 70px;
+    }
+
+    .tc-triangle {
+        margin-left: -40px;
+        @include flexbox(center);
+        position: relative;
+        @include box(290px, 128px);
+        transition: all 0.3s ease;
+
+        &:nth-child(1) {
+            margin: 0;
+        }
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
+
+        &:hover svg path {
+            fill: $dark-blue !important;
+        }
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            path {
+                transition: all 0.3s ease;
+            }
+        }
+
+        .triangle-content {
+            align-self: center;
+            position: relative;
+            z-index: 222;
+            @include flexbox(center);
+            padding-left: 55px;
+        }
+
+        .icon {
+            img {
+                max-width: 40px;
+                height: 45px;
+            }
+        }
+
+        .title {
+            margin-left: 10px;
+            font-family: "PFCentroSlabPro";
+            font-size: em(18px);
+            font-weight: 500;
+        }
+    }
+}

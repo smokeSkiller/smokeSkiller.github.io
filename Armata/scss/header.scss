@@ -1,0 +1,92 @@
+.header {
+	position: relative;
+	@include box(100%, 810px);
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-position: center;
+
+	&::before {
+		top: 0;
+		left: 0;
+		content: "";
+		position: absolute;
+		@include box(100%);
+		background-color: $blue;
+		opacity: 0.85;
+	}
+
+	// Top line
+	.top-line {
+		padding: 45px 0;
+		background-image: url("../img/top_gradient.png");
+		background-repeat: repeat-x;
+	}
+	
+	// Header wrap
+	.header-wrap {
+		margin-top: 65px;
+		color: #ffffff;
+
+		.main-title {
+			margin-top: 130px;
+			padding-bottom: 6px;
+			display: inline-block;
+			width: auto;
+			font-family: "PFCentroSlabPro", sans-serif;
+			font-size: em(48px);
+			font-weight: 100;
+			border-bottom: 8px solid $gold;
+		}
+
+		.links {
+			margin-top: 45px;
+			margin-left: 18px;
+			list-style: none;
+		}
+
+		.links li a {
+			position: relative;
+			color: #ffffff;
+			font-family: "Raleway-Bold";
+			font-size: em(18px);
+			font-weight: 400;
+			line-height: 32px;
+			transition: all 0.2s ease;
+
+			&:hover {
+				color: $gold;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: -16px;
+				top: 5px;
+				@include box(0);
+				border-bottom: 5.5px solid transparent;
+				border-left: 5.5px solid #f39f18;
+				border-top: 5.5px solid transparent;
+			}
+		}
+	}
+
+	.scroll-down-btn {
+		margin: 0 auto;
+		margin-top: 43px;
+		@include flexbox(center, center);
+		@include box(40px);
+		color: #ffffff;
+		border: 1px solid #ffffff; 
+		border-radius: 50%; 
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: #ffffff;
+
+			i {
+				color: $blue;
+			}
+		}
+	}
+}

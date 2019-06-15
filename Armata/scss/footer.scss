@@ -1,0 +1,26 @@
+footer {
+    position: relative;
+    padding-top: 70px;
+    background-color: $dark-blue;
+
+    .content {
+        padding-bottom: 50px;
+    }
+}
+
+.scroll-up {
+    @include flexbox(center, center);
+    @include box(100%, 35px);
+    background-color: #1f2b3a;
+
+    button {
+        @include flexbox(center, center);
+        color: #ffffff;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}

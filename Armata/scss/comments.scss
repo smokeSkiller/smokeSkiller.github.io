@@ -1,0 +1,48 @@
+.comments {
+    background-color: #e5e5e5;
+
+    .content {
+        margin-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .comment {
+        @include flexbox(flex-start, center, column);
+        font-family: "Raleway", sans-serif;
+
+        .img {
+            @include box(131px);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 7px solid $gold;
+
+            img {
+                width: 126px;
+            }
+        }
+
+        .title {
+            max-width: 100%;
+            margin-top: 30px;
+            color: #000000;
+            font-size: em(18px);
+            font-weight: 700;
+        }
+
+        .company {
+            margin-top: 15px;
+            color: #6e7b8b;
+            font-size: em(13px);
+            font-weight: 400;
+        }
+
+        .text {
+            max-width: 100%;
+            margin-top: 20px;
+            text-align: center;
+            color: #000000;
+            font-size: em(14px);
+            font-weight: 400;
+        }
+    }
+}

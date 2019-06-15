@@ -1,0 +1,10 @@
+//! Fonts
+// Raleway
+@include font-face("Raleway", "../fonts/RalewayRegular/RalewayRegular");
+@include font-face("Raleway-Bold", "../fonts/RalewayBold/RalewayBold", bold);
+// Roboto
+@include font-face("Roboto", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("Roboto-Bold", "../fonts/RobotoBold/RobotoBold", bold);
+// PF
+@include font-face("PFCentroSlabPro", "../fonts/PFCentroSlabProMedium/PFCentroSlabProMedium");
+@include font-face("PFCentroSlabProBold", "../fonts/PFCentroSlabProBold/PFCentroSlabProBold", bold);

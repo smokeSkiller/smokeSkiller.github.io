@@ -1,0 +1,54 @@
+.about-us {
+    .content {
+        padding-bottom: 80px;
+    }
+
+    .section-head {
+        .description, .title {
+            text-align: left;
+        }
+
+        .title {
+            &::after {
+                left: 0;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    .group-items {
+        @include flexbox(center);
+        flex-wrap: wrap;
+    }
+    
+    .item {
+        margin-left: 30px;
+        margin-top: 40px;
+        @include flexbox(flex-start, center, column);
+        max-width: 160px;
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+        
+        .icon {
+            @include flexbox(center, center);
+            @include box(72px);
+
+            img {
+                max-width: 72px;
+                max-height: 72px;
+            }
+        }
+
+        .title {
+            max-width: 100%;
+            margin-top: 25px;
+            text-align: center;
+            color: #333333;
+            font-family: "Raleway", sans-serif;
+            font-size: em(13px);
+            font-weight: 700;
+        }
+    }
+}

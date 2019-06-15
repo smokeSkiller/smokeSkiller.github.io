@@ -1,0 +1,78 @@
+@import "vars";
+@import "mixins";
+@import "libs";
+@import "fonts";
+@import "reset";
+@import "slick_styles";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.section-a, .section-b, .section-c, .section-d, .section-f, .team, .comments, .about-us, footer {
+    position: relative;
+    padding-top: 70px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 0;
+        @include box(100%, 5px);
+	}
+}
+
+.section-a, .section-b, .section-d, .team, .about-us {
+	&::before {
+		background-image: url("../img/bah_1.png");
+	}
+}
+
+.section-c, .section-f, footer {
+	&::before {
+		background-image: url("../img/bah_2.png");
+	}
+}
+
+.comments {
+	&::before {
+		background-image: url("../img/bah_3.png");
+	}
+}
+
+// Sections and components
+@import "components";
+@import "header";
+@import "section-a";
+@import "section-b";
+@import "section-c";
+@import "section-d";
+@import "section-f";
+@import "team";
+@import "comments";
+@import "about-us";
+@import "footer";
+
+@import "media"; // Always at the end
