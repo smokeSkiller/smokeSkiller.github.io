@@ -26,11 +26,6 @@ $(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 
-	//! smooth scrolling
-	$(function() {
-		// scrollSpeed(step, speed);
-		jQuery.scrollSpeed(100, 800);
-	});
 
 	//! Slider
 	commentSlider.slick({
