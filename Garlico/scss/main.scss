@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixins";
+@import "libs";
+@import "fonts";
+@import "reset";
+@import "slick-styles";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	position: relative;
+	min-width: 320px;
+	font-size: em(16px);
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	background-color: $dark;
+}
+
+// Components and sections
+@import "sections/components";
+@import "sections/header";
+@import "sections/about-us";
+@import "sections/products";
+@import "sections/delivery";
+@import "sections/contact";
+@import "sections/map";
+@import "sections/footer";
+
+@import "media"; // Always at the end

@@ -1,0 +1,157 @@
+header {
+    position: relative;
+    @include box(100%, auto);
+    background-image: url("../../img/garlics1.png");
+    background-size: cover;       
+    padding-bottom: 40px;
+
+    .languages {
+        z-index: 777;
+        position: absolute;
+        right: 5px;
+        top: 30px;
+
+        .language {
+            cursor: pointer;
+        }
+
+        .language + .language {
+            margin-top: 5px;
+        }
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    // Top-line
+    .top-line {
+        position: relative;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .top-menu {
+        @include flexbox(space-between, flex-start);
+        padding-top: 40px;
+
+        ul {
+            @include flexbox();
+            list-style: none;
+        }
+
+        li {
+            margin-left: 20px;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+
+        .link {
+            color: $white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;    
+
+            &::before {
+                height: 1px;
+                background: $green;
+            }
+        }
+    }
+
+    .website-title {
+        @include box(460px, 103px);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        img {
+            @include box(175px, 210px);
+        }
+    }
+
+    .call-phone {
+        .number {
+            color: $white;
+            font-family: "Montserrat-Bold", sans-serif;
+            font-size: em(21px);
+            font-weight: 400;
+        }
+
+        .call-btn {
+            float: right;
+            color: $green;
+            font-family: "Montserrat", sans-serif;
+            font-size: em(16px);
+            font-weight: 400;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: lighten($color: $green, $amount: 15);
+            }
+        }
+    }
+
+    // Content
+    .content {
+        margin-top: 225px;
+        @include flexbox(flex-start, center, column);
+
+        .text, .title {
+            text-align: center;
+        }
+
+        .title {
+            margin-top: 20px;
+        }
+
+        .text {
+            margin-top: 25px;
+            padding: 0 30px;
+            color: $white;
+            font-family: "Montserrat", sans-serif;
+            font-size: em(14px);
+        }
+    }
+
+    // Bottom
+    .bottom {
+        position: static;
+        transform: none;
+        margin-top: 100px;
+    }
+
+    .soc-btn {
+        color: $white;
+        font-size: em(21px);
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    .mouse-scroll-btn {
+        @include flexbox(center);
+        margin-left: 70px;
+        cursor: pointer;
+
+        img {
+            @include box(20px, 40px);
+        }
+    }
+
+    .logo-af {
+        @include flexbox(flex-end);
+
+        img {
+            @include box(125px, 58px);
+        }
+    }
+}

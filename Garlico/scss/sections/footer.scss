@@ -1,0 +1,21 @@
+footer {
+    @include box(100%);
+    padding: 25px 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background-color: $green;
+
+    .title {
+        color: $white;
+        font-size: em(14px);
+    }
+
+    .text {
+        margin-top: 5px;
+        font-size: em(10px);
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+}

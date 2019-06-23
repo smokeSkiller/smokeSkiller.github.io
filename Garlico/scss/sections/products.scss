@@ -1,0 +1,91 @@
+.products {
+    margin-top: 90px;
+    padding-bottom: 50px;
+
+    .container {
+        padding: 0 !important;
+    }
+
+    .tabs {
+        margin-top: 30px;
+        @include flexbox();
+        flex-wrap: wrap;
+        border-bottom: 2px solid #ffffff;
+
+        .tab {
+            padding: 7px 21px;
+            color: #ffffff;
+            font-family: "Montserrat";
+            font-size: em(16px);
+            font-weight: 400;
+            cursor: pointer;
+
+            &.active {
+                position: relative;
+                color: $green;
+                transition: all 0.3s ease;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 38px;
+                    left: 0;
+                    @include box(100%, 6px);
+                    background-color: $green;
+                }
+            }
+        }
+    }
+
+    .sliders {
+        margin-top: 30px;
+    }
+
+    .slick-list {
+        margin: 0 -15px;
+    }
+
+    .product {
+        margin: 0 15px;
+        @include flexbox(flex-start, center, column);
+        padding-bottom: 20px;
+        background-color: $white;
+        
+        .title {
+            width: 100%;
+            padding: 20px 0;
+            background-color: $green;
+
+            h5 {
+                text-align: center;
+                color: $white;
+                font-family: "Montserrat-Bold", sans-serif;
+                font-size: em(14px);
+                text-transform: uppercase;
+            }
+        }
+
+        .img {
+            @include flexbox(center);
+            @include box(100%, 200px);
+            overflow: hidden;
+        }
+
+        .weight {
+            margin-top: 25px;
+            color: $dark;
+            font-family: "Montserrat-Bold", sans-serif;
+            font-size: em(28px);
+        }
+
+        .view-btn {
+            padding: 23px 75px;
+            font-family: "Montserrat", sans-serif;
+            background-color: #ebebeb;
+
+            &::before {
+                background-color: $green;
+            } 
+        }
+    }
+}

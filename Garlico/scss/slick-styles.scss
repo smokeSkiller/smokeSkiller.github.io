@@ -1,0 +1,86 @@
+.tab-content {
+    // Prev, next buttons
+    .slick-prev, .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 555;
+        background-color: transparent;
+        opacity: 1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            .arrow {
+                border-color: lighten($color: $green, $amount: 20);
+            }
+        }
+
+        .arrow {
+            @include box(40px);
+            transform: rotate(45deg);
+            border: 2px solid $green;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .slick-prev {
+        left: -35px;
+        @media (max-width: 1270px) {
+            left: 20px;
+        }
+
+        .arrow {
+            border-right: none;
+            border-top: none;
+        }
+    }
+
+    .slick-next {
+        right: -35px;
+        @media (max-width: 1270px) {
+            right: 20px;
+        }
+
+        .arrow {
+            border-left: none;
+            border-bottom: none;
+        }
+    }
+
+    // Dots
+    .slider-dots {
+        position: absolute;
+        align-self: flex-end;
+        left: 50%;
+        bottom: -35px;
+        transform: translate(-50%, 0);
+        @include flexbox();
+
+        li {
+            margin-left: 10px;
+            @include box(10px);
+            background-color: #9b9b9b;
+            border-radius: 50%; 
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+
+        .slick-active {
+            background-color: $green;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}

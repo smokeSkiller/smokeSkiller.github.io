@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

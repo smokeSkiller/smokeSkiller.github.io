@@ -1,0 +1,11 @@
+.map {
+    margin-top: 70px;
+    @include box(100%, 280px);
+
+    .bg-map {
+        @include box(100%);
+        background-image: url("../../img/map.png");
+        background-size: cover;
+        background-position: 20%;
+    }
+}
