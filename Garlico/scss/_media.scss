@@ -36,8 +36,11 @@
 
             li {
                 width: 100%;
-                margin-left: 0;
                 padding: 0;
+            }
+
+            li + li {
+                margin-left: 0;
             }
 
             a.link {

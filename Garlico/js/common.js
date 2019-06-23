@@ -1,8 +1,12 @@
 $(function() {
 	//! DOM
 	// Header
+	const fixedHeader = $(".fixed-header");
+	const fixedMenu = $(".fixed-header .top-menu");
+	const fixedHamburger = $("header .hamburger").eq(0);
 	const header = $("header.fullBackground");
-	const hamburger = $("header .hamburger");
+	const topLine = $("header .top-line")
+	const hamburger = $("header .hamburger").eq(1);
 	const navMenu = $("header .top-menu");
 	const navMenuLink = $("header .top-menu .link");
 	const scrollDownBtn = $(".mouse-scroll-btn");
@@ -12,6 +16,18 @@ $(function() {
 	const productViewBtn = $(".product .view-btn");
 	const modal = $(".modal");
 	const modalCloseBtn = $(".modal-close-btn");
+
+	//! Fixed header
+	$(window).on("scroll", function () {
+		if ($(this).width() >= 200) {
+			if ($(this).scrollTop() > topLine.height() + 120) {
+				fixedHeader.slideDown();
+				fixedHeader.css("display", "flex");
+			} else {
+				fixedHeader.slideUp();
+			}
+		}
+	});
 
 	//! Modal windows 
 	// Open
@@ -94,12 +110,22 @@ $(function() {
 	}
 	
 	//! Responsive menu
-	// Clicking to button
+	//* Clicking to button
+	// Header
 	hamburger.on("click", function (event) {
 		$(event.currentTarget).toggleClass("is-active");
+		// header
 		navMenu.slideToggle(150);
 	});
-	
+
+	// Fixed header
+	fixedHamburger.on("click", function (event) {
+		$(event.currentTarget).toggleClass("is-active");
+		// header
+		fixedMenu.slideToggle(150);
+	});
+
+	// Header
 	if ($(window).width() < 1200) {
 		navMenuLink.removeClass("hvr-underline-from-center");
 	}

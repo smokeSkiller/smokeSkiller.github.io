@@ -24,6 +24,31 @@
 			<div class="language"><img class="hvr-pulse-shrink" src="img/flag_ukr.png" alt="flag_ukr"></div>
 			<div class="language"><img class="hvr-pulse-shrink" src="img/flag_rus.png" alt="flag_rus"></div>
 		</div>
+		<!-- Fixed header -->
+		<div class="fixed-header">
+			<div class="container">
+				<div class="fixed-header-content">
+					<nav class="top-menu" id="top-menu">
+						<ul>
+							<li><a href="#about-us" class="link hvr-underline-from-center">О нас</a></li>
+							<li><a href="#products" class="link hvr-underline-from-center">Продукция</a></li>
+							<li><a href="#delivery" class="link hvr-underline-from-center">Оплата и доставка</a></li>
+							<li><a href="#contact" class="link hvr-underline-from-center">Контакты</a></li>
+						</ul>
+						<div class="call-phone">
+							<span class="number">+38 (097) 333-22-44</span>
+							<p><a href="#" class="call-btn">Заказать звонок</a></p>
+						</div>
+					</nav>
+					<!-- Hamburger -->
+					<button class="hamburger hamburger--emphatic" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
 		<!-- Container -->
 		<div class="container">
 			<div class="row top-line justify-content-between align-items-center align-items-sm-start">
@@ -548,8 +573,8 @@
 		</div>
 	</section>
 	<!--* Map -->
-	<section class="map" data-aos="zoom-in">
-		<div class="bg-map"></div>
+	<section class="map" id="map"data-aos="zoom-in">
+	
 	</section>
 	<!--* Footer -->
 	<footer>
@@ -567,6 +592,44 @@
 		</div>
 	</footer>
 	<!--! Scripts -->
+	<script>
+		// Initialize and add the map
+		function initMap() {
+		  // The location of Uluru
+		var pos = {lat: 50.4021368, lng: 30.2525089};
+		var image = {
+    url: 'img/SVG files/map-marker.svg',
+    // This marker is 20 pixels wide by 32 pixels high.
+	scaledSize: new google.maps.Size(32, 50)
+};
+		  // The map, centered at Uluru
+		var map = new google.maps.Map(
+			document.getElementById('map'), {
+				zoom: 10,
+				center: pos,
+				scrollwheel: false ,
+				mapTypeControl: false,
+				streetViewControl: false,
+				fullscreenControl: false,
+				zoomControl:true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.LARGE,
+					position: google.maps.ControlPosition.TOP_LEFT
+				},
+				styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+				});
+		  // The marker, positioned at Uluru
+		var marker = new google.maps.Marker({
+			position: pos, 
+			map: map,
+			title: "Это Киев, детка!",
+			icon: image
+		});
+		}
+	</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPNRzQmuovSCC3tPgxMluQE3tgkTulM_E&callback=initMap">
+		</script>
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>

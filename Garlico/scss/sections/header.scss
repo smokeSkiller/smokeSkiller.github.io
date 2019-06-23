@@ -5,6 +5,7 @@ header {
     background-size: cover;       
     padding-bottom: 40px;
 
+    // Languages
     .languages {
         z-index: 777;
         position: absolute;
@@ -42,11 +43,13 @@ header {
             list-style: none;
         }
 
-        li {
+        li + li {
             margin-left: 20px;
 
-            &:nth-child(1) {
-                margin-left: 0;
+            &.active {
+                a {
+                    border-bottom: 1px solid silver;
+                }
             }
         }
 
@@ -60,10 +63,6 @@ header {
                 background: $green;
             }
         }
-    }
-
-    .website-title {
-        @include box(460px, 103px);
     }
 
     .logo {
@@ -96,6 +95,11 @@ header {
                 color: lighten($color: $green, $amount: 15);
             }
         }
+    }
+
+    
+    .website-title {
+        @include box(460px, 103px);
     }
 
     // Content

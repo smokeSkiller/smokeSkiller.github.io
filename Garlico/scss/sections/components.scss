@@ -1,3 +1,28 @@
+// Fixed header
+.fixed-header {
+    position: fixed;
+    z-index: 999;
+    @include box(100%, auto);
+    @include flexbox(center);
+    background-color: lighten($color: $dark, $amount: 6);
+    display: none;
+
+    &-content {
+        position: relative;
+        @include flexbox(flex-end);
+        padding: 10px 0;
+
+        .top-menu {
+            width: 100%;
+            padding: 0;
+        }
+
+        ul {
+            align-self: center;
+        }
+    }
+}
+
 .universal-title {
     color: $green;
     font-family: "Montserrat-Bold", sans-serif;
@@ -8,6 +33,7 @@
     text-align: center;
 }
 
+// Modal
 .modal {
     top: 0;
     left: 0;
