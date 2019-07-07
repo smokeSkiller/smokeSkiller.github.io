@@ -1,0 +1,439 @@
+@import "vars";
+@import "mixins";
+@import "libs";
+@import "fonts";
+@import "reset";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+@import "components";
+
+//! Main styles
+//* Header
+header {
+	padding-top: 30px;
+	font-family: "Roboto", sans-serif;
+
+	.email {
+		display: block;
+		padding-bottom: 15px;
+	}
+
+	.cellphone-numbers {
+		@include flexbox(flex-start, flex-start, column);
+	}
+
+	.call-btn {
+		padding-left: 26px;
+		padding-right: 26px;
+	}
+}
+
+	// Navigation
+.nav {
+	height: 70px;
+	margin-top: 30px;
+	background-color: $dark;
+
+	&-menu {
+		display: flex;
+		height: 100%;
+
+		li {
+			height: 100%;
+			margin-left: 40px;
+		}
+
+		.link {
+			height: 100%;
+			@include flexbox(center, center);
+			color: #ffffff;
+			font-size: em(18px);
+
+			&:hover {
+				color: $green;
+			}
+
+			i {
+				margin-left: 5px;
+				font-size: em(12px);
+			}
+		}
+
+		.dropdown-link {
+			a {
+				position: relative;
+			}
+		}
+
+		.dropdown {
+			z-index: 888;
+			position: absolute;
+			left: 0;
+			top: 70px;
+			@include flexbox(flex-start, flex-start, column);
+			display: none;
+		}
+
+		.dropdown-item {
+			@include flexbox(center, center);
+			@include box(250px, 70px);
+			color: #ffffff;
+			background-color: rgba($color: $dark, $alpha: 0.8);
+
+			&:hover {
+				color: $green;
+				background-color: rgba($color: $dark, $alpha: 0.9);
+			}
+		}
+	}
+
+	.download-btn {
+		@include flexbox(center, center);
+		cursor: pointer;
+		
+		&:hover {
+			a {
+				color: $green;
+			}
+		}
+
+		a {
+			margin-left: 5px;
+			color: #a4a4a4;
+		}
+	}
+
+	.search {
+		margin: 0;
+		position: relative;
+		height: 100%;
+		@include flexbox(flex-end);
+
+		.search-btn {
+			z-index: 555;
+			position: absolute;
+			@include flexbox(center, center);
+			@include box(70px, 100%);
+			background-color: #424242;
+			cursor: pointer;
+
+			&:hover {
+				i {
+					color: $green;
+				}
+			}
+
+			i {
+				color: #a4a4a4;
+			}
+		}
+
+		.search-field {
+			z-index: -1;
+			position: absolute;
+			transform: translate(0px, 0px);
+			@include flexbox(flex-start, center);
+			opacity: 0;
+			@include box(230px, 70px);
+			background-color: #424242;
+			transition: all 0.7s ease;
+			
+			&.active {
+				z-index: 444;
+				opacity: 1;
+				transform: translate(-70px, 0px);
+			}
+
+			input {
+				width: 100%;
+				margin-left: 30px;
+				background-color: transparent;
+				padding-bottom: 5px;
+				color: white;
+				border-bottom: 1px solid #626262;
+				transition: all 0.3s ease;
+
+				&:focus {
+					border-bottom-color: $green;
+				}
+			}
+		}
+	}
+}
+
+//! Main 
+main {
+	.address {
+		margin-top: 20px;
+		color: #a4a4a4;
+		font-family: "Roboto", sans-serif;
+		font-size: em(18px);
+		font-weight: 400;
+	
+		.link {
+			color: #a4a4a4;
+			font-size: em(18px);
+	
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.filter {
+		margin-top: 25px;
+	}
+
+	.view-projects {
+		@include flexbox(flex-start, flex-start, column);
+
+		select {
+			position: relative;
+			margin-top: 5px;
+			padding-left: 10px;
+			width: calc(100% - 30px);
+			min-height: 36px;
+			color: #626262;
+			font-family: "Roboto", sans-serif;
+			font-size: em(16px);
+			border: 0 !important;
+			appearance: none;
+			background-color: #f4f4f4;
+			cursor: pointer;
+		}
+
+		i {
+			position: absolute;
+			z-index: 222;
+			right: 42px;
+			top: 40px;
+			color: $green;
+			font-size: 1.1em;
+		}
+	}
+
+	.radio-container {
+		input {
+			position: relative;
+			appearance: none;
+			@include box(16px);
+			background-color: #f4f4f4;
+			border: 1px solid #a4a4a4;
+			border-radius: 50%;
+			cursor: pointer;
+
+			&:checked::after {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+				content: "";
+				display: block;
+				@include box(8px);
+				border-radius: 50%;
+				background-color: #43ca19;
+			}
+		}
+
+		input:checked ~ .value {
+			color: $green;
+		}
+
+		.value {
+			margin-left: 5px;
+			color: #626262;
+			font-family: "Roboto", sans-serif;
+			font-size: em(14px);
+			cursor: pointer;
+		}
+	}
+
+	.btn-container {
+		padding: 0;
+	}
+
+	.search-projects-btn {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+
+	// Projetcts
+	.projects {
+		margin: 0 -15px;
+		margin-top: 30px;
+	}
+
+	.project {
+		margin-top: 20px;
+		margin-left: 15px;
+		width: 370px;
+		background-color: #f4f4f4;
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 0 20px rgba(59, 59, 59, 0.3);
+		}
+
+		.img {
+			position: relative;
+			@include box(100%, 226px);
+			overflow: hidden;
+
+			img {
+				@include box(auto);
+			}
+
+			.label-square {
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				padding: 12px 15px;
+				background-color: $green;
+				color: #ffffff;
+				font-family: "Roboto-Bold", sans-serif;
+				font-size: em(24px);
+				font-weight: 700;
+			}
+		}
+
+		.flex-container {
+			padding: 20px;
+		}
+
+		.title {
+			color: $green;
+			font-family: "Roboto-Bold", sans-serif;
+			font-size: em(24px);
+			font-weight: 700;
+		}
+
+		.striked-price {
+			color: #626262;
+			font-family: "Roboto-Bold", sans-serif;
+			font-size: em(16px);
+			font-weight: 300;
+		}
+
+		.price {
+			color: $dark;
+			font-family: "Roboto-Bold", sans-serif;
+			font-size: em(24px);
+			font-weight: 700;
+		}
+
+		.project-filter {
+			@include flexbox(flex-start, center);
+			padding-top: 5px;
+			cursor: pointer;
+
+			.text {
+				margin-left: 8px;
+				color: $dark;
+				font-family: "Roboto", sans-serif;
+				font-size: em(12px);
+				font-weight: 400;
+			}
+
+			&:hover {
+				.text {
+					color: $green;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.project-filter + .project-filter {
+			margin-top: 9px;
+		}
+
+		.view-btn {
+			padding: 16px 0;
+			@include box(100%, auto);
+			background-color: $green;
+			color: #ffffff;
+			font-family: "Roboto", sans-serif;
+			font-size: em(16px);
+
+			&::before {
+				background-color: $dark;
+			}
+		}
+	}
+
+	// Paginator
+	.paginator {
+		margin-top: 55px;
+
+		&-links {
+			margin: 0 30px;
+			display: flex;
+
+			li + li {
+				margin-left: 25px;
+			}
+		}
+
+		&-link {
+			color: $dark;
+			font-family: "Roboto-Bold", sans-serif;
+			font-size: em(24px);
+			font-weight: 700;
+
+			&:hover {
+				color: #42a5f5;
+			}
+
+			&.active {
+				color: $green;
+			}
+		}
+	}
+}
+
+footer {
+	margin-top: 100px;
+	padding: 40px 0;
+	background-color: $dark;
+
+	.copyright span {
+		color: #a4a4a4;
+		font-family: "Roboto", sans-serif;
+		font-size: em(18px);
+		font-weight: 400;
+	}
+}
+
+@import "media"; // Always at the end

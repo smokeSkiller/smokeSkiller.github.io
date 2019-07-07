@@ -1,0 +1,195 @@
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	main {
+        .projects {
+            justify-content: center;
+        }
+    } 
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+    // Header
+    header {
+        .email {
+            text-align: center;
+        }
+    }
+
+    .nav {
+        .nav-menu {
+            z-index: 888;
+            position: fixed;
+            left: 0;
+            top: 0;
+            max-width: 280px;
+            min-width: 250px;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: $dark;
+
+            li {
+                margin-left: 0;
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid silver;
+            }
+
+            .link {
+                padding: 15px;
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #424242;
+                }
+            }
+
+            .dropdown {
+                position: static;
+            }
+
+            .dropdown-item {
+                border-top: 1px solid silver;
+                
+                &:hover {
+                    background-color: #424242;
+                }
+            }
+        }
+        
+        .burger-btn {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .search {
+            justify-content: flex-start !important;
+            
+            .search-field {
+                &.active {
+                    transform: translate(70px, 0);
+                }
+
+                input {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .radios, .btn-container {
+        margin-top: 20px;
+    }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+    .nav {
+        margin-top: 15px;
+    }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+    .row {
+        padding: 0 15px;
+    }
+
+    // Header
+    header .logo {
+        img {
+            width: 120px;
+        }
+    }
+
+    .nav .search .search-btn {
+        width: 60px;
+    }
+
+    .nav .search .search-field {
+        transform: translate(-170px, 0px);
+
+        &.active {
+            transform: translate(-170px, 69px) !important;
+        }
+    }
+
+    // Main 
+    main {
+        .projects {
+            margin: 0;
+            margin-top: 30px;
+        }
+
+        .project {
+            margin-left: 0;
+            width: 300px;
+
+            .img {
+                height: 200px;
+            }
+
+            .flex-container {
+                padding-top: 10px;
+                flex-direction: column;
+            }
+        }
+
+        .paginator {
+            &-links {
+                margin: 0;
+            }
+
+            li {
+                &:nth-child(4), &:nth-child(6) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 20px 0;
+
+        .footer-content {
+            flex-direction: column;
+
+            .copyright {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 336px) {
+    // Header
+    header {
+        .email {
+            padding-bottom: 0;
+        }
+
+        .call-btn {
+            margin-top: 10px;
+        }
+    }
+
+    // Main
+    main {
+        .view-projects {
+            select {
+                width: 100%;
+            }
+
+            i {
+                right: 15px;
+            }
+        }
+    }
+}

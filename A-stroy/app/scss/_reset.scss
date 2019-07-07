@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    list-style: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

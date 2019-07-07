@@ -1,0 +1,105 @@
+.btn { 
+    padding: 15px 0;
+    border-radius: 1px;
+    color: $green;
+    font-family: "Roboto", sans-serif;
+    font-size: em(14px);
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before {
+        background-color: $green;
+    }
+
+    &.green {
+        border: 1px solid $green;
+    }
+
+    &.dark {
+        border: 1px solid $dark;
+
+        &:hover {
+            border-color: $green;
+        }
+    }
+}
+
+// Burger menu
+.burger-btn {
+    display: none;
+    @include box(28px, 30px);
+
+    span {
+        position: relative;
+        display: block;
+
+        &:after,&:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -9px;
+        }
+
+        &:after {
+            top: 9px;
+        }
+    }
+}
+
+.burger-btn span,
+	.burger-btn span:after,
+	.burger-btn span:before {
+		@include box(100%, 4px);
+		background-color: $green;
+		transition: all 0.3s;
+		backface-visibility: hidden;
+		border-radius: 2px;
+    }
+    
+/* on activation */
+.burger-btn.on span {
+    background-color: transparent;
+
+    &::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &::after {
+        transform: rotate(-45deg) translate(7px, -8px);
+    } 
+}
+
+// Main title
+.main-title {
+    margin-top: 35px;
+    color: $dark;
+    font-family: "Roboto-Bold";
+    font-size: em(36px);
+    font-weight: 700;
+}
+
+.flex-container {
+    display: flex;
+}
+
+// Scroll buttons
+.scroll-btn {
+    @include box(45px);
+    transform: rotate(45deg);
+    border: 2px solid $green;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: #42a5f5;
+    }
+}
+
+.scroll-left-btn {
+    border-right: none;
+    border-top: none;
+}
+
+.scroll-right-btn {
+    border-left: none;
+    border-bottom: none;
+}
