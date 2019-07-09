@@ -18,47 +18,54 @@
 	<!--* Header -->
 	<header>
 		<div class="container">
-			<div class="row align-items-start justify-content-between justify-content-sm-start">
-				<div class="logo col-auto col-sm-6 col-lg-2"><img src="img/Logo_a-stroy.png" alt="Logo_a"></div>
-				<div class="col-auto col-sm-6 col-lg-3 offset-0 offset-lg-3 align-self-end">
+			<div class="top-line row align-items-start justify-content-between justify-content-sm-start">
+				<div class="logo col-auto col-sm-6 col-xl-2"><img src="img/Logo_a-stroy.png" alt="Logo_a"></div>
+				<div class="col-auto col-sm-6 col-xl-3 offset-0 offset-xl-3 align-self-end">
 					<span class="email">stroimdoma.nn@yandex.ru</span>
 				</div>
-				<div class="cellphone-numbers col-auto col-sm-6 col-lg-2">
+				<div class="cellphone-numbers col-auto col-sm-6 col-xl-2">
 					<span class="number">+7 (831) 423 61 59</span>
 					<span class="number">+7 (929) 053 61 59</span>
 				</div>
-				<button class="col-auto col-sm-6 col-lg-2 call-btn btn green hvr-shutter-out-horizontal">Обратный звонок</button>
+				<div class="call-btn-container col-auto col-sm-6 col-xl-2 row justify-content-end align-items-start">
+					<button class="call-btn btn green hvr-shutter-out-horizontal">Обратный звонок</button>
+				</div>
 			</div>
-			<nav class="row nav align-items-md-center">
-				<div class="col-2 col-sm-1 col-lg-9 align-self-start order-3 order-lg-1 align-self-center align-self-lg-stretch">
-					<button class="burger-btn"><span></span></button>
-					<ul class="nav-menu">
-						<li class="dropdown-link">
-							<a href="#" class="link">Проекты домов <i class="fas fa-angle-down"></i></a>
-							<div class="dropdown">
-								<a href="#" class="dropdown-item">Одноэтажные дома</a>
-								<a href="#" class="dropdown-item">Двухэтажные дома</a>
-								<a href="#" class="dropdown-item">Дома с мансардой</a>
-								<a href="#" class="dropdown-item">Дома до 150м2</a>
-							</div>
-						</li>
-						<li><a href="#" class="link">Портфолио</a></li>
-						<li><a href="#" class="link">Вопросы и ответы</a></li>
-						<li><a href="#" class="link">Контакты</a></li>
-					</ul>
-				</div>
-				<div class="download-btn col-7 col-sm-4 col-lg-2 order-1 order-lg-2">
-					<img src="img/ic_download.png" alt="ic_download">
-					<a href="#">Скачать каталог</a>
-				</div>
-				<div class="search col-3 col-sm-7 col-lg-1 order-2 order-lg-3">
-					<div class="search-field">
-						<input type="text" placeholder="Введите запрос">
+			</div>
+			<!-- Sub-header -->
+			<nav class="sub-header">
+			<div class="container">
+				<div class="row nav align-items-md-center">
+					<div class="col-2 col-sm-1 col-lg-9 align-self-start order-3 order-lg-1 align-self-center align-self-lg-stretch">
+						<button class="burger-btn"><span></span></button>
+						<ul class="nav-menu">
+							<li class="dropdown-link">
+								<a href="#" class="link">Проекты домов <i class="fas fa-angle-down"></i></a>
+								<div class="dropdown">
+									<a href="#" class="dropdown-item">Одноэтажные дома</a>
+									<a href="#" class="dropdown-item">Двухэтажные дома</a>
+									<a href="#" class="dropdown-item">Дома с мансардой</a>
+									<a href="#" class="dropdown-item">Дома до 150м2</a>
+								</div>
+							</li>
+							<li><a href="#" class="link">Портфолио</a></li>
+							<li><a href="#" class="link">Вопросы и ответы</a></li>
+							<li><a href="#" class="link">Контакты</a></li>
+						</ul>
 					</div>
-					<button class="search-btn"><i class="fas fa-search"></i></button>
+					<div class="download-btn col-7 col-sm-4 col-lg-2 order-1 order-lg-2">
+						<img src="img/ic_download.png" alt="ic_download">
+						<a href="#">Скачать каталог</a>
+					</div>
+					<div class="search col-3 col-sm-7 col-lg-1 order-2 order-lg-3">
+						<div class="search-field">
+							<input type="text" placeholder="Введите запрос">
+						</div>
+						<button class="search-btn"><i class="fas fa-search"></i></button>
+					</div>
 				</div>
-			</nav>
-		</div>
+			</div>
+		</nav>
 	</header>
 	<!--* Main -->
 	<main>
@@ -85,15 +92,15 @@
 				<div class="col-lg-2 radios">
 					<div class="radio-container">
 						<input id="1" type="radio" name="square">
-						<label for="1" class="value">Малые до 150м2</label>
+						<label for="1" class="value">Малые до 150м<sup class="radio-sup">2</sup></label>
 					</div>
 					<div class="radio-container">
 						<input id="2" type="radio" name="square" checked>
-						<label for="2" class="value">Средние 150-200м2</label>
+						<label for="2" class="value">Средние 150-200м<sup class="radio-sup">2</sup></label>
 					</div>
 					<div class="radio-container">
 						<input id="3" type="radio" name="square">
-						<label for="3" class="value">Большие от 200м2</label>
+						<label for="3" class="value">Большие от 200м<sup class="radio-sup">2</sup></label>
 					</div>
 				</div>
 				<div class="col-lg-2 radios">

@@ -47,23 +47,47 @@ header {
 
 	.email {
 		display: block;
-		padding-bottom: 15px;
+		margin-left: 13px;
+		padding-bottom: 12px;
+		font-size: em(18px);
 	}
 
 	.cellphone-numbers {
 		@include flexbox(flex-start, flex-start, column);
+		padding-left: 22px;
+		padding-top: 5px;
+		font-size: em(18px);
+
+		.number {
+			&:nth-child(2) {
+				margin-top: -7px;
+			}
+		}
 	}
 
 	.call-btn {
+		margin-top: 8px;
+		padding: 11px 0;
 		padding-left: 26px;
 		padding-right: 26px;
+	}
+}
+
+.sub-header {
+	margin-top: 23px;
+
+	&.fixed {
+		position: fixed;
+		z-index: 888;
+		margin-top: 0;
+		top: 0;
+		width: 100%;
 	}
 }
 
 	// Navigation
 .nav {
 	height: 70px;
-	margin-top: 30px;
 	background-color: $dark;
 
 	&-menu {
@@ -104,6 +128,10 @@ header {
 			top: 70px;
 			@include flexbox(flex-start, flex-start, column);
 			display: none;
+
+			&.active {
+				display: flex;
+			}
 		}
 
 		.dropdown-item {
@@ -120,7 +148,8 @@ header {
 	}
 
 	.download-btn {
-		@include flexbox(center, center);
+		padding-left: 24px;
+		@include flexbox(flex-start, center);
 		cursor: pointer;
 		
 		&:hover {
@@ -130,7 +159,7 @@ header {
 		}
 
 		a {
-			margin-left: 5px;
+			margin-left: 11px;
 			color: #a4a4a4;
 		}
 	}
@@ -196,10 +225,10 @@ header {
 //! Main 
 main {
 	.address {
-		margin-top: 20px;
+		margin-top: 18px;
 		color: #a4a4a4;
 		font-family: "Roboto", sans-serif;
-		font-size: em(18px);
+		font-size: em(16px);
 		font-weight: 400;
 	
 		.link {
@@ -213,17 +242,24 @@ main {
 	}
 
 	.filter {
-		margin-top: 25px;
+		margin-top: 14px;
 	}
 
 	.view-projects {
 		@include flexbox(flex-start, flex-start, column);
 
+		label {
+			color: $green;
+			font-family: "Roboto", sans-serif;
+			font-size: em(14px);
+			font-weight: 400;
+		}
+
 		select {
 			position: relative;
-			margin-top: 5px;
+			margin-top: 8px;
 			padding-left: 10px;
-			width: calc(100% - 30px);
+			width: calc(100% - 15px);
 			min-height: 36px;
 			color: #626262;
 			font-family: "Roboto", sans-serif;
@@ -237,14 +273,35 @@ main {
 		i {
 			position: absolute;
 			z-index: 222;
-			right: 42px;
-			top: 40px;
+			right: 31px;
+			top: 43px;
 			color: $green;
 			font-size: 1.1em;
 		}
 	}
 
+	.radios {
+		&:nth-child(2) {
+			padding-left: 13px;
+		}
+
+		&:nth-child(3) {
+			padding-left: 17px;
+		}
+
+		&:nth-child(4) {
+			padding-left: 22px;
+		}
+	}
+
+	.radio-container + .radio-container {
+		margin-top: 4px;
+	}
+
 	.radio-container {
+		display: flex;
+		align-items: center;
+
 		input {
 			position: relative;
 			appearance: none;
@@ -272,11 +329,17 @@ main {
 		}
 
 		.value {
-			margin-left: 5px;
+			position: relative;
+			margin-top: -2px;
+			margin-left: 8px;
 			color: #626262;
 			font-family: "Roboto", sans-serif;
 			font-size: em(14px);
 			cursor: pointer;
+		}
+
+		.radio-sup {
+			position: absolute;
 		}
 	}
 
@@ -285,19 +348,23 @@ main {
 	}
 
 	.search-projects-btn {
-		padding-left: 45px;
-		padding-right: 45px;
+		margin-top: 3px;
+		margin-left: -3px;
+		@include flexbox(center, center);
+		@include box(200px, 44px);
+		padding: 0;
+		color: $dark;
 	}
 
 	// Projetcts
 	.projects {
-		margin: 0 -15px;
-		margin-top: 30px;
+		margin: 0 -30px;
+		margin-top: 28px;
 	}
 
 	.project {
-		margin-top: 20px;
-		margin-left: 15px;
+		margin-top: 30px;
+		margin-left: 30px;
 		width: 370px;
 		background-color: #f4f4f4;
 		transition: all 0.3s ease;
@@ -320,43 +387,54 @@ main {
 				left: 0;
 				top: 0;
 				display: block;
-				padding: 12px 15px;
+				padding: 0 13px;
 				background-color: $green;
 				color: #ffffff;
-				font-family: "Roboto-Bold", sans-serif;
+				font-family: "RobotoSlab", sans-serif;
 				font-size: em(24px);
 				font-weight: 700;
 			}
 		}
 
 		.flex-container {
-			padding: 20px;
+			padding-left: 20px;
+			padding-right: 25px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
+
+		// .column {
+		// 	&:nth-child(2) {
+		// 		padding-top: 10px;
+		// 	}
+		// }
 
 		.title {
 			color: $green;
-			font-family: "Roboto-Bold", sans-serif;
+			font-family: "RobotoSlab", sans-serif;
 			font-size: em(24px);
 			font-weight: 700;
 		}
 
 		.striked-price {
+			margin-top: 2px;
 			color: #626262;
-			font-family: "Roboto-Bold", sans-serif;
+			font-family: "RobotoSlab", sans-serif;
 			font-size: em(16px);
 			font-weight: 300;
 		}
 
 		.price {
+			margin-top: -9px;
 			color: $dark;
-			font-family: "Roboto-Bold", sans-serif;
+			font-family: "RobotoSlab", sans-serif;
 			font-size: em(24px);
 			font-weight: 700;
 		}
 
 		.project-filter {
+			margin-top: 9px;
 			@include flexbox(flex-start, center);
-			padding-top: 5px;
 			cursor: pointer;
 
 			.text {
@@ -395,7 +473,7 @@ main {
 
 	// Paginator
 	.paginator {
-		margin-top: 55px;
+		margin-top: 63px;
 
 		&-links {
 			margin: 0 30px;
@@ -424,7 +502,7 @@ main {
 }
 
 footer {
-	margin-top: 100px;
+	margin-top: 107px;
 	padding: 40px 0;
 	background-color: $dark;
 

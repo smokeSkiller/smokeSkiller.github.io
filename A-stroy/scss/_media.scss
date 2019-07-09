@@ -2,6 +2,21 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
+    // Header
+    header {
+        .email {
+            text-align: end;
+        }
+
+        .cellphone-numbers {
+            padding-left: 0;
+        }
+
+        .nav .download-btn {
+            padding-left: 0;
+        }
+    }
+
 	main {
         .projects {
             justify-content: center;
@@ -11,14 +26,18 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
-    // Header
-    header {
-        .email {
-            text-align: center;
+    .sub-header {
+        position: sticky;
+        z-index: 777;
+
+        .nav .nav-menu {
+            top: 70px;
         }
     }
 
-    .nav {
+    header .nav {
+        transform: translateX(0); // this will act like relative parent 
+
         .nav-menu {
             z-index: 888;
             position: fixed;
@@ -56,6 +75,7 @@
             }
 
             .dropdown-item {
+                height: 60px;
                 border-top: 1px solid silver;
                 
                 &:hover {
@@ -63,7 +83,11 @@
                 }
             }
         }
-        
+
+        .download-btn {
+            justify-content: center;
+        }
+
         .burger-btn {
             display: block;
             margin: 0 auto;
@@ -91,7 +115,7 @@
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-    .nav {
+    .sub-header {
         margin-top: 15px;
     }
 }
@@ -101,11 +125,22 @@
     .row {
         padding: 0 15px;
     }
+    
 
     // Header
-    header .logo {
-        img {
-            width: 120px;
+    header {
+        .logo {
+            img {
+                width: 120px;
+            }
+        }
+
+        .email {
+            margin: 0;
+        }
+
+        .call-btn-container {
+            padding: 0;
         }
     }
 

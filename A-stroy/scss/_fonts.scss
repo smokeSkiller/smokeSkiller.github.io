@@ -1,2 +1,7 @@
 @include font-face("Roboto", "../fonts/RobotoRegular/RobotoRegular");
 @include font-face("Roboto-Bold", "../fonts/RobotoBold/RobotoBold", bold);
+
+@font-face {
+    font-family: "RobotoSlab";
+    src: url("../fonts/RobotoSlab/RobotoSlab-Regular.ttf");
+}
