@@ -7,7 +7,7 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
-    header  {
+    .top-line  {
         .menu  {
             display: flex;
 

@@ -15,6 +15,9 @@
 .d-flex {
 	display: flex;
 }
+.text-center {
+    text-align: center;
+}
 
 * {
     padding: 0;
@@ -26,6 +29,10 @@ a {
     color: white;
 }
 
+.orange {
+    color: #ef6c00;
+}
+
 button {
 	border: 0;
 	outline: none;
@@ -33,25 +40,32 @@ button {
 }
 
 header {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 600px;
     background-image: url("../img/stalker2_art_uhd.jpg");
     background-size: cover;
     background-position: center;
+}
 
-    .top-line {
-        width: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.7);
+.static-container {
+    width: 100%;
+    height: 60px;
+}
+
+.top-line {
+    width: 100%;
+    background-color: #000000;
+
+    &.fixed {
+        z-index: 888;
+        position: fixed;
+        top: 0;
     }
 
     .logo {
         color: darkgrey;
         font-size: 2em;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-        .orange {
-            color: #ef6c00;
-        }
     }
 
     .top-line-content {
@@ -200,7 +214,51 @@ header {
 				transform: rotate(-45deg) translate(7px, -8px);
 			} 
 		}
+    }
+}
 
+.main-content {
+    margin-top: 30px;
+    
+    .main-title {
+        font-size: 2.1em;
+    }
+
+    .articles {
+        margin-top: 30px;
+
+        .article {
+            padding: 15px;
+            color: white;
+            background-color: #1e88e5;
+        }
+    }
+}
+
+section {
+    @include flexbox(center, center);
+    @include box(100%, 250px);
+
+    &.section-blue {
+        background-color: #00b0ff;
+    }
+
+    &.section-green {
+        background-color: #43a047;
+    }
+
+    &.section-orange {
+        background-color: #fb8c00;
+    }
+
+    &.section-black {
+        background-color: #000000;
+    }
+
+    h2 {
+        color: white;
+        font-size: 2.1em;
+        font-weight: 400;
     }
 }
 
