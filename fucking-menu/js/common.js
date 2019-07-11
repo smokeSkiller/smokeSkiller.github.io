@@ -9,7 +9,7 @@ let dropdown, dropdownArrow;
 
 //! Fixed nav
 $(window).on("scroll", function () {
-    if ($(this).scrollTop() > header.height() + 120) {
+    if ($(this).scrollTop() > header.height()) {
         topLine.addClass("fixed");
         menuItems.css("top", "60px");
     } else {
