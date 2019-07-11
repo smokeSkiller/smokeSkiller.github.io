@@ -1,0 +1,83 @@
+@import "vars";
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+    header  {
+        .menu  {
+            display: flex;
+
+            ul.menu-items {
+                z-index: 888;
+                position: fixed;
+                left: 0;
+                top: 0;
+                max-width: 280px;
+                min-width: 250px;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 100vh;
+                background-color: #616161;
+                overflow-y: scroll;
+
+                li {
+                    margin-left: 0;
+                    width: 100%;
+                    height: auto;
+                    border-bottom: 1px solid silver;
+
+                    a {
+                        width: auto;
+                        padding: 15px;
+
+                        &:hover {
+                            color: white;
+                            background-color: #f57c00;
+                        }
+                    }
+                }
+            }
+
+            .has-child {    
+                .arrow {
+                    margin-right: 8px;
+                    margin-left: 12px;
+                    @include flexbox(center, center);
+                    @include box(25px);
+                    border-radius: 50%;
+                    background-color: white;
+
+                    i {
+                        color: black;
+                    }
+                }
+            }
+
+            .dropdown {
+                position: static;
+            }
+
+            .burger-btn {
+                display: flex;
+                align-self: center;
+            }
+        }
+    }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+    .row {
+        padding: 0 15px;
+    }
+}

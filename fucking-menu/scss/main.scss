@@ -1,0 +1,207 @@
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+.d-flex {
+	display: flex;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+	border: 0;
+	outline: none;
+	background: none;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/stalker2_art_uhd.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .top-line {
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+
+    .logo {
+        color: darkgrey;
+        font-size: 2em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        .orange {
+            color: #ef6c00;
+        }
+    }
+
+    .top-line-content {
+        height: 60px;
+    }
+
+    .menu {
+        height: 100%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
+        a {
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: #f57c00;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul.menu-items {
+            display: flex;
+            height: 100%;
+        }
+
+        li {        
+            height: 100%;
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                font-size: 1.1em;
+                text-decoration: none;
+                padding: 0 40px;
+        
+                &:hover {
+                    background-color: #424242;
+                }
+            }
+        }
+
+        //! Dropdown
+        .has-child {
+            position: relative;
+
+            .arrow {
+				margin-left: 10px;
+
+				i {
+					color: white;
+				}
+            }
+        }
+
+        .has-child-1 .dropdown {
+            left: 0;
+			top: 60px;
+        }
+
+        .has-child-2 .dropdown {
+            left: 245px;
+			top: 0;
+        }
+
+        .dropdown {
+			z-index: 888;
+			position: absolute;
+            flex-direction: column;
+            align-items: flex-start;
+            display: none;
+
+			&.active {
+				display: flex;
+			}
+		}
+
+		li > ul > li {
+            height: auto;
+
+            a {
+				@include flexbox(center, center);
+				@include box(245px, 50px);
+                color: #ffffff;
+                background-color: rgba($color: #757575, $alpha: 0.8);
+    
+                &:hover {
+                    color: #f57c00;
+                    background-color: rgba($color: #616161, $alpha: 0.9);
+                }
+            }
+        }
+
+        li > ul > li > ul > li > a {
+            background-color: rgba($color: #616161, $alpha: 0.8);
+
+            &:hover {
+                background-color: rgba($color: #424242, $alpha: 0.9);
+            }
+		}
+		
+		// Burger menu
+		.burger-btn {
+			display: none;
+			@include box(35px);
+			cursor: pointer;
+
+			span {
+				position: relative;
+				display: block;
+
+				&:after,&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: -9px;
+				}
+
+				&:after {
+					top: 9px;
+				}
+			}
+		}
+
+		.burger-btn span,
+			.burger-btn span:after,
+			.burger-btn span:before {
+				@include box(100%, 4px);
+				background-color: white;
+				transition: all 0.3s;
+				backface-visibility: hidden;
+				border-radius: 2px;
+			}
+			
+		/* on activation */
+		.burger-btn.on span {
+			background-color: transparent;
+
+			&::before {
+				transform: rotate(45deg) translate(5px, 5px);
+			}
+
+			&::after {
+				transform: rotate(-45deg) translate(7px, -8px);
+			} 
+		}
+
+    }
+}
+
+@import "media"; // Always at the end
