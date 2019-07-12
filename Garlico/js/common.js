@@ -2,11 +2,9 @@ $(function() {
 	//! DOM
 	// Header
 	const fixedHeader = $(".fixed-header");
-	const fixedMenu = $(".fixed-header .top-menu");
-	const fixedHamburger = $("header .hamburger").eq(0);
 	const header = $("header.fullBackground");
-	const topLine = $("header .top-line")
-	const hamburger = $("header .hamburger").eq(1);
+	const topLine = $("header .top-line");
+	const hamburger = $("header .hamburger");
 	const navMenu = $("header .top-menu");
 	const navMenuLink = $("header .top-menu .link");
 	const scrollDownBtn = $(".mouse-scroll-btn");
@@ -16,6 +14,17 @@ $(function() {
 	const productViewBtn = $(".product .view-btn");
 	const modal = $(".modal");
 	const modalCloseBtn = $(".modal-close-btn");
+
+		//! Nav menu while resizing
+	$(window).on("resize", function () {
+		if ($(this).width() >= 1200) {
+			hamburger.removeClass("is-active");
+			navMenu.css("display", "flex");
+		} else {
+			hamburger.removeClass("is-active");
+			navMenu.css("display", "none");
+		}
+	});
 
 	//! Fixed header
 	$(window).on("scroll", function () {
@@ -110,19 +119,28 @@ $(function() {
 	}
 	
 	//! Responsive menu
-	//* Clicking to button
-	// Header
-	hamburger.on("click", function (event) {
-		$(event.currentTarget).toggleClass("is-active");
-		// header
-		navMenu.slideToggle(150);
+	//* Clicking to body
+	$(document.body).on("click", function (params) {
+		if ($(window).width() <= 1200) {
+			hamburger.removeClass("is-active");
+			// header
+			navMenu.slideUp(150);
+		} else {
+			navMenu.slideDown(150);
+		}
 	});
 
-	// Fixed header
-	fixedHamburger.on("click", function (event) {
-		$(event.currentTarget).toggleClass("is-active");
+	navMenu.on("click", function (e) {
+		e.stopPropagation();
+	});
+
+	//* Clicking to button
+	// Header
+	hamburger.on("click", function (e) {
+		e.stopPropagation();
+		hamburger.toggleClass("is-active");
 		// header
-		fixedMenu.slideToggle(150);
+		navMenu.slideToggle(150);
 	});
 
 	// Header
@@ -132,11 +150,4 @@ $(function() {
 
 	//! Animate On Scroll Library
 	AOS.init({duration: 1000, once: true});
-
-	//! Smooth scrolling
-	$(window).on('load', function() {
-		if ($(window).width() >= 1280) {
-			$(this).impulse({tempo: 400, range: 115, curb: 6});
-		}
-	});
 });
