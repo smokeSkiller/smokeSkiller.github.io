@@ -1,0 +1,232 @@
+.news-container {
+	margin-top: 80px;
+	@include flexbox(space-between);
+
+	main {
+		@include flexbox();
+		flex-direction: column;
+		width: calc( 100% / 12 * 8 - 30px); 
+	}
+
+	// Articles
+	.articles {
+		width: 100%;
+	}
+
+	.article + .article {
+		margin-top: 50px;
+	}
+
+	.article {
+		@include box(100%, auto);
+
+		.title {
+			max-width: 95%;
+			color: #444444;
+			font-size: em(30px);
+			font-weight: 700;
+		}
+
+		.thumbnail {
+			margin: 15px 0;
+			width: 100%;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.news-thumbnail {
+			height: 400px;
+		}
+
+		.post-thumbnail {
+			height: 195px;
+		}
+
+		.content {
+			margin-top: 15px;
+
+			p + p {
+				margin-top: 15px;
+			}
+
+			p {	
+				font-family: "Myriad Pro", sans-serif;
+				color: #444444;
+			}
+		}
+
+		a {
+			color: $blue;
+		}
+
+		.box {
+			position: relative;
+			@include flexbox(flex-end, center);
+			@include box(100%, 40px);
+			padding-right: 14px;
+			background-color: $blue;
+			font-size: em(15px);
+			font-weight: 300;
+
+			&::before {
+				top: 0;
+				left: -15px;
+				// z-index: 444;
+				@include box(30%, 20px);
+				background-color: #fff;
+			}
+		}
+
+		.date-author {
+			margin-top: 30px;
+		}
+
+		.date {
+			color: #444444;
+		}
+
+		.news-date {
+			position: absolute;
+			left: 3px;
+			top: 0;
+		}
+
+		.author {
+
+		}
+
+		.news-author {
+			color: #fff;
+		}
+	}
+
+	// Page nav
+	.page-nav {
+		margin: 0 auto;
+		margin-top: 60px;
+		@include flexbox(flex-start, center);
+		flex-wrap: wrap;
+
+		a + a {
+			margin-left: 15px;
+		}
+
+		a {
+			transition: all .3s ease;
+
+			&:hover {
+				color: #fff;
+				background-color: $blue;
+			}
+		}
+
+		.btn-circle {
+			@include flexbox(center, center);
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+		}
+
+		.btn-arrow {
+			@include box(30px);
+		}
+
+		.btn-counter {
+			@include box(50px);
+			color: #232323;
+			font-weight: 700;
+			font-size: em(22px);
+
+			&.active {
+				background-color: #a5c6d9;
+			}
+		}
+	}
+
+	// Widgets
+	.widgets {
+		width: calc( 100% / 12 * 4 - 30px);
+
+		.widget + .widget {
+			margin-top: 30px;
+		}
+
+		.widget {
+			@include box(100%, auto);
+			background-color: #e1ecf3;
+
+			&-links {
+				margin-top: 25px;
+				padding-bottom: 10px;
+				list-style: none;
+			}
+
+			li {
+				padding: 10px 0;
+				padding-left: 35px;
+				padding-right: 30px;
+				transition: all .3s ease;
+
+				&:hover {
+					background-color: #a5c6d9;
+				}
+			}
+
+			li a {
+				position: relative;
+				color: #30658e;
+				font-size: em(16px);
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: -20px;
+					top: 5px;
+					@include box(14px);
+					background-image: url('http://nanonasibulin.com/wp-content/themes/albert_theme/assets/img/icons/hexagon.png');
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+
+		.widget-title {
+			margin: 0 15px;
+			padding-top: 20px;
+
+			.decoration {
+				margin-top: 6px;
+			}
+		}
+
+		.widget-search {
+			@include flexbox();
+			@include box(100%, 40px);
+
+			input {
+				@include box(calc(100% - 70px), 100%);
+				padding-top: 15px;
+				padding-left: 11px;
+				padding-bottom: 11px;
+				background-color: #e1ecf3;
+				font-size: em(16px);
+
+				&:placeholder {
+					color: #9f9f9f;
+				}
+			}
+
+			.search-btn {
+				@include box(70px, 100%);
+				background-color: $blue;
+				color: #fff;
+				transition: all .3s ease;
+
+				&:hover {
+					background-color: #1565c0;
+				}
+			}
+		}
+	}
+}

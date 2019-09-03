@@ -1,0 +1,386 @@
+// Components
+.wrapper {
+	margin-top: 30px;
+	width: 1180px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+}
+
+// Employers
+.employers {
+	@include flexbox();
+	flex-wrap: wrap;
+
+	.employer {
+		margin-top: 40px;
+		@include flexbox(flex-start, center);
+		width: 570px;
+
+		.hexagon {
+			@include box(148px, 171px);
+			background: red;
+			transform: rotate(120deg);
+			overflow: hidden;
+			visibility: hidden;
+
+			&-inside {
+				@include box(100%);
+				transform: rotate(120deg);
+				background: lime;
+				overflow: hidden;
+			}
+
+			.img {
+				@include box(100%);
+				transform: rotate(120deg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				visibility: visible;
+			}
+		}
+
+		.content {
+			margin-left: 20px;
+			@include flexbox(flex-start, flex-start, column);
+		}
+
+		h6.name {
+			word-break: break-word;
+			color: #444444;
+			font-size: em(18px);
+			font-family: "RobotoBold";
+			font-weight: 700;
+		}
+
+		span {
+			word-break: break-word;
+			color: #444444;
+			font-size: em(18px);
+
+			&.cellphone {
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+// Slider navigation
+.slide-nav {
+	position: relative;
+	@include box(100%, 60px);
+	background: $blue;
+	overflow: hidden;
+
+	&::after {
+		right: -15px;
+		bottom: 30px;
+		@include box(calc(45% + 15px), 30px);
+		background-color: #fff;
+	}
+
+	&.gallery-slide-nav {
+		&::after {
+			width: calc(100% - 281px);
+			background-color: #e1ecf3;
+		}
+	}
+
+	.buttons {
+		@include flexbox(flex-start, center);
+		@include box(100%);
+		padding-left: 20px;
+	}
+
+	.arrow-btn {
+		margin-left: 20px;
+		@include box(35px);
+		font-size: 1em;
+
+		&:nth-child(1) {
+			margin-left: 0;
+		}
+	}
+
+	.counter {
+		margin-left: 20px;
+		@include flexbox(center, center);
+		@include box(58px, 35px);
+		background: #fff;
+		border-radius: 17px;
+		color: #30658e;
+		font-size: em(16px);
+		font-weight: 400;
+	}
+
+	.pause-btn {
+		margin-left: 24px;
+		@include box(24px);
+		font-size: em(10px);
+	}
+}
+
+// Main-banner 
+.main-banner {
+	@include flexbox(center, center);
+	@include box(100%, 200px);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	h1 {	
+		padding: 0 15px;
+		text-align: center;
+		color: #fff;
+		font-family: "Myriad Pro", sans-serif;
+		font-size: em(36px);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
+// Breadcrumbs
+.breadcrumbs {
+	@include box(100%, 40px);
+	border-bottom: 1px solid #e1e1e1;
+
+	.container {
+		@include box(100%);
+	}
+
+	ul {
+		@include flexbox();
+		@include box(100%);
+
+		a + a {
+			padding: 0 30px;
+		}
+
+		a {
+			position: relative;
+			overflow: hidden;
+			@include flexbox(flex-start, center);
+			height: 100%;
+			transition: all .3s ease;
+
+			&:hover {
+				color: #212121;
+			}
+
+			&:nth-child(1) {
+				padding-right: 30px;
+			}
+
+			&:last-child {
+				&::before, &::after {
+					display: none;
+				}
+			}
+
+			&::before {
+				transform: skewX(-30deg);
+			}
+
+			&::after {
+				transform: skewX(30deg);
+			}
+
+			&::before, &::after {
+				content: '';
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    border: 1px solid rgba(225, 225, 225, .8);
+			    height: 40px;
+			    width: 2px;
+			}
+		}
+
+		a {
+			color: #5d5d5d;
+			font-size: em(16px);
+			font-weight: 300;
+		}
+	}
+}
+
+// Companies
+.companies {
+	@include flexbox(flex-start, center);
+	padding: 30px 0;
+
+	.item {
+		@include flexbox();
+		max-width: 50%;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	hr {
+		margin: 0 120px;
+		@include box(.5px, 100px);
+		display: block;
+		background: #000;
+	}
+}
+
+// Menu
+.nav-menu {
+	@include flexbox(flex-start, center);
+	list-style: none;
+	height: 100%;
+
+	li + li {
+		margin-left: 30px;
+	}
+
+	li {
+		position: relative;
+		&:hover {
+			a {
+				color: #f57c00;		
+			}
+		}
+	}
+
+	a {
+		color: #fff;
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		transition: all 0.3s ease;
+	}
+}
+
+.header-menu {
+	padding-left: 52px;
+
+	li + li {		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -17px;
+			transform: translateY(-50%);
+			display: block;
+			@include box(4px);
+			border-radius: 50%;
+			background-color: #a5c6d9;
+		}
+	}
+
+	li {
+		&.active::after {
+			content: "";
+			position: absolute;
+			bottom: -21px;
+			left: 50%;
+			right: 50%;
+			transform: translate(-50%);
+			@include box(73%, 5px);
+			background-color: #fff;
+		}
+	} 
+
+	a {
+		font-size: em(16px);
+	}
+}
+
+.footer-menu {
+	a {
+		font-size: em(14px);
+	}
+}
+
+.soc-btns {
+	position: absolute;
+	right: 20px;
+	align-self: center;
+	@include flexbox();
+
+	.soc-btn + .soc-btn {
+		margin-left: 11px;
+	}
+
+	.soc-btn {
+		@include flexbox(center, center);
+		@include box(38px);
+		font-size: em(20px);
+		transition: all .5s ease;
+
+		&:hover {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.skew-left::before {
+	content: "";
+	position: absolute;
+	height: 30px;
+	transform: skewX(-45deg);
+}
+
+.skew-right::after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	transform: skewX(45deg);
+}
+
+.btn {
+	@include flexbox(center, center);
+	background-color: #fff;
+	color: $blue;
+	border-radius: 50%;
+}
+
+.section {
+	margin-top: 70px;
+}
+
+.section-title, .widget-title {
+	@include flexbox();
+	flex-wrap: wrap;
+	text-transform: uppercase;
+	color: #444;
+
+	h2, h5, h6 {
+		font-size: em(30px);
+		font-weight: 700;
+	}
+
+	.light-text {
+		margin-left: 10px;
+		margin-bottom: 4px;
+		align-self: flex-end;
+		font-size: em(-18px) !important;
+		font-weight: 100;
+	} 
+
+	.decoration {
+		margin-top: 8px;
+		margin-left: 16px;
+		background: url("http://nanonasibulin.com/wp-content/themes/albert_theme/assets/img/title_triangle.png") 0 bottom no-repeat;	
+		display: flex;
+	    flex-grow: 1;
+	    position: relative;
+	    height: 23px;
+	    min-width: 30px;
+
+	    hr {
+	    	display: block;
+		    background-color: $blue;
+		    width: 100%;
+		    margin: 0;
+		    height: 1px;
+		    border: none;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+	    }
+	}
+}

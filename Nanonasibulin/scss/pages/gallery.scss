@@ -1,0 +1,137 @@
+.section-work {
+	position: relative;
+}
+
+.scaled-img {
+	position: fixed;
+	left: 0;
+	top: 0;
+	@include flexbox(center,center);
+	display: none;
+	@include box(100vw, 100vh);
+	z-index: 888;
+	background-color: rgba(#222, 0.9);
+	transition: all .5s ease;
+
+	img {
+		position: relative;
+		max-width: 760px;
+	}
+
+	.close-btn {
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		right: 20px;
+		@include box(50px);
+		background-color: #424242;
+		color: red;
+		font-size: 1.7em;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: #212121;
+		}
+	}
+
+	&.active {
+		transform: scale(1);
+		display: flex;
+	}
+}
+
+.gallery-slider {
+	margin-top: 30px;
+	@include box(100%, auto);
+	padding-bottom: 20px;
+	background: #e1ecf3;
+
+	.inner {
+		position: relative;
+		margin: 56px 10px 42px;
+		background: #000;
+		transition: transform .2s ease;
+
+		img {
+			max-width: 100%;
+			max-height: 300px;
+			transition: all .4s;
+			opacity: .3;
+		}
+	}
+
+	.slick-current .inner {
+		transform: scale(1.2);
+		transition: transform .4s .6s;
+		z-index: 2;
+
+		img {
+			opacity: 1;
+		}
+
+		.scale-img {
+			display: block;
+		}
+	}
+
+	.scale-img {
+		position: absolute;
+		left: 9px;
+		bottom: 9px;
+		display: none;
+		@include box(24px);
+		background-color: #fff;
+	}
+}
+
+.gallery-img-nav {
+	@include flexbox();
+	position: absolute;
+	z-index: 666;
+	bottom: 10px;
+	left: 28%;
+
+	.item + .item {
+		margin-left: 10px;
+	}
+
+	.item {
+		position: relative;
+		cursor: pointer;
+		background: #000;
+
+		img {
+			// max-width: 75px;
+			height: 50px;
+			transition: all .3s ease;
+		}
+
+		&:hover {
+			img {
+				opacity: .7;
+			}
+		}
+
+		&.active {
+			&::after {
+				content: "";
+				position: absolute;
+				top: -8px;
+				left: 50%;
+				transform: translateX(-50%);
+				@include box(0);
+				border-style: solid;
+				border-width: 0 7.5px 8px 7.5px;
+				border-color: transparent transparent $blue transparent;
+			}
+		}
+	}
+}
+
+.gallery-desc {
+	margin-top: 12px;
+	display: flex;
+    flex-direction: column;
+    font-size: em(14px);
+    line-height: 1.4;
+}

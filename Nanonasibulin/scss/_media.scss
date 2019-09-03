@@ -1,0 +1,583 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.wrapper {
+		margin-top: 0;
+		width: 100%;
+	}
+
+	header .nav {
+		&::before {
+			width: calc(20% + 15px);
+		}
+
+		&-menu {
+			padding-left: 0;
+		}
+	}
+
+	// Slider
+	.slider-info .text .text-wrap {
+		padding: 50px 0;
+	}
+
+	// About 
+	.about {
+		&-content {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-box {
+			width: 50%;
+		}
+
+		.contact-box {
+			margin: 0;
+			margin-top: 20px;
+
+			.img {
+				height: 346px;
+			}
+		}  
+	}
+
+	.about-laboratory {
+		.section-title {
+			margin-top: 30px;
+		}
+	}
+
+	// Employers 
+	.employers {
+		padding: 0 10px;
+		justify-content: space-between;
+
+		.employer {
+			width: auto;
+			max-width: 570px;
+
+			.content {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	// Cv tables
+	.cv-table {
+		margin: 0 10px;
+		margin-top: 20px;
+	}
+
+	// Footer
+	footer .footer-line {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 30px 0;
+
+		.footer-menu {
+			padding-left: 0;
+			align-self: center;
+			margin-top: 30px;
+		}
+	}
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	header .burger-btn {
+		display: block;
+	}
+
+	header .nav {
+		&-menu {
+			display: none;
+			position: absolute;
+			z-index: 222;
+			right: 20px;
+			top: 60px;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 240px;
+			height: auto;
+			padding-bottom: 10px;
+			background-color: rgba($blue, 0.9);
+			border-radius: 0px 0px 11px 11px; 
+
+			li + li {
+				margin: 0;
+
+				&::before {
+					display: none;
+				}
+			}
+
+			li {
+				width: 100%;
+				margin: 0;
+
+				&.active::after {
+					display: none;
+				}
+			}
+
+			a {
+				@include flexbox(flex-start, center);
+				padding-left: 20px;
+				@include box(100%, 40px);
+				border-bottom: 1px solid #82b1ff;
+				transition: all 0.3s ease;
+
+				&:hover {
+					background-color: darken($blue, 16);
+				}
+			}
+		}
+
+		.soc-btns {
+			position: static;
+			transform: none;
+			align-self: center;
+		}
+	}
+
+	// section 
+	.section {
+		margin-top: 50px;
+	}
+
+	// Last news 
+	.last-news {
+		.news {
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-item {
+				width: calc(50% - 30px);
+			}
+		}
+	}
+
+	// Research-areas
+	.research-areas .box .tooltip {
+		right: -50px;
+		width: 100%;
+		max-width: 650px;
+		min-width: 310px;
+	}
+
+	// Gallery slider
+	.scaled-img {
+		img {
+			max-width: 90vw;
+			max-height: 90vh;
+		}
+	}
+
+	.gallery-slider {
+		.inner {
+			margin: 10px 0;
+			@include flexbox(center);
+			@include box(100%, 60vh);
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				@include box(100%);
+				object-fit: cover;
+				max-width: none;
+				max-height: none;
+			}
+
+			.scale-img {
+				@include box(35px !important);
+				font-size: 1.3em;
+			}
+		}
+
+		.slick-current .inner {
+			transform: scale(1);
+		}
+	}
+
+	.gallery-img-nav {
+		display: none;
+	}
+
+	// News
+	.news-container {
+		flex-direction: column;
+		align-items: center;
+
+		main {
+			width: 100%;
+		}
+
+		.widgets {
+			margin-top: 20px;
+			width: 90%;
+		}
+	}
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	// Slider
+	.slider-info {
+		.slide-content {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: center;
+			height: auto;
+		}
+
+		.text {
+			padding: 20px;
+			background-position: auto;
+		}	
+	}
+
+	// Slide navigation
+	.slide-nav {
+		.buttons {
+			justify-content: center;
+			padding: 0;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	// section 
+	.section {
+		margin-top: 30px;
+	}
+
+	// Tabs 
+	.research-areas {
+		margin-top: 20px;
+
+		.tabs {
+			margin-top: 20px;
+		}
+
+		.tab-contents .item {
+			padding-top: 20px;
+
+			&.active {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			p {
+				margin-top: 15px;
+				padding: 0 15px;
+			}
+		}
+	}
+
+	// About 
+	.about {
+		&-content {
+			margin-top: 15px
+		}
+
+		&-box {
+			width: 70%;
+		}
+
+		.contact-box {
+			flex-grow: 1;
+			flex-direction: column;
+			width: 95%;
+
+			.contact-info {
+				margin-top: 15px;
+				flex-direction: column;
+				border-bottom: 1px solid #444;
+			}
+
+			.text-content {
+				padding-top: 20px;
+				width: 100%;
+			}
+
+			.value {
+				margin-left: 0;
+				margin-top: 10px;
+				flex-wrap: wrap;
+			}
+
+			.img {
+				align-self: center;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	// Our position
+	.our-position {
+		.map-block {
+			margin-top: 10px;
+		}
+
+		.boxes {
+			margin-top: 60px;
+			flex-direction: column;
+			align-items: center;
+
+			.box + .box {
+				margin-top: 50px;
+			}
+
+			.box {
+				margin: 0;
+				width: 80%;
+			}
+		}
+	}
+
+	// About laboratory
+	.about-laboratory {
+		.thumbnail {
+			height: 80vh;
+		}
+
+		.section-title {
+			margin-top: 10px;
+		}
+
+		.content {
+			margin-top: 0;
+		}
+
+		h4 {
+			margin-top: 15px;
+		}
+	}
+
+	// News
+	.news-container {
+		margin-top: 30px;
+
+		.article + .article {
+			margin-top: 30px;
+		}
+
+		.page-nav {
+			.btn-arrow {
+				@include box(25px);
+			}
+
+			.btn-counter {
+				@include box(35px);
+			}
+		}
+	}
+
+	// Companies
+	.companies {
+		padding: 0;
+		padding-top: 15px;
+	}
+
+	// Employers
+	.employers {
+		.employer {
+			margin-top: 20px;
+		}
+	}
+
+	// Publications
+	.publicications-top-text {
+		margin-top: 20px;
+	}
+
+	.publications-list {
+		margin-top: 20px;
+	}
+
+	// CV
+	.cv-top {
+		margin-top: 30px;
+	}
+
+	// Gallery
+	.gallery-slider {
+		margin-top: 5px;
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	// Header
+	header .nav {
+		&::before {
+			width: calc(15% + 15px);
+		}
+	}
+
+	header .top-line {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header .header-about {
+		padding: 15px 0;
+		align-items: center;
+
+		span {
+			text-align: center;
+		}
+	} 	
+
+	// Section title
+	.section-title {
+		h2 {
+			padding-left: 10px;
+		}
+
+		.decoration {
+			display: none;
+		}
+	}
+
+	// Breadcrumbs
+	.breadcrumbs {
+		ul {
+			padding-left: 15px;
+		}
+	}
+
+	// Companies
+	.companies {
+		flex-direction: column;
+
+		hr {
+			margin: 0;
+			transform: rotate(90deg);
+			height: 200px;
+		}
+	}
+
+	// Research
+	.research-areas {
+		.tabs {
+			padding: 0 10px;
+		}
+
+		.tab + .tab {
+			margin: 0;
+		}
+
+		.box {
+			flex-direction: column;
+			align-items: center;
+			width: auto;
+		}
+	}
+
+	.research-areas .box .tooltip {
+		left: 50%;
+		transform: translateX(-50%);
+
+		&::after {
+			right: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	// Last news 
+	.last-news {
+		.news {
+			margin-top: 0;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&-item {
+				margin-left: 0;
+				margin-right: 0;
+				width: calc(80%);
+			}
+		}
+	}	
+
+	// Group
+	.employers {
+		flex-direction: column;
+		align-items: center;
+
+		.employer {
+			flex-direction: column;
+
+			.content {
+				margin: 0;
+				align-items: center;
+			}
+		}
+	}
+
+	// Gallery desc
+	.gallery-desc {
+		padding: 0 10px;
+	}
+
+	// News
+	.news-container {
+		flex-direction: column;
+		align-items: center;
+
+		main {
+			width: 100%;
+		}
+
+		.article {
+			.title {
+				max-width: 100%;
+				padding: 0 10px;
+			}
+
+			.thumbnail {
+				height: 40vh;
+			}
+
+			.box::before {
+				width: 40%;
+			}
+
+			.content {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	// Footer
+	footer .footer-line {
+		align-items: center;
+		padding: 30px 15px;
+
+		.footer-menu {
+			margin-top: 15px;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			li {
+				margin-top: 15px;
+			}
+		}
+
+		.soc-btns {
+			position: static;
+			margin-top: 30px;
+		}
+	}
+}

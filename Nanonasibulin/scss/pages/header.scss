@@ -1,0 +1,84 @@
+header {
+	padding-top: 15px;
+
+	.top-line {
+		@include flexbox(space-between);
+	}
+
+	.header-about {
+		@include flexbox(flex-start, flex-end, column);
+
+		span {	
+			text-align: end;
+			font-family: "Roboto", sans-serif;
+			font-size: em(14px);
+			line-height: em(16px);
+			padding: 3px 0; 
+		}
+	}
+
+	.nav {
+		position: relative;
+		margin-top: -4px;
+		@include flexbox(center);
+		@include box(100%, 60px);
+		padding: 0 20px;		
+		background-color: $blue;
+
+		&::before {
+			left: -15px;
+			width: calc(27% + 15px);
+			background-color: #fff;
+		}
+	}
+
+	// Burger menu
+	.burger-btn {
+		display: none;
+		position: absolute;
+		right: 20px;
+		align-self: center;
+		// display: none;
+		@include box(28px, 30px);
+
+		span {
+			position: relative;
+			display: block;
+
+			&:after,&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -9px;
+			}
+
+			&:after {
+				top: 9px;
+			}
+		}
+	}
+
+	.burger-btn span,
+	.burger-btn span:after,
+	.burger-btn span:before {
+		@include box(100%, 4px);
+		background-color: #ffffff;
+		transition: all 0.3s;
+		backface-visibility: hidden;
+		border-radius: 2px;
+	}
+
+	/* on activation */
+	.burger-btn.on span {
+		background-color: transparent;
+
+		&::before {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+
+		&::after {
+			transform: rotate(-45deg) translate(7px, -8px);
+		} 
+	}
+
+}

@@ -1,0 +1,24 @@
+footer {
+	position: relative;
+	margin-top: 100px;
+	width: 100%;
+	background: $blue;
+
+	&::before {
+		right: -15px;
+		top: -30px;
+		@include box(calc(27% + 15px), 30px);
+		background: $blue;
+	}
+
+	.footer-line {
+		position: relative;
+		@include flexbox(flex-start, center);
+		@include box(100%);
+		padding: 18px 0;
+
+		.footer-menu {
+			padding-left: 65px;
+		}
+	}
+}

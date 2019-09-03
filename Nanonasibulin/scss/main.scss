@@ -1,0 +1,43 @@
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+body {
+	@include flexbox(center);
+	background-image: url("../img/node.jpg");
+}
+
+
+// Pages
+@import "pages/components";
+@import "pages/header";
+@import "pages/home";
+@import "pages/research";
+@import "pages/group";
+@import "pages/publications";
+@import "pages/cv";
+@import "pages/gallery";
+@import "pages/news";
+@import "pages/footer";
+
+
+@import "media"; // Always at the end

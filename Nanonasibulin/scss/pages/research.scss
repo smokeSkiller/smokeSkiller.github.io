@@ -1,0 +1,149 @@
+.research-areas {
+	margin-top: 40px;
+
+	.tabs {
+		margin-top: 55px;
+		@include flexbox();
+		flex-wrap: wrap;
+		border-bottom: 1px solid $blue;
+	}
+
+	.tab + .tab {
+		margin-left: 15px;
+	}
+
+	.tab {
+		padding: 16px 20px;
+		display: block;
+		transition: all 0.3s ease;
+
+		&.active {
+			background-color: #e1ecf3;
+		}
+
+		&:hover {
+			background-color: #bbdefb;
+		}
+	}
+
+	.tab-contents {
+		@include flexbox();
+		width: 100%;
+
+		.item {
+			padding-top: 40px;
+			width: 100%;
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		} 
+
+		p + p {
+			margin-top: 30px;
+		}
+
+		p {	
+			color: #444444;
+			font-size: em(16px);
+			font-weight: 400;
+		}
+	}
+
+	.box {
+		float: right;
+		@include flexbox();
+		flex-wrap: wrap;
+		width: 340px;
+		padding: 0 15px;
+		background-color: #e1ecf3;
+
+		&-item {
+			position: relative;
+			margin: 15px;
+			@include flexbox(flex-start, center, column);
+			width: calc(50% - 30px);
+			padding-bottom: 5px;
+			border-bottom: 1px solid #4b80c6;
+			cursor: pointer;
+
+			.img {
+				position: relative;
+				height: 140px;
+			}
+
+			.circle {
+				position: absolute;
+				top: 5px;
+				left: 4px;
+				@include box(30px);
+				@include flexbox(center, center);
+				background: #fff;
+				border: 2px solid #4b80c6;
+				border-radius: 50%;
+				font-family: "Roboto", sans-serif;
+				font-size: em(16px)
+			}
+
+			.title {
+				font-size: em(16px);
+			}
+		}
+
+		.tooltip {
+			display: none;
+			position: absolute;
+			right: 40px;
+			top: 100px;
+			z-index: 333;
+			padding: 20px;
+			width: 650px;
+			border-radius: 5px;
+			border: 1px solid #4b80c6;
+			background-color: #faf7ee;
+
+			&::after {
+				content: "";
+				position: absolute;
+				z-index: 222;
+				right: 51px;
+				top: -26px;
+				@include box(26px);
+				background: url("../../img/tooltip-triangle.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+
+			ol {
+				list-style-type: lower-latin;
+				list-style-position: inside;
+			}
+
+			p, li {
+				color: #444444;
+				font-size: em(16px);
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.references {
+	ol {
+		margin-top: 30px;
+		padding: 0 25px;
+		list-style-position: inside;
+
+		li + li {
+			margin-top: 5px;
+		}
+
+		li {
+			color: #4f4f4f;
+			font-size: em(12px);
+			font-weight: 400;
+		}
+	}
+}

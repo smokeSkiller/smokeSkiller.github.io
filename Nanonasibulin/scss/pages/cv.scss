@@ -1,0 +1,25 @@
+.cv-top {
+	margin-top: 40px;
+}
+
+.cv-table {
+	margin-top: 30px;
+}
+
+.cv-row + .cv-row {
+	margin-top: 10px;
+}
+
+.cv-row {
+	@include flexbox();
+	color: #444;
+
+	.cv-left {
+		width: 145px;
+	}
+
+	.cv-right {
+		width: calc(100% - 145px);
+		word-break: break-word;
+	}
+}
