@@ -421,6 +421,16 @@
 @include media-breakpoint-down(xs) {
 	// Header
 	header .nav {
+		&.fixed {
+			position: fixed;
+			z-index: 555;
+			top: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
 		&::before {
 			width: calc(15% + 15px);
 		}
