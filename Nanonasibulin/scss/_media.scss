@@ -267,6 +267,16 @@
 
 		.tabs {
 			margin-top: 20px;
+			flex-direction: column;
+		}
+
+		.tab + .tab {
+			margin-left: 0;
+			margin-top: 15px;
+		}
+
+		.tab {
+			border-bottom: 1px solid $blue;
 		}
 
 		.tab-contents .item {
@@ -450,10 +460,37 @@
 		}
 	} 	
 
+	// CV
+	.cv-top {
+		margin-top: 0;
+	}
+
+	.cv-row + .cv-row {
+		margin-top: 15px;
+	}
+
+	.cv-row {
+		flex-direction: column;
+
+		.cv-right, .cv-left {
+			width: auto;
+		}
+
+		.cv-right {
+			margin-top: 5px;
+		}
+	}
+
+	// Map
+	.our-position #map-block {
+		margin-top: 10px;
+	}
+
 	// Section title
 	.section-title {
 		h2 {
 			padding-left: 10px;
+			font-size: em(25px);
 		}
 
 		.decoration {
@@ -475,7 +512,11 @@
 		hr {
 			margin: 0;
 			transform: rotate(90deg);
-			height: 200px;
+			height: 70px;
+		}
+
+		.item + .item {
+			margin-top: 15px;
 		}
 	}
 
@@ -483,10 +524,7 @@
 	.research-areas {
 		.tabs {
 			padding: 0 10px;
-		}
-
-		.tab + .tab {
-			margin: 0;
+			padding-bottom: 10px;
 		}
 
 		.box {

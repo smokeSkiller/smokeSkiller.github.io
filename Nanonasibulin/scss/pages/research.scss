@@ -15,6 +15,9 @@
 	.tab {
 		padding: 16px 20px;
 		display: block;
+		border-top: 1px solid $blue;
+		border-left: 1px solid $blue;
+		border-right: 1px solid $blue;
 		transition: all 0.3s ease;
 
 		&.active {
