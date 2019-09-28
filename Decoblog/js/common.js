@@ -118,6 +118,7 @@ $(function() {
 		arrows: false,
 		vertical: true,
 		draggable: false,
+		swipe: false
 	});
 
 	$("header .header-slider .slider-dots").after("<nav class='slider-nav'><button class='item slide-left'><i class='fas fa-long-arrow-alt-left'></i></button><span class='item title'>Featured Article</span><button class='item slide-right'><i class='fas fa-long-arrow-alt-right'></i></button></nav>");
