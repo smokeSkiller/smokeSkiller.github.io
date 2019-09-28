@@ -1,0 +1,113 @@
+.contact-us-margin {
+    margin: 100px 0;
+}
+
+.contact-us {
+    .contact-card {
+        @include flexbox(flex-start, stretch);
+        background-color: #ffffff;
+    }
+
+    .img {
+        @include box(438px, auto);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .title {
+        color: #424242;
+        font-family: "Montserrat", sans-serif;
+        font-size: em(20px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+
+    p {
+        margin-top: 50px;
+    }
+
+    p, span {
+        color: #424242;
+        font-size: em(14px);
+    }
+
+    span {
+        width: calc(100% - 25px);
+    }
+
+    .content {
+        width: calc(100% - 438px);
+        padding: 35px 0;
+        padding-left: 25px;
+        padding-right: 50px;
+    }
+
+    .table {
+        margin-top: 25px;
+    }
+
+    .item + .item {
+        margin-top: 10px;
+    }
+
+    .item {
+        @include flexbox(flex-start, center);
+
+        .icon {
+            width: 25px;
+        }
+    }
+
+    input, textarea {
+        font-size: em(14px);
+        text-transform: uppercase;
+        letter-spacing: 0.84px;
+    }
+
+    form {
+        margin-top: 10px;
+        @include flexbox(flex-start, flex-start, column);
+        width: 100%;
+    }
+
+    .form-table {
+        @include flexbox(space-between);
+        width: 100%;
+
+        input {
+            width: calc(100% / 2 - 15px);
+        }
+    }
+
+    input {
+        padding: 20px;
+    }
+    
+    input, textarea {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    textarea {
+        padding: 20px;
+        height: 246px;
+    }
+
+    button[type="submit"] {
+        margin-top: 20px;
+        padding: 15px 32px;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-size: em(12px);
+        text-transform: uppercase;
+        background-color: #212429;
+        letter-spacing: 0.72px;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: #4e342e;
+        }
+    }
+}

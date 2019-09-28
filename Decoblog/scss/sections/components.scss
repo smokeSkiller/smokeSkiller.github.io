@@ -1,0 +1,71 @@
+// Subscription
+.subscription {
+	margin-top: 0;
+	margin-bottom: 45px;
+	@include flexbox(flex-start, center);
+	@include box(100%, auto);
+	min-height: 100px;
+	padding: 28px;
+	box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+	border: 1px solid rgba(221, 221, 221, 0.15);
+	background-color: #f7f7f7;
+
+
+	.title {
+		text-align: center;
+		max-width: 175px;
+		color: #212121;
+		font-family: "Montserrat", sans-serif;
+		font-size: em(20px);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	&-form {
+		margin-left: 30px;
+		@include flexbox(center);
+		flex-wrap: wrap;
+	}
+
+	input + input {
+		margin-left: 25px;
+	}
+
+	input[type="text"], input[type="email"] {
+		@include box(450px, 50px);
+		padding-left: 30px;
+		font-size: em(15px);
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		box-shadow: 0 0 0 rgba(232, 232, 232, 0.11);
+		border: 1px solid rgba(221, 221, 221, 0.15);
+	}
+
+	input[type="submit"] {
+		padding: 0 71px;
+		height: 50px;
+		color: #fff;
+		font-size: em(14px);
+		text-transform: uppercase;
+		letter-spacing: 2.8px;
+		cursor: pointer;
+		background-color: #212121;
+		transition: all .3s ease;
+
+		@media (max-width: 1531px) {
+			margin-left: 0;
+			margin-top: 15px;
+		}
+
+
+		&:hover {
+			background-color: #6d4c41;
+		}
+	}
+}
+
+// Margin 60px
+.section-margin {
+	margin-top: 60px !important;
+}

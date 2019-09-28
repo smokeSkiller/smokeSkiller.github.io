@@ -1,0 +1,91 @@
+footer {
+    width: 100%;
+    background-color: #212429;
+
+    .columns {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .column {
+        margin-top: 30px;
+        @include flexbox(flex-start, flex-start, column);
+
+        &-title, &-text {
+            color: #f9f9fb;
+        }
+
+        &-title {
+            margin-bottom: 25px;
+            font-family: "Montserrat", sans-serif;
+            font-size: em(16px);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.96px;
+        }
+
+        &-text {
+            font-family: "Hind", sans-serif;
+            font-size: em(15px);
+            font-weight: 300;
+            letter-spacing: 1.2px;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+    }
+
+    .twits {
+        .twit + .twit {
+            margin-top: 30px;
+        }
+
+        .twit {
+            position: relative;
+            padding-left: 20px;
+            @include flexbox(flex-start, flex-start, column);
+
+            &:before {
+                content: "\f099";
+                position: absolute;
+                left: -1px;
+                top: 5px;
+                color: #f9f9fb;
+                font-family: "Font Awesome 5 Brands";
+                font-size: em(13px);
+            }
+        }
+
+        .twit-author {
+            color: #f9f9fb;
+            font-family: "Hind", sans-serif;
+            font-size: em(14px);
+            font-weight: 300;
+        } 
+
+        .twit-text {
+            margin-top: 10px;
+        }
+    }
+
+    .comments {
+        .comment + .comment {
+            margin-top: 35px;
+        }
+
+        .comment {
+            @include flexbox(flex-start, flex-start, column);
+        }
+
+        .author {
+            color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+            font-size: em(14px);
+        }
+
+        .comment-text {
+            margin-top: 15px;
+        }
+    }
+}
