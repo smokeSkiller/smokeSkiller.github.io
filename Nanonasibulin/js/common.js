@@ -5,6 +5,7 @@ $(function() {
 	const burgerBtn = $("header .burger-btn");
 	const navMenu = $(".header-menu");
 	const headerNav = $("header .nav");
+	const headerNavEmpty = $("header .nav-empty");
 	// Home
 	const sliderInfo = $(".slider");
 	const currentSlideIndex = $(".current-index");
@@ -30,8 +31,10 @@ $(function() {
 	function fixedNav() {
 		if ($(window).width() <= 576 && $(window).scrollTop() >= $("header .top-line").height()) {
 			headerNav.addClass("fixed");
+			headerNavEmpty.css("display", "block");
 		} else {
 			headerNav.removeClass("fixed");
+			headerNavEmpty.css("display", "none");
 		}
 	}
 
@@ -163,7 +166,7 @@ $(function() {
 	});
 
 	$(document.body).on("click", function (params) {
-		if ($(window).width() <= 1200) {
+		if ($(window).width() <= 992) {
 			burgerBtn.removeClass("on");
 			// header
 			navMenu.slideUp(150);

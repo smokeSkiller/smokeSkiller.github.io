@@ -32,6 +32,11 @@ header {
 		}
 	}
 
+	.nav-empty {
+		@include box(100%, 60px);
+		display: none;
+	}
+
 	// Burger menu
 	.burger-btn {
 		display: none;
