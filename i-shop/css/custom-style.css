@@ -1,0 +1,263 @@
+/*! Header */
+.login-nav-menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .header-text-btn {
+        display: none;
+    }
+
+    .login-nav-menu-btn {
+        display: list-item;
+    }
+
+    .dropdown-link-desktop-icon {
+        display: none;
+    }
+}
+
+.main-nav .has-child-2 ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+} 
+
+.sticky-menu .main-nav .clear-fix i {
+    padding-top: 2px;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/*! Main banner */
+@media (max-width: 700px){
+    .main-banner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-banner p {
+        max-width: none !important;
+    }
+}
+
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.main-banner h1, .main-banner p {
+    color: #fff !important;
+}
+
+.main-banner p {
+    max-width: 660px;
+    font-size: 1.1em;
+    line-height: 1.3;
+}
+
+
+/*! Search field */
+.search {
+    min-width: 500px;
+    position: relative;
+    display: flex;
+}
+
+@media (max-width: 700px){
+    .search {
+        min-width: 300px;
+    }
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #03a9f4;
+    border-right: none;
+    padding: 5px;
+    height: 45px !important;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    background-color: #212121;
+    font-size: 1.1em !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchTerm:focus{
+    color: #fff;
+}
+
+.searchButton {
+    width: 90px;
+    height: 45px !important;
+    border: 1px solid #03a9f4;
+    background: #03a9f4;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/*! Course list  */
+/* Rating and price */
+.rating-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating-count {
+    display: flex;
+    align-items: center;
+}
+
+.count-reviews {
+    margin-left: 15px;
+}
+
+/* Info items */
+.category-info-item {
+    display: flex;
+    align-items: center;
+}
+
+.category-info-item .value {
+    margin-left: 10px;
+}
+
+.category-info-item i {
+    font-size: 1.4em;
+}
+
+/* More courses btn */
+.more-courses-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Img */
+.category-item.list .picture .img {
+    width: 270px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    transition: all 1s ease;
+}
+
+.category-item.list .picture .img:hover {
+    background-size: auto 160%;
+}
+
+
+/* Responsive */
+@media (max-width: 980px) {
+    .category-info-item {
+        margin-left: 0 !important;
+    }
+
+    .category-item.list .category-info,
+    .course-page-content .category-info {
+        align-items: flex-start;
+    }
+
+    .category-item.list .category-info,
+    .course-page-content .category-info {
+        flex-direction: column;
+    }
+
+    .category-item.list .picture {
+        height: auto;
+    }
+}
+
+@media (max-width: 530px) {
+    .category-item.list .picture .img {
+        background-size: cover;
+    }
+
+    .products.list-view .product .picture, .category-item.list .picture .img {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .category-item .short-description {
+        max-height: 150px;
+        overflow: hidden;
+    }
+}
+
+/*! Pagination */
+.page-pagination a:last-child, .page-pagination a:first-child {
+    background-color: #616161;
+}
+
+.page-pagination a:last-child {
+    border-top-right-radius: 10px;
+}
+
+.page-pagination a:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+/*! Widgets */
+.widget-categories .cat-item a {
+    border-radius: 0px;
+}
+
+/*! Course page */
+main .tabs strong {
+    font-weight: bold;
+}
+
+.course-page-content .price {
+    display: flex;
+}
+
+.course-page-content .amount {
+    margin-left: 10px;
+}
+
+.course-page-content .price-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+/*! Components */
+.center-title {
+    text-align: center;
+}
+
+.orange-bg {
+    background-color: #f57f17;
+    border-color: #f57f17;
+}
+
+/*! Footer */
+footer .widget-categories .cat-item, footer .widget-text p {
+    color: #dad8de;
+}
+
+footer .widget-text strong, footer .cws-button.alt {
+    color: #fff;
+}
