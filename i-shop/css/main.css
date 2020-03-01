@@ -8651,10 +8651,10 @@ input[type=radio] {
 .woocommerce td.actions input[name="update_cart"],
 .blog-post .post-info,
 .pricing-table .header-pt {
-	border-top-left-radius: 10px;
-	-ms-border-top-left-radius: 10px;
-	-moz-border-top-left-radius: 10px;
-	-webkit-border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-ms-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
 }
 .corner-radius-bottom,
 .corner-radius,
