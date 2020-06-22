@@ -1,0 +1,157 @@
+/*! Common moments */
+.text_24 {
+    font-weight: 800;
+}
+
+.button {
+    border-radius: 28.5px;
+}
+
+.titleBlock__back {
+    color: #fff;
+    opacity: 0.01;
+    font-weight: 600;
+}
+
+/* Technologies */
+.technologies {
+    background: url(../img/wave.png) no-repeat 700px 600px, url(../img/pr.png) no-repeat -200px 12px, #0a1121;
+}
+
+@media (max-width: 440px) {
+    .technologies__item {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+
+/*! Main header with banner  */
+/* Media quieries */
+@media (max-width: 1620px) {
+    .header {
+        background: url(../img/bg.png) no-repeat -377px -50px, url(../img/dots.png) no-repeat right -120px top -100px;
+    }
+
+    .header__image {
+        margin-right: -180px;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1170px) {
+    .header {
+        background: url(../img/bg.png) no-repeat -440px -136px, url(../img/dots.png) no-repeat right -160px top -100px;
+    }
+
+    .header__content {
+        padding: 65px 0;
+    }
+
+    .header__funcBlock {
+        margin-top: 50px;
+    }
+
+    .header__dots {
+        top: -50px;
+        left: -290px;
+    }
+}
+
+@media (max-width: 1310px) {
+    .header {
+        background: url(../img/bg.png) no-repeat -475px -136px;
+    }
+}
+
+@media (max-width: 1285px) {
+    .header {
+        background: url(../img/bg.png) no-repeat -500px -136px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .header__image {
+        margin-right: 0;
+    }
+
+    .header__dots {
+        top: -50px;
+        left: -290px;
+    }
+
+    .header {
+        background: url(../img/bg.png) no-repeat -700px -195px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__language {
+        border-radius: 28.5px;
+        padding: 0 20px;
+        border: 2px solid #f42f54;
+    }
+}
+
+/* Menu button */
+.burger-btn {
+    display: none;
+    width: 38px;
+    height: 30px;
+}
+
+.burger-btn span, .burger-btn span:after, .burger-btn span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.burger-btn span:after, .burger-btn span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+.burger-btn span:after {
+    top: 10px;
+}
+
+.burger-btn span {
+    position: relative;
+    display: block;
+}
+
+@media (max-width: 820px) {
+    .burger-btn {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.burger-btn.active span {
+    background-color: transparent;
+}
+
+.burger-btn.active span::before {
+    -webkit-transform: rotate(45deg) translate(5px,5px);
+    -ms-transform: rotate(45deg) translate(5px,5px);
+    transform: rotate(45deg) translate(6px,5px);
+}
+
+.burger-btn.active span::after {
+    -webkit-transform: rotate(-45deg) translate(7px,-8px);
+    -ms-transform: rotate(-45deg) translate(7px,-8px);
+    transform: rotate(-45deg) translate(9px,-8px);
+}
