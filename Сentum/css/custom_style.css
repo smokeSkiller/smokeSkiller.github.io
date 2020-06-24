@@ -1,0 +1,63 @@
+/*! Common moments  */
+/* #wrapper {
+    padding: 0px 35px 50px;
+    margin: 0 auto 0;
+} */
+
+#footer {
+    margin: 0 auto 0px;
+}
+
+/* Shop item */
+.shop-item .item-description h5 {
+    color: #fff;
+}
+
+.shop-item .img-block {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Widgets */
+.widget-cities ul.links-list-alt li {
+    display: flex;
+}
+
+.widget-cities ul.links-list-alt label {
+    font-weight: bold;
+}
+
+/* Product page */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-container .shop-img {
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tel-mail__item {
+    display: block;
+}
+
+.product-container .product-info p, .tel-mail__item {
+    font-size: 17px;
+}
+
+.tel-mail__item:nth-child(2) {
+    margin-top: 8px;
+}
+
+.yandex-map {
+    width: 100%;
+}
