@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mathematician</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/preloader_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!--! Compiled and minified materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body class="light-blue accent-2">
+    <!--! Preloader -->
+    <div class="loading-container">
+        <div class="e-loadholder">
+            <div class="m-loader">
+                <span class="e-text">Loading</span>
+            </div>
+        </div>
+    </div>
+
+    <!--! Game over menu -->
+    <div class="game-over-menu">
+        <div class="game-over-menu-container">
+            <h1 class="game-over-menu__title red-text">Game over!</h1>
+            <h4 class="praised-msg green-text text-accent-3"></h4>
+            <h5 class="game-over-score white-text">Your score: <span></span></h5>
+            <br>
+            <div class="game-over-buttons">
+                <!-- Go to main menu button -->
+                <button class="btn waves-effect waves-light blue
+                main-menu-btn">To main menu</button>
+                <br>
+                <!-- Play button -->
+                <button class="btn waves-effect waves-light play-btn cyan lighten-1 pulse"><i class="medium material-icons">refresh</i>
+                </button>
+            </div>
+        </div>
+    </div> 
+
+    <!--! Get ready block -->
+    <div class="get-ready-block-container blue darken-1">
+        <div class="get-ready-block">
+            <h3 class="white-text">Get ready!</h3>
+            <div class="get-ready-block__timer light-blue lighten-5"><h5></h5></div>
+        </div>
+    </div>
+
+    <!--! Main menu -->
+    
+    <!-- Main menu -->
+    <div class="main-menu">
+        <!-- Title -->
+        <h2 class="center-align"><span class="indigo-text text-accent-4">M</span>athematician
+        </h2>
+        <br>
+        <!--* High score -->
+        <h5 class="orange-text">Your high score: <span class="high-score"></span></h5>
+        
+
+        <!--* Difficulty -->
+        <h5>Choose difficulty:</h5>
+        <div class="columned-flex">
+        <label>
+            <input type="radio" name="difficulty" checked>
+            <span class="blue-text accent-4"><b>Medium</b></span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty">
+            <span class="blue-text accent-4"><b>Hard</b></span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty">
+            <span class="blue-text accent-4"><b>Einstein</b></span>
+        </label>
+        </div>
+        <br>
+        <!--* Buttons -->
+        <!-- Play button -->
+        <button class="btn waves-effect waves-light play-btn blue menu-btn">Play</button>
+        <br>
+        <!-- High scores button -->
+        <button class="btn waves-effect waves-light blue menu-btn md-trigger" data-modal="high-scores">High scores</button>
+
+        <!--* High scores modal window -->
+        <div class="md-modal md-effect-1" id="high-scores">
+            <div class="md-content">
+                <!-- Title -->
+                <h3 class="blue">High scores</h3>
+                <div class="white">
+                    <!-- High score on medium level -->
+                    <h6 class="green-text">Your high score on medium level: <span class="high-score-medium"></span></h6>
+                    <!-- High score on hard level -->
+                    <h6 class="orange-text">Your high score on hard level: <span class="high-score-hard"></span></h6>
+                    <!-- High score on Einstein level -->
+                    <h6 class="red-text">Your high score on Einstein level: <span class="high-score-einstein"></span></h6>
+                    <br>
+                    <button class="md-close btn red waves-effect waves-light">Close me!</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md-overlay"></div>
+    </div>
+
+    <!--! Game process -->
+    <!--* Game Process-info-block -->
+    <div class="processed-info-block">
+        <div class="info-bar">
+            <div class="timer info-bar-block"><span class="title white-text">Timer:</span><span class="value white-text"></span></div>
+            <div class="level info-bar-block"><span class="title white-text">Level:</span><strong class="value">Medium</strong></div>
+            <div class="score info-bar-block"><span class="title white-text">Score:</span><span class="value white-text"></span></div>
+        </div>
+        <br>
+    </div>
+    <br><br><br>
+    <!--* Game Process-block -->
+    <div class="container processed-block">
+        <div class="row">
+            <div class="col xl4 offset-xl4 m6 offset-m3 s10 offset-s1 orange accent-2 sample">
+                <h2 class="white-text center-align"></h2>
+                <div class="col s4 offset-s4 icon-container" id="correct-icon"><img src="img/correct_icon.png" class="icon"></div>
+                <div class="col s4 offset-s4 icon-container" id="incorrect-icon"><img src="img/incorrect_icon.png" class="icon"></div>
+            </div>
+        </div>
+        <br>
+        <!--? Variants of answers -->
+        <div class="answers-container">
+            <button class="btn light-blue waves-effect waves-light answer"><span></span></button>
+            <button class="btn light-blue waves-effect waves-light answer"><span></span></button>
+            <button class="btn light-blue waves-effect waves-light answer"><span></span></button>
+            <button class="btn light-blue waves-effect waves-light answer"><span></span></button>
+            <button class="btn light-blue waves-effect waves-light answer"><span></span></button>
+        </div>
+    </div>
+    <!--! Scripts -->
+    <script src="main.js"></script>
+    <!--* Modal windowsb plugin -->
+    <script src="plugins_js/classie.js"></script>
+    <script src="plugins_js/modalEffects.js"></script>
+    <!--* Compiled and minified materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

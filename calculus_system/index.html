@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Конвертер систем исчислений</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- Compiled and minified materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body class="black">
+    <div class="page-wrap">
+    <h2 class="center-align white-text">Конвертер систем счисления</h2>
+    <div class="container">
+        <label for="calculus-system-value-field">Введите число:</label><input type="text" id="calculus-system-value-field" onkeypress="return restrictCharacters(this, event, partAlphaOnly);" required>
+    </div>
+    <div class="container">
+    <form class="calculus-form" action="#">
+        <!--? From -->
+        <h4 class="white-text">From:</h4>
+        <label>
+            <input type="radio" value="Двоичная" name="input-calculus">
+            <span>Двоичная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" value="Восьмеричная" name="input-calculus">
+            <span>Восьмеричная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" value="Десятиричная" name="input-calculus">
+            <span>Десятиричная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="input-calculus" value="Шестнадцатиричная">
+            <span>Шестнадцатиричная</span>
+        </label>
+        <!--? To -->
+        <h4 class="white-text">To:</h4>
+        <label>
+            <input type="radio" name="output-calculus" value="Двоичная">
+            <span>Двоичная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="output-calculus" value="Восьмеричная">
+            <span>Восьмеричная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="output-calculus" value="Десятиричная">
+            <span>Десятиричная</span>
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="output-calculus" value="Шестнадцатиричная">
+            <span>Шестнадцатиричная</span>
+        </label>
+        <br>
+        <br>
+        <button class="convert-btn waves-effect waves-light btn blue darken-1 white-text">Конвертировать</button>
+    </form>
+    </div>
+    <br>
+    </div>
+    <!--! Animated background -->
+    <div id="particles-js"></div>
+    <!-- Compiled and minified materialized JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- minified Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- paricles.js -->
+    <script src="js_scripts/particles.min.js"></script>
+    <!-- app.js -->
+    <script src="js_scripts/app.js"></script>
+    <!-- restrict_input.js -->
+    <script src="js_scripts/restrict_input.js"></script>
+    <!-- Main.js -->
+    <script src="js_scripts/main.js"></script>
+</body>
+</html>

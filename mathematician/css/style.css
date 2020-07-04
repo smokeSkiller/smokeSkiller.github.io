@@ -1,0 +1,262 @@
+::selection{background-color: #e53935; color: #fff;}
+
+body{
+    background-image: url("../img/cell_wallpaper.jpeg");
+    background-size: 13%;
+    padding: 0;
+    margin: 0;
+}
+
+.info-bar{
+    display: flex;
+    position: absolute;
+    width: 25%;
+    margin-left: 37.5%; 
+    height: 45px;
+    background-color: rgb(9%, 0%, 96%, .45);
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.info-bar-block{
+    height: 100%;
+    width: 33.6%;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.info-bar-block:nth-child(3){
+    border-right: 0;
+}
+
+.info-bar-block span:nth-child(2){
+    line-height: 1;
+}
+
+.info-bar-block span:nth-child(1){
+    font-weight: bold;
+}
+
+.info-bar-block span:nth-child(1)::first-letter{
+    color: aqua;
+}
+
+/** Get ready block */
+.get-ready-block-container{
+    display:none;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.get-ready-block{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    display: flex;
+}
+
+.get-ready-block__timer{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** info block */
+@media (max-width: 1100px) {
+    body{
+        background-size: 25%;
+    }
+
+    .info-bar{
+        width: 30%;
+        margin-left: 35%; 
+    }
+}
+
+@media (max-width: 900px) {
+    body{
+        background-size: 35%;
+    }
+
+    .info-bar{
+        width: 40%;
+        margin-left: 30%; 
+    }
+}
+
+@media (max-width: 631px) {
+    body{
+        background-size: 55%;
+    }
+
+    .info-bar{
+        width: 50%;
+        margin-left: 25%; 
+    }
+}
+
+@media (max-width: 510px) {
+    body{
+        background-size: 65%;
+    }
+
+    .info-bar-block .title{
+        font-size: 1.5em; 
+    }
+
+    .info-bar-block .value{
+        font-size: 1.3em;
+    }
+
+    .info-bar{
+        width: 65%;
+        margin-left: 17.5%; 
+    }
+}
+
+@media (max-width: 420px) {
+    body{
+        background-size: 75%;
+    }
+
+    .info-bar{
+        width: 80%;
+        margin-left: 10%; 
+    }
+}
+
+@media (max-width: 360px) {
+    .info-bar{
+        width: 90%;
+        margin-left: 5%; 
+    }
+}
+
+/** Main menu */
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-btn{
+    width: 150px;
+    padding: 0 10px !important;
+}
+
+.columned-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+/** Processed blocks */
+.processed-info-block{
+    display: none;
+}
+
+.processed-block{
+    display: none;
+}
+
+.sample{
+    border-radius: 5px;
+    position: relative;
+}
+
+.icon{
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    position: absolute;
+}
+
+.icon-container{
+    display: none;
+}
+
+.answers-container{
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.answer{
+    color: #fff !important;
+}
+
+@media (max-width: 535px) {
+    .answers-container{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (max-width: 425px) {
+    .answers-container{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media (max-width: 375px) {
+    .answers-container{
+        width: 97%;
+        margin-left: 1.5%;
+    }
+}
+
+@media (max-width: 325px) {
+    .answers-container{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/** Game over menu */
+.game-over-menu{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 888;
+    background-color: rgb(0, 0, 0, .9);
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.game-over-menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.game-over-buttons{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.praised-msg{
+    padding: 20px;
+}
