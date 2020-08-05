@@ -67,7 +67,7 @@ body {
 .start-banner {
     position: relative;
     z-index: 1;
-    @include box(100%, 475px);
+    @include box(100%, auto);
     padding-left: 30px;
     padding-right: calc(10% + 85px);
     background-repeat: no-repeat;
@@ -305,21 +305,20 @@ hr {
     margin-top: 100px;
 
     &-items {
-        margin-left: -68px;
-        margin-right: -68px;
-        @include flexbox();
+        @include flexbox(space-between);
+        width: 100%;
     }
 
     &-item {
         position: relative;
         z-index: 1;
-        margin: 0 68px;
-        @include box(calc(50% - 136px), 315px);
+        @include box(calc(50% - 68px), 315px);
         padding: 20px;
         @include flexbox(flex-start, flex-end);
+        background-color: #6978CE;
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        background-size: contain;
+        background-position: center right;
 
         &:after {
             top: 0;
