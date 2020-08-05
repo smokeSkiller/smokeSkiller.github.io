@@ -1,0 +1,342 @@
+//* Common moments
+body {
+    h3, p {
+       font-weight: bold; 
+
+       // Gradient
+        @include text-gradient(linear-gradient(180deg, #6A79CF -28.61%, #33269D 149.18%));
+    }
+
+    p {
+        font-size: em(16px);
+    }
+
+    p + p {
+        margin-top: 20px;
+    }
+}
+ 
+//* Burger menu
+.burger-btn {
+    @include flexbox(center, center);
+    background-color: transparent;
+    @include box(88.8px);
+    background: linear-gradient(180deg, rgba(107, 122, 208, 0.8) 0%, rgba(44, 27, 150, 0.8) 100%);
+    border-radius: 50%;
+
+    span {
+        position: relative;
+        display: block;
+
+        &:after,&:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -13px;
+        }
+
+        &:after {
+            top: 13px;
+        }
+    }
+}
+
+.burger-btn span,
+.burger-btn span:after,
+.burger-btn span:before {
+    @include box(44px, 5px);
+    background-color: #ffffff;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+/* on activation */
+.burger-btn.on span {
+    background-color: transparent;
+
+    &::before {
+        transform: rotate(45deg) translate(9px, 9px);
+    }
+
+    &::after {
+        transform: rotate(-45deg) translate(9px, -9px);
+    } 
+}
+
+//* Start banner
+.start-banner {
+    position: relative;
+    z-index: 1;
+    @include box(100%, 475px);
+    padding-left: 30px;
+    padding-right: calc(10% + 85px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &::before {
+        top: 0;
+        left: 0;
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .15;
+    }
+
+
+    .row, .container, &__white-divider {
+        height: 100%;
+    }
+
+    &__title {
+        max-width: 830px;
+        color: #fff;
+        font-size: em(36px);
+        line-height: 45px;
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+    &__white-divider {
+        position: absolute;
+        right: 0;
+        width: 10%;
+        background-color: #fff;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -25px;
+            width: 25px;
+            height: 100%;
+            background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255,.9)); 
+        }
+    }
+}
+
+//* Page title
+section.page-title {
+    @include flexbox(center);
+    width: 100%;
+    padding: 60px 30px;
+
+    h1 {
+        max-width: 800px;
+        text-align: center;
+        font-size: em(45px);
+        font-weight: bold;
+        font-family: "Geometria-Medium";
+        text-transform: uppercase;
+
+        // Gradient
+        background: linear-gradient(180deg, #6A79CF -28.61%, #33269D 149.18%);
+        color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+} 
+
+//* Card block
+.card-block {
+    @include flexbox(flex-start, center);
+    padding: 0 70px;
+
+    &.right {
+        flex-direction: row-reverse;
+    }
+
+    &__img {
+        max-width: 410px;
+        max-height: 310px;
+    }
+
+    &.right &__content {
+        padding-left: 0;
+        padding-right: 100px;
+    }
+
+    &__content {
+        padding-left: 100px;
+    }
+}
+
+//* Horizontal line
+hr {
+    margin: 0 auto;
+    @include box(495px, 3px);
+    background: #443FAC;
+} 
+
+//* Quote block
+.quote-block {
+    padding: 50px 100px;
+
+    p {
+        text-align: center;
+        font-size: em(24px);
+    }
+} 
+
+
+//* Columns section
+.columns-section {
+    padding: 0 70px;
+
+    h3 {
+        font-size: em(24px);
+    }
+} 
+
+//* News component
+.news {
+    position: relative;
+    margin-top: 100px;
+    padding: 27px 90px;
+    width: 100%;
+    background: linear-gradient(180deg, #E2CAA8 0%, #D8BD96 100%);
+
+    &__title {
+        text-decoration: underline;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: em(96px);
+    }
+
+    &__title, .news-item p, .news-item h4 {
+        color: #f5f5f5;
+    }
+
+    &-content {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    &-items {
+        margin: 0; 
+        padding: 0; 
+        height: 100%; 
+        list-style: none;
+    }
+
+    &-item {
+        @include flexbox(flex-start, flex-start, column);
+
+        float: left; 
+        margin: 0 50px 0 0; 
+        padding: 0;
+        width: 626px; 
+        height: 100%;
+
+        h4 {
+            position: relative;
+            font-size: em(36px);
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                @include box(100%, 6px);
+                background-color: #f5f5f5;
+            }
+        }
+
+        p {
+            margin-top: 55px;
+            font-size: em(22px);
+        }
+    }
+
+    // Scrollbar
+    .scrollbar { 
+        margin-top: 60px;
+
+        position: relative;
+        @include box(100%, 7px);
+        background: #F4F4F4; 
+    }
+
+    .scrollbar .handle {
+        position: relative;
+        width: 230px; 
+        height: 100%;
+        background: #D8BD96;
+        cursor: pointer;
+
+        &:after {
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            @include box(50px);
+            border-radius: 50%;
+            border: 5px solid #F0F0F0;
+        }
+    }
+
+    // Slide btns
+    .prev-slide, .next-slide {
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -47%);
+        position: absolute;
+        z-index: 555;
+        color: #F4F4F4;
+        font-weight: lighter;
+        font-size: em(55px);
+    }
+
+    .prev-slide {
+        left: -5px;
+    }
+
+    .next-slide {
+        right: -5px;
+    }
+} 
+
+//* Pagination
+.pagination {
+    margin-top: 100px;
+
+    &-items {
+        margin-left: -68px;
+        margin-right: -68px;
+        @include flexbox();
+    }
+
+    &-item {
+        position: relative;
+        z-index: 1;
+        margin: 0 68px;
+        @include box(calc(50% - 136px), 315px);
+        padding: 20px;
+        @include flexbox(flex-start, flex-end);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        &:after {
+            top: 0;
+            left: 0;
+            content: "";
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .2;
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: em(70px);
+            color: #F5F5F5;
+        }
+    }
+}

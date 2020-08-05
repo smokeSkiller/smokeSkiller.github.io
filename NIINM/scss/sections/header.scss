@@ -1,0 +1,41 @@
+header {
+    position: relative;
+	width: 100%;
+	padding: 30px;
+    background-color: #fff;
+
+    &.fixed {
+        top: 0;
+        position: fixed;
+        padding: 15px 30px;
+        z-index: 777;
+        border-bottom: 2px solid #616161;
+    }
+
+    .logo {
+        @include flexbox(flex-start, center);
+    }
+
+    img.logo-shape {
+    	max-width: 90px;
+    }
+
+    .logo-text {
+    	margin-left: 20px;
+    	@include flexbox(flex-start, flex-start, column);
+
+    	.title {
+    		font-size: em(45px);
+    		font-weight: bold;
+
+            // Gradient
+            @include text-gradient(linear-gradient(180deg, #6A79CF -26.62%, #33269D 146.51%));
+    	}
+
+    	.descr {
+    		font-weight: bold;
+    		font-size: em(10px);
+    		color: #33269D;
+    	}
+    }
+}

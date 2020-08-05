@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>ООО “НИИИНМ”</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+	<!-- Menu style -->
+	<style>
+		/* Menu */
+		.mm-menu {
+			--mm-line-height: 45px;
+			--mm-color-text: #fff;
+	        --mm-color-background: -webkit-linear-gradient(#4643AF 0%, #616BC6 100%);
+	        --mm-color-background: -o-linear-gradient(#4643AF 0%, #616BC6 100%);
+	        --mm-color-background: linear-gradient(#4643AF 0%, #616BC6 100%);
+		}
+
+    	.mm-listitem {
+    		--mm-listitem-size: 65px;
+    		font-size: 20px;
+    		
+    		transition: all .3s ease;
+    	}
+
+		.mm-listitem:hover {
+			background-color: #5c6bc0;
+		}
+
+    	.mm-listitem__text {
+    		padding-left: 77px;
+    		text-transform: uppercase;
+    		white-space: normal;
+    	}
+
+		/* Navbar */
+    	.mm-navbar {
+    		color: #fff;
+    		font-size: 1.2em;
+    		font-weight: bold;
+    		--mm-color-background: #1a237e;
+	        --mm-color-background: #1a237e;
+	        --mm-color-background: #1a237e;
+   		}
+
+   		.mm-listitem__btn:not(.mm-listitem__text) {
+   			border: none;
+   		}
+
+   		/* Current Page */
+   		.current-page a:first-child {
+			text-decoration: underline;
+   		}
+
+   		/* Navbar arrow */
+   		.mm-btn:after, .mm-btn:before {
+   			display: none;
+   		}
+
+   		.mm-btn_next {
+   			padding: 0;
+   			width: 60px;
+   			display: -webkit-flex;
+   			display: -moz-flex;
+   			display: -ms-flex;
+   			display: -o-flex;
+   			display: flex;
+   			justify-content: center;
+   			align-items: center
+   		}
+
+   		/* Blocker */
+   		.mm-wrapper__blocker {
+   			z-index: 888;
+   		}
+	</style>
+</head>
+<body>
+	<!-- Main page -->
+	<div id="my-page">
+		<!--! Header -->
+		<header>
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<!-- Logo -->
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="" class="logo-shape">
+						<div class="logo-text">
+							<span class="title">ООО “НИИИНМ”</span>
+							<span class="descr">НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ НЕТКАНЫХ МАТЕРИАЛОВ</span>
+						</div>
+					</a>
+					<!-- Burger-btn -->
+					<a href="#my-menu" class="burger-btn">
+						<span></span>
+					</a>
+					<!-- Interactive Menu -->
+					<nav id="my-menu">
+				        <ul>
+				        	<li class="current-page"><a href="#">Главная</a></li>
+				            <li><a href="#">Об институте</a></li>
+				            <li>
+				            	<a href="#">Материалы</a>
+				            	<ul>
+				                    <li><a href="#">ФИЛЬТРОВАЛЬНЫЕ</a></li>
+				                    <li><a href="#">СОРБЦИОННО-ФИЛЬТРУЮЩИЕ</a></li>
+				                    <li><a href="#">БАРЬЕРНЫЕ</a></li>
+				                    <li><a href="#">ОБУВНЫЕ</a></li>
+				                    <li><a href="#">САНИТАРНОГО НАЗНАЧЕНИЯ</a></li>
+				                    <li><a href="#">БЫТОВОГО НАЗНАЧЕНИЯ</a></li>
+				                    <li><a href="#">ДЕКОРАТИВНЫЕ ПАННО</a></li>
+				                </ul>
+				        	</li>
+				            <li><a href="#">Ассоциация</a></li>
+				            <li><a href="#">Последние Разработки</a></li>
+				            <li><a href="#">Услуги</a></li>
+				            <li><a href="#">Контакты</a></li>
+				            <li><a href="#">Лаборатория</a></li>
+				        </ul>
+				    </nav>
+				</div>
+			</div>
+		</header>
+		<!-- Fixed header -->
+		<header class="fixed-for-menu">
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<!-- Logo -->
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="" class="logo-shape">
+						<div class="logo-text">
+							<span class="title">ООО “НИИИНМ”</span>
+							<span class="descr">НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ НЕТКАНЫХ МАТЕРИАЛОВ</span>
+						</div>
+					</a>
+					<!-- Burger-btn -->
+					<a href="#my-menu" class="burger-btn">
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--! Start-banner -->
+		<section class="start-banner" style="background-image: url('img/start_banner1.png');">
+			<div class="container">
+				<div class="row align-items-end justify-content-sm-end justify-content-center">
+					<span class="start-banner__title">РАЗРАБОТКА, ПРОИЗВОДСТВО И ПРОДАЖА НЕТКАНЫХ МАТЕРИАЛОВ</span>
+					<div class="start-banner__white-divider"></div>
+				</div>
+			</div>
+		</section>
+		<!--! Page-title -->
+		<section class="page-title"><h1>Главная</h1></section>
+		<!-- Container -->
+		<div class="container">
+			<!--! Card-block -->
+			<div class="card-block right">
+				<img class="card-block__img" src="img/card1.png" alt="Научно-исследовательский институт нетканых материалов">
+				<div class="card-block__content">
+					<p>ООО «Научно-исследовательский институт нетканых материа- лов» (ООО "НИИНМ") является правопреемником Открытого Акционерного Общества "Научно-исследовательский институт нетканых материалов" и, ранее Всесоюзного научно-исследовательского институтанетканых материалов (ВНИИНТМ) основанного Минлегпромом СССР в 1963 году. Исследования и разработки ученых и специалистов института сформировали научно-техническую базу отечественной промышленности нетканых материалов. </p>
+					<p>В различные годы по разработкам института выпускалось до 70% общего объеманетканой продукции в стране.</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<!-- Quote block -->
+			<hr>
+			<div class="quote-block">
+				<p>Сегодня главным направлением работы института является разработка и производство высокоэффективных нетканых материалов технического назначения, в том числе для фильтровальной техники.</p>
+			</div>
+			<hr>
+			<!-- ./Quote block -->
+			<br>
+			<br>
+			<!--! Card-block -->
+			<div class="card-block">
+				<img class="card-block__img" src="img/card2.png" alt="Научно-исследовательский институт нетканых материалов">
+				<div class="card-block__content">
+					<p>Разработанные и выпускаемые ООО "НИИНМ" фильтровальные материалы успешно конкурируют с продукцией ведущих мировых производителей (в том числе DuPont, Freudenberg, Lurgi), и по некоторым параметрам превосходят их.</p>
+					<p>Имеющийся набор пилотных установок, которые позволяет варьировать технологическими операциями и получать образцы и опытные партии нетканых материалов, сложных структур, шириной 40см. При оптимальном расходе сырья 1- 5 кг.</p>
+					<p>Помимо производственных мощностей, ООО "НИИНМ" обладает достаточным научным потенциалом, способным генерироватьнаучные идеи, воплощать их в конкретные разработки для различных отраслей промышленности.Результаты научных исследований сотрудников инстита регулярно публикуются в отраслевых и специализированных изданиях.</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<!-- Quote block -->
+			<hr>
+			<div class="quote-block">
+				<p>ООО "НИИНМ" принимает к разработке и освоению заказы на нетканые материалы эксклюзивных структур и свойств в соответствии с требованиями заказчика.</p>
+			</div>
+			<hr>
+			<!-- ./Quote block -->
+			<br>
+			<br>
+			<!--! Columns -->
+			<section class="row columns-section justify-content-between">
+				<div class="col-lg-5 col-md-6 col-12">
+					<h3>Основные направления деятельности института:</h3>
+					<br>
+					<p>Разработка и освоение новых видов технологических процессов изготовления нетканых материалов из различных видов волокнистого и не волокнистого сырья.</p>
+					<p>Разработка новых видов оригинальных структур нетканых материалов различного назначения в соответствии с требованиями потребителя.</p>
+					<p>Осуществление инжиниринговых работ по организации производства нетканых материалов.</p>
+					<p>Осуществление работ по стандартизации, испытанию и сертификации продукции для предприятий производителей нетканых материалов.</p>
+				</div>
+				<div class="col-lg-5 col-md-6 col-12">
+					<p>Сотрудниками института создано более 200 патентов на изобретения, полезную модель, и свидетельств на товарные знаки. За последние годы разработки института награждены медалями, в том числе золотыми и серебряными, дипломами Всемирного салона изобретений, научных исследований и промышленных инноваций «Брюссель-Эврика», международных выставок и салонов инноваций и инвестиций.</p>
+					<p>Результаты НИР института представлены на международных конгрессах, в том числе ЭДАНА (Брюссель, Женева), ИНДЕКС (Прага), ЭЛТЕКС (Польша), АКВАТЕРРА (Санкт-Петербург), Вейст-Тек (Москва). Два сотрудника института являются лауреатами премии Правительства РФ в области науки и техники.</p>
+				</div>
+			</section>
+			<br><br>
+		</div>
+		<!--! News -->
+		<section class="news">
+			<div class="container">
+				<h2 class="news__title">Новости</h2>
+				<div class="news-content">
+					<ul class="news-items">
+						<li class="news-item">
+							<h4 class="news-item__title">Сентябрь 2019 года</h4>
+							<p class="news-item__content">Специалисты ООО «НИИНМ» приняли участие в деловой программе 53-й Федеральный оптовый ярмарки «Тегстильлегпром», которая состоялась на ВДНХ. В рамках работы круглого стола «Актуальные аспекты» поступательного развития текстильной промышленности», организованного «НПФ Траверс», сотрудником института представлено сообщение на тему «Принципы «устойчивого развития» в работе предприятий, выпускающих нетканые материалы».</p>
+						</li>
+						<li class="news-item">
+							<h4 class="news-item__title">29-30 ноября 2018</h4>
+							<p class="news-item__content">В г.Иваново состоялся V Всероссийский форум лёгкой промышленности, проведение которого организовано Минпромторгом РФ. На Форуме были обсуждены вопросы конкурентоспособности российской лёгкой промышленности, экспорта продукции сотрудничества стран ЕвроАзес. От института на круглом столе , на котором были рассмотрены перспективы рынка нетканых материалов и проблемы обеспечения отрасли волокнистым сырьём, был представлен доклад «О развитии ассортимента инновационной продукции».</p>
+						</li>
+						<li class="news-item">
+							<h4 class="news-item__title">Октябрь 2020 года</h4>
+							<p class="news-item__content">Специалисты ООО «НИИНМ» приняли участие в деловой программе 53-й Федеральный оптовый ярмарки «Тегстильлегпром», которая состоялась на ВДНХ. В рамках работы круглого стола «Актуальные аспекты» поступательного развития текстильной промышленности», организованного «НПФ Траверс», сотрудником института представлено сообщение на тему « Принципы «устойчивого развития» в работе предприятий, выпускающих нетканые материалы».</p>
+						</li>
+						<li class="news-item">
+							<h4 class="news-item__title">12 августа 2020</h4>
+							<p class="news-item__content">В г.Иваново состоялся V Всероссийский форум лёгкой промышленности, проведение которого организовано Минпромторгом РФ. На Форуме были обсуждены вопросы конкурентоспособности российской лёгкой промышленности, экспорта продукции сотрудничества стран ЕвроАзес. От института на круглом столе , на котором были рассмотрены перспективы рынка нетканых материалов и проблемы обеспечения отрасли волокнистым сырьём, был представлен доклад «О развитии ассортимента инновационной продукции».</p>
+						</li>
+					</ul>
+				</div>
+				<div class="scrollbar">
+					<div class="handle"></div>
+					<button class="prev-slide"><i class="fas fa-angle-left"></i></button>
+					<button class="next-slide"><i class="fas fa-angle-right"></i></button>
+				</div>
+				<br>
+			</div>
+		</section>
+		<!--! Pagination -->
+		<div class="pagination">
+			<div class="container">
+				<div class="pagination-items">
+					<a href="#" class="pagination-item" style="background-image: url(img/pagination_1.png);">
+						<h4 class="pagination-item__title">МАТЕРИАЛЫ</h4>
+					</a>
+					<a href="#" class="pagination-item" style="background-image: url(img/pagination_2.png);">
+						<h4 class="pagination-item__title">УСЛУГИ</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--! Footer -->
+		<footer>
+			<div class="container">
+				<div class="row justify-content-between flex-column flex-lg-row align-items-center">
+					<div class="col-lg-4 col-12">
+						<!-- Logo -->
+						<a href="#" class="logo">
+							<img src="img/logo.png" alt="" class="logo-shape">
+							<div class="logo-text">
+								<span class="title">ООО “НИИИНМ”</span>
+								<span class="descr">НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ НЕТКАНЫХ МАТЕРИАЛОВ</span>
+							</div>
+						</a>
+						<!-- Text -->
+						<p class="text-under-logo">ОБЩЕСТВО С ОГРАНИЧЕННОЙ  ОТВЕТСТВЕННОСТЬЮ “НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ НЕТКАНЫХ МАТЕРИАЛОВ”</p>
+						<ul class="requisites">
+							<li>ОКПО 00302327</li>
+							<li>ОГРН 1165043051030</li>
+							<li>ИНН 5043057956</li>
+							<li>КПП 504301002</li>
+						</ul>
+					</div>
+					<div class="col-lg-8 col-12">
+						<nav class="footer-menu">
+							<div class="footer-column">
+								<h5 class="footer-column__title">МАТЕРИАЛЫ</h5>
+								<ul class="footer-menu__links">
+									<li><a href="#">ФИЛЬТРОВАЛЬНЫЕ</a></li>
+									<li><a href="#">СОРБЦИОННО-ФИЛЬТРУЮЩИЕ</a></li>
+									<li><a href="#">БАРЬЕРНЫЕ</a></li>
+									<li><a href="#">ОБУВНЫЕ</a></li>
+									<li><a href="#">САНИТАРНО-ГИГИЕНИЧЕСНОГО НАЗНАЧЕНИЯ</a></li>
+									<li><a href="#">БЫТОВОГО НАЗНАЧЕНИЯ</a></li>
+								</ul>
+							</div>
+							<div class="footer-column">
+								<h5 class="footer-column__title">ИНФОРМАЦИЯ</h5>
+								<ul class="footer-menu__links">
+									<li><a href="#">ОБ ИНСТИТУТЕ</a></li>
+									<li><a href="#">АССОЦИАЦИЯ</a></li>
+									<li><a href="#">ПОСЛЕДНИЕ  РАЗРАБОТКИ</a></li>
+									<li><a href="#">КОНТАКТЫ</a></li>
+								</ul>
+							</div>
+							<div class="footer-column">
+								<h5 class="footer-column__title">УСЛУГИ</h5>
+								<ul class="footer-menu__links">
+									<li><a href="#">ДЕКОРАТИВНОЕ  ПАННО</a></li>
+									<li><a href="#">ИСПЫТАТЕЛЬНАЯ ЛАБОРАТОРИЯ </a></li>
+									<li><a href="#">УСЛУГИ</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

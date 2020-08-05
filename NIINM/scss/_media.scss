@@ -1,0 +1,302 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	//* Card block
+	.card-block {
+	    @include flexbox(flex-start, center);
+	    padding: 0 40px;
+
+	    &__img {
+	        max-width: 310px;
+	    }
+
+	    &__content {
+	        padding-left: 30px;
+	    }
+
+	    &.right &__content {
+	        padding-right: 30px;
+	    }
+	}
+
+	//* Pagination
+	.pagination {
+		&-items {
+			margin-left: -15px;
+        	margin-right: -15px;
+		}
+
+		&-item {
+			margin: 0 15px;
+        	width: calc(50% - 30px);
+
+        	&__title {
+	            font-size: em(60px);
+	        }
+		}
+	}
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	//* Card block
+	.card-block {
+	    flex-direction: column !important;
+	    padding: 0 30px;
+
+	    &__img {
+	        max-width: 410px;
+	    }
+
+	    &__content {
+	    	margin-top: 30px;
+	    	padding: 0;
+	    }
+	}
+
+	//* Quote block
+	.quote-block {
+	    padding: 30px;
+	} 
+
+	//* Columns section
+	.columns-section {
+	    padding: 0 30px;
+	} 
+
+	//* News Component
+	.news {
+		&-item {
+			margin: 0;
+		}
+	} 
+
+	//* Pagination
+	.pagination {
+		margin-top: 50px;
+
+		&-items {
+			margin: 0;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-item {
+			margin: 0;
+        	width: 80%;
+		}
+
+		&-item + &-item {
+			margin-top: 30px;
+		}
+	}
+
+	//* Footer 
+	footer {
+		padding-top: 50px;
+
+		.footer-menu {
+			margin-top: 50px;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.footer-column + .footer-column {
+	    	margin-top: 30px;
+	    }
+
+		.footer-menu__links {
+	    	margin-top: 20px;
+	    }
+	}
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	// Header
+	header {
+		padding: 20px;
+
+		&.fixed {
+			padding: 10px;
+		}
+
+		.logo {
+			max-width: 60%;
+		}
+
+		.logo-text {
+			.title {
+				font-size: em(25px);
+			}
+		}
+	}
+
+	// Menu
+	.burger-btn {
+		@include box(60px);
+
+		span {
+	        &:after,&:before {
+	            top: -10px;
+	        }
+
+	        &:after {
+	            top: 10px;
+	        }
+	    }
+	}
+
+	.burger-btn span,
+	.burger-btn span:after,
+	.burger-btn span:before {
+	    @include box(30px, 4px);
+	    border-radius: 2px; 
+	}
+
+	/* on activation */
+	.burger-btn.on span {
+	    background-color: transparent;
+
+	    &::before {
+	        transform: rotate(45deg) translate(7px, 7px);
+	    }
+
+	    &::after {
+	        transform: rotate(-45deg) translate(7px, -7px);
+	    } 
+	}
+
+	// Page title
+	section.page-title {
+		padding: 30px;
+	}
+
+	// News
+	.news {
+		padding: 27px;
+
+		&__title {
+	        font-size: em(50px);
+	    }
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	//* Header
+	header {
+		padding: 10px !important;
+
+		.logo {
+			max-width: 80%;
+			padding-right: 5px;
+		}
+
+		img.logo-shape {
+	    	max-width: 80px;
+	    }
+
+		.logo-text {
+			.title {
+				font-size: em(20px);
+			}
+		}
+	}
+
+	//* Menu
+	.mm-listitem__text {
+		padding-left: 20px !important;
+	}
+
+	.mm-listitem {
+		--mm-listitem-size: 55px !important;
+		font-size: 19px !important;
+	}
+
+	//* Start banner
+	.start-banner {
+		padding: 0 30px;
+
+		&__white-divider {
+			display: none;
+		}
+
+		&__title {
+	        font-size: em(30px);
+    	}
+	}
+
+	//* Card block
+	.card-block {
+		padding: 0 10px;
+
+	    &__img {
+	        max-width: 100%;
+	    }
+	}
+
+	//* Horizontal line
+	hr {
+	    width: 100%;
+	} 
+
+	//* Quote block
+	.quote-block {
+	    padding: 30px 10px;
+
+	    p {
+	        font-size: em(22px);
+	    }
+	} 
+
+	.columns-section {
+	    padding: 0 10px;
+	}
+
+	//* News
+	.news {
+		margin-top: 30px;
+		padding: 27px 5px;
+
+		&-item {
+	        h4 {
+	            font-size: em(30px);
+	        }
+
+	        p {
+	        	margin-top: 45px;
+	            font-size: em(18px);
+	        }
+	    }
+
+		.scrollbar { 
+	        margin-top: 50px;
+	    }
+
+	    .scrollbar .handle {
+	        width: 100px; 
+	    }
+	}
+
+	//* Pagination
+	.pagination {
+		margin-top: 30px;
+
+		&-item {
+        	width: 100%;
+
+        	&__title {
+        		font-size: em(40px);
+        	}
+		}
+
+		&-item + &-item {
+			margin-top: 30px;
+		}
+	}
+}
