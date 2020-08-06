@@ -39,6 +39,19 @@
 	        }
 		}
 	}
+
+	//* Employers
+	.employers {
+	    .employer {
+	        margin: 30px;
+	        width: calc(50% - 60px);
+	        @include flexbox(flex-start, flex-start, column);
+
+	        img {
+	        	align-self: center;
+	        }
+	    }
+	} 
 }
 
 // ≥992px
@@ -182,6 +195,16 @@
 	        font-size: em(50px);
 	    }
 	}
+
+	//* Employers
+	.employers {
+		flex-direction: column;
+
+	    .employer {
+	        margin: 30px 0;
+	        width: 100%;
+	    }
+	} 
 }
 
 // ≥576px
@@ -227,6 +250,11 @@
 		&__title {
 	        font-size: em(30px);
     	}
+	}
+
+	//* Page title
+	section.page-title h1 {
+		font-size: em(35px);
 	}
 
 	//* Card block
@@ -297,4 +325,15 @@
 			margin-top: 30px;
 		}
 	}
+
+	//* Employers
+	.employers {
+	    .employer {
+	        margin: 15px 0;
+
+	        img {
+	            max-width: 280px;
+	        }
+	    }
+	} 
 }

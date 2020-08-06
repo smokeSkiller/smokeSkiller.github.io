@@ -1,6 +1,6 @@
 //* Common moments
 body {
-    h3, p {
+    h1, h2,h3, h4, h5, p {
        font-weight: bold; 
 
        // Gradient
@@ -13,6 +13,10 @@ body {
 
     p + p {
         margin-top: 20px;
+    }
+
+    strong {
+        font-size: em(24px);
     }
 }
  
@@ -161,6 +165,27 @@ section.page-title {
     &__content {
         padding-left: 100px;
     }
+
+    &__title, strong, li {
+        @include text-gradient(linear-gradient(180deg, #6A79CF -28.61%, #33269D 149.18%));
+    }
+
+    &__title {
+        font-size: em(36px);
+    }
+
+    ul {
+        max-width: 560px;
+        padding: 15px 30px;
+
+        li {
+            font-weight: bold;
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+    }
 }
 
 //* Horizontal line
@@ -173,13 +198,18 @@ hr {
 //* Quote block
 .quote-block {
     padding: 50px 100px;
+    text-align: center;
 
     p {
-        text-align: center;
         font-size: em(24px);
     }
-} 
 
+    h2 {
+        text-transform: uppercase;
+        font-size: em(48px);
+        @include text-gradient(linear-gradient(180deg, #6A79CF -28.61%, #33269D 149.18%));
+    }
+} 
 
 //* Columns section
 .columns-section {
@@ -317,7 +347,7 @@ hr {
         @include flexbox(flex-start, flex-end);
         background-color: #6978CE;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 60% 100%;
         background-position: center right;
 
         &:after {
@@ -339,3 +369,39 @@ hr {
         }
     }
 }
+
+//* Employers
+.employers {
+    @include flexbox(center);
+    flex-wrap: wrap;
+
+    .employer {
+        margin: 45px;
+        width: calc(33.333% - 90px);
+
+        img {
+            max-width: 325px;
+            max-height: 260px;
+        }
+
+        &__name {
+            margin-top: 40px;
+            font-size: em(24px);
+        }
+
+        p {
+            margin-top: 30px;
+        }
+
+        &-contact {
+            margin-top: 20px;
+            @include flexbox(flex-start, flex-start, column);
+        }
+
+        span {
+            font-weight: bold; 
+           // Gradient
+            @include text-gradient(linear-gradient(180deg, #6A79CF -28.61%, #33269D 149.18%));
+        }
+    }
+} 
