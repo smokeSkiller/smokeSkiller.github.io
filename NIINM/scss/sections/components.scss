@@ -1,6 +1,6 @@
 //* Common moments
 body {
-    h1, h2,h3, h4, h5, p {
+    h1, h2, h3, h4, h5, p, strong {
        font-weight: bold; 
 
        // Gradient
@@ -175,7 +175,6 @@ section.page-title {
     }
 
     ul {
-        max-width: 560px;
         padding: 15px 30px;
 
         li {
