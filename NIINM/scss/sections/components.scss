@@ -1,6 +1,6 @@
 //* Common moments
 body {
-    h1, h2, h3, h4, h5, p, strong {
+    h1, h2, h3, h4, h5, p, strong, .strong-text {
        font-weight: bold; 
 
        // Gradient
@@ -15,7 +15,7 @@ body {
         margin-top: 20px;
     }
 
-    strong {
+    strong, .strong-text {
         font-size: em(24px);
     }
 }
