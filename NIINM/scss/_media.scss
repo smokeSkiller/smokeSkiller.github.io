@@ -65,7 +65,7 @@
 	        max-width: 410px;
 	    }
 
-	    &__content {
+	    &__content, &.right &__content {
 	    	margin-top: 30px;
 	    	padding: 0;
 	    }
