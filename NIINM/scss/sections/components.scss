@@ -16,6 +16,7 @@ body {
     }
 
     strong, .strong-text {
+        display: block;
         font-size: em(24px);
     }
 }
