@@ -254,10 +254,13 @@
 	}
 
 	//* Page title
-	section.page-title h1 {
-		font-size: em(35px);
-	}
+	section.page-title {
+		padding: 15px;
 
+		h1 {
+			font-size: em(32px);
+		}
+	} 
 	//* Card block
 	.card-block {
 		padding: 0 10px;
