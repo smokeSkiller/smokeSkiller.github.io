@@ -1,32 +1,86 @@
 header {
-    position: fixed;
-	width: 100%;
-	background: rgba(32, 32, 32, 0.2);
-	padding: 20px 0;
-    z-index: 333;
+    .top-line {
+        @include box(100%, auto);
+        box-shadow: 0 8px 13px 1px rgba(0, 0, 0, 0.81);
+        background-color: #1a1a1a;
 
-	* {
-		color: $white-light;
-	}
-
-    .logo img {
-        max-width: 250px;
-    }
-
-    .email {
-    	font-family: '20db';
-    	font-weight: bold;
-    	font-size: em(30px);
-    }
-
-    .cellphone {
-        border-radius: 2px;
-        padding: 5px;
-        background: $pink;
-    	font-size: em(30px);
-
-        &:hover {
-            background: #757575;
+        &.fixed {
+            position: fixed;
+            z-index: 555;
         }
+    }
+
+    .content {
+        position: relative;
+        @include box(100%, 85px);
+    }
+
+    ul.header-menu {
+        @include flexbox(flex-start, center);
+        height: 100%;
+
+        li + li {
+            margin-left: 85px;
+        }
+
+        a {
+            color: #efe3ae;
+            font-size: em(20px);
+            font-weight: 400;
+            transition: all .3s ease;
+
+            &:hover {
+                color: #ff8f00;
+            }
+        }
+    }
+
+    .lang-search {
+        @include flexbox();
+
+        .lang {
+            margin-right: 25px;
+            color: #ffffff;
+        }
+
+        .lang a.item {
+            color: #5d5d5d;
+            font-size: em(18px);
+
+            &:hover {
+                color: #bdbdbd;
+            }
+
+            &.current {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .search-form {
+        position: relative;
+
+        input[type="text"] {
+            @include box(155px, 20px);
+            padding: 10px 0;
+            padding-left: 25px;
+            padding-right: 5px;
+            border-radius: 9px;
+            background-color: #090909;
+            color: #fff;
+        }
+
+        button[type="submit"] {
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            color: #665e4b;
+        }
+    }
+
+    .top-line-empty {
+        @include box(100%, 85px);
+        display: none;
     }
 }

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Paulls</title>
+	<title>Html starter</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,134 +15,151 @@
 </head>
 <body>
 	<!--! Header -->
-	<header class="fixed-header">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<a href="#" class="logo">
-					<img src="img/logo.png" alt="Paulls logo">
-				</a>
-				<a href="mailto:client@paulss.art" class="order-3 order-md-2 email">client@paulss.art</a>
-				<a href="tel:+79162767864" class="order-2 order-md-3 cellphone">+7(916)276-78-64</a>
+	<header>
+		<div class="top-line">
+			<div class="container">
+				<div class="content row justify-content-between align-items-center">
+					<!-- Hamburger -->
+					<button class="burger-btn"><span></span></button>
+					<!-- Header menu -->
+					<ul class="header-menu">
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Где купить?</a></li>
+						<li><a href="#">Партнерам</a></li>
+					</ul>
+					<!-- Lang-search -->
+					<div class="lang-search">
+						<div class="lang">
+							<a href="" class="item current">Ru</a>
+							|
+							<a href="" class="item">En</a>
+						</div>
+						<form action="#" class="search-form">
+							<input type="text">
+							<button type="submit"><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class="top-line-empty"></div>
 	</header>
-	<div id="fullpage">
-		<!--! Start banner -->
-		<section class="start-banner section">
+	<!-- Dark gray -->
+	<div class="bg bg-dark-gray">
+		<!--! Main section -->
+		<section class="main-section" style="background-image: url('img/dark-bg.png');">
 			<div class="container">
-				<!-- Title -->
-				<h2 class="start-banner__title">ПОМОГАЕМ СДЕЛАТЬ ИЗ БИЗНЕСА КУЛЬТУРУ, ИЗ САЙТА ФИЛОСОФИЮ.</h2>
-				<!-- Content -->
-				<div class="start-banner-content">
-					<p>СОЗДАЕМ ФИРМЕННЫЙ СТИЛЬ. </p>
-					<p>СФОРМИРУЕМ ВАШ БРЕНД.</p>
-					<p> СОЗДАДИМ САЙТ.</p>
-					<p> СДЕЛАЕМ ВСЮ ТЕХНИЧЕСКУЮ РАБОТУ.</p>
-				</div>
-				<!-- Case -->
-				<a href="#" class="start-banner__case">
-					Кейсы
-				</a>
-			</div>
-			<br>
-			<br>
-			<br>
-			<!-- Waves -->
-			<div class="waves"></div>
-			<br>
-			<!-- Waves -->
-			<div class="waves"></div>
-			<br>
-			<!-- Waves -->
-			<div class="waves"></div>
-		</section>
-		<!--! Section card -->
-		<section class="section-card section">
-			<div class="container">
-				<div class="row flex-lg-row flex-column justify-content-between align-items-lg-start align-items-center">
-					<div class="section-card-content">
-						<h2>ЭТАПЫ РАБОТЫ<span class="pink-text">.</span></h2>
-						<ul class="section-card-menu">
-							<li class="section-card-menu__item">
-								<a>Обсуждаем<span class="pink-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Обсуждаем ваши пожелания<span class="dark-text">.</span></li>
-									<li>Составляем карту сайта<span class="dark-text">.</span></li>
-									<li>Продумываем философию бренда<span class="dark-text">.</span></li>
-								</ul>
-							</li>
-							<li class="section-card-menu__item">
-								<a>Дизайн<span class="pink-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Создаем и согласуем фирменный стиль<span class="dark-text">.</span></li>
-									<li>Верстаем главную страницу и согласуем<span class="dark-text">.</span></li>
-									<li>Делаем дизайн всех страниц<span class="dark-text">.</span></li>
-								</ul>
-							</li>
-							<li class="section-card-menu__item">
-								<a>РАЗРАБОТКА<span class="pink-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Создаем скелет сайта<span class="dark-text">.</span></li>
-									<li>Добавляем дизайн и графику<span class="dark-text">.</span></li>
-									<li>Добавляем функции<span class="dark-text">.</span></li>
-									<li>Согласуем<span class="dark-text">.</span></li>
-								</ul>
-							</li>
-							<li class="section-card-menu__item">
-								<a>Контент<span class="pink-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Наполняем сайт текстами и картинками<span class="dark-text">.</span></li>
-									<li>Добавляем товары<span class="dark-text">.</span></li>
-									<li>Подключаем сторонние системы<span class="dark-text">.</span></li>
-									<li>Сдаем проект<span class="dark-text">.</span></li>
-								</ul>
-							</li>
-						</ul>
+				<img src="img/colorful_smoke.png" alt="colorful_smoke" class="smoke-effect">
+				<img src="img/logo1.png" alt="logo" class="logo">
+				<div class="flex-lg-row flex-column row produce-block flex-direction-md-column align-items-lg-start align-items-center">
+					<div class="col-10 col-lg-7">
+						<img src="img/color-box.png" alt="colorful_box">
 					</div>
-					<img class="stages-img" src="img/stages.png" alt="Этапы работы">
+					<div class="type-content col-lg-5 col-12">
+						<h3 class="title">Производитель отделочных материалов</h3>
+						<p class="text">Pratta Exclusive производит декоративную штукатурку и другие отделочные материалы. Наш ассортимент позволит Вам реализовать самые смелые дизайнерские идеи в строительстве и ремонте. Материалы Pratta предназначены для интерьерных и экстерьерных работ, отделки стен, потолков, полов, влажных помещений и мест с особыми требованиями к безопасности материалов.</p>
+						<a href="#" class="purple-btn">каталог ОТДЕЛОЧНЫХ МАТЕРИАЛОВ</a>
+					</div>
 				</div>
 			</div>
 		</section>
-		<!--! Section card -->
-		<section class="section-card section right">
+		<!--! Categories section -->
+		<section class="categories-section">
+			<!-- Introduced block -->
+			<div class="introduced-block">
+				<h2>Pratta для Вашего дома</h2>
+				<p class="text">Мы предлагаем идеи оформления интерьеров декоративной штукатуркой. Вдохновитесь и сделайте свой выбор!</p>
+			</div>
+			<!-- Container -->
 			<div class="container">
-				<div class="row flex-lg-row-reverse flex-column justify-content-between align-items-lg-start align-items-center">
-					<div class="section-card-content">
-						<h2>О НАС<span class="white-text">.</span></h2>
-						<ul class="section-card-menu">
-							<li class="section-card-menu__item">
-								<a>В НАШЕЙ КОМАНДЕ<span class="white-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Графические дизайнеры<span class="pink-text">.</span></li>
-									<li>UX-аналитик<span class="pink-text">.</span></li>
-									<li>Верстальщики<span class="pink-text">.</span></li>
-									<li>Программисты<span class="pink-text">.</span></li>
-								</ul>
-							</li>
-							<li class="section-card-menu__item">
-								<a>НАШИ ИНСТРУМЕНТЫ<span class="white-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Тильда<span class="pink-text">.</span></li>
-									<li>WordPress<span class="pink-text">.</span></li>
-									<li>Python<span class="pink-text">.</span></li>
-									<li>Наша креативность<span class="pink-text">!</span></li>
-									<li>Любые другие на Ваше усмотрение<span class="pink-text">.</span></li>
-								</ul>
-							</li>
-							<li class="section-card-menu__item">
-								<a>НАША ФИЛОСОФИЯ<span class="white-text">.</span><i class="fas fa-angle-down"></i></a>
-								<ul class="section-card-submenu">
-									<li>Сайты, понятные людям<span class="pink-text">.</span></li>
-									<li>Эстетика в минимализме<span class="pink-text">.</span></li>
-									<li>Красота в удобстве<span class="pink-text">.</span></li>
-									<li>Оптимизируем все, что возможно<span class="pink-text">.</span></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<img class="robot-img" src="img/robot.png" alt="Этапы работы">
+				<div class="categories">
+					<img src="img/colorful_smoke.png" alt="colorful_smoke" class="category-smoke-effect-1">
+					<a href="#" class="category" style="background-image: url('img/cat1.png');">
+						<span class="category-title">Ванная комната</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat2.png');">
+						<span class="category-title">Спальня</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat3.png');">
+						<span class="category-title">фасад</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat4.png');">
+						<span class="category-title">Ступени и полы</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat5.png');">
+						<span class="category-title">Прихожая</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat6.png');">
+						<span class="category-title">Horeca</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat7.png');">
+						<span class="category-title">Кухня</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat8.png');">
+						<span class="category-title">Гостиная</span>
+					</a>
+					<a href="#" class="category" style="background-image: url('img/cat9.png');">
+						<span class="category-title">Детская</span>
+					</a>
+					<img src="img/colorful_smoke.png" alt="colorful_smoke" class="category-smoke-effect-2">
+				</div>
+				<div class="purple-btn-container">
+					<a href="#" class="purple-btn">ВСЕ ИДЕИ ДЛЯ ВАШЕГО ДОМА</a>
 				</div>
 			</div>
+		</section>
+		<!--! Banner section -->
+		<section class="banner-section" style="background-image: url(img/banner1.png);">
+			<h2 class="title">ПРИГЛАШАЕМ ПАРТНЕРОВ</h2>
+			<a href="#" class="text transparent-btn">Business guide</a>
+		</section>
+		<!--! Advantages section -->
+		<section class="advantages-section" style="background-image: url('img/dark-bg.png');">
+			<div class="container">
+				<div class="left-block">
+					<img src="img/gold-bird.png" alt="gold-bird" class="gold-bird">
+					<div class="content">
+						<h3>Совместное творчество</h3>
+						<p>Команда Pratta развивает и совершенствует методы
+							The PRATTA team develops methods for applying decorative materials and design solutions for their use.
+							For our partners and everyone, we regularly organise master-classes and educational program. Also our team developing new collections for partners of PRATTA Store workshops.
+							New methods of applications with decorative plaster and all about PRATTAMASTER can be found on our YouTube channel #PRATTAMASTER.</p>
+					</div>
+					<img src="img/right-photo.png" alt="right-photo" class="img">
+				</div>
+				<div class="right-block">
+					<img src="img/left-photo.png" alt="right-photo" class="img">
+					<div class="content">
+						<h3>Неограниченные возможности</h3>
+						<p>
+							Декоративная штукатурка Pratta Exclusive позволяет создавать гладкие и текстурированные поверхности на любой вкус.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--! Contacts -->
+		<section class="contacts-section" style="background-image: url('img/dark-bg.png');">
+			<div class="container">
+				<div class="items">
+					<div class="item">
+						<img src="img/item1.png" alt="" class="img">
+						<p class="item-text">Лихачёвский пр., 4, стр. 1, Долгопрудный</p>
+					</div>
+					<div class="item">
+						<img src="img/item2.png" alt="" class="img">
+						<p class="item-text">+7 (499) 685-16-25</p>
+					</div>
+					<div class="item">
+						<img src="img/item3.png" alt="" class="img">
+						<p class="item-text">pratta@mail.ru</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--! Map -->
+		<section class="section-map">
+			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.358107928299!2d38.108292315727056!3d55.57837401289904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414abf3c9520f5fb%3A0x13f72fd7d4d8110a!2z0YPQuy4g0JrQvtC-0L_QtdGA0LDRgtC40LLQvdCw0Y8sIDEyLCDQltGD0LrQvtCy0YHQutC40LksINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGB0LjRjywgMTQwMTg1!5e0!3m2!1sru!2sua!4v1581800627278!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 		</section>
 	</div>
 	<script src="js/scripts.min.js"></script>
