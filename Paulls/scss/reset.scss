@@ -4,7 +4,8 @@
     border: 0;
     box-sizing: border-box !important;
     outline: none;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Cochin", sans-serif;
+    word-break: break-word;
 }
 
 body {
@@ -20,7 +21,7 @@ a {
     color: #000000;
     text-decoration: none;
     outline: none;
-    word-break: break-word;
+    transition: all .3s ease;
 }
 
 input, textarea{
@@ -32,8 +33,4 @@ button {
     border: none;
     cursor: pointer;
     outline: none !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #444444;
 }

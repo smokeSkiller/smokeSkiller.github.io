@@ -1,13 +1,14 @@
-$default-font: "Helvetica", sans-serif;
+$default-font: "roboto-example", sans-serif;
 $accent: orange;
 $text: #333;
-$purple: #7D0D36;
-$light-gold: #efe3ae;
+$pink: #E5C4B8;
+$white-light: #FBFBFB;
+$dark: #373737;
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
 $grid-columns: 12;
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1170px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1420px);
 
 $gutter: $grid-gutter-width;

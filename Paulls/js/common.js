@@ -1,51 +1,41 @@
-$(function() {
+$(document).ready(function() {
+	//! Vertical slider
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling: true,
+		dragAndMove: true,
+		// fadingEffect: true,
+		scrollBar: true,
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(true);
 
 	//! DOM
-	const burgerBtn = $("header .burger-btn"); 
-	const headerMenu = $(".header-menu");
-	const topLine = $(".top-line"); 
-	const topLineEmpty = $(".top-line-empty");
+	var cardMenuItem = $('.section-card-menu__item');
+	var cardMenuItemLink = $('.section-card-menu__item a');
 
-	//! Fixed top-line 
-	$(window).on("scroll", function() {
-		if($(this).scrollTop() > topLine.height()) {
-			topLine.addClass("fixed");
-			topLineEmpty.css("display", "block");
-		} else {
-			topLine.removeClass("fixed");
-			topLineEmpty.css("display", "none");
-		}
-	});
+	var sectionCardRight = $('.section-card.right');
+	var robotImg = $('.section-card.right .robot-img');
 
-	//! Responsive menu 
-	$(window).on("resize", function () {
-		if($(this).width() >= 768) {
-			headerMenu.css("display", "flex");
-			burgerBtn.removeClass("on");
-		} else {
-			burgerBtn.removeClass("on");
-			headerMenu.css("display", "none");
-		}
-	});
+	//! Calculating margin bottom for robot img
+	if ($(window).width() <= 768) {
+		robotImg.css('top', '' + sectionCardRight.height() - 230 + 'px')
+	}
 
-	burgerBtn.on("click", function (e) {
-		e.stopPropagation();
-		$(this).toggleClass("on");
-		headerMenu.slideToggle();
-	});
-
-	//* Clicking to body
-	$(document.body).on("click", function (params) {
-		if ($(window).width() <= 768) {
-			burgerBtn.removeClass("on");
-			// header
-			headerMenu.slideUp(150);
-		} else {
-			headerMenu.slideDown(150);
-		}
-	});
-
-	headerMenu.on("click", function (e) {
-		e.stopPropagation();
-	});
+	//! Dropdown list 
+	if ($(window).width() >= 992) {
+		cardMenuItemLink.hover(function () {
+		$(this).next().stop(false, true).fadeIn().addClass("active");
+		}, function () {
+			$(this).next().stop(false, true).fadeOut().removeClass("active");
+		});
+	} 
+	else if ($(window).width() < 992) {
+		cardMenuItem.hover(function () {
+		$(this).children(".section-card-submenu").stop(false, true).slideDown().addClass("active");
+		}, function () {
+			$(this).children(".section-card-submenu").stop(false, true).slideUp().removeClass("active");
+		});
+	}
 });
