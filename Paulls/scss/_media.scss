@@ -45,6 +45,12 @@
 			}
 		}
 	}
+
+	//! Case header
+	.case-header {
+		background-size: 100%;
+		background-position: center 10%;
+	} 
 }
 
 // ≥992px
@@ -89,13 +95,12 @@
 	.section-card {
 		padding: 0 10px;
 		background-image: url('../img/waves-bg2.png');
-		background-repeat-y: no-repeat;
+		background-repeat: repeat-x;
 		background-position: 70% 95%;
 
 		&.right {
 			background-image: url('../img/rounds.png');
-			background-repeat-y: repeat;
-			background-repeat-x: repeat;
+			background-repeat: repeat;
 			background-position: center center;
 		}
 
@@ -171,6 +176,25 @@
 			}
 		} 
 	} 
+
+	//! Case header 
+	.case-header {
+		&__title {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			h1 {
+				font-size: em(50px);
+			}
+		}
+	} 
+
+	//! Case pagination
+	.case-pagination {
+		.absolute-img {
+			display: none;
+		}
+	} 
 }
 
 // ≥768px
@@ -226,6 +250,20 @@
 			transform: translateX(-50%);
 			max-height: 300px;
 		}
+	} 
+
+	//! Case header 
+	.case-header {
+		background-position: center 40%;
+
+		&__title{
+			padding: 0 15px;
+			padding-top: 20px;
+
+			h1 {
+				font-size: em(45px);
+			}
+		} 
 	}  
 }
 
@@ -250,7 +288,7 @@
 	.start-banner {
 		background-image: url('../img/waves-bg.png');
 		background-position: left 95%;
-		background-repeat-y: no-repeat;
+		background-repeat: repeat-x;
 
 		// Title
 		&__title {
@@ -298,6 +336,24 @@
 			li + li {
 				margin-top: 20px;
 			}
+		}
+	} 
+
+	//! Case header 
+	.case-header {
+		height: 80vh;
+		background-size: 150%;
+		background-position: center 30%;
+
+		&__title h1 {
+			font-size: em(30px);
+		}
+	}
+
+	//! Case pagination
+	.case-pagination { 
+		&__link {
+			font-size: em(20px);
 		}
 	} 
 }
