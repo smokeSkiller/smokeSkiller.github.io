@@ -3,7 +3,7 @@
 	position: relative;
 	background-color: $dark;
 	background-image: url('../img/vertical-line.png');
-	background-repeat-x: no-repeat;
+	background-repeat: repeat-y;
 	background-position: 93%;
 
 	* {
@@ -67,7 +67,7 @@
 .section-card {
 	background-image: url('../img/vertical-line2.png');
 	background-position: 97%;
-	background-repeat-x: no-repeat;
+	background-repeat: repeat-y;
 
 	.row {
 		padding: 0 10px;
