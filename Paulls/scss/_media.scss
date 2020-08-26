@@ -297,6 +297,12 @@
 	.case-header {
 		background-position: center 40%;
 
+		&.specific-bg {
+			.case-header__title {
+				padding: 20px;
+			}
+		}
+
 		&__title{
 			padding: 0 15px;
 			padding-top: 20px;
@@ -385,6 +391,10 @@
 		height: 80vh;
 		background-size: 150%;
 		background-position: center 30%;
+
+		&.specific-bg {
+			background-position: 5% bottom;
+		}
 
 		&__title h1 {
 			font-size: em(30px);

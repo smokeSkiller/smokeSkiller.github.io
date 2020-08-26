@@ -7,6 +7,18 @@
 	background-repeat: no-repeat;
 	background-color: #D9B4A6;
 
+	&.specific-bg {
+		background-color: #fff;
+		background-size: cover;
+		background-position: center bottom;
+
+		.case-header__title {
+			background-color: transparent;
+			border: none;
+			padding: 50px;
+		}
+	}
+
 	.container, .row {
 		height: 100%;
 	}
