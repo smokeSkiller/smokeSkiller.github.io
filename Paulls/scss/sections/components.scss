@@ -175,54 +175,13 @@
 	}
 } 
 
-//! Case header
-.case-header {
-	@include flexbox(flex-start, flex-end);
-	@include box(100%, 650px);
-	background-size: 70%;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-color: #D9B4A6;
-
-	.container, .row {
-		height: 100%;
-	}
-
-	&__title {
-		@include box(100%, auto);
-		padding: 0 50px;
-		padding-top: 50px;
-		border-top: 7px solid #D1D1D1;
-		border-bottom: 35px solid #D1D1D1;
-		background-color: #E7E7E7;
-
-		h1 {
-			color: $dark;
-			font-size: em(60px);
-		}
-	}
-}
-
-//! Case pagination
-.case-pagination {
-	position: relative;
-	padding: 20px 15px;
-
-	&__link {
-		color: $dark;
-		font-size: em(30px);
-		text-transform: uppercase;
-
-		&:hover {
-			color: $pink;
-		}
-	}
-
-	.absolute-img {
-		max-width: 270px; 
-		position: absolute;
-		left: 15%;
-		top: 10%;
-		transform: translateY(-50%);
-	}
+//! Img fluid
+.img-fluid {
+	margin: 0 auto;
+	max-width: 100%;
 } 
+
+.img-container {
+	width: 100%;
+	display: flex;
+}
