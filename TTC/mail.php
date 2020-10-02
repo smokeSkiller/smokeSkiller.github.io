@@ -23,7 +23,7 @@
 	}
 
 
-	$address = "sharipow03@mail.ru";
+	$address = "info@kupavnatk.ru";
 
 	$mes  = "<b>Имя:</b> $name <br>";	
 	$mes .= "<b>E-mail:</b> $email <br>";
