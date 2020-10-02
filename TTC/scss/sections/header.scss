@@ -1,0 +1,81 @@
+.header {
+    width: 100%;
+    background-color: #fff;
+
+    &.fixed {
+        position: fixed;
+        z-index: 333;
+        top: 0;
+        border-bottom: 1px solid silver;
+
+        .header__body {
+            padding: 15px 0;
+        }
+    }
+
+    .logo {
+        @include flexbox(flex-start, center);
+
+        img {
+            max-width: 270px;
+        }
+
+        &__content {
+            margin-left: 26px;
+            @include flexbox(flex-start, flex-start, column);
+
+            span {
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+        }
+
+        &__text1 {
+            font-size: em(50px);
+        }
+
+        &__text2 {
+            font-size: em(25px);
+        }
+    }
+
+    &__body {
+    	padding: 30px;
+    }
+
+    .burger-btn {
+        @include flexbox(space-between, flex-end, column);
+        @include box(47px, 40px);
+
+
+        &.active {
+            justify-content: center;
+
+            span:nth-child(2) {
+                display: none;
+            }
+
+            span:nth-child(1) {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+
+        span {
+            @include box(100%, 1.5px);
+            background-color: #000;
+            transition: all .4s ease;
+
+            &:nth-child(2) {
+                width: 60%;
+            }
+        }
+    }
+
+    .contact-btn {
+        margin-right: 72px;
+    }
+}

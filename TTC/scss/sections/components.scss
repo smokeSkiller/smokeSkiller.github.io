@@ -1,0 +1,204 @@
+// Feedback
+.feedback {
+    margin-top: 160px;
+
+    form {
+        margin: 0 auto;
+        margin-top: 100px;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .input-row + .input-row {
+        margin-top: 30px;
+    }
+
+    label {
+        letter-spacing: 4px;
+        font-size: em(30px);
+    }
+
+    textarea, input {
+        background: #F9F9F9;
+        font-size: em(20px);
+        font-family: 'Raleway', sans-serif;
+    }
+
+    input {
+        height: 51px;
+    }
+
+    textarea {
+        resize: none;
+        padding: 20px;
+    }
+
+    .submit-btn {
+        margin-right: 100px;
+    }
+}
+
+// Card
+.card {
+    margin-top: 120px;
+    @include flexbox(center, center);
+    width: 100%;
+    max-width: 1150px;
+
+    &.no-align-center {
+        align-items: flex-start;
+    }
+
+    &.right {
+        flex-direction: row-reverse;
+
+        .card__content {
+            margin-left: 0;
+        }
+
+        img {
+            margin-left: 150px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .imgs-group {
+        img {
+            max-width: 360px;
+        }
+    }
+
+    &__title {
+        font-size: em(48px);
+    }
+
+    &__content {
+        margin-left: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        font-family: 'Raleway', sans-serif;
+        font-size: em(18px);
+
+        &.center-text {
+            max-width: 530px;
+            align-self: center;
+        }
+
+        strong {
+            font-weight: lighter;
+            font-size: em(22px);
+        }
+    }
+}
+
+// Section-title
+.section-title {
+    @include flexbox(center);
+
+    h2 {
+        position: relative;
+        text-align: center;
+        font-size: em(64px);
+        text-transform: uppercase;
+
+            &:after {
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                display: block;
+                background: #000;
+                @include box(100%, 1px);
+        }
+    }  
+}
+
+// Btn
+.btn {
+    padding: 10px 24px;
+    background-color: $pink;
+    text-transform: uppercase;
+    font-size: em(24px);
+    letter-spacing: 4px;
+    border-radius: 5px;
+    transition: all .3s ease;
+
+    &:hover {
+        color: #fff;
+        background-color: #000;
+    }
+}
+
+// Slider
+.slider {
+    @include flexbox(center);
+    margin-top: 60px;
+
+    &__body {
+        width: 100%;
+    }
+
+    &-item {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+        @include box(100%, 700px);
+        padding-bottom: 45px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; 
+
+        &.left {
+            justify-content: flex-start;
+
+            .slider-item__title {
+                background: linear-gradient(270deg, rgba(255, 255, 255, 0) -5.47%, #FFFFFF 120.39%);
+            }
+
+            .slider-item__value {
+                left: 40px;
+            }
+        }
+
+        &__title {
+            position: relative;
+            @include box(100%, 70px);
+            max-width: 560px;
+            background: linear-gradient(270deg, #FFFFFF -5.47%, rgba(255, 255, 255, 0) 120.39%);
+        }
+
+        &__value {
+            position: absolute;
+            right: 30px;
+            top: -30px;
+            font-size: em(64px);
+            letter-spacing: 6px;
+        }
+    }
+
+    .slick-dots{
+        bottom: -65px;
+
+        li {
+            margin: 0 10px;
+            @include box(25px);
+            background-color: #000;
+            border-radius: 50%;
+
+            &.slick-active {
+                background-color: $pink;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    } 
+}

@@ -1,0 +1,16 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "libs";
+@import "reset";
+
+// Sections and components
+@import 'sections/header';
+@import 'sections/mmenu';
+@import 'sections/components';
+@import 'sections/main-page';
+@import 'sections/footer';
+
+
+
+@import "media"; // Always at the end

@@ -1,0 +1,4 @@
+.assortment, .features {
+	margin-top: 160px;
+	@include flexbox(flex-start, center, column);
+}

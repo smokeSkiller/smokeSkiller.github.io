@@ -3,7 +3,7 @@
         font-family: "#{$name}";
         // src: url("#{$file}.eot");
         // src: url("#{$file}.eot?#iefix") format("embedded-opentype"),
-        src: url("#{$file}.woff") format("woff");
+        // url("#{$file}.woff") format("woff");
         src: url("#{$file}.ttf") format("truetype");
         // url("#{$file}.svg?#webfont") format("svg");
     }

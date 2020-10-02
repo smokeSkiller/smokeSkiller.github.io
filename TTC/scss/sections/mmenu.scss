@@ -1,0 +1,33 @@
+/* Menu */
+.mm-menu {
+    --mm-color-background: #E5E5E5;
+}
+
+.mm-listitem {
+	--mm-listitem-size: 65px;
+	font-size: em(30px);
+	font-family: "Open Sans", sans-serif;
+	letter-spacing: 4px;
+	transition: all .3s ease;
+
+	&:hover {
+		background: $pink;
+		color: #fff;
+	}
+
+	&.current-page a {
+		text-decoration: underline;
+	}	
+
+	&__text {
+		padding-left: 77px;
+		text-transform: uppercase;
+		white-space: normal;
+	}
+}
+
+.mm-navbar {
+	color: #fff;
+	font-size: 1.5em;
+	--mm-color-background: #757575;
+}

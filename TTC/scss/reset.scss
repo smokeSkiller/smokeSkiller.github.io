@@ -4,13 +4,12 @@
     border: 0;
     box-sizing: border-box !important;
     outline: none;
-    font-family: "Cochin", sans-serif;
-    word-break: break-word;
+    font-family: "Open Sans";
 }
 
 body {
     overflow-x: hidden;
-    background-color: #f9f9fb;
+    background-color: #fff;
 }
 
 ul {
@@ -21,10 +20,10 @@ a {
     color: #000000;
     text-decoration: none;
     outline: none;
-    transition: all .3s ease;
+    word-break: break-word;
 }
 
-input, textarea{
+input, textarea {
     border: 0;
 }
 
@@ -33,4 +32,10 @@ button {
     border: none;
     cursor: pointer;
     outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: lighter;
 }

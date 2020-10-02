@@ -1,0 +1,334 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	// Header
+	.header {
+		.logo {
+	    	img {
+	            max-width: 200px;
+	        }
+
+	    	&__text1 {
+	            font-size: em(36px);
+	        }
+
+	        &__text2 {
+	            font-size: em(18px);
+	        }
+	    }
+	}
+
+	// Card
+	.card {
+		&.right {
+			img {
+	            margin-left: 70px;
+	        }
+		}
+
+		&__content {
+	        margin-left: 70px;
+	    }
+	}
+
+	// Footer
+	.footer {
+		margin-top: 150px;
+
+		&__logo {
+	 		max-width: 360px;
+	 	}  
+
+	 	&-content {
+	 		max-width: 400px;
+
+	 		p, li {
+	 			font-size: em(20px);
+	 		}
+	 	}
+
+	 	&-column {
+	 		&__title {
+	 			font-size: em(25px);
+	 		}
+
+	 		&__links {
+	 			li {
+	 				font-size: em(20px);
+	 			}
+	 		}
+	 	}
+
+	 	&-column + &-column {
+	 		margin-left: 30px;
+	 	}
+	}
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	// Header
+	.header {
+		&.fixed {
+			.header__body {
+		    	padding: 10px 0;
+		    }
+		}
+		
+		&__body {
+	    	padding: 15px;
+	    }
+
+		.logo {
+	    	flex-direction: column;
+
+	    	img {
+	            max-width: 150px;
+	        }
+
+	    	&__content {
+	            margin-top: 15px;
+	           	margin-left: 0;
+	            align-items: center;
+	        }
+
+	        &__text1 {
+	            font-size: em(20px);
+	        }
+
+	        &__text2 {
+	            font-size: em(14px);
+	        }
+	    }
+
+	    .contact-btn {
+	        margin-right: 30px;
+	    }
+	}
+
+	// Slider
+	.slider {
+		margin-top: 40px;
+
+		&-item {
+			height: 600px;
+		}
+	}
+
+	// Section-title  
+	.section-title {
+	    h2 {
+	        font-size: em(54px);
+	    }  
+	}
+
+	// Card
+	.card {
+		margin-top: 70px;
+		flex-direction: column;
+
+		&.right {
+			flex-direction: column;
+
+	    	img {
+	        	margin: 0;
+	        }
+		}
+
+		.imgs-group {
+			width: 100%;
+
+			img {
+				width: 100%;
+				max-height: 100% !important;
+			}
+	    }
+
+	    .card__top-title {
+	    	text-align: center;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+
+        &__content {
+        	margin-top: 30px;
+        	margin-left: 0;
+        }
+	}
+
+	// Footer
+	.footer {
+		margin-top: 100px; 
+
+		&-menu {
+			margin-top: 40px;
+	 		justify-content: flex-start;
+	 	}
+
+	 	&-column {
+	 		&__links {
+	 			margin-top: 30px;
+	 		}
+
+	 		li + li {
+ 				margin-top: 15px;
+ 			}
+	 	}
+	}
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	// Header
+	.header {
+		.logo {
+			&__content {
+	            margin-top: 5px;
+	        }
+		}
+
+		.contact-btn {
+	        display: none;
+	    }
+	}
+
+	// Section-title  
+	.section-title {
+	    h2 {
+	        font-size: em(45px);
+	    }  
+	}
+
+	// Feedback
+	.feedback {
+		input {
+	        margin-top: 10px;
+	    }
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	// Header
+	.header {
+		.row {
+			padding: 0;
+			margin: 0;
+		}
+
+		.logo {
+			img {
+				max-width: 160px;
+			}
+
+	        &__text1 {
+	            font-size: em(16px);
+	        }
+
+	        &__text2 {
+	            font-size: em(10px);
+	        }
+	    }
+	}
+
+	// Menu
+	.mm-listitem {
+		font-size: em(20px);
+
+		&__text {
+			padding-left: 30px;
+		}
+	}
+
+	// Slider
+	.slider {
+		margin-top: 30px;
+
+		&-item {
+			height: 80vh;
+
+			&.left {
+	            .slider-item__value {
+	                left: 15px;
+	            }
+	        }
+
+			&__value {
+	            right: 15px;
+	            top: -30px;
+	            font-size: em(54px);
+	        }
+		}
+	}
+
+	// Section-title  
+	.section-title {
+	    h2 {
+	        font-size: em(32px);
+	    }  
+	}
+
+	// Card
+	.card {
+		margin-top: 50px;
+
+		img {
+			max-height: 180px;
+		}
+
+		&__title {
+	        font-size: em(26px);
+	    }
+
+	    p {
+	    	font-size: em(16px);
+	    }
+	}
+
+	// Assortment, features
+	.assortment, .features, .feedback {
+		margin-top: 70px;
+	}
+
+	// Feedback
+	.feedback {
+		.input-row {
+			margin: 0;
+		}
+
+		.input-row + .input-row {
+	        margin-top: 20px;
+	    }
+
+	     label {
+	        font-size: em(20px);
+	    }
+
+	    .submit-btn {
+	        margin-right: 0;
+	    }
+
+	    form {
+	    	margin-top: 30px;
+	    }
+	}
+
+	// Footer
+	.footer {
+		margin-top: 70px;  
+
+		&-menu {
+			flex-direction: column;
+			align-items: center;
+	 	}
+
+	 	&-column + &-column {
+	 		margin-top: 30px;
+	 		margin-left: 0px;
+	 	}
+	}
+}
