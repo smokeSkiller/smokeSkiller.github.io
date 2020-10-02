@@ -225,13 +225,9 @@
 				max-width: 160px;
 			}
 
-	        &__text1 {
-	            font-size: em(16px);
-	        }
-
-	        &__text2 {
-	            font-size: em(10px);
-	        }
+			&__content {
+				display: none;
+			}
 	    }
 	}
 
