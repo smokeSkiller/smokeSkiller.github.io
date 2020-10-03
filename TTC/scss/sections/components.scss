@@ -42,7 +42,6 @@
     margin-top: 120px;
     @include flexbox(center, center);
     width: 100%;
-    max-width: 1150px;
 
     &.no-align-center {
         align-items: flex-start;
@@ -86,6 +85,7 @@
         &.center-text {
             max-width: 530px;
             align-self: center;
+            text-align: center;
         }
 
         strong {
@@ -93,6 +93,17 @@
             font-size: em(22px);
         }
     }
+}
+
+p.section-text {
+    margin-top: 120px;
+}
+
+// max width 1150px
+.mxw-1150 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1150px;
 }
 
 // Section-title
