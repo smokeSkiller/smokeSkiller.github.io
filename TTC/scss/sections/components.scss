@@ -1,3 +1,15 @@
+// Map container
+.map-container {
+    position:relative;
+    width: 100%;
+    overflow:hidden;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
 // Feedback
 .feedback {
     margin-top: 160px;
