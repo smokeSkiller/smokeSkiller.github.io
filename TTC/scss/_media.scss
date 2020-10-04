@@ -75,7 +75,7 @@
 	.header {
 		&.fixed {
 			.header__body {
-		    	padding: 10px 0;
+		    	padding: 10px 15px;
 		    }
 		}
 		
@@ -293,13 +293,19 @@
 	    }
 	}
 
+	.soft {
+		.card img {
+			max-height: 300px;
+		}
+	}
+
 	// Assortment, features
 	.assortment, .features, .feedback {
 		margin-top: 70px;
 	}
 
-	// Partners, about, contact
-	.partners, .about, .contact {
+	// Partners, about, contact soft
+	.partners, .about, .contact, .soft {
 		margin-top: 50px;
 	}
 

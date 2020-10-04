@@ -82,12 +82,14 @@
     }
 
     &__title {
+        word-break: break-word;
         font-size: em(48px);
     }
 
     &__content {
         margin-left: 150px;
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
     }
 
@@ -139,6 +141,21 @@ p.section-text {
                 @include box(100%, 1px);
         }
     }  
+}
+
+.emphasized {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        display: block;
+        background: #000;
+        @include box(100%, 1px);
+    }
 }
 
 // Btn
