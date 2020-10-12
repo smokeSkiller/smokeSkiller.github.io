@@ -1,0 +1,109 @@
+//! Case header
+.case-header {
+	@include flexbox(flex-start, flex-end);
+	@include box(100%, 650px);
+	background-size: 70%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: #D9B4A6;
+
+	&.specific-bg {
+		background-color: #fff;
+		background-size: cover;
+		background-position: center bottom;
+
+		.case-header__title {
+			background-color: transparent;
+			border: none;
+			padding: 50px;
+		}
+	}
+
+	.container, .row {
+		height: 100%;
+	}
+
+	&__title {
+		@include box(100%, auto);
+		padding: 0 50px;
+		padding-top: 50px;
+		border-top: 7px solid #D1D1D1;
+		border-bottom: 35px solid #D1D1D1;
+		background-color: #E7E7E7;
+
+		h1 {
+			color: $dark;
+			font-size: em(60px);
+		}
+	}
+}
+
+//! Case pagination
+.case-pagination {
+	position: relative;
+	padding: 20px 15px;
+
+	&__link {
+		color: $dark;
+		font-size: em(30px);
+		text-transform: uppercase;
+
+		&:hover {
+			color: $pink;
+		}
+	}
+
+	.absolute-img {
+		max-width: 270px; 
+		position: absolute;
+		left: 15%;
+		top: 10%;
+		transform: translateY(-50%);
+	}
+} 
+
+//! Case content
+.case-content {
+	padding: 50px 100px;
+
+	&__title {
+		font-size: em(45px);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: em(30px);
+	}
+
+	strong {
+		display: block;
+		text-align: center;
+		font-size: em(54px);
+	}
+
+	hr {
+		margin: 0 auto;
+		max-width: 610px;
+		height: 2px;
+		background: #000;
+	}
+
+	.quote-block {
+		padding: 25px 0;
+	}
+
+	&__card-block {
+		@include flexbox(center, center);
+		width: 100%;
+
+		.text {
+			max-width: 420px;
+			margin-right: 60px;
+		}
+
+		img {
+			max-width: 520px;
+		}
+	}
+}
