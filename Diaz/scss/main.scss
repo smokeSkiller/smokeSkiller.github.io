@@ -136,7 +136,7 @@
 // About
 .about {
     .video-container {
-        @include box(100%, 500px);
+        @include box(100%, 700px);
         @include flexbox(center, center);
         border: 5px solid #7fa0cd;
 
