@@ -111,10 +111,6 @@
     .start-banner {
         padding: 30px 0;
 
-        &__content {
-            @include flexbox(flex-start, flex-start, column);
-        }
-
         h2 {
             font-size: em(40px);
         }
