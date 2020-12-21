@@ -1,0 +1,198 @@
+//! Testimonial
+.testimonial {
+    margin: 70px 10px;
+    margin-bottom: 0;
+    position: relative;
+    @include flexbox(flex-start, center, column);
+    padding: 15px 20px;
+    max-width: 735px;
+    border: 1px solid #6B95CF;
+
+    &__img {
+        position: absolute;
+        top: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        margin-top: 55px;
+        text-align: center;
+        font-family: "Myriad Pro", sans-serif;
+        font-size: em(23px);
+    }
+
+    p {
+        margin-top: 20px;
+        padding: 0 50px;
+        max-width: 590px;
+        text-align: center;
+        letter-spacing: 1.1px;
+        font-family: "Futura PT", sans-serif;
+        font-size: em(23px);
+    }
+
+    &__role {
+        margin-top: 40px;
+        align-self: flex-end;
+        font-family: "Myriad Pro", sans-serif;
+        font-weight: bold;
+    }
+} 
+
+//! Social buttons
+.soc-btns {
+    margin: 30px 0;
+    padding: 0 10px;
+    @include flexbox(flex-start, center, column);
+    width: 100%;
+
+    h3 {
+        text-align: center;
+        font-family: 'Myriad Pro', sans-serif;
+        font-size: em(30px);
+    }
+
+    &__items {
+        margin-top: 25px;
+        @include flexbox();
+        flex-wrap: wrap;
+    }
+
+    .soc-btn {
+        margin: 10px 5px;
+        @include flexbox(center, center);
+        @include box(55px);
+        background-color: #8cabd6;
+        border-radius: 50%;
+        border: 3px solid #8cabd6;
+        color: #fff;
+        font-size: em(25px);
+        transition: all .3s ease;
+
+        &:hover {
+            color: #8cabd6;
+            background-color: #fff;
+        }
+    }
+}
+
+//! Section row
+.section__row {
+    margin-top: 60px;
+} 
+
+//! Padding of section
+.section-pd {
+    padding: 70px 0;
+}
+
+//! Btns
+// Blue
+.blue-btn {
+    position: relative;
+    display: table;
+    background: #7FA0CD;
+    color: #fff;
+    font-family: 'Futura PT', sans-serif;
+    text-transform: uppercase;
+    border-radius: 45px;
+    box-shadow: 0px 4px 1px #6589bb;
+    transition: all .3s ease;
+
+    i {
+        position: absolute;
+        margin-left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.blue-btn:hover {
+    background: #97B3D9;
+}
+
+.blue-btn:active {
+    background: #7FA0CD;
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+// Light
+.light-btn {
+    display: block;
+    padding: 15px 17px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5c7ba8;
+    background: #fff;
+    font-size: em(15px);
+    line-height: 9px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.light-btn:hover {
+    background: #b1c5e1;
+}
+
+//! Bg colors 
+.bg-light-blue {
+    background-color: #D4E0F2;
+}
+
+//! Section title
+h2.section-title {
+    text-align: center;
+    color: #1F1F1F;
+    font-family: 'Pribambas', 'Myriad Pro', sans-serif;
+    font-size: em(50px);
+}
+
+//! Burger menu
+.burger-btn {
+    @include flexbox(center, center);
+    background-color: transparent;
+    @include box(60px, 55px);
+    border-left: 1px solid #3c3c3c;
+    border-right: 1px solid #3c3c3c;
+
+    span {
+        position: relative;
+        display: block;
+
+        &:after,&:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -6px;
+        }
+
+        &:after {
+            top: 6px;
+        }
+    }
+}
+
+.burger-btn span,
+.burger-btn span:after,
+.burger-btn span:before {
+    @include box(20px, 2px);
+    background-color: #ffffff;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+/* on activation */
+.burger-btn.on span {
+    background-color: transparent;
+
+    &::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &::after {
+        transform: rotate(-45deg) translate(4px, -4px);
+    } 
+}

@@ -1,0 +1,43 @@
+.header {
+    margin-top: 20px;
+    width: 100%;
+
+    &__body {
+        @include flexbox(space-between, center);
+        width: 100%;
+        padding: 10px 17px;
+        border-radius: 10px;
+        background: #B3C5DE;
+        box-shadow: 0px 6px 24px 0px rgba(97,97,97,0.46);
+    }
+
+    &__contact {
+        @include flexbox(flex-start, center);
+    }
+
+    &__contact-info + &__contact-info {
+        margin-left: 35px;
+    }
+
+    &__contact-info {
+        @include flexbox(flex-start, center);
+
+        i {
+            color: #fff;
+            font-size: em(21px);
+        }
+
+        span {
+            margin-left: 20px;
+            color: #5b5b5b;
+            font-family: 'Montserrat';
+            font-size: em(18.1px);
+            line-height: 18px;
+            font-weight: 500;
+        }
+    }
+
+    .light-btn {
+        margin-left: 30px;
+    }
+}

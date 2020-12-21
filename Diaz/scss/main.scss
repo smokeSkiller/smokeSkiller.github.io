@@ -1,0 +1,146 @@
+//! Libraries and settings
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "libs";
+@import "reset";
+
+//! Sections and components
+@import "sections/header";
+@import "sections/components";
+
+// Start banner
+.start-banner {
+    padding: 130px 0;
+    position: relative;
+
+    h2 {
+        font-family: 'Pribambas', sans-serif;
+        font-size: em(45px);
+    }
+
+    p {
+        margin-top: 25px;
+        color: #323232;
+        font-family: 'Myriad Pro', sans-serif;
+        font-size: em(25px);
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+    p.little {
+        font-size: em(20px);
+    }
+
+    &__btn {
+        margin-top: 40px;
+        padding: 15px 60px;
+        font-size: em(25px);
+    }
+
+    &__img {
+        position: absolute;
+        right: -50px;
+        top: -20%;
+    }
+}
+
+// Features
+.features {
+    .feature {
+        padding: 40px 20px;
+        min-height: 290px;
+        background: #fff;
+        box-shadow: 0px 5px 17px 1px rgba(180,192,209,0.34);
+
+        &__flex {
+            @include flexbox(flex-start, center);
+        }
+
+        h4 {
+            margin-left: 25px;
+            color: #1f1f1f;
+            font-family: 'Futura PT', sans-serif;
+            font-size: em(26px);
+            line-height: 24px;
+        }
+
+        p {
+            margin-top: 25px;
+            color: #1f1f1f;
+            font-family: 'Futura PT', sans-serif;
+            font-size: em(22px);
+            line-height: 31px;
+        }
+    }
+}
+
+// Requirements
+.requirements {
+    .requirement {
+        @include flexbox(flex-start, center, column);
+        padding: 30px 25px;
+        min-height: 300px;
+        border: 2px solid #6B95CF;
+        border-radius: 50px;
+
+        h4 {
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Futura PT', sans-serif;
+            font-size: em(26px);
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    }
+}
+
+// How we work 
+.how-work {
+    .stage {
+        @include flexbox(flex-start, center, column);
+
+        .percentage {
+            position: relative;
+            @include flexbox(center, center);
+            @include box(130px);
+            font-family: 'Futura PT', sans-serif;
+            font-size: em(35px);
+            border-radius: 50%;
+        }
+
+        h4 {
+            margin-top: 15px;
+            text-align: center;
+            font-family: 'Myriad Pro', sans-serif;
+            font-size: em(18px);
+            line-height: 24px;
+        }
+
+        i {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #7FA0CD;
+        }
+    }
+}
+
+// About
+.about {
+    .video-container {
+        @include box(100%, 500px);
+        @include flexbox(center, center);
+        border: 5px solid #7fa0cd;
+    }
+
+    // Testimonial 
+    .testimonial {
+        margin-top: 150px;
+    }
+}
+
+@import "media"; // Always at the end
