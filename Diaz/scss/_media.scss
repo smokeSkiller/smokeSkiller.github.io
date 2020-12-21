@@ -124,6 +124,10 @@
             font-size: em(16px);
         }
 
+        &__img-container {
+            align-items: flex-start;
+        }
+
         &__img {
             max-width: 300px;
             height: auto;
