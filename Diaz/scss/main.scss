@@ -135,6 +135,10 @@
         @include box(100%, 500px);
         @include flexbox(center, center);
         border: 5px solid #7fa0cd;
+
+        iframe {
+            @include box(100%);
+        }
     }
 
     // Testimonial 
