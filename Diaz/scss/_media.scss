@@ -30,6 +30,23 @@
             }
         }
     }
+
+    //! Price 
+    .price {
+        &-slider {
+            .slide-to-left {
+                left: 1%;
+            }
+    
+            .slide-to-right {
+                right: -5.5%;
+            }
+
+            &.slick-current.slick-center {
+                height: auto;
+            }
+        }
+    }
 }
 
 // ≥992px
@@ -85,6 +102,20 @@
             }
         }
     }
+
+    //! Price
+    .price {
+        &-slider {
+            .slick-track {
+                align-items: stretch;
+                height: auto;
+            }
+
+            &__slide:after {
+                display: none;
+            }
+        }
+    } 
 }
 
 // ≥768px
@@ -148,13 +179,48 @@
 
     //! About
     .about {
-        // .video-container {
-        //     height: 350px;
-        // }
-
         // Testimonial 
         .testimonial {
             margin-top: 100px;
+        }
+    }
+
+    //! Price 
+    .price {
+        &-slider {
+            .slide-to-left {
+                left: 5%;
+            }
+    
+            .slide-to-right {
+                right: -6%;
+            }
+        }
+    }
+
+    //! Projects
+    .projects {
+        &__row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    
+        .project {
+            margin: 10px 0;
+            width: 100%;
+        }
+    } 
+
+    //! Footer
+    footer {
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .links {
+            margin-top: 15px;
+            align-items: center;
         }
     }
 }
@@ -203,6 +269,30 @@
 
             p {
                 padding: 0 10px;
+            }
+        }
+    }
+
+    //! Price 
+    .price {
+        &-slider {
+            .slide-to-left {
+                left: 6%;
+            }
+    
+            .slide-to-right {
+                right: -12%;
+            }
+        }
+    }
+
+    //! Partners
+    .partners {
+        &-slider {
+            &__slide {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

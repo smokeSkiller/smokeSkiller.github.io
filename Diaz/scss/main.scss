@@ -139,7 +139,6 @@
         position: relative;
         height: 0;
         padding-bottom: 56.25%;
-        border: 5px solid #7fa0cd;
 
         iframe {
             position: absolute;
@@ -155,5 +154,172 @@
         margin-top: 150px;
     }
 }
+
+// Price
+.price {
+    overflow: hidden;
+
+    &-slider {
+        // Arrows
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 777;
+            transform: translateX(-50%);
+            @include flexbox(center, center);
+            @include box(60px);
+            color: #fff;
+            font-size: em(30px);
+            background-color: #6c96cf;
+            border-radius: 50%;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #9FBBE0;
+            }
+        }
+
+        .slide-to-left {
+            left: -4.5%;
+        }
+
+        .slide-to-right {
+            right: -10%;
+        }
+
+        // Track
+        .slick-track {
+            height: 660px;
+            @include flexbox(space-between, center);
+        }
+
+        // Slide
+        &__slide {
+            position: relative;
+            margin: 0 10px;
+            display: flex !important;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 30px;
+            height: auto;
+            background-color: #f8f8f8;
+
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                @include box(100%);
+                background-color: rgba(255, 255, 255, 0.35);
+            }
+
+            &.slick-current.slick-center {
+                height: 630px;
+                border: 1.5px solid #658abb;
+
+                &:after {
+                    display: none;
+                }
+
+                h3 {
+                    font-size: em(30px);
+                }
+
+                p {
+                    font-size: em(25px);
+                }
+
+                .blue-btn {
+                    padding: 20px 75px;
+                    font-size: em(18.4px);
+                }
+            }
+
+            h3, p {
+                text-align: center;
+                color: #1F1F1F;
+                font-family: 'Futura PT', sans-serif;
+                letter-spacing: 1px;
+            }
+
+            h3 {
+                position: relative;
+                font-size: em(25px);
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    @include box(100%, 2px);
+                    background-color: #1F1F1F;
+                }
+            }
+
+            .content {
+                margin-top: 50px;
+            }
+            
+            p {
+                font-size: em(20px);
+                line-height: 20px;
+            }
+
+            p + p {
+                margin-top: 5px;
+            }
+
+            .price-text {
+                margin-top: 50px;
+                color: #4F71A0;
+                font-family: 'Futura PT', sans-serif;
+                font-size: em(40px);
+                letter-spacing: 1px;
+            }
+
+            .blue-btn {
+                margin-top: 30px;
+                padding: 10px 50px;
+                font-size: em(16px);
+            }
+        }
+    }
+}
+
+// Partners
+.partners {
+    &-slider {
+        &__slide {
+            @include flexbox(center, center);
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// Projects
+.projects {
+    &__row {
+        margin-left: -10px;
+        margin-right: -10px;
+        @include flexbox(center);
+        flex-wrap: wrap;
+    }
+
+    .project {
+        margin: 5px;
+        @include box(calc(50% - 15px), 345px);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all .3s ease;
+
+        &:hover {
+            box-shadow: inset .5em .5em 4em #7FA0CD;
+        }
+    }
+}
+
+@import "sections/footer";
 
 @import "media"; // Always at the end
