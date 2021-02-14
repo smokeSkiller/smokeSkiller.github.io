@@ -1,0 +1,45 @@
+.footer {
+    .soc-link {
+        margin-top: 25px;
+    }
+
+    &-menu {
+        li + li {
+            margin-top: 5px;
+        }
+
+        a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: em(16px);
+            font-weight: bold;
+            transition: all .3s ease;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    &__tel, &__email {
+        font-family: 'Montserrat', sans-serif;
+        font-size: em(18px);
+    }
+
+    &__tel {
+        font-weight: bold;
+    }
+
+    &__email {
+        margin-top: 5px;
+    }
+
+    &-info {
+        p + p {
+            margin-top: 5px;
+        }
+
+        p {
+            text-align: end;
+        }
+    }
+}

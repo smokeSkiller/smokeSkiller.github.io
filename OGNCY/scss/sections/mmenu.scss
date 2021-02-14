@@ -1,0 +1,64 @@
+.mm-panel {
+    padding: 50px 0;
+    background-color: #161618;
+}
+
+.mm-menu .mm-listitem {
+    a {
+        padding-right: 150px;
+        padding-left: 150px; 
+        @include flexbox(space-between, center);
+        color: #fff;
+        text-transform: none;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: bold;
+        font-size: em(40px);
+        transition: all .3s ease;
+    
+        &:hover {
+            color: $blue;
+
+            svg {
+                fill: #fff;
+            }
+    
+            i:before {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        svg { 
+            fill: transparent;
+            transition: fill .4s ease; 
+        }
+
+
+        .link-title {
+            margin-left: 40px;
+        }
+    
+        .menu-icons {
+            @include flexbox();
+        }
+    
+        i {
+            transition: all 2s ease;
+    
+            &:before {
+                display: block;
+                font-size: 16px;
+                -webkit-transition: all 1s ease;
+                transition: all 1s ease;
+            }
+        }
+    
+        i + i {
+            margin-left: 40px;
+        }
+    }
+
+    &:last-child {
+        margin-top: 50px;
+    }
+}
