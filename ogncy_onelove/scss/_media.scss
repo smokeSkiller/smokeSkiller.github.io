@@ -140,6 +140,7 @@
         &-imgs {   
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             
             img {
                 position: static;
@@ -432,11 +433,11 @@
 
     //! Start section
     .start-section {
-        &-imgs {
-            img {
-                max-width: 300px;
-            }
-        }
+        // &-imgs {
+        //     img {
+        //         max-width: 300px;
+        //     }
+        // }
 
         &__title {
             font-size: em(40px);
