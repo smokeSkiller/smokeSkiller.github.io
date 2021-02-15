@@ -3,7 +3,8 @@ $(function() {
   //! DOM
   // Header
   const header = $('.header');
-  const headerFixed = $('.header.fixed-for-menu')
+  const headerFixed = $('.header.fixed-for-menu');
+  const topEmpty = $('.top-header-empty-line');
   const menu = $('#my-menu');
   const burgerBtn = $('.burger-btn');
   // Slider 
@@ -15,16 +16,16 @@ $(function() {
   $(window).on("scroll", function() {
     //! Fixed header
     if($(this).scrollTop() > $('.static-header').outerHeight()) {
-      header.addClass("fixed");
+      headerFixed.addClass("fixed");
 
       setTimeout(() => {
-        menu.css('top', '' + header.innerHeight() + 'px');
+        menu.css('top', '' + headerFixed.innerHeight() + 'px');
       }, 200);
     } else {
-      header.removeClass("fixed");
+      headerFixed.removeClass("fixed");
 
       setTimeout(() => {
-        menu.css('top', '' + header.innerHeight() + 'px');
+        menu.css('top', '' + headerFixed.innerHeight() + 'px');
       }, 200);
     }
 
