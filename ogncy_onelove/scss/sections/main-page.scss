@@ -127,6 +127,11 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom;
+
+            .tag {
+                font-family: 'Montserrat';
+                font-size: em(14px);
+            }
         }
 
         .description {
