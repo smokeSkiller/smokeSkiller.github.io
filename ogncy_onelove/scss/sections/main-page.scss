@@ -31,7 +31,7 @@
     &__title {
         margin-top: 15px;
         font-size: em(69px);
-        font-weight: bold;
+        // font-weight: bold;
         line-height: 77px;
     }
 
@@ -54,7 +54,7 @@
     .quote {
         margin-top: 40px;
         font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
+        // font-weight: bold;
         font-size: em(15px);
     }
 
@@ -82,7 +82,7 @@
             .text {
                 font-family: 'Montserrat', sans-serif;
                 font-size: em(24px);
-                font-weight: bold;
+                // font-weight: bold;
             }
         }
     }
@@ -97,7 +97,7 @@
             width: 670px;
             height: auto;
             display: block;
-            transition: all .7s ease;
+            transition: all .3s ease;
         }
 
         .img-to-hover {
@@ -153,7 +153,7 @@
             display: block;
             font-family: 'Montserrat', sans-serif;
             font-size: em(13px);
-            font-weight: bold;
+            // font-weight: bold;
             color: #A3A3A3;
         }
     }
@@ -181,7 +181,7 @@
             margin-top: 15px;
             font-family: 'Montserrat', sans-serif;
             font-size: em(14px);
-            font-weight: bold;
+            // font-weight: bold;
         }
     }
 }
@@ -233,7 +233,7 @@
 
         p {
             margin-top: 20px;
-            font-weight: bold;
+            // font-weight: bold;
         }
 
         .quote-author {
@@ -258,6 +258,8 @@
 
 //! Section projects
 .section-projects {
+    padding: 85px 0;
+
     .btn {
         padding: 11px 16px;
     }
@@ -265,7 +267,7 @@
     &-first-col {
         p {
             margin-top: 20px;
-            font-weight: bold;
+            // font-weight: bold;
             line-height: 17px;
         }
     }
@@ -279,7 +281,7 @@
             height: 405px;
             background-size: cover;
             background-position: center;
-            transform: scale(.8);
+            transform: scale(.7);
             filter: grayscale(100%);
             
             * {
@@ -385,7 +387,7 @@
 .section-feedback {
     position: relative;
     padding: 70px 0;
-    background-color: #161618;
+    background-color: #000;
     background-image: url('../img/feedback-bg.png');
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -411,7 +413,7 @@
             display: block;
             color: #FFFFFF;
             line-height: 17px;
-            font-weight: bold;
+            // font-weight: bold;
         }
 
         .arrow-line {
@@ -500,7 +502,7 @@
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
                 font-size: em(14px);
-                font-weight: bold;
+                // font-weight: bold;
             }
         }
 
@@ -528,7 +530,7 @@
     }
 
     p {
-        font-weight: bold;
+        // font-weight: bold;
     }
 
     .arrow-line {
@@ -592,14 +594,14 @@
     p {
         margin-top: 30px;
         max-width: 400px;
-        font-weight: bold;
+        // font-weight: bold;
     }
 
     &__pointer {
         align-self: flex-end;
         font-family: 'Montserrat', sans-serif;
         font-size: em(12px);
-        font-weight: bold;
+        // font-weight: bold;
         line-height: 15px;
 
         i {
@@ -612,7 +614,6 @@
         @include flexbox(flex-start, center, column);
         padding: 30px;
         border: 1px solid #000000;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 
         &__field {
             margin-top: 30px;

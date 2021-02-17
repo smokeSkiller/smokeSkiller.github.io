@@ -95,7 +95,7 @@ $(function() {
   //! Masonry
   $('.team-section-grid').masonry({
     itemSelector: '.team-section-grid-item',
-  })
+  });
 
   //! Main menu 
 	new Mmenu( "#my-menu", {   
@@ -128,15 +128,8 @@ $(function() {
 
       if (menu.hasClass('mm-menu_opened')) {
         burgerBtn.addClass('on');
-
-        setTimeout(() => {
-          header.addClass('dark');
-        }, 360);
+        header.addClass('dark');
       } 
-      // else {
-      //   header.removeClass('dark');
-      //   burgerBtn.removeClass('on');
-      // }
     });
 
     $(document.body).on('click', function () {
@@ -151,6 +144,11 @@ $(function() {
     });
 
     $(".mm-wrapper__blocker").on("touchstart", function() {
+      burgerBtn.removeClass('on');
+      header.removeClass('dark');
+    });
+
+    menu.find('li').on('click', function () {
       burgerBtn.removeClass('on');
       header.removeClass('dark');
     });

@@ -22,8 +22,8 @@
 
     //! Mmenu
     .mm-menu .mm-listitem a {
-        padding-right: 120px;
-        padding-left: 80px; 
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         i {
             &:nth-child(9), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
@@ -106,7 +106,7 @@
     //! Footer
     .footer {
         .soc-link {
-            margin-top: 0;
+            margin-top: 15px;
             margin-left: 0;
         }
     }
@@ -426,9 +426,6 @@
         }
 
         a {
-            padding-left: 20px;
-            padding-right: 20px;
-    
             i {
                 display: none;
             }
@@ -437,12 +434,6 @@
 
     //! Start section
     .start-section {
-        // &-imgs {
-        //     img {
-        //         max-width: 300px;
-        //     }
-        // }
-
         &__title {
             font-size: em(40px);
             line-height: 45px;
@@ -501,6 +492,11 @@
                 }
             }
         }
+    }
+
+    //! Section projects
+    .section-projects {
+        padding-top: 50px;
     }
 
     //! Clients 

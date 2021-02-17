@@ -3,11 +3,21 @@
     background-color: #161618;
 }
 
+.mm-listview {
+    margin: 0 auto;
+}
+
 .mm-menu .mm-listitem {
+    &_selected {
+        a {
+            background-color: transparent;
+        }
+    }
+
     a {
-        padding-right: 150px;
-        padding-left: 150px; 
         @include flexbox(space-between, center);
+        padding-top: 15px;
+        padding-bottom: 15px;
         color: #fff;
         text-transform: none;
         font-family: 'JetBrains Mono', monospace;
@@ -21,18 +31,20 @@
             svg {
                 fill: #fff;
             }
+
+            .link-title {
+                text-decoration: underline;
+            }
     
             i:before {
                 transform: rotate(360deg);
             }
         }
 
-
         svg { 
             fill: transparent;
             transition: fill .4s ease; 
         }
-
 
         .link-title {
             margin-left: 40px;
@@ -45,9 +57,15 @@
         i {
             transition: all 2s ease;
     
+            &.pink {
+                &:before {
+                    color: #F20080;
+                }
+            }
+
             &:before {
                 display: block;
-                font-size: 16px;
+                font-size: 22px;
                 -webkit-transition: all 1s ease;
                 transition: all 1s ease;
             }
