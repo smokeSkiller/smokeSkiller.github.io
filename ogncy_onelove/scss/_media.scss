@@ -9,6 +9,11 @@
     .header {
         padding: 25px 0;
 
+        .soc-link {
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+
         &.fixed {
             padding: 15px 0;
         }
@@ -115,12 +120,12 @@
 // ≥992px
 @include media-breakpoint-down(md) {
     //! Header
-    .header {
-        .soc-link {
-            margin-top: 10px;
-            margin-left: 0px;
-        }
-    }
+    // .header {
+    //     .soc-link {
+    //         margin-top: 10px;
+    //         margin-left: 0px;
+    //     }
+    // }
 
      //! Mmenu
     .mm-menu .mm-listitem a i {
@@ -385,10 +390,6 @@
 
         &.fixed {
             padding: 10px;
-        }
-
-        .logo {
-            line-height: 35px;
         }
 
         &-btns {
