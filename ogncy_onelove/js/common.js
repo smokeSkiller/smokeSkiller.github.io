@@ -15,7 +15,7 @@ $(function() {
 
   $(window).on("scroll", function() {
     //! Fixed header
-    if($(this).scrollTop() > $('.static-header').outerHeight()) {
+    if($(this).scrollTop() > 0) {
       headerFixed.addClass("fixed");
 
       setTimeout(() => {
@@ -39,7 +39,8 @@ $(function() {
 
   //! Scroll to top 
   scrollToTop.on('click', function () {
-    $(window).scrollTop(0);
+    $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
   });
 
   //! Slider

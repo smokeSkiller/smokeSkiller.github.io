@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    padding: 35px 0;
+    padding: 30px 0;
     background: #fff;
     transition: all .3s ease;
     border-bottom: 1px solid #e0e0e0;
@@ -9,7 +9,7 @@
         top: 0;
         position: fixed;
         z-index: 888;
-        padding: 20px 0;
+        // padding: 20px 0;
     }
     
     &.dark {

@@ -97,7 +97,6 @@
             width: 670px;
             height: auto;
             display: block;
-            transition: all .3s ease;
         }
 
         .img-to-hover {
@@ -467,11 +466,6 @@
             padding: 15px;
             font-size: em(20px);
             cursor: pointer;
-
-            &:hover {
-                color: #fff;
-                background: #1C1C21;
-            }
         }
     }
 }
@@ -482,7 +476,7 @@
         margin-top: 40px;
 
         .client-slide {
-            height: 212px;
+            height: 235px;
             padding: 15px;
 
             &__container {
