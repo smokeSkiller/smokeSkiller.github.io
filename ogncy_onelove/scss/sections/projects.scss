@@ -1,0 +1,130 @@
+.projects-page {
+    padding-bottom: 100px;
+}
+
+.projects-introduction {
+    padding: 40px 0;
+
+    p {
+        max-width: 470px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    &-title {
+        @include flexbox(flex-start, center);
+
+        h1 {
+            font-size: em(69px);
+        }
+
+        svg {
+            margin-left: 35px;
+            transition: all .3s ease;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+.projects-categories {
+    margin: 0 -15px;
+
+    &__category {
+        margin: 10px 15px;
+        min-width: 70px;
+        padding: 6px 14px;
+        border: 2px solid #000000;
+        cursor: pointer;
+
+        &.current {
+            color: #fff;
+            border-color: $blue;
+            background: $blue;   
+        }
+    }
+}
+
+.projects-grid {
+    margin-top: 40px;
+
+    &-item {
+        margin-bottom: 50px;
+        display: flex;
+        width: 48%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: all .5s ease;
+
+        &:hover {
+            background: $blue;
+
+            p, h3, .tags .tag {
+                color: #fff;
+            }
+
+            h3 {
+                &:before {
+                    background: #fff;
+                }
+            }
+        }
+
+        &__content {
+            padding: 20px;
+        }
+
+        h3 {
+            position: relative;
+            padding-left: 25px;
+            font-size: em(25px);
+            line-height: 31px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                @include box(12px);
+                border-radius: 50%;
+                background: $blue;
+            }
+        }
+
+        p {
+            display: block;
+            
+            &:first-of-type {
+                margin-top: 10px;
+            }
+        }
+
+        p + p {
+            margin-top: 4px;
+        }
+
+        &__thumbnail {
+            min-width: 238px;
+            max-width: 265px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .tags {
+            margin-top: 10px;
+
+            .tag {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: em(12px);
+            }
+        }
+    }
+}

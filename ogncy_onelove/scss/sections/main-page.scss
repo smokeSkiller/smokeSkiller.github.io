@@ -637,3 +637,22 @@
         }
     }
 } 
+
+//! Clients 2
+.section-clients-2 {
+    background: $gray;
+    overflow: hidden;
+
+    &__wrapper {
+        @include flexbox(space-between, center);
+    }
+
+    .client-slide {
+        @include flexbox(center, center, column);
+        height: 90px;
+
+        img {
+            max-width: 150px;
+        }
+    }
+}

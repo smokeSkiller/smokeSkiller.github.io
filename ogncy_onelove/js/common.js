@@ -8,8 +8,9 @@ $(function() {
   const menu = $('#my-menu');
   const burgerBtn = $('.burger-btn');
   // Slider 
+  const clientSlider2 = $('.client-slider-2');
   const projectsSlider = $('.projects-slider');
-  const clientSlider = $('.client-slider')
+  const clientSlider = $('.client-slider');
   // Scroll
   const scrollToTop = $('.scroll-to-top-btn');
 
@@ -30,7 +31,7 @@ $(function() {
     }
 
     // Scroll to top
-    if($(this).scrollTop() > $('.services-section').scrollTop() + $('.services-section').outerHeight()) {
+    if($(this).scrollTop() > 1000) {
       scrollToTop.fadeIn();
     } else {
       scrollToTop.fadeOut();
@@ -44,6 +45,33 @@ $(function() {
   });
 
   //! Slider
+  clientSlider2.slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
+  })
+
   // Client
   clientSlider.slick({
     slidesToShow: 4,
@@ -94,8 +122,15 @@ $(function() {
   });
 
   //! Masonry
+  // Team section grid
   $('.team-section-grid').masonry({
     itemSelector: '.team-section-grid-item',
+  });
+
+  // Projects grid
+  $('.projects-grid').masonry({
+    itemSelector: '.projects-grid-item',
+    gutter: 20
   });
 
   //! Main menu 
@@ -135,8 +170,8 @@ $(function() {
 
     $(document.body).on('click', function () {
       if (menu.hasClass('mm-menu_opened')) {
-        header.removeClass('dark');
         burgerBtn.removeClass('on');
+        header.removeClass('dark');
       }
     });
     
