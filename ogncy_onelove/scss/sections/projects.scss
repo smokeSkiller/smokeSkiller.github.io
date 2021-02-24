@@ -39,10 +39,9 @@
         border: 2px solid #000000;
         cursor: pointer;
 
-        &.current {
-            color: #fff;
+        &:hover {
+            background-color: $blue;
             border-color: $blue;
-            background: $blue;   
         }
     }
 }
