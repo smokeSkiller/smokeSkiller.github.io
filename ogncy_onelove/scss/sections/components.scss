@@ -1,3 +1,26 @@
+//! Tags
+.tags {
+    .tag {
+        font-family: 'Montserrat', sans-serif;
+        font-size: em(14px);
+    }
+}
+
+//! Scroll to bottom button
+.scroll-to-bottom-btn {
+    @include box(70px);
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background: #fff;
+    font-size: em(30px);
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
 //! Scroll to top button
 .scroll-to-top-btn {
     position: fixed;

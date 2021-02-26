@@ -5,6 +5,51 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
+    //! Services
+    // Section blog
+    .section-blog {
+        &-articles {
+            margin: 0 -10px;
+        }
+        
+        &-article {
+            margin: 15px 10px;
+            width: calc(33.33% - 20px);
+        }
+    }
+
+    // Section offers
+    .section-offers {
+        .row {
+            margin-top: 0;
+        }
+
+        .first-column {
+            p {
+                margin-top: 20px;
+            }
+        }
+
+        &-box {
+            margin-top: 60px;
+        }
+    }
+
+    // Start box
+    .start-box {
+        &__row {
+            padding: 40px;
+        }
+
+        &__icons {
+            top: 50px;
+        }
+    
+        .scroll-to-bottom-btn, &__icons {
+            right: 50px;
+        }
+    }
+
     //! Projects page
     .projects-grid {
         &-item {
@@ -136,6 +181,29 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
+    //! Services
+    // Section blog
+    .section-blog {
+        &-articles {
+            margin: 0 -10px;
+        }
+        
+        &-article {
+            width: calc(50% - 20px);
+        }
+    }
+
+    // Start box
+    .start-box {
+        &__icons {
+            display: none;
+        }
+
+        &__title {
+            font-size: em(60px);
+        }
+    }
+
     //! Projects page
     .projects-introduction {
         p {
@@ -143,14 +211,6 @@
             max-width: none;
         }
     }
-
-    //! Header
-    // .header {
-    //     .soc-link {
-    //         margin-top: 10px;
-    //         margin-left: 0px;
-    //     }
-    // }
 
      //! Mmenu
     .mm-menu .mm-listitem a i {
@@ -284,6 +344,29 @@
 
 // ≥768px
 @include media-breakpoint-down(sm) {
+    //! Services
+    .section-offers {
+        &-item {
+            margin: 15px;
+            width: calc(50% - 30px);
+        }
+    }
+
+    .start-box {
+        &__row {
+            padding: 30px;
+        }
+
+        &__title {
+            font-size: em(50px);
+            line-height: 60px;
+        }
+
+        &__text p {
+            font-size: em(22px);
+        }
+    }
+
     //! Projects page
     .projects-grid {
         &-item {
@@ -419,6 +502,61 @@
 
 // ≥576px
 @include media-breakpoint-down(xs) {
+    //! Services
+    // Section blog
+    .section-blog {
+        &-articles {
+            margin-top: 20px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        &-article {
+            width: 100%;
+        }
+    }
+
+    .section-offers {
+        &-box {
+            margin-top: 25px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &-item {
+            margin: 20px 15px;
+            width: 100%;
+
+            &.has-optimal {
+                margin-top: 40px;
+
+                .section-offers-item__title {
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 0;
+                }
+            }
+
+            &__optimal {
+                left: 0;
+            }
+        }
+    }
+
+    .start-box {
+        &__row {
+            padding: 30px 15px;
+        }
+
+        &__title {
+            font-size: em(37px);
+            line-height: 45px;
+        }
+
+        &__text p {
+            font-size: em(18px);
+        }
+    }
+
     //! Projects page
     .projects-introduction {
         &-title {

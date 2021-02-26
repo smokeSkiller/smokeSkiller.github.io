@@ -21,13 +21,6 @@
         @include box(100%, 20.6%);
     }
 
-    .tags {
-        .tag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: em(14px);
-        }
-    }
-
     &__title {
         margin-top: 15px;
         font-size: em(69px);

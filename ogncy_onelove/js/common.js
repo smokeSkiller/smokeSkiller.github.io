@@ -7,12 +7,37 @@ $(function() {
   const topEmpty = $('.top-header-empty-line');
   const menu = $('#my-menu');
   const burgerBtn = $('.burger-btn');
+
   // Slider 
   const clientSlider2 = $('.client-slider-2');
   const projectsSlider = $('.projects-slider');
   const clientSlider = $('.client-slider');
+
   // Scroll
   const scrollToTop = $('.scroll-to-top-btn');
+  const scrollToBottom = $('.scroll-to-bottom-btn');
+
+  // Offer
+  const openOfferBtn = $('.section-offers-item .line-btn__btn');
+
+  //! Open offer 
+  openOfferBtn.on('click', function () {
+    $(this).toggleClass('opened');
+
+    let offerText = $(this).closest('.section-offers-item').find('.section-offers-item__text');
+    offerText.toggleClass('opened');
+
+    if($(this).hasClass('opened')) {
+      offerText.css({height: '100%'});
+      var offerTextHeight = offerText.height();
+      offerText.css({height: '80px'});
+      
+      offerText.animate({height: offerTextHeight});
+    } else {
+      offerText.animate({height: '80px'});
+    }
+    
+  });
 
   $(window).on("scroll", function() {
     //! Fixed header
@@ -36,6 +61,12 @@ $(function() {
     } else {
       scrollToTop.fadeOut();
     }
+  });
+
+  //! Scroll to section
+  scrollToBottom.on('click', function () {
+    $("html, body").animate({ scrollTop: $('.section-offers').scrollTop() + $('.section-offers').height() }, 500);
+        return false;
   });
 
   //! Scroll to top 
@@ -70,7 +101,7 @@ $(function() {
         }
       },
     ]
-  })
+  });
 
   // Client
   clientSlider.slick({

@@ -1,8 +1,4 @@
 .footer {
-    // .logo {
-    //     line-height: 35px;
-    // }
-
     .soc-link {
         margin-top: 20px;
     }
@@ -15,7 +11,7 @@
         a {
             font-family: 'Montserrat', sans-serif;
             font-size: em(16px);
-            font-weight: bold;
+            font-weight: 500;
             transition: all .3s ease;
 
             &:hover {
