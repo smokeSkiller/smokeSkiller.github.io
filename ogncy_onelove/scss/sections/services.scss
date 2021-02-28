@@ -92,13 +92,8 @@
 
         &.has-optimal {
             .section-offers-item__title {
-                border-top-right-radius: 0;
-            }
-        }
-
-        &:hover {
-            .section-offers-item__title {
                 background: $blue;
+                border-top-right-radius: 0;
             }
         }
 

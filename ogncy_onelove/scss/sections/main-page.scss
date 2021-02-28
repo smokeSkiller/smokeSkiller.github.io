@@ -414,7 +414,16 @@
         }
     }
 
-    .top-form-text {
+    &__pointer {
+        margin-top: 90px;
+        display: block;
+
+        i {
+            margin-left: 15px;
+        }
+    }
+
+    .top-form-text, &__pointer {
         color: #BEBEBE;
         font-family: 'Montserrat', sans-serif;
         font-size: em(12px);
@@ -644,8 +653,16 @@
         @include flexbox(center, center, column);
         height: 90px;
 
+        &:hover {
+            img {
+                filter: grayscale(0%);
+            }
+        }
+
         img {
             max-width: 150px;
+            filter: grayscale(100%);
+            transition: all .3s ease;
         }
     }
 }
