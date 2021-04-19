@@ -1,0 +1,52 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+    background: $orange;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        transform: skewX(25deg);
+        @include box(100%);
+        background: $aqua;
+    }
+
+    * {
+        color: #fff;
+    }
+
+    &-soc-btns .hash-tag {
+        color: #fff;
+    }
+
+    &-logo {
+        @include flexbox();
+
+        img {
+            max-width: 70px;
+        }
+
+        .copyright {
+            margin-left: 25px;
+            max-width: 150px;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+
+            b {
+                font-size: em(16px);
+            }
+
+            span {
+                margin-top: 10px;
+                font-size: em(14px);
+            }
+        }
+    }
+}
