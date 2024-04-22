@@ -1,0 +1,64 @@
+.top-line-empty {
+    display: none;
+}
+
+.header {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+
+    &.fixed {
+        position: fixed;
+        z-index: 666;
+    }
+
+    &__logo {
+        max-width: 60px;
+    }
+
+    &-menu {
+        @include flexbox(flex-start, center);
+        height: 100%;
+    }
+
+    &-menu-mobile {
+        display: none;
+    }
+
+    &-menu__item a {
+        color: $dark-blue;
+        font-family: 'Montserrat', sans-serif;
+        font-size: em(14px);
+        font-weight: 500;
+        transition: all .3s ease;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &-menu__item + &-menu__item {
+        margin-left: 20px;
+    }
+
+    .address {
+        i {
+            color: $aqua;
+        }
+
+        span {
+            color: $dark-blue;
+        }
+    }
+
+    &-soc-btns {
+        .soc-btns__link .fa-vk {
+            color: $aqua;
+        }
+
+        .soc-btns__link .fa-instagram {
+            color: $orange;
+        }
+    }
+}
