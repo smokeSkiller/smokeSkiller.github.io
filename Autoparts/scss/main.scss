@@ -1,0 +1,12 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "libs";
+@import "reset";
+
+@import "sections/header.scss";
+@import "sections/footer.scss";
+@import "sections/components.scss";
+@import "sections/sections.scss";
+
+@import "media"; // Always at the end

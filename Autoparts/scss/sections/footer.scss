@@ -1,0 +1,26 @@
+.footer {
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    &-column {
+        &__title {
+            text-transform: uppercase;
+            font-size: em(22px);
+            font-weight: 500;
+        }
+
+        &-menu {
+            &__item {
+                width: 50%;
+                display: block;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &-info {
+        display: block;
+        max-width: 470px;
+        font-size: em(12px);
+    }
+}

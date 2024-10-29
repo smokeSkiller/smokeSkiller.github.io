@@ -1,0 +1,547 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+// Document
+.document {
+    height: 100%;
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__link {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+// Yellow-block
+.yellow-block {
+    padding: 40px 30px;
+    border-radius: 10px;
+    background: $yellow;
+
+    &__text {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: em(20px);
+    }
+}
+
+// Circle
+.circle {
+    @include flexbox(center, center, column);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba($yellow, 0.5);
+
+    &__title {
+        font-size: em(30px);
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: em(16px);
+    }
+}
+
+// Table
+.table {
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+
+    thead {
+        background: $yellow;
+
+        td {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: em(16px);
+        }
+    }
+
+    td {
+        padding: 13px 20px;
+        font-size: em(14px);
+    }
+
+    tbody {
+        background: #ECECEC;
+
+        tr {
+            background: #ECECEC;
+
+            &:nth-child(even) {
+                background: #fff;
+            }
+        }
+    }
+}
+
+// Font weight
+.fw-500 {
+    font-weight: 500;
+}
+
+// FAQ
+.faq {
+    &__title, &__icon {
+        cursor: pointer;
+    }
+
+    &__title {
+        color: #000;
+        font-size: em(14px);
+        font-weight: 500;
+        flex-shrink: 35;
+    }
+
+    &__content {
+        max-width: 700px;
+        display: none;
+        color: #5C5C5C;
+        font-size: em(14px);
+    } 
+
+    &__icon {
+        @include flexbox(center, center);
+        @include box(19px);
+        background: $yellow;
+    }
+}
+
+// Bottom lined
+.bt-lined {
+    border-bottom: 1px solid #CECECE;
+}
+
+// Image fit
+.img-fit {
+    display: block;
+    @include box(100%);
+    object-fit: cover;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+    &__item a {
+        color: $lightgray;
+    }
+}
+
+// Product category
+.products-category {
+    &__mobile-title, &__mobile-view-btn {
+        display: none !important;
+    }
+}
+
+// Modal
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 888;
+    @include box(100vw, 100vh);
+    background-color: rgba(#000, 0.2);
+
+    &.opened {
+        @include flexbox(center, center);
+    }
+}
+
+.contact-form {
+    position: relative;
+    margin: auto;
+    @include flexbox(flex-start, center, column);
+    padding: 15px 10px;
+    max-width: 280px;
+    background: $yellow;
+    border-radius: 10px;
+    text-align: center;
+
+    &__close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        @include flexbox(center, center);
+        @include box(20px);
+        color: $dark;
+        font-size: em(12px);
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+
+    &__text {
+        display: block;
+        max-width: 210px;
+        font-weight: 500;
+    }
+
+    &__field {
+        width: 100%;
+        border-radius: 30px;
+        padding: 12px;
+    }
+
+    &__field + &__field {
+        margin-top: 10px;
+    }
+
+    &__policy {
+        font-size: em(12px);
+    }
+}
+
+// Box
+.box {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    &__icon {
+        @include flexbox(center, center);
+        @include box(35px);
+        background: $yellow;
+        border-radius: 50%;
+        font-size: em(14px);
+    }
+
+    &__num {
+        font-size: em(20px);
+        font-weight: 500;
+    }
+
+    &__title {
+        font-size: em(20px);
+        font-weight: 500;
+    }
+
+    &__text {
+        font-size: em(14px);
+    }
+}
+
+// Products
+.products {
+    .card {
+        width: 31.5%;
+    }
+}
+
+// Card
+.card {
+    position: relative;
+    @include flexbox(flex-start, flex-start, column);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    &__title {
+        font-size: em(14px);
+        text-transform: uppercase;
+    }
+
+    &__img {
+        margin: 0 auto;
+        max-width: 230px;
+    }
+
+    &__price {
+        font-weight: bold;
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        padding: 0 20px;
+    }
+
+    &-view-btn {
+        position: relative;
+        z-index: 1;
+
+        &__text {
+            position: absolute;
+            left: -95px;
+            z-index: -1;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            @include flexbox(flex-start, center);
+            @include box(107px, 100%);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            line-height: em(16px);
+            opacity: 0;
+            background: $yellow;
+        }
+
+        i {
+            @include flexbox(center, center);
+            @include box(30px);
+            border-radius: 50%;
+        }
+
+        &:hover {
+            .card-view-btn__text {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Paddings
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+// Backgrounds
+.bg-accent-1 {
+    background-color: #F2F2F2;
+}
+
+.bg-accent-2 {
+    background-color: #E6E6E6;
+}
+
+// Section title
+.section-title {
+    text-transform: uppercase;
+    font-size: em(30px);
+    font-weight: 500;
+}
+
+// Logo
+.logo {
+    img {
+        max-width: 155px;
+    }
+}
+
+// Content container
+.content-container {
+    padding: 0 40px;
+}
+
+// Search form
+.search-form {
+    position: relative;
+    @include flexbox(space-between, center);
+
+    &:before {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $lightgray;
+        font-family: 'Font Awesome 6 Pro';
+        font-size: 11px;
+        content: '\f002';
+    }
+
+    &__submit-btn {
+        text-align: center;
+        padding: 11px 25px;
+        border: 1px solid $yellow;
+    }
+
+    &-wide {
+        .search-form__field {
+            width: 88%;
+        }
+
+        .search-form__submit-btn {
+            width: 10%;
+        }
+    }
+
+    &__field {
+        padding: 11px 33px;
+        border-radius: 50px;
+        font-size: em(14px);
+        border: 1px solid $lightgray;
+
+        &::placeholder {
+            color: $lightgray;
+        }
+    }
+}
+
+// Social button
+.soc-btn {
+    @include flexbox(center, center);
+    @include box(35px);
+    border-radius: 50%;
+    background: $yellow;
+
+    img {
+        max-width: 20px;
+    }
+}
+
+.soc-btn + .soc-btn {
+    margin-left: 10px;
+}
+
+// Button
+.button {
+    border-radius: 50px;
+    font-size: em(14px);
+    font-weight: 500;
+    background: $yellow;
+    transition: all .3s ease;
+    display: block;
+
+    &.button-contact {
+        @include flexbox(flex-start, center);
+        padding-left: 15px;
+
+        &:hover {
+            color: $yellow;
+            background: $dark;
+        }
+    }
+
+    &.button-contact-2 {
+        @include flexbox(flex-start, center);
+        padding-left: 15px;
+        background: #fff;
+
+        i {
+            background: $yellow;
+        }
+
+        &:hover {
+            color: $yellow;
+            background: $dark;
+        }
+    }
+
+    &-circle {
+        @include flexbox(center, center);
+        @include box(35px);
+        border-radius: 50%;
+
+        &:hover {
+            background: $dark;
+
+            i {
+                color: $yellow;
+            }
+        }
+    }
+
+    &__arrow {
+        margin-left: 18px;
+        margin-right: 3px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding: 15px;
+        border-radius: 50%;
+        @include box(34px);
+        @include flexbox(center, center);
+        background: #fff;
+    }
+}
+
+// Accordion
+.accordion {
+    &__link {
+        @include flexbox(space-between, center);
+    }
+
+    &__icon {
+        @include box(20px);
+        @include flexbox(center, center);
+        border-radius: 50%;
+    }
+
+    &__icon-collapsed {
+        i {
+            transform: rotate(45deg)
+        }
+    }
+}
+
+// Burger menu
+.burger-btn {
+    @include flexbox(center, center);
+    background-color: rgba($yellow, 0.5);
+    @include box(34px);
+    border-radius: 50%;
+    font-size: em(12px);
+
+    i {
+        transform: scaleX(1.8);
+    }
+}
+
+// Bottom nav
+.bottom-nav {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    &.active {
+        display: flex;
+    }
+
+    &__chat-btn {
+        @include flexbox(center, center);
+        padding: 10px 20px;
+        box-shadow: 0px 0px 14px 1px $yellow;
+
+        i {
+            color: #fff;
+            font-size: em(20px);
+            margin-left: 10px;
+        }
+    }
+
+    &__top-btn {
+        margin-left: 20px;
+        @include flexbox(center, center);
+        @include box(40px);
+        background: $yellow;
+        border-radius: 50%;
+    }
+}

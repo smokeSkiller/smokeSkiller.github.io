@@ -1,0 +1,286 @@
+//! Contacts
+.contacts {
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: em(20px);
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: em(16px);
+    }
+
+    &__map {
+        margin-top: 70px;
+        @include box(100%, 425px);
+    }
+}
+
+//! Reviews
+.reviews {
+    &-slider-nav {
+        &__btn {
+            font-size: em(25px);
+        }
+
+        &__btn + &__btn {
+            margin-left: 20px;
+        }
+    }
+
+    &-slider {
+        .slick-list {
+            margin: 0 -20px;
+        }
+
+        .slick-track {
+            display: flex;
+        }
+
+        &-slide {
+            margin: 0 20px;
+            height: auto;
+            padding: 30px;
+            background: #fff;
+
+            &__avatar {
+                @include box(50px);
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &__dots {
+            bottom: -50px;
+
+            li {
+                @include box(12px);
+                border-radius: 50%;
+                background: #fff;
+
+                &.slick-active {
+                    background: $lightgray;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__yellow-block {
+        margin-top: 100px;
+    }
+
+    &-form {
+        display: none;
+        position: relative;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+
+        &__title {
+            text-transform: uppercase;
+            font-size: em(20px);
+            font-weight: 400;
+        }
+
+        &__close-btn {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            @include flexbox(center, center);
+            @include box(30px);
+            text-align: center;
+            font-size: em(16px);
+            background: $yellow;
+            border-radius: 50%;
+        }
+
+        &__field {
+            display: block;
+            padding: 15px 20px;
+            border-radius: 5px;
+            background: #F2F2F2;
+        }
+
+        input.reviews-form__field {
+            width: 360px;
+        }
+
+        textarea.reviews-form__field {
+            width: 80%;
+            height: 209px;
+            resize: none;
+        }
+    }
+}
+
+//! About
+.about {
+    &__text {
+        max-width: 600px;
+    }
+}
+
+//! Pricelist
+.pricelist {
+    &__title {
+        text-transform: uppercase;
+        font-size: em(22px);
+        font-weight: 600;
+    }
+
+    &-search {
+        justify-content: flex-start;
+
+        &__btn {
+            margin-left: 10px;
+        }
+
+        &__field {
+            width: 310px;
+            background: transparent;
+        }
+    }
+}
+
+//! Guarantee
+.guarantee {
+    &__title {
+        font-size: em(20px);
+        text-transform: uppercase;
+    }
+}
+
+//! Payment
+.payment {
+    &-info__title {
+        font-size: em(20px);
+        font-weight: 500;
+    }
+}
+
+//! Delivery
+.delivery {
+    &-brands {
+        &__title {
+            text-transform: uppercase;
+            font-size: em(20px);
+            font-weight: 500;
+        }
+
+        &__text {
+            font-size: em(14px);
+        }
+
+        &__brand {
+            max-width: 160px;
+            max-height: 100px;
+        }
+    }
+}
+
+//! Product content
+.product {
+    &__title {
+        max-width: 310px;
+        text-transform: uppercase;
+        font-size: em(16px);
+        font-weight: 500;
+    }
+
+    &__price {
+        font-size: em(18px);
+        font-weight: bold;
+    }
+
+    &-details {
+        &__title {
+            text-transform: uppercase;
+            font-size: em(22px);
+            font-weight: 500;
+        }
+    }
+
+    &-large-slider {
+        position: relative;
+        background: #fff;
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        &__prev-btn, &__next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 444;
+
+            &.slick-disabled {
+                display: none;
+            }
+        }
+
+        &__prev-btn {
+            left: 20px;
+        }
+
+        &__next-btn {
+            right: 20px;
+        }
+    }
+
+    &-small-slider {
+        .slick-track {
+            display: flex;
+        }
+
+        &__item {
+            margin: 0 5px;
+            height: auto;
+            background: #fff;
+        }
+    }
+}
+
+//! Main
+.start-section {
+    .large-banner {
+        height: 100%;
+        padding: 75px 30px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &__title {
+            max-width: 550px;
+        }
+
+        &__text {
+            max-width: 365px;
+        }
+    }
+
+    &-card {
+        position: relative;
+
+        &__btn {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}
+
+// Features
+.features {
+    .box {
+        @include box(100%);
+    }
+}
