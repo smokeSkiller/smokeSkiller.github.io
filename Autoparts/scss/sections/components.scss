@@ -516,14 +516,10 @@
 
 // Bottom nav
 .bottom-nav {
-    display: none;
     position: fixed;
+    display: flex;
     right: 30px;
     bottom: 30px;
-
-    &.active {
-        display: flex;
-    }
 
     &__chat-btn {
         @include flexbox(center, center);
@@ -539,9 +535,15 @@
 
     &__top-btn {
         margin-left: 20px;
-        @include flexbox(center, center);
+        justify-content: center;
+        align-items: center;
+        display: none;
         @include box(40px);
         background: $yellow;
         border-radius: 50%;
+
+        &.active {
+            display: flex;
+        }
     }
 }

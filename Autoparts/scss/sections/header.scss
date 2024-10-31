@@ -62,6 +62,10 @@
         &:last-child {
             border-bottom: 1px solid #CECECE;
         }
+
+        &.catalog__item-mobile {
+            display: none;
+        }
     }
 
     &__link {

@@ -29,9 +29,9 @@ $(function() {
 	// Показать кнопку при прокрутке
     $(window).scroll(function() {
         if ($(this).scrollTop() > $(document).height() * 0.6 && $(window).width() <= 576) {
-            bottomNav.addClass('active');
+            scrollTopBtn.addClass('active');
         } else {
-            bottomNav.removeClass('active');
+            scrollTopBtn.removeClass('active');
         }
     });
 
