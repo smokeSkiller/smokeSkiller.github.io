@@ -2,6 +2,10 @@
     padding-top: 25px;
     padding-bottom: 20px;
 
+    a {
+        font-size: em(14px);
+    }
+
     &-column {
         &__title {
             text-transform: uppercase;

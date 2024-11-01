@@ -260,6 +260,12 @@
     background-color: #fff;
     border-radius: 10px;
 
+    &:hover {
+        .card-view-btn__text {
+            opacity: 1;
+        }
+    }
+
     &__title {
         font-size: em(14px);
         text-transform: uppercase;
@@ -306,12 +312,6 @@
             @include flexbox(center, center);
             @include box(30px);
             border-radius: 50%;
-        }
-
-        &:hover {
-            .card-view-btn__text {
-                opacity: 1;
-            }
         }
     }
 }
@@ -517,6 +517,7 @@
 // Bottom nav
 .bottom-nav {
     position: fixed;
+    z-index: 77777;
     display: flex;
     right: 30px;
     bottom: 30px;
