@@ -1,0 +1,17 @@
+$default-font: "Dela Gothic One", sans-serif;
+$orange: #EDAC00;
+$orange-light: #FFDA79;
+$dark: #393939;
+$light: #F2F2F2;
+$gray-accent: #E9E9E9;
+$light-gray: #D9D9D9;
+$dark-gray: #ABABAB;
+$gradient: linear-gradient(180deg, rgba(237,172,0,1) 50%, rgba(255,218,121,1) 100%);
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1190px);
+
+$gutter: $grid-gutter-width;
