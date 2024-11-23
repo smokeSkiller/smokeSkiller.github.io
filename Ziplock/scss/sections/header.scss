@@ -1,0 +1,148 @@
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 -5px 13px 4px;
+    z-index: 777;
+    background: $light;
+
+    &-logo {
+        position: absolute;
+        bottom: 0;
+        transform: rotate(-4.13deg);
+        
+        &__btn {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            font-size: rem(83px);
+            line-height: 0;
+
+            &:hover {
+                span {
+                    color: $orange !important;
+                }
+            }
+        }
+
+        &__domain-zone {
+            margin-top: 40px;
+            align-self: flex-end;
+            line-height: 0;
+            font-size: rem(28px);
+        }
+    }
+
+    &__tel {
+        font-family: 'Dela Gothic One', sans-serif;
+        font-size: rem(14px);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__order-btn {
+        padding: 15px 17px;
+        font-size: rem(14px);
+    }
+
+    .nav-menu {
+        display: flex;
+
+        .nav-menu__item {
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .nav-menu__item + .nav-menu__item {
+            margin-left: 25px;
+        }
+
+        &__link {
+            @include flexbox(flex-start, center);
+            text-transform: uppercase;
+            font-family: 'Dela Gothic One', sans-serif;
+            font-size: rem(14px);
+
+            &:hover {
+                color: $orange;
+            }
+
+            i {
+                margin-left: 5px;
+                font-size: em(12px);
+                transform: rotate(180deg);
+            }
+        }
+
+        &-dropdown {
+            top: 25px;
+            display: none;
+            position: absolute;
+            width: 250%;
+            padding: 20px;
+            background: $dark;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            .nav-menu__item {
+                padding-bottom: 0;
+            }
+
+            .nav-menu__item + .nav-menu__item {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .nav-menu__link {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                color: $light;
+
+                i {
+                    margin-right: 5px;
+                    color: $light;
+                    transform: rotate(90deg);
+                }
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    .top-line-empty {
+        height: 55px;
+    }
+}
+
+// Top line empty
+.top-line-empty {
+    @include box(100%, 133px);
+}
+
+// Burger menu
+.burger-btn {
+    @include flexbox(center, center);
+    background-image: $gradient;
+    @include box(38px);
+    border-radius: 50%;
+
+    i {
+        font-size: rem(25px);
+    }
+}
+
+// Active nav bg
+.active-nav-bg {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    @include box(100vw, 100vh);
+    z-index: 555;
+    background: #000;
+    opacity: .6;
+}
