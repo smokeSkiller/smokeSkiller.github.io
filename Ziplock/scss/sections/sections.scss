@@ -505,7 +505,7 @@
         display: block;
         @include box(100%, vh(155px));
         content: '';
-        background-image: url('https://smokeskiller.github.io/ZipLock/img/zplk2.png');
+        background-image: url('https://smokeskiller.github.io/Ziplock/img/zplk2.png');
         background-size: vh(350px);
         background-repeat: repeat-x;
         z-index: -1;
@@ -522,7 +522,7 @@
         display: block;
         @include box(100%, vh(155px));
         content: '';
-        background-image: url('https://smokeskiller.github.io/ZipLock/img/zplk1.png');
+        background-image: url('https://smokeskiller.github.io/Ziplock/img/zplk1.png');
         background-size: vh(350px);
         background-repeat: repeat-x;
         background-position: -15%;
@@ -608,7 +608,7 @@
 .start-banner {
     &__box {
         height: 640px;
-        background-image: url('https://smokeskiller.github.io/ZipLock/img/start-bg.png');
+        background-image: url('https://smokeskiller.github.io/Ziplock/img/start-bg.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
