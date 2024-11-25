@@ -155,10 +155,21 @@
     background-size: 103% 103%;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 90px;
     backdrop-filter: blur(10px);
-    border-top-left-radius: 90px;
-    border-top-right-radius: 90px;
-    border-bottom-left-radius: 90px;
+
+    &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include box(105.5%);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        z-index: -1;
+    }
 
     &__img {
         max-width: 80%;
