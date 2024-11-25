@@ -149,7 +149,7 @@
 	<section class="start-section mt-5" data-aos="fade-up" data-aos-duration="800">
 		<div class="content-container">
 			<!-- Box -->
-			<div class="start-section__box w-100" style="background-image: url('img/start-section-about.png');">
+			<div class="start-section__box w-100">
 				<!-- Top -->
 				<div class="start-section__top d-flex">
 					<!-- Title -->
@@ -173,8 +173,12 @@
 			</div>
 
             <style>
+				.start-section__box:before {
+					background-image: url('img/start-section-about.png');
+				}
+
                 @media (max-width: 576px) {
-                    .start-section__box {
+                    .start-section__box:before {
                         background-image: url('img/start-section-about-mobile.png') !important;
                     }
                 }
@@ -234,8 +238,6 @@
                     <!-- Image -->
                     <div class="about-slider">
 						<div class="about-slider__item" style="background-image: url('img/about2.jpg');"></div>
-						<div class="about-slider__item" style="background-image: url('img/about21.jpg');"></div>
-						<div class="about-slider__item" style="background-image: url('img/about22.jpg');"></div>
 					</div>
                 </div>
             </div>

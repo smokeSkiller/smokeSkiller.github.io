@@ -553,8 +553,6 @@
         &__box {
             height: auto;
             padding-bottom: 10px;
-            background-size: 105% 105%;
-            background-position: center;
         }
 
         &__icons-wrap {
@@ -800,12 +798,12 @@
             border-radius: 40px;
 
             &__title {
-                font-size: em(20px);
+                font-size: em(17px);
                 text-wrap: wrap;
             }
     
             &__subtitle {
-                font-size: em(12px);
+                font-size: em(10px);
             }
 
             &__img {

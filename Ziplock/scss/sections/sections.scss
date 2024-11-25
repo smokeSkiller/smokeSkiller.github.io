@@ -43,10 +43,24 @@
 //! Start section
 .start-section {
     &__box {
+        position: relative;
         padding-bottom: 40px;
         height: vh(300px);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+
+        &:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 102.5%;
+            height: 102.5%;
+            content: '';
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+        }
     }
 
     &__title {

@@ -149,7 +149,7 @@
 	<section class="start-section mt-5" data-aos="fade-up" data-aos-duration="800">
 		<div class="content-container">
 			<!-- Box -->
-			<div class="start-section__box w-100" style="background-image: url('img/start-section-bg2.png');">
+			<div class="start-section__box w-100">
 				<!-- Top -->
 				<div class="start-section__top d-flex">
 					<!-- Title -->
@@ -171,8 +171,12 @@
 			</div>
 
 			<style>
+				.start-section__box:before {
+					background-image: url('img/start-section-bg2.png');
+				}
+
                 @media (max-width: 576px) {
-                    .start-section__box {
+                    .start-section__box:before {
                         background-image: url('img/start-section-mobile.png') !important;
                     }
                 }
