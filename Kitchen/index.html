@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Kitchen верстка</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Montserrat font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<!-- Main styles -->
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+	<!--! Header -->
+	<header class="header">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="d-flex align-items-center justify-content-between header__inner">
+				<!-- Logo -->
+				<h1 class="header__logo">Kitchen</h1>
+
+				<!-- Navigation -->
+				<nav class="header-nav">
+					<!-- PC: Menu -->
+					<menu class="header-nav-pc-menu">
+						<!-- Item -->
+						<li class="header-nav-pc-menu__item"><a href="#">Каталог</a></li>
+
+						<!-- Item -->
+						<li class="header-nav-pc-menu__item"><a href="#">О компании</a></li>
+
+						<!-- Item -->
+						<li class="header-nav-pc-menu__item"><a href="#">Связаться</a></li>
+					</menu>
+
+					<!-- Mobile box -->
+					<div class="header-nav-mobile-box">
+						<!-- Top -->
+						<div class="w-100">
+							<!-- Top bar -->
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Logo -->
+								<h2 class="header__logo">Kitchen</h2>
+
+								<!-- Close btn -->
+								<button class="header-nav__close-btn"><i class="fa-solid fa-xmark"></i></button>
+							</div>
+
+							<!-- Mobile menu -->
+							<menu class="header-nav-mobile-menu mt-4">
+								<!-- Item -->
+								<li class="header-nav-mobile-menu__item"><a href="#">Каталог</a></li>
+
+								<!-- Item -->
+								<li class="header-nav-mobile-menu__item"><a href="#">О компании</a></li>
+
+								<!-- Item -->
+								<li class="header-nav-mobile-menu__item"><a href="#">FAQ</a></li>
+
+								<!-- Item -->
+								<li class="header-nav-mobile-menu__item"><a href="#">Онлайн дизайн-проект</a></li>
+
+								<!-- Item -->
+								<li class="header-nav-mobile-menu__item"><a href="#">Связаться</a></li>
+							</menu>
+						</div>
+
+						<!-- Social links -->
+						<div class="social-links d-flex">
+							<!-- Item -->
+							<a href="#" class="social-links__item"><i class="fa-brands fa-instagram"></i></a>
+
+							<!-- Item -->
+							<a href="#" class="social-links__item ms-3"><i class="fa-brands fa-telegram"></i></a>
+
+							<!-- Item -->
+							<a href="#" class="social-links__item ms-3"><i class="fa-brands fa-vk"></i></a>
+						</div>
+					</div>
+				</nav>
+
+				<!-- Mobile: Burger button -->
+				<button class="burger-btn d-sm-none">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<!-- Top empty -->
+	<div class="top-empty-space"></div>
+
+	<!-- Section A -->
+	<section class="section-a mt-5">
+		<div class="container">
+			<!-- Top row -->
+			<div class="row align-items-lg-end flex-lg-row flex-column">
+				<!-- Column -->
+				<div class="col-lg-7">
+					<!-- Section title -->
+					<h2 class="section-title">Качественные кухни от производителя в Москве</h2>
+				</div>
+
+				<!-- Column -->
+				<div class="col-lg-5">
+					<!-- Text -->
+					<p class="section-a__text mb-lg-2">Более 10 лет мы создаем кухни, которые становятся сердцем вашего дома. Доверьтесь профессионалам!</p>
+				</div>
+			</div>
+
+			<!-- Bottom row -->
+			<div class="row justify-content-between align-items-center mt-lg-5 mt-4">
+				<!-- Column:content -->
+				<div class="col-xl-5 d-flex flex-lg-column justify-content-between align-items-xl-start">
+					<!-- Snake block -->
+					<div class="section-a-snake-block">
+						<!-- Title -->
+						<h4 class="section-a-snake-block__title">Собственное производство</h4>
+
+						<!-- Text -->
+						<p class="section-a-snake-block__text">наша мебель дешевле конкурентов за счёт собственного производства</p>
+					</div>
+
+					<!-- Snake block -->
+					<div class="section-a-snake-block mt-lg-4">
+						<!-- Title -->
+						<h4 class="section-a-snake-block__title">На 30% выгоднее</h4>
+
+						<!-- Text -->
+						<p class="section-a-snake-block__text">за счёт постоянных <br> поставщиков</p>
+					</div>
+
+					<!-- Snake block -->
+					<div class="section-a-snake-block mt-lg-4">
+						<!-- Title -->
+						<h4 class="section-a-snake-block__title">60% клиентов возвращается</h4>
+
+						<!-- Text -->
+						<p class="section-a-snake-block__text">и рекомендует нас <br> своим близким</p>
+					</div>
+
+					<!-- Btn -->
+					<button class="btn section-a__btn mt-5 d-lg-block d-none open-modal-btn" target="get-price">
+						Рассчитать стоимость <i class="fa-solid fa-arrow-up-right-from-square"></i>
+					</button>
+				</div>
+
+				<!-- Column:slider -->
+				<div class="col-xl-7 mt-xl-0 mt-4 ov-h">
+					<!-- Vertical gallery -->
+					<div class="vertical-gallery">
+						<!-- Wrapper -->
+						<div class="vertical-gallery-wrapper">
+							<!-- Row -->
+							<div class="vertical-gallery-row d-flex justify-content-between mx-lg-4 mx-sm-3 mx-2" data-row="0">
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/1.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/2.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/3.jpg')"></div>
+							</div>
+
+							<!-- Row -->
+							<div class="vertical-gallery-row d-flex justify-content-between mx-lg-4 mx-sm-3 mx-2" data-row="1">
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/4.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/5.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/6.jpg')"></div>
+							</div>
+
+							<!-- Row -->
+							<div class="vertical-gallery-row d-flex justify-content-between mx-lg-4 mx-sm-3 mx-2" data-row="2">
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/7.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/8.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/9.jpg')"></div>
+							</div>
+
+							<!-- Row -->
+							<div class="vertical-gallery-row d-flex justify-content-between mx-lg-4 mx-sm-3 mx-2" data-row="3">
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/10.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/11.jpg')"></div>
+
+								<!-- Item -->
+								<div class="vertical-gallery__item" style="background-image: url('img/section-a/12.jpg')"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Btn -->
+					<button class="btn section-a__btn mt-4 d-lg-none d-block open-modal-btn" target="get-price">
+						Рассчитать стоимость <i class="fa-solid fa-arrow-up-right-from-square"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section B -->
+	<section class="section-b mt-5">
+		<div class="container">
+			<!-- Section title -->
+			<h2 class="section-title">Дизайн кухни от искусственного интеллекта</h2>
+
+			<!-- Section text -->
+			<p class="section-text mt-3">
+				— как работа профессионала, но мгновенно и бесплатно 
+				<br>
+				Просто ответьте на 4 вопроса!
+			</p>
+
+			<!-- Row -->
+			<div class="row align-items-center mt-lg-3 mt-4">
+				<!-- Column -->
+				<div class="col-xl-5">
+					<!-- Content item -->
+					<div class="section-b-content-item">
+						<!-- Title -->
+						<h4 class="section-b-content-item__title">Выбери элемент кухни</h4>
+
+						<!-- Line -->
+						<hr>
+
+						<!-- Text -->
+						<p class="section-b-content-item__text">Из предложенных вариантов, выбери понравившийся</p>
+					</div>
+
+					<!-- Content item -->
+					<div class="section-b-content-item mt-4">
+						<!-- Title -->
+						<h4 class="section-b-content-item__title">Укажите месенджер</h4>
+
+						<!-- Line -->
+						<hr>
+
+						<!-- Text -->
+						<p class="section-b-content-item__text">Выберите месенджер для получения вашего дизайн-макета</p>
+					</div>
+
+					<!-- Content item -->
+					<div class="section-b-content-item mt-4">
+						<!-- Title -->
+						<h4 class="section-b-content-item__title">Через 2 минуты</h4>
+
+						<!-- Line -->
+						<hr>
+
+						<!-- Text -->
+						<p class="section-b-content-item__text">Нажмите старт и через 2 минуты вы получите дизайн от искусственного интеллекта</p>
+					</div>
+
+					<!-- Button -->
+					<button class="btn section-b__btn mt-5 d-lg-block d-none">Создать</button>
+				</div>
+
+				<!-- Column -->
+				<div class="col-xl-7 mt-xl-0 mt-4 ov-h">
+					<!-- Slider -->
+					<div class="section-b-slider">
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/a1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/a2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/a3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/a4.png');"></div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/b1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/b2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/b3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/b4.png');"></div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/c1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/c2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/c3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/c4.png');"></div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/d1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/d2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/d3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/d4.png');"></div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/e1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/e2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/e3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/e4.png');"></div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-b-slider-item d-flex justify-content-between align-items-start flex-wrap">
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/g1.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/g2.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/g3.png');"></div>
+
+							<!-- Image -->
+							<div class="section-b-slider-item__img" style="background-image: url('img/section-b/g4.png');"></div>
+						</div>
+					</div>
+
+					<!-- Button -->
+					<button class="btn section-b__btn mt-5 d-lg-none d-block">Создать</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section C -->
+	<section class="section-c mt-5">
+		<!-- Container -->
+		<div class="container">
+			<div class="px-lg-0 px-3">
+				<!-- Section title -->
+				<h2 class="section-title">Кухня - как отдельная жизнь</h2>
+
+				<!-- Section text -->
+				<p class="section-text mt-3">
+					Ознакомтесь с элементами кухни, кликнув <br> на интересующую часть кухни
+				</p> 
+			</div>
+
+			<!-- Row -->
+			<div class="row mt-5 tabs">
+				<!-- Column -->
+				<div class="col-lg-5 px-lg-3 px-0">
+					<!-- Tabs -->
+					<div class="section-c-tabs">
+						<!-- Pointer -->
+						<span class="section-c-tabs__pointer">Нажмите на кнопку</span>
+
+						<!-- Tab -->
+						<button class="section-c-tabs-tab active tab" tab-target="section-c-tab1">
+							<!-- Icon -->
+							<div class="section-c-tabs-tab__icon">
+								<img src="img/section-c/tab1.png" alt="">
+							</div>
+
+							<!-- Name -->
+							<span class="section-c-tabs-tab__name">Закрыть ящики</span>
+						</button>
+
+						<!-- Tab -->
+						<button class="section-c-tabs-tab tab" tab-target="section-c-tab2">
+							<!-- Icon -->
+							<div class="section-c-tabs-tab__icon">
+								<img src="img/section-c/tab2.png" alt="">
+							</div>
+
+							<!-- Name -->
+							<span class="section-c-tabs-tab__name">Открыть ящики</span>
+						</button>
+
+						<!-- Tab -->
+						<button class="section-c-tabs-tab tab" tab-target="section-c-tab3">
+							<!-- Icon -->
+							<div class="section-c-tabs-tab__icon">
+								<img src="img/section-c/tab3.png" alt="">
+							</div>
+
+							<!-- Name -->
+							<span class="section-c-tabs-tab__name">Включить свет</span>
+						</button>
+
+						<!-- Tab -->
+						<button class="section-c-tabs-tab tab" tab-target="section-c-tab4">
+							<!-- Icon -->
+							<div class="section-c-tabs-tab__icon">
+								<img src="img/section-c/tab4.png" alt="">
+							</div>
+
+							<!-- Name -->
+							<span class="section-c-tabs-tab__name">Убрать фасады</span>
+						</button>
+					</div>
+				</div>
+
+				<!-- Column -->
+				<div class="col-lg-7 mt-lg-0 mt-4 px-lg-3 px-0">
+					<!-- Tabs content -->
+					<div class="section-c-tabs-content">
+						<!-- Item -->
+						<div class="tab-content section-c-tabs-content__item active" id="section-c-tab1"><img src="img/section-c/content1.png" alt=""></div>
+
+						<!-- Item -->
+						<div class="tab-content section-c-tabs-content__item" id="section-c-tab2"><img src="img/section-c/content2.png" alt=""></div>
+
+						<!-- Item -->
+						<div class="tab-content section-c-tabs-content__item" id="section-c-tab3"><img src="img/section-c/content3.png" alt=""></div>
+
+						<!-- Item -->
+						<div class="tab-content section-c-tabs-content__item" id="section-c-tab4"><img src="img/section-c/content4.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section D -->
+	<section class="section-d mt-5 pb-5">
+		<!-- Container -->
+		<div class="container tabs">
+			<!-- Section title -->
+			<h2 class="section-title">Каталог</h2>
+
+			<!-- Section text -->
+			<p class="section-text mt-3">У нас огромный выбор кухонь и собственное производство. Вы можете выбрать понравившую кухню и мы рассчитаем стоимость под ваши размеры.</p>
+
+			<!-- Navigation tabs -->
+			<div class="section-d-nav-tabs d-flex mt-5">
+				<!-- Tab -->
+				<button class="section-d-nav-tabs__tab tab active" tab-target="section-d-tab1">Все</button>
+
+				<!-- Tab -->
+				<button class="section-d-nav-tabs__tab tab" tab-target="section-d-tab2">Угловая</button>
+
+				<!-- Tab -->
+				<button class="section-d-nav-tabs__tab tab" tab-target="section-d-tab3">Прямая</button>
+
+				<!-- Tab -->
+				<button class="section-d-nav-tabs__tab tab" tab-target="section-d-tab4">С островом</button>
+			</div>
+
+			<!-- Tabs content -->
+			<div class="section-d-tabs-content mt-3">
+				<!-- Tab content & row -->
+				<div class="row g-sm-4 g-3 tab-content active" id="section-d-tab1">
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/1.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/2.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/3.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/4.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/5.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/6.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/7.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/8.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/9.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/10.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/11.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/12.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab content & row -->
+				<div class="row g-sm-4 g-3 tab-content" id="section-d-tab2">
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/1.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/2.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/3.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/4.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/5.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/6.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/7.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/8.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/9.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/10.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/11.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/12.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab content & row -->
+				<div class="row g-sm-4 g-3 tab-content" id="section-d-tab3">
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/1.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/2.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/3.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/4.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/5.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/6.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/7.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/8.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/9.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/10.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/11.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/12.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tab content & row -->
+				<div class="row g-sm-4 g-3 tab-content" id="section-d-tab4">
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/1.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/2.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/3.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/4.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/5.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/6.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/7.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/8.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/9.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/10.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая+остров</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/11.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня угловая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-xl-3 col-lg-4 col-6 section-d-card mt-4">
+						<!-- Image -->
+						<div class="section-d-card__img" style="background-image: url('img/section-a/12.jpg');">
+							<!-- Arrow btn -->
+							<button class="section-d-card__arrow-btn open-modal-btn" target="catalog1"><i class="fa-solid fa-arrow-up"></i></button>
+						</div>
+
+						<!-- Title -->
+						<h5 class="section-d-card__title">Кухня прямая</h5>
+
+						<!-- Properties -->
+						<div class="section-d-card__properties">
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Размеры</span>
+
+								<!-- Value -->
+								<span class="value">1300*2900</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Остров</span>
+
+								<!-- Value -->
+								<span class="value">700*1000</span>
+							</div>
+
+							<!-- Row -->
+							<div class="d-flex justify-content-between w-100">
+								<!-- Name -->
+								<span class="name">Фасады и корпус</span>
+
+								<!-- Value -->
+								<span class="value">Egger</span>
+							</div>
+						</div>
+
+						<!-- Row -->
+						<div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-center align-items-start mt-3">
+							<!-- Price -->
+							<span class="section-d-card__price">238 900₽</span>
+
+							<!-- Btn -->
+							<button class="section-d-card__btn open-modal-btn" target="get-price">Рассчитать стоимость</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="btn section-d__btn mt-5 open-modal-btn" target="get-catalog">Получить каталог</div>
+		</div>
+	</section>
+
+	<!-- Section E -->
+	<div class="section-e mt-5">
+		<!-- Container -->
+		<div class="container tabs">
+			<!-- Row -->
+			<div class="row align-items-center flex-xl-row flex-column">
+				<!-- Column -->
+				<div class="col-xl-4">
+					<!-- Section title -->
+					<h2 class="section-title">Этапы работы</h2>
+				</div>
+
+				<!-- Column -->
+				<div class="col-xl-7 mt-xl-0 mt-3">
+					<!-- Section text -->
+					<p class="section-text">подразделяются на 2 типа. Посмотрите ваш вариант структуры предстоящих работ</p>
+				</div>
+			</div>
+
+			<!-- Row -->
+			<div class="d-flex justify-content-between mt-4">
+				<!-- Btn -->
+				<button class="section-e__tab tab active blured" tab-target="section-e1">
+					Только получили ключи, ещё <br> <span>нет ремонта</span>
+					
+					<!-- Pointer -->
+					<img src="img/section-e/pointer.png" alt="" class="pointer">
+				</button>
+
+				<!-- Btn -->
+				<button class="section-e__tab tab" tab-target="section-e2">
+					<span>Ремонт сделан</span>, <br> подбираем мебель
+				</button>
+			</div>
+
+			<!-- Tabs contents -->
+			<div class="section-e-tabs-content mt-5">
+				<!-- Row & tab -->
+				<div class="row tab-content section-e-tab-content active blured" id="section-e1">
+					<!-- Column & Stages -->
+					<div class="col-lg-6 section-e-stages">
+						<!-- Item -->
+						<div class="section-e-stages-item">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a1.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Схема по электрике и сантехнике </h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Наш специалист выезжает <br> к вам и готовит схему</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a2.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Замер кухни</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Наш специалист выезжает <br> к вам и производит замеры</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a3.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Согласование проекта</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Согласовываем и <br> утверждаем нюансы</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a4.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Производство</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Проект отправляем на производство, <br> где производим вашу будущую кухню</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a5.png" alt="">
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Доставка и установка</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Кухню доставляем и устанавливаем в короткие сроки</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Column & Content -->
+					<div class="col-lg-6 section-e-content mt-lg-0 mt-4">
+						<!-- Image -->
+						<div class="section-e-content__img order-lg-1 order-2 mt-lg-0 mt-3" style="background-image: url(img/section-e/b1.png);"></div>
+
+						<!-- Title -->
+						<h3 class="section-e-content__title order-lg-2 order-1">Хотите получить схему по электрике бесплатно?</h3>
+
+						<!-- Button -->
+						<button class="btn section-e-content__btn order-3 mt-4">Оставить заявку</button>
+					</div>
+				</div>
+
+				<!-- Row & tab -->
+				<div class="row flex-lg-row flex-column-reverse tab-content section-e-tab-content" id="section-e2">
+					<!-- Column & Content -->
+					<div class="col-lg-6 section-e-content mt-lg-0 mt-4">
+						<!-- Image -->
+						<div class="section-e-content__img order-lg-1 order-2 mt-lg-0 mt-3" style="background-image: url(img/section-e/b2.png);"></div>
+
+						<!-- Title -->
+						<h3 class="section-e-content__title order-lg-2 order-1">Хотите получить 3D дизайн проект за 2 минуты?</h3>
+
+						<!-- Button -->
+						<button class="btn section-e-content__btn order-3 mt-4">Оставить заявку</button>
+					</div>
+
+					<!-- Column & Stages -->
+					<div class="col-lg-6 section-e-stages">
+						<!-- Item -->
+						<div class="section-e-stages-item">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a2.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Замер кухни</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Наш специалист выезжает <br> к вам и производит замеры</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a3.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Согласование проекта</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Согласовываем и <br> утверждаем нюансы</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a4.png" alt="">
+
+								<!-- Line -->
+								<hr>
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Производство</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Проект отправляем на производство, <br> где производим вашу будущую кухню</p>
+							</div>
+						</div>
+
+						<!-- Item -->
+						<div class="section-e-stages-item mt-sm-5 mt-4">
+							<!-- Icon -->
+							<div class="section-e-stages-item__icon">
+								<img src="img/section-e/a5.png" alt="">
+							</div>
+
+							<!-- Content -->
+							<div class="ms-2 section-e-stages-item__content">
+								<!-- Title -->
+								<h4 class="section-e-stages-item__title">Доставка и установка</h4>
+
+								<!-- Text -->
+								<p class="section-e-stages-item__text">Кухню доставляем и устанавливаем в короткие сроки</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br><br><br>
+
+	<!--! Global Modals -->
+	<!-- Get price -->
+	<div class="modal" id="get-price">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Box -->
+			<div class="modal-box">
+				<!-- Title -->
+				<h3 class="modal-box__title mt-3">Рассчитаем стоимость под ваши размеры</h3>
+
+				<!-- Form -->
+				<form action="#" class="modal-form">
+					<!-- Text -->
+					<p class="modal-form__text">Заполните форму, наш менеджер свяжется с вами в ближайшее время</p>
+
+					<!-- Name:field -->
+					<input type="text" name="name" class="modal-form__field mt-4" placeholder="Имя">
+
+					<!-- Tel:field -->
+					<input type="tel" name="tel" class="modal-form__field mt-3 tel-field" placeholder="+7 (999) 999-99-99">
+
+					<!-- Privacy -->
+					<div class="mt-3 modal-form-privacy">
+						<input type="checkbox" name="privacy" id="privacy" class="modal-form-checkbox__field">
+						<label for="privacy" class="modal-form-privacy__text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой персональных данных</a></label>
+					</div>
+
+					<!-- Submit button -->
+					<input type="submit" value="Отправить" class="btn modal-form__btn mt-4">
+				</form>
+
+				<!-- Close modal button -->
+				<button class="modal-close-btn">
+					<div class="modal-close-btn__container">
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Get catalog -->
+	<div class="modal" id="get-catalog">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Box -->
+			<div class="modal-box">
+				<!-- Title -->
+				<h3 class="modal-box__title mt-3">Получить каталог</h3>
+
+				<!-- Form -->
+				<form action="#" class="modal-form">
+					<!-- Text -->
+					<p class="modal-form__text">Укажите ваши контакты, наш менеджер в ближайшее время отправит вам каталог</p>
+
+					<!-- Name:field -->
+					<input type="text" name="name" class="modal-form__field mt-4" placeholder="Имя">
+
+					<!-- Tel:field -->
+					<input type="tel" name="tel" class="modal-form__field mt-3 tel-field" placeholder="+7 (999) 999-99-99">
+
+					<!-- Messanger -->
+					<span class="modal-form__text-2 mt-4 align-self-start">Выберите месенджер для получения каталога</span>
+					
+					<!-- Checkboxes -->
+					<div class="d-flex justify-content-between flex-sm-row flex-column w-100 mt-sm-3 mt-1">
+						<!-- Whatsapp -->
+						<div class="d-flex align-items-center modal-form-checkbox mt-sm-0 mt-2">
+							<input type="checkbox" name="whatsapp-checkbox" id="whatsapp-checkbox" class="modal-form-checkbox__field">
+
+							<!-- Checkbox -->
+							<label for="whatsapp-checkbox" class="ms-3">
+								<i class="fa-brands fa-whatsapp"></i>
+
+								<span>Whats App</span>
+							</label>
+						</div>
+
+						<!-- Telegram -->
+						<div class="d-flex align-items-center modal-form-checkbox mt-sm-0 mt-2">
+							<input type="checkbox" name="telegram-checkbox" id="telegram-checkbox" class="modal-form-checkbox__field">
+
+							<!-- Checkbox -->
+							<label for="telegram-checkbox" class="ms-3">
+								<i class="fa-brands fa-telegram"></i>
+
+								<span>Telegram</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Privacy -->
+					<div class="mt-5 modal-form-privacy">
+						<input type="checkbox" name="privacy1" id="privacy1" class="modal-form-checkbox__field">
+						<label for="privacy1" class="modal-form-privacy__text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой персональных данных</a></label>
+					</div>
+
+					<!-- Submit button -->
+					<input type="submit" value="Отправить" class="btn modal-form__btn mt-4">
+				</form>
+
+				<!-- Close modal button -->
+				<button class="modal-close-btn">
+					<div class="modal-close-btn__container">
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Cards Modals -->
+	<div class="modal" id="catalog1">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Box -->
+			<div class="modal-card-box">
+				<!-- Row -->
+				<div class="row modal-card-box__row">
+					<!-- Column -->
+					<div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
+						<!-- Slider -->
+						<div class="modal-card-box-slider">
+							<!-- Item -->
+							<div class="modal-card-box-slider__item" style="background-image: url('img/section-a/1.jpg');"></div>
+
+							<!-- Item -->
+							<div class="modal-card-box-slider__item" style="background-image: url('img/section-a/2.jpg');"></div>
+
+							<!-- Item -->
+							<div class="modal-card-box-slider__item" style="background-image: url('img/section-a/3.jpg');"></div>
+						</div>
+
+						<!-- Slider arrows -->
+						<div class="d-lg-flex d-none justify-content-end w-100 modal-card-box-slider-arrows mt-3"></div>
+					</div>
+
+					<!-- Column -->
+					<div class="col-lg-6 mt-lg-0 mt-4">
+						<h4 class="modal-card-box__title">Кухня угловая+остров</h4>
+
+						<!-- Text -->
+						<p class="modal-card-box__text mt-3">Основные характеристики:</p>
+
+						<!-- Properties -->
+						<div class="modal-card-box__properties mt-3">
+							Размеры: 4200
+							<br>
+							Фасады: МДФ в ПВХ
+							<br>
+							Корпус: ЛДСП Увадрев
+							<br>
+							Столешница: искусственный камень
+							<br>
+							Стеновая: клиента
+							<br>
+							Ручки: tipon+накладные
+							<br>
+							Фурнитура: Blum
+							<br>
+							Подсветка врезная
+						</div>
+
+						<!-- Text -->
+						<p class="modal-card-box__text mt-3">Стоимость:</p>
+
+						<!-- Price -->
+						<span class="modal-card-box__price mt-1 d-block">от 238 900₽</span>
+
+						<!-- Btn -->
+						<button class="modal-card-box__btn btn mt-lg-5 mt-4">Рассчитать стоимость</button>
+					</div>
+				</div>
+
+				<!-- Close modal button -->
+				<button class="modal-close-btn">
+					<div class="modal-close-btn__container">
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

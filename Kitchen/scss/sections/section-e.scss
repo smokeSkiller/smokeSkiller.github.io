@@ -1,0 +1,163 @@
+.section-e {
+    // Tab
+    &__tab {
+        position: relative;
+        width: calc(50% - 15px);
+        padding: 10px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: em(20px);
+        border: 2px solid $accent;
+        border-radius: 10px;
+
+        &.active {
+            border-color: $maroon;
+        }
+
+        &.blured {
+            .pointer {
+                display: block;
+            }
+        }
+
+        .pointer {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            display: none;
+            @include box(50px);
+            animation: pulsePoint .7s infinite ease-out;
+        }
+
+        @keyframes pulsePoint {
+            from {
+                transform: scale(1.1);
+            } to {
+                transform: scale(.7);
+                opacity: 0.6;
+            }
+        }
+
+        span {
+            color: $maroon;
+        }
+    }
+
+    // Tab content
+    &-tab-content {
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+
+        &.blured {
+            filter: blur(4px);
+        }
+    }
+
+    // Stages
+    &-stages {
+        &-item {
+            @include flexbox(flex-start, flex-start);
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    .section-e-stages-item {
+                        &__icon hr::before {
+                            animation-delay: #{$i}s;
+                        }
+                    }
+                }
+            }
+
+            &__icon {
+                position: relative;
+                @include flexbox(center, center);
+                @include box(62px);
+                border-radius: 50%;
+                background-color: $maroon;
+
+                img {
+                    max-width: 30px;
+                    max-height: 30px;
+                }
+
+                hr {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include box(2px, 61px);
+                    background: $accent;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 111;
+                        transform: translateY(-100%);
+                        display: block;
+                        @include box(100%, 140%);
+                        background: linear-gradient(180deg, $accent, $maroon);
+                        animation: animateHr 3s infinite linear;
+                    }
+
+                    // &:before {
+                    //     animation-delay: 0s;
+                    // }
+
+                    // &:after {
+                    //     animation-delay: 1s;
+                    // }
+                }
+
+                @keyframes animateHr {
+                    0% {
+                        transform: translateY(-100%) skewY(-20deg); /* Уезжает влево под углом */
+                    }
+                    100% {
+                        transform: translateY(100%) skewY(20deg); /* Проходит направо */
+                    }
+                }
+            }
+
+            &__title {
+                color: $maroon;
+                font-family: 'Montserrat', sans-serif;
+                font-size: em(24px);
+                font-weight: 500;
+            }
+
+            &__text {
+                margin-top: 8px;
+                font-size: em(16px);
+                font-weight: 300;
+            }
+        }
+    }
+
+    // Content
+    &-content {
+        @include flexbox(flex-start, flex-start, column);
+
+        &__img {
+            @include box(100%, 340px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 10px;
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-size: em(32px);
+        }
+
+        &__btn {
+            padding: 20px 30px;
+        }
+    }
+}

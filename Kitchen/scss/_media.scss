@@ -1,0 +1,475 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(xl) {
+	.modal {
+        &-box {
+            padding: 30px 20px;
+            max-width: 520px;
+
+            &__title {
+                font-size: em(24px);
+            }
+        }
+
+        &-form {
+            padding: 25px;
+        }
+    }
+
+    // Section c
+    .section-c {
+        &-tabs {
+            width: 100%;
+        }
+    }
+
+    // Section e
+    .section-e {
+        &__tab {
+            .pointer {
+                right: 20px;
+            }
+        }
+
+        &-content {
+            align-items: center;
+
+            &__title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// ≥992px
+@include media-breakpoint-down(lg) {
+    // Section title
+    .section-title {
+        font-size: em(28px);
+    }
+
+    // Section text
+    .section-text {
+        font-size: em(18px);
+    }
+
+    // Section a
+    .section-a {
+        .section-title, &__text {
+            text-align: center;
+        }
+
+        &__text {
+            margin-top: 20px;
+            font-size: em(16px);
+        }
+
+        &-snake-block {
+            @include flexbox(center, center);
+            width: 31%;
+            padding: 15px;
+            
+            &__title {
+                text-align: center;
+                font-size: em(18px);
+            }
+
+            &__text {
+                display: none;
+            }
+        }
+
+        &__btn {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // Section b
+    .section-b {
+        &__btn {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // Section c
+    .section-c {
+        // Tabs
+        &-tabs {
+            margin-top: 0;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 50px;
+
+            &__pointer {
+                top: 20px;
+            }
+
+            &-tab {
+                margin-top: 10px;
+                width: calc(50% - 15px);
+            }
+
+            &-tab + &-tab {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    // Section e
+    .section-e {
+        &__tab {
+            .pointer {
+                top: 30px;
+                @include box(35px);
+            }
+        }
+    }
+
+    // Modal
+    .modal {
+        &-card-box {
+            @include box(95%);
+            padding: 20px;
+
+            &__row {
+                @include box(auto);
+            }
+
+            // Slider
+            &-slider {
+                &__item {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+// ≥768px
+@include media-breakpoint-down(md) {
+    // Modal
+    .modal {
+        &-box {
+            max-width: 95%;
+
+            &__title {
+                text-align: center;
+            }
+        }
+
+        &-card-box {
+            padding: 15px;
+
+            // Slider
+            &-slider {
+                &__item {
+                    height: 35vh;
+                }
+            }
+
+            &__title, &__price {
+                font-size: em(20px);
+            }
+
+            &__text {
+                font-size: em(16px);
+            }
+
+            &__properties {
+                font-size: em(14px);
+            }
+    
+            &__btn {
+                padding: 15px;
+            }
+        }
+
+        // Close button
+        &-close-btn {
+            top: 13px;
+            right: 13px;
+            @include box(20px)
+        }
+
+        &-form {
+            margin-top: 15px;
+            padding: 25px 10px;
+
+            &__text {
+                font-size: em(14px);
+            }
+
+            &__field {
+                padding: 15px;
+                font-size: em(14px);
+            }
+
+            &-privacy {
+                &__text {
+                    flex-shrink: 80;
+                    font-size: em(12px);
+                }
+            }
+
+            &__btn {
+                padding: 15px 20px;
+            }
+        }
+    }
+
+    // Button
+    .btn {
+        font-size: em(16px);
+    }
+
+    // Section title
+    .section-title {
+        font-size: em(26px);
+    }
+
+    // Section text
+    .section-text {
+        font-size: em(16px);
+    }
+
+    // Section b
+    .section-b {
+        &-content-item {
+            width: 90%;
+
+            &__title {
+                font-size: em(22px);
+            }
+        }
+    }
+
+    // Section c
+    .section-c {
+        // Tabs
+        &-tabs {
+            &-tab {
+                width: calc(50% - 5px);
+                padding: 5px;
+
+                &__icon {
+                    @include box(37px);
+
+                    img {
+                        max-width: 25px;
+                        max-height: 25px;
+                    }
+                }
+
+                &__name {
+                    font-size: em(14px);
+                }
+            }
+        }
+
+        // Tabs content
+        &-tabs-content {
+            height: 270px;
+        }
+    }
+
+    // Section d
+    .section-d {
+        // Nav tabs
+        &-nav-tabs {
+            overflow-x: auto;
+
+            &__tab + &__tab {
+                margin-left: 20px;
+            }
+
+            &__tab {
+                font-size: em(14px);
+            }
+        }
+
+        &-card {
+            &__img {
+                height: 180px;
+            }
+
+            &__title {
+                font-size: em(12px);
+            }
+
+            &__properties {    
+                span {
+                    font-size: em(11px);
+                }
+            }
+
+            &__btn {
+                margin-top: 15px;
+
+                font-size: em(12px);
+            }
+        }
+    }
+}
+
+// ≥576px
+@include media-breakpoint-down(sm) {
+    // Header
+    .header {
+        &__logo {
+            font-size: em(20px);
+        }
+
+        &-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 777;
+            display: none;
+            justify-content: flex-end;
+            @include box(100vw, 100vh);
+            background-color: rgba($color: #000000, $alpha: .8);
+
+            &-pc-menu {
+                display: none;
+            }
+
+            &-mobile-box {
+                @include flexbox(space-between, flex-start, column);
+                padding: 35px 20px;
+                @include box(70%, 90%);
+                background: #fff;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+
+            &-mobile-menu {
+                &__item + &__item {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    // Section a
+    .section-a {
+        &-snake-block {
+            width: 32%;
+
+            &__title {
+                font-size: em(13px);
+            }
+        }
+
+        &__btn {
+            padding: 15px 20px;
+            font-size: em(16px);
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    // Vertical gallery
+    .vertical-gallery {
+        &-row {
+            margin-top: 7px;
+        }
+
+        &__item {
+            @include box(calc(33.3% - 3px), 150px);
+        }
+    }
+
+    // Section b
+    .section-b {
+        &-slider {
+            &-item {
+                &__img {
+                    margin-top: 8px;
+                    @include box(calc(50% - 4px), 160px);
+                }
+            }
+        }
+
+        &__btn {
+            min-width: 150px;
+            padding: 15px;
+        }
+    }
+
+    // Section e
+    .section-e {
+        // Tab
+        &__tab {
+            padding: 10px 5px;
+            width: calc(50% - 5px);
+            font-size: em(12px);
+
+            br {
+                display: none;
+            }
+
+            .pointer {
+                top: 23px;
+                right: 5px;
+                @include box(25px);
+            }
+        }
+
+        // Stages
+        &-stages {
+            &-item {
+                &:last-child {
+                    .section-e-stages-item__icon {
+                        flex-grow: 2;
+                    }
+
+                    .section-e-stages-item__content {
+                        flex-shrink: 20;
+                    }
+                }
+
+                &__icon {
+                    @include box(45px);
+    
+                    img {
+                        max-width: 20px;
+                        max-height: 20px;
+                    }
+    
+                    hr {
+                        bottom: -55px;
+                        height: 55px;
+                    }
+                }
+
+                &__title {
+                    font-size: em(16px);
+                }
+
+                &__text {
+                    font-size: em(14px);
+                }
+            }
+        }
+
+        // Content
+        &-content {
+            &__title {
+                font-size: em(18px);
+            }
+
+            &__img {
+                height: 200px;
+            }
+        }
+    }
+}

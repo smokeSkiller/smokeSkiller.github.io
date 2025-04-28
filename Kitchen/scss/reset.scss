@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+ul, menu {
+    list-style: none;
+}
+
+a {
+    color: $text;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea {
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+}
+
+p, span {
+    font-family: 'Montserrat', sans-serif;
+}

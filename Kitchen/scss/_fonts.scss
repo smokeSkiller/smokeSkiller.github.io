@@ -1,0 +1,16 @@
+//! Century Gothic
+// Regular
+@font-face {
+    font-family: 'Century Gothic';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/CenturyGothic/centurygothic.ttf') format('ttf');
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Century Gothic';
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/CenturyGothicBold/centurygothic_bold.ttf') format('ttf');
+}

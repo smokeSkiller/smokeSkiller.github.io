@@ -1,0 +1,111 @@
+.section-d {
+    // Nav tabs
+    &-nav-tabs {
+        &__tab + &__tab {
+            margin-left: 30px;
+        }
+
+        &__tab {
+            color: $native;
+            font-size: em(20px);
+
+            &.active {
+                color: $maroon;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Tabs content
+    &-tabs-content {
+        .tab-content {
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+        }
+    } 
+
+    // Cards
+    &-card {
+        &__img {
+            position: relative;
+            @include box(100%, 300px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 10px;
+        }
+
+        &__arrow-btn {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            @include flexbox(center, center);
+            @include box(45px);
+            background-color: #fff;
+            border-radius: 50%;
+
+            &:hover {
+                i {
+                    transform: rotate(0deg);
+                }
+            }
+
+            i {
+                color: $maroon;
+                font-size: em(25px);
+                transform: rotate(45deg);
+                transition: all .3s ease;
+            }
+        }
+
+        &__title {
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: em(18px);
+        }
+
+        &__properties {
+            margin-top: 10px;
+
+            span {
+                font-size: em(14px);
+                font-weight: 300;
+
+                &.value {
+                    display: block;
+                }
+            }
+        }
+
+        &__price {
+            font-size: em(16px);
+        }
+
+        &__btn {
+            padding: 10px;
+            text-align: center;
+            font-size: em(16px);
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid $maroon;
+            border-radius: 10px;
+
+            &:hover {
+                color: #fff;
+                background: $maroon;
+            }
+        }
+    }
+
+    // Button
+    &__btn {
+        padding: 20px 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        max-width: 290px;
+        text-align: center;
+    }
+}

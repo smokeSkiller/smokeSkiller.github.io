@@ -1,0 +1,39 @@
+.section-a {
+    &__text {
+        font-size: em(20px);
+    }
+
+    // Snake block
+    &-snake-block {
+        position: relative;
+        width: 85%;
+        padding: 20px 30px;
+        background: transparent;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        --border-angle: 0;
+        background: linear-gradient(white, white) padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            $accent 60%,
+            $maroon
+            )
+            border-box;
+
+        &__title {
+            color: $maroon;
+            font-size: em(24px);
+            font-weight: 700;
+        }
+
+        &__text {
+            margin-top: 5px;
+            font-size: em(16px);
+        }
+    }
+
+    &__btn {
+        padding: 20px 30px;
+        font-size: em(24px);
+    }
+}

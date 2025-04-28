@@ -1,0 +1,102 @@
+.header {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fff;
+
+    &.fixed {
+        margin-top: 0;
+        position: fixed;
+        z-index: 555;
+        background-color: #f9f9f9;
+        border-bottom: 2px solid $accent;
+
+        .header__inner {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: none;
+        }
+    }
+
+    // Inner
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $accent;
+    }
+
+    // Logo
+    &__logo {
+        font-size: em(28px);
+    }
+
+    // Nav
+    &-nav {
+        // PC menu
+        &-pc-menu {
+            @include flexbox();
+
+            &__item a {
+                position: relative;
+
+                &:hover {
+                    color: $maroon;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: block;
+                    @include box(0, 2px);
+                    transition: width .3s ease;
+                    background: $maroon;
+                }
+            }
+
+            &__item + &__item {
+                margin-left: 35px;
+            }
+        }
+
+        // Mobile box
+        &-mobile-box {
+            display: none;
+        }
+
+        // Close btn
+        &__close-btn {
+            font-size: em(20px);
+        }
+    }
+
+    // Top line empty
+    .top-line-empty {
+        height: 55px;
+    }
+
+    // Burger btn
+    .burger-btn {
+        @include flexbox(space-between, flex-end, column);
+        @include box(35px, 20px);
+
+        span {
+            @include box(100%, 2px);
+            background-color: $text;
+
+            &:first-child {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.top-empty-space {
+    display: none;
+    @include box(100%, 95px);
+}
