@@ -1,0 +1,280 @@
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(xl) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .top-empty-space {
+        height: 96px;
+    }
+
+	.section-title {
+        text-align: left;
+        font-size: em(40px);
+    }
+
+    .tabs {
+        &-content {
+            &-item {
+                // Top gallery
+            &-top-gallery {
+                &__item {
+                    height: 350px;
+                }
+            }
+            }
+        }
+    }
+
+    .about {
+        &-row {
+            height: 400px;
+        }
+
+        &-content {
+            padding: 20px;
+
+            &__title {
+                font-size: em(40px);
+            }
+
+            &__text {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+// ≥992px
+@include media-breakpoint-down(lg) {
+    .about {
+        &-row {
+            @include box(auto);
+        }
+
+        &-column {
+            border-radius: 10px;
+        }
+
+        &-content {
+            padding: 50px 20px;
+        }
+
+        &__img {
+            height: 300px;
+        }
+    }
+
+    .tabs {
+        &-content {
+            &-item {
+                // Bottom gallery
+                &-bottom-gallery {
+                    display: none;
+                }
+
+                // Box
+                &-box {
+                    height: auto;
+
+                    &__title {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ≥768px
+@include media-breakpoint-down(md) {
+    .section-title {
+        font-size: em(26px);
+        font-weight: 500;
+    }
+
+    .breadcrumbs {
+        &__slug {
+            margin-top: 15px;
+        }
+    }
+
+    .stairs {
+        &-item {
+            &__img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            &-content {
+                margin-top: 20px;
+                padding: 0;
+                width: 100%;
+                max-width: none;
+
+                &__title {
+                    font-size: em(22px);
+                }
+
+                &__text {
+                    font-size: em(16px);
+                }
+            }
+        }
+    }
+
+    .start-banner {
+        &__img {
+            height: 200px;
+        }
+    }
+
+    .main-banner {
+        &__img {
+            border-radius: 10px;
+        }
+
+        &__btn {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+
+    .whatsapp-container {
+        .whatsapp-btn {
+            @include box(60px);
+    
+            i {
+                font-size: em(45px);
+            }
+        }
+    }
+
+    .task {
+        &-form {
+            padding: 20px;
+
+            // Content
+            &__title {
+                font-size: em(20px);
+            }
+
+            label {
+                font-size: em(16px);
+            }
+
+            h4 {
+                font-size: em(18px);
+            }
+        }
+    }
+}
+
+// ≥576px
+@include media-breakpoint-down(sm) {
+    .header {
+        &__logo img {
+            max-width: 190px;
+        }
+
+        &.fixed {
+            .mobile-nav {
+                top: 72px;
+                height: calc(100vh - 60px);
+            }
+        }
+    }
+
+    .breadcrumbs {
+        &__link {
+            font-size: em(20px);
+        }
+    
+        &__title {
+            font-size: em(16px);
+        }
+
+        &__slug {
+            margin-top: 5px;
+        }
+    }
+
+    .reviews {
+        &-slider {
+            &-item {
+
+                &__inner {
+                    margin: 0 auto;
+                    width: 260px;
+                }
+            }
+        }
+    }
+    
+    .slider {
+        .slick-arrow {
+            @include box(40px);
+
+            &.slide-next {
+                right: 0;
+            }
+
+            &.slide-prev {
+                left: 0;
+            }
+
+            i {
+                font-size: em(30px);
+            }
+        }
+    }
+
+    .about {
+        &-column {
+            width: 93%;
+        }
+
+        &-content {
+            &__title {
+                margin-top: 0;
+                font-size: em(30px);
+            }
+        }
+    }
+
+    .tabs {
+        &-controller {
+            .slick-list {
+                margin: 0 -10px;
+            }
+
+            &-item {
+                margin: 0 10px;
+
+                &__img {
+                    height: 130px;
+                }
+            }
+        }
+
+        &-content {
+            &-item {
+                // Bottom gallery
+                &-top-gallery {
+                    &__item {
+                        height: 245px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        &-form {
+            width: 95%;
+            padding: 70px 15px;
+        }
+    }
+}

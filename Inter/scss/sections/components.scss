@@ -1,0 +1,341 @@
+//* Slider
+.slider {
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 555;
+        @include box(50px);
+        background-color: $red;
+        border-radius: 50%;
+
+        &.slide-next {
+            right: -60px;
+        }
+
+        &.slide-prev {
+            left: -60px;
+        }
+
+        i {
+            text-align: center;
+            color: #fff;
+            font-size: em(40px);
+        }
+    }
+}
+
+//* Breadcrumbs
+.breadcrumbs {
+    &__link {
+        color: $text3;
+        font-size: em(25px);
+    }
+
+    &__title {
+        color: $text2;
+        font-size: em(20px);
+    }
+
+    &__slug {
+        min-width: auto !important;
+    }
+}
+
+//* Section
+.section {
+    padding: 30px 0;
+    background-color: #fff;
+
+    &-gray {
+        background-color: $accent;
+        border-bottom: 1px solid silver;
+    }
+}
+
+//* Modal
+.modal {
+    position: fixed;
+    z-index: 888;
+    top: 0;
+    left: 0;
+    @include box(100vw, 100vh);
+    display: none;
+    background-color: rgba($color: $text, $alpha: 0.6);
+
+    &-inner {
+        @include flexbox(center, center);
+        @include box(100%);
+    }
+
+    &-form {
+        position: relative;
+        @include flexbox(flex-start, center, column);
+        @include box(500px, auto);
+        padding: 50px;
+        border: 2px solid $red;
+        border-radius: 10px;
+        background: #F2F2F2;
+
+        &__title {
+            color: $text2;
+            text-align: center;
+            font-size: em(20px);
+            font-weight: 400;
+        }
+
+        &__field {
+            margin-top: 20px;
+            padding: 10px 15px;
+            @include box(100%, 40px);
+            border-radius: 5px;
+        }
+
+        &__submit-btn {
+            margin-top: 20px;
+            @include box(100%, 45px);
+            display: block;
+            cursor: pointer;
+        }
+
+        &__whatsapp-btn {
+            background-color: $whatsapp !important;
+        }
+
+        &__privacy {
+            margin-top: 15px;
+            display: block;
+            text-align: center;
+            color: $text2;
+            font-size: 14px;
+            
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        &__img {
+            margin: 20px 0;
+            max-width: 190px;
+        }
+
+        &__close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            @include flexbox(center, center);
+            @include box(30px);
+            text-align: center;
+            font-size: em(20px);
+            border-radius: 50%;
+            background-color: $red;
+
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+//* Whatsapp button
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    .whatsapp-btn {
+        position: relative;
+        @include box(80px);
+        background: $whatsapp;
+        border-radius: 50%;
+        transition: all .3s ease;
+
+        &:hover {
+            background: #fff;
+            box-shadow: 0 0 25px $whatsapp;
+
+            i {
+                color: $whatsapp;
+            }
+        }
+    
+        i {
+            color: #fff;
+            font-size: em(65px);
+        }
+    
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 222;
+            left: -2px;
+            top: -2px;
+            display: block;
+            @include box(100%);
+            background: transparent;
+            border: 2px solid $whatsapp;
+            border-radius: 50%;
+            animation-name: pulse;
+            animation-duration: .8s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+//* Button
+.btn {
+    padding: 13px;
+    text-align: center;
+    color: #fff;
+    font-size: em(16px);
+    background-color: $red;
+    border-radius: 10px;
+    min-width: 235px;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: $text;
+    }
+}
+
+//* Section title
+.section-title {
+    font-size: em(48px);
+    font-weight: 400;
+}
+
+//* Menu
+.menu {
+    position: relative;
+
+    &-dropdown-1 {
+        position: absolute;
+        z-index: 666;
+        left: 0;
+        @include box(100%, auto);
+        min-height: 350px;
+        display: none;
+        box-shadow: 0 0 5px 0 $text;
+        background: #fff;
+
+        .menu-item-2 {
+            width: 33.3%;
+
+            &:hover {
+                // Hovered link <a>
+                a:nth-child(1) {
+                    background-color: $accent;
+                }
+            }
+
+            // Arrow icon
+            &.has-child > a:nth-child(1):after {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                content: '';
+                @include box(8px, 16px);
+                background-image: url('../../img/angle-right.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    // Dropdown 2nd,3rd levels
+    &-dropdown-2, &-dropdown-3 {
+        position: absolute;
+        top: 0;
+        @include box(33.3%, 100%);
+        display: none;
+    }
+
+    &-dropdown-2 {
+        left: 33.3%;
+        background: $accent;
+
+        .menu-item-3:hover {
+            a {
+                color: $red;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-dropdown-3 {
+        left: 100%;
+        width: 100%;
+        padding: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        @include box(100%);
+    }
+}
+
+//* Social buttons 
+.soc-btns {
+    @include flexbox();
+
+    &__btn {
+        @include box(42px);
+        @include flexbox(center, center);
+        border-radius: 50%;
+        border: 2px solid $red;
+
+        &:hover {
+            background-color: $red;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        i {
+            color: $red;
+            font-size: 25px;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 9px;
+    }
+}
+
+//* Other little things
+.link {
+    &:hover {
+        color: $red;
+        text-decoration: underline;
+    }
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}

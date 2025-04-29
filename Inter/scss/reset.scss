@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    color: $text;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $accent;
+}
+
+ul, menu {
+    list-style: none;
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}

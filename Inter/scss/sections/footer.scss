@@ -1,0 +1,41 @@
+.footer {
+    padding: 30px 0;
+    background-color: #fff;
+
+    &__logo {
+        img {
+            max-width: 230px;
+        }
+    }
+
+    &-column {
+        &__title {
+            font-size: em(20px);
+            font-weight: 500;
+        }
+
+        &-info {
+            @include flexbox(flex-start, flex-start, column);
+
+            &.footer-menu {
+                padding-left: 20px;
+                list-style-type: disc;
+
+                li::marker {
+                    color: $red;
+                }
+            }
+
+            &__item {
+                a:hover {
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+
+            &__item + &__item {
+                margin-top: 15px;
+            }
+        }
+    }
+}
