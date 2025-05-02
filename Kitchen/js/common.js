@@ -14,11 +14,19 @@ $(function() {
 	const verticalGalleryRows = $('.vertical-gallery-row');
 	const verticalGalleryRowsLength = verticalGalleryRows.length;
 	const verticalSlideItem = $('.vertical-gallery__item');
-	// const verticalSlide = $('.vertical-gallery-row:not(.slick-cloned)');
 	// Section b
 	const sectionBslider = $('.section-b-slider');
 	// Section c
-	const sectionCnavTabs = $('.section-c-tabs-tab');
+	const sectionClight = $('.section-c-tabs-content__item-light');
+	// Section g
+	const sectionGscroll = $('.section-g-scroll');
+	const sectionGscrollWrapper = $('.section-g-scroll__wrapper');
+	const sectionGrows = $('.section-g-scroll-row');
+	const sectionGrowsCount = sectionGrows.length;
+	// Reviews slider
+	const reviewsSlider = $('.section-reviews-slider');
+	// FAQ
+	const faqItem = $('.section-faq-item');
 	// Tabs
 	const tab = $('.tab')
 	const tabContent = $('.tab-content');
@@ -30,6 +38,29 @@ $(function() {
 	const modal = $('.modal');
 	// Tel field
 	const telField = $('.tel-field');
+
+	//! Yandex map
+	ymaps.ready(init);
+	function init() {
+		// Создание карты.
+		const myMap = new ymaps.Map("map", {
+			// Координаты центра карты.
+			// Порядок по умолчанию: «широта, долгота».
+			// Чтобы не определять координаты центра карты вручную,
+			// воспользуйтесь инструментом Определение координат.
+			center: [55.729397, 37.734524],
+			// Уровень масштабирования. Допустимые значения:
+			// от 0 (весь мир) до 19.
+			zoom: 17,
+			controls: []
+		});
+
+		const placemark = new ymaps.Placemark([55.729397, 37.734524], {
+			balloonContent: "Рязанский проспект, 2к3, Москва, 109052"
+		});
+
+		myMap.geoObjects.add(placemark);
+	}  
 
 	//! Header&menu 
 	// Fixed header
@@ -124,7 +155,8 @@ $(function() {
 
 	//! Tabs
 	tab.on('click', function () {
-		const tabTarget = $(this).attr('tab-target');
+		const tabTargetAttr = $(this).attr('tab-target');
+		const tabTarget = $(`#${tabTargetAttr}`);
 
 		if($(this).hasClass('active') == false) {
 			// Add class to tab link
@@ -134,19 +166,24 @@ $(function() {
 			// Remove active in all tab-content
 			$(this).closest('.tabs').find('.tab-content').hide().removeClass('active');
 
-			// Add active class to tab target
-			$(`#${tabTarget}`).fadeIn({
-				start: function () {
-					$(this).addClass('active');
-					$(this).css('display', 'flex');
-				}
-			});
+			// Remove fade effect from section c
+			if($(this).hasClass('section-c-tabs-tab')) {
+				tabTarget.show().css('display', 'flex').addClass('active');
+			} else {
+				// Add active class to tab target
+				tabTarget.fadeIn({
+					start: function () {
+						$(this).addClass('active');
+						$(this).css('display', 'flex');
+					}
+				});
+			}
 		}
 
 		// Hide blur effect
 		if($(this).hasClass('blured') == true) {
 			$(this).removeClass('blured');
-			$(`#${tabTarget}`).removeClass('blured');
+			tabTarget.removeClass('blured');
 		}
 	});
 	
@@ -167,126 +204,74 @@ $(function() {
 	);
 
 	const verticalScrollSpeed = 50; // pixels per second
-	const rowHeight = verticalGalleryRows.outerHeight(true);
-	let scrollPosition = verticalGallery.outerHeight() / 2;
-	let lastTime = null;
+	const verticalRowHeight = verticalGalleryRows.outerHeight(true);
+	let verticalScrollPosition = verticalGallery.outerHeight() / 2;
+	let verticalLastTime = null;
 
 	let activeZoomedRow = null;
 
-	function getRandomImageFromRow(row) {
-		const images = $(row).find('.vertical-gallery__item');
-		return images[Math.floor(Math.random() * images.length)];
-	}
-	
-	function handleNewRowAppearing() {
-		// Определяем текущую позицию прокрутки в рядах
-		let currentRowIndex = Math.floor((-scrollPosition) / rowHeight) % verticalGalleryRows.length + 1;
-		
-		// Если это новый ряд (не тот, что был в прошлый раз)
-		if (currentRowIndex !== activeZoomedRow) {
-			// Убираем все zoom-эффекты
-			$('.vertical-gallery__item').removeClass('zoomed');
-			
-			// Находим новый появляющийся ряд
-			const rows = $('.vertical-gallery-row[data-row]');
-			const newRow = rows.filter(`[data-row="${currentRowIndex}"]`)[0];
-			
-			if (newRow) {
-				// Выбираем случайное изображение в этом ряду
-				const randomImg = getRandomImageFromRow(newRow);
+	//! Scroll animation
+	function startInfiniteScroll(lastTime, scrollPosition, scrollSpeed, rowHeight, rowsLength, boxToMove,enableZoom=false) {
+		// Image zooming
+		function getRandomImageFromRow(row) {
+			const images = $(row).find('.vertical-gallery__item');
+			return images[Math.floor(Math.random() * images.length)];
+		}
 
-				$(randomImg).addClass('zoomed');
+		// New Row Appear
+		function handleNewRowAppearing() {
+			// Определяем текущую позицию прокрутки в рядах
+			let currentRowIndex = Math.floor((-scrollPosition) / rowHeight) % verticalGalleryRows.length + 1;
+
+			// Если это новый ряд (не тот, что был в прошлый раз)
+			if (currentRowIndex !== activeZoomedRow) {
+				// Убираем все zoom-эффекты
+				$('.vertical-gallery__item').removeClass('zoomed');
 				
-				// Устанавливаем текущий активный ряд
-				activeZoomedRow = currentRowIndex;
+				// Находим новый появляющийся ряд
+				const rows = $('.vertical-gallery-row[data-row]');
+				const newRow = rows.filter(`[data-row="${currentRowIndex}"]`)[0];
+				
+				if (newRow) {
+					// Выбираем случайное изображение в этом ряду
+					const randomImg = getRandomImageFromRow(newRow);
+	
+					$(randomImg).addClass('zoomed');
+					
+					// Устанавливаем текущий активный ряд
+					activeZoomedRow = currentRowIndex;
+				}
 			}
 		}
-	}
 
-	// Scroll
-	function animateScroll(timestamp) {
-		if (!lastTime) lastTime = timestamp;
-		const deltaTime = timestamp - lastTime;
-		lastTime = timestamp;
-		
-		// Рассчитываем новую позицию
-		scrollPosition -= (verticalScrollSpeed * deltaTime) / 1000;
-		
-		// Если прокрутили всю высоту оригинальных рядов - сбрасываем позицию
-		if (scrollPosition <= -rowHeight * verticalGalleryRowsLength) {
-			scrollPosition = 0;
+		function animateScroll(timestamp) {
+			if (!lastTime) lastTime = timestamp;
+			const deltaTime = timestamp - lastTime;
+			lastTime = timestamp;
+			
+			// Рассчитываем новую позицию
+			scrollPosition -= (scrollSpeed * deltaTime) / 1000;
+			
+			// Если прокрутили всю высоту оригинальных рядов - сбрасываем позицию
+			if (scrollPosition <= -rowHeight * rowsLength) {
+				scrollPosition = 0;
+			}
+
+			boxToMove.css('top', scrollPosition + 'px');
+
+			if(enableZoom == true) {
+				// Обрабатываем появление новых рядов
+				handleNewRowAppearing();
+			}
+			
+
+			requestAnimationFrame(animateScroll);
 		}
-		
-		verticalGalleryWrapper.css('top', scrollPosition + 'px');
 
-		// Обрабатываем появление новых рядов
-		handleNewRowAppearing();
-		
 		requestAnimationFrame(animateScroll);
 	}
-	
-	// Запускаем анимацию
-	requestAnimationFrame(animateScroll);
 
-	// Old code
-	// verticalGallery.slick({
-	// 	slidesToShow: 2,
-	// 	slidesToScroll: 1,
-	// 	infinite: true,
-	// 	vertical: true,
-	// 	draggable: false,
-	// 	speed: 600,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 1200,
-	// 			settings: {
-	// 			slidesToShow: 3,
-	// 			}
-	// 		},
-	// 		]
-	// }); 
-
-	// // Transition&scaling
-	// let verticalSlidesCount = verticalSlide.length;
-	// let rowIndex = 0;
-	// let itemIndex = -1;
-
-	// setInterval(function () {
-	// 	verticalSlide.removeClass('top-active');
-	// 	verticalSlide.removeClass('bottom-active');
-	// 	$('.vertical-gallery__item').removeClass('active');
-
-	// 	// Increase item index
-	// 	itemIndex++;
-
-	// 	// Increase row index
-	// 	if(itemIndex === 3) {
-	// 		itemIndex = 0;
-	// 		rowIndex++;
-
-	// 		if(rowIndex > verticalSlidesCount) {
-	// 			rowIndex = 1;
-	// 		}
-	// 	}
-
-	// 	// Slide next
-	// 	if($(`.vertical-gallery-row[data-slick-index=${rowIndex}]`).hasClass('slick-active') == false) {
-	// 		$('.vertical-gallery').slick('slickNext');
-	// 	}
-
-	// 	// Add top&bottom active classes to row
-	// 	if($(window).width() >= 1200) {
-	// 		$('.vertical-gallery-row.slick-active').eq(0).addClass('top-active');
-	// 		$('.vertical-gallery-row.slick-active').eq(1).addClass('bottom-active');
-	// 	} else {
-	// 		$('.vertical-gallery-row.slick-active').eq(0).addClass('top-active');
-	// 		$('.vertical-gallery-row.slick-active').eq(1).addClass('top-active');
-	// 		$('.vertical-gallery-row.slick-active').eq(2).addClass('bottom-active');
-	// 	}
-
-	// 	// Add active class to grid item
-	// 	$(`.vertical-gallery-row[data-slick-index=${rowIndex}]`).find('.vertical-gallery__item').eq(itemIndex).addClass('active');
-	// }, 2000);
+	startInfiniteScroll(verticalLastTime, verticalScrollPosition, verticalScrollSpeed, verticalRowHeight, verticalGalleryRowsLength, verticalGalleryWrapper, true);
 
 	//* Snakes 
 	let angles = [0, 100, 230];
@@ -318,6 +303,110 @@ $(function() {
 		pauseOnHover: false,
 		pauseOnFocus: false,
 	}); 
+
+	//! Section c
+	$('.section-c-tabs-tab.light-on').on('click', function () {
+		$(this).toggleClass('active');
+		sectionClight.toggleClass('on');
+	});
+
+	//! Section g
+	let isTriggered = false; 
+	// Vertical scroll
+	sectionGscroll.height($('.section-g-scroll-row__item').outerHeight() * 3 + 10);
+	sectionGscrollWrapper.append(sectionGrows.clone());
+
+	$(window).on('scroll', function() {
+		if (isTriggered) return; // Если уже сработало, выходим
+
+		const gPosition = sectionGscroll.offset().top; // Позиция блока
+		const scrollPosition = $(window).scrollTop(); // Текущая прокрутка
+		const windowHeight = $(window).height(); // Высота окна
+
+		const gScrollSpeed = 55; // pixels per second
+		const gRowHeight = $('.section-g-scroll-row').outerHeight(true);
+		let gScrollPosition = 0;
+		let gLastTime = null;
+
+		if (scrollPosition + windowHeight > gPosition + sectionGscroll.outerHeight() / 1.25) {
+			startInfiniteScroll(gLastTime, gScrollPosition, gScrollSpeed, gRowHeight, sectionGrowsCount, sectionGscrollWrapper);
+
+			isTriggered = true;
+		}
+	});
+
+	//! About section
+	$(document).ready(function() {
+		$('.section-about-video-item').magnificPopup({
+			type: 'ajax', // Используем ajax вместо inline
+			callbacks: {
+				parseAjax: function(mfpResponse) {
+					// Вставляем видео напрямую
+					mfpResponse.data = `
+					<div class="mfp-video-container">
+						<video controls width="100%">
+							<source src="${this.st.el.data('video')}" type="video/mp4">
+						</video>
+					</div>
+					`;
+				},
+				ajaxContentAdded: function() {
+					// Автовоспроизведение после загрузки
+					const video = this.content.find('video')[0];
+					if(video) {
+						video.play().catch(e => {
+							video.muted = true;
+							video.play();
+						});
+					}
+				}
+			}
+		});
+	});
+
+	//! Reviews slider
+	reviewsSlider.slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		appendArrows: '.section-reviews__arrows',
+		nextArrow: '<button type="button" class="slide-next slick-arrow"><i class="fa-solid fa-arrow-right"></i></button>',
+		prevArrow: '<button type="button" class="slide-prev slick-arrow"><i class="fa-solid fa-arrow-left"></i></button>',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 512,
+				settings: {
+					slidesToShow: 1,
+					variableWidth: true
+				}
+			},
+		]
+		// autoplay: true,
+		// autoplaySpeed: 4000,
+	});
+
+	const players = Plyr.setup('.reviews-plyr', {
+		toplay: false,   // Запрещает авто-воспроизведение
+		controls: ['play'], // Оставляем только кнопку Play
+	});
+
+	//! FAQ
+	faqItem.on('click', function() {
+		$(this).find('.section-faq-item__value').slideToggle();
+		$(this).toggleClass('opened');
+	});
 
 	//! Resize window
 	$(window).on('resize', function () {

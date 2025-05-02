@@ -22,6 +22,10 @@
 
 	<!-- Main styles -->
 	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Yandex map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=deb65a9a-d8d8-4c73-b143-2bbd849e4db5
+	&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
 	<!--! Header -->
@@ -38,13 +42,13 @@
 					<!-- PC: Menu -->
 					<menu class="header-nav-pc-menu">
 						<!-- Item -->
-						<li class="header-nav-pc-menu__item"><a href="#">Каталог</a></li>
+						<li class="header-nav-pc-menu__item"><a href="#catalog">Каталог</a></li>
 
 						<!-- Item -->
-						<li class="header-nav-pc-menu__item"><a href="#">О компании</a></li>
+						<li class="header-nav-pc-menu__item"><a href="#about">О компании</a></li>
 
 						<!-- Item -->
-						<li class="header-nav-pc-menu__item"><a href="#">Связаться</a></li>
+						<li class="header-nav-pc-menu__item"><a href="#catalog">Связаться</a></li>
 					</menu>
 
 					<!-- Mobile box -->
@@ -63,19 +67,19 @@
 							<!-- Mobile menu -->
 							<menu class="header-nav-mobile-menu mt-4">
 								<!-- Item -->
-								<li class="header-nav-mobile-menu__item"><a href="#">Каталог</a></li>
+								<li class="header-nav-mobile-menu__item"><a href="#catalog">Каталог</a></li>
 
 								<!-- Item -->
-								<li class="header-nav-mobile-menu__item"><a href="#">О компании</a></li>
+								<li class="header-nav-mobile-menu__item"><a href="#about">О компании</a></li>
 
 								<!-- Item -->
-								<li class="header-nav-mobile-menu__item"><a href="#">FAQ</a></li>
+								<li class="header-nav-mobile-menu__item"><a href="#faq">FAQ</a></li>
 
 								<!-- Item -->
-								<li class="header-nav-mobile-menu__item"><a href="#">Онлайн дизайн-проект</a></li>
+								<li class="header-nav-mobile-menu__item"><a href="#feedback">Онлайн дизайн-проект</a></li>
 
 								<!-- Item -->
-								<li class="header-nav-mobile-menu__item"><a href="#">Связаться</a></li>
+								<li class="header-nav-mobile-menu__item"><a href="#contact">Связаться</a></li>
 							</menu>
 						</div>
 
@@ -280,7 +284,7 @@
 					</div>
 
 					<!-- Button -->
-					<button class="btn section-b__btn mt-5 d-lg-block d-none">Создать</button>
+					<button class="btn section-b__btn open-modal-btn mt-5 d-lg-block d-none" target="get-quiz">Создать</button>
 				</div>
 
 				<!-- Column -->
@@ -379,7 +383,7 @@
 					</div>
 
 					<!-- Button -->
-					<button class="btn section-b__btn mt-5 d-lg-none d-block">Создать</button>
+					<button class="btn section-b__btn open-modal-btn mt-5 d-lg-none d-block" target="get-quiz">Создать</button>
 				</div>
 			</div>
 		</div>
@@ -431,7 +435,7 @@
 						</button>
 
 						<!-- Tab -->
-						<button class="section-c-tabs-tab tab" tab-target="section-c-tab3">
+						<button class="section-c-tabs-tab light-on">
 							<!-- Icon -->
 							<div class="section-c-tabs-tab__icon">
 								<img src="img/section-c/tab3.png" alt="">
@@ -459,16 +463,16 @@
 					<!-- Tabs content -->
 					<div class="section-c-tabs-content">
 						<!-- Item -->
-						<div class="tab-content section-c-tabs-content__item active" id="section-c-tab1"><img src="img/section-c/content1.png" alt=""></div>
+						<div class="tab-content section-c-tabs-content__item active" id="section-c-tab1"><img src="img/section-c/a1.png" alt=""></div>
 
 						<!-- Item -->
-						<div class="tab-content section-c-tabs-content__item" id="section-c-tab2"><img src="img/section-c/content2.png" alt=""></div>
+						<div class="tab-content section-c-tabs-content__item" id="section-c-tab2"><img src="img/section-c/a2.png" alt=""></div>
 
 						<!-- Item -->
-						<div class="tab-content section-c-tabs-content__item" id="section-c-tab3"><img src="img/section-c/content3.png" alt=""></div>
+						<div class="section-c-tabs-content__item section-c-tabs-content__item-light" id="section-c-tab3"><img src="img/section-c/light.png" alt=""></div>
 
 						<!-- Item -->
-						<div class="tab-content section-c-tabs-content__item" id="section-c-tab4"><img src="img/section-c/content4.png" alt=""></div>
+						<div class="tab-content section-c-tabs-content__item" id="section-c-tab4"><img src="img/section-c/a3.png" alt=""></div>
 					</div>
 				</div>
 			</div>
@@ -476,7 +480,7 @@
 	</section>
 
 	<!-- Section D -->
-	<section class="section-d mt-5 pb-5">
+	<section class="section-d mt-5 pb-5" id="catalog">
 		<!-- Container -->
 		<div class="container tabs">
 			<!-- Section title -->
@@ -2968,7 +2972,7 @@
 	</section>
 
 	<!-- Section E -->
-	<div class="section-e mt-5">
+	<section class="section-e mt-5 pb-5">
 		<!-- Container -->
 		<div class="container tabs">
 			<!-- Row -->
@@ -3215,9 +3219,696 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<br><br><br>
+	<!-- Section G -->
+	<section class="section-g mt-5">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row align-items-center">
+				<!-- Title -->
+				<h3 class="section-g__title d-lg-none">Следите за нами <br> в социальных сетях</h3>
+
+				<!-- Text -->
+				<p class="section-g__text d-lg-none my-3">Узнавайте первыми о новинках и скидках, участвуйте в розыгрышах</p>
+
+				<!-- Column -->
+				<div class="col-lg-5 col-4">
+					<!-- Title -->
+					<h3 class="section-g__title d-lg-block d-none">Следите за нами <br> в социальных сетях</h3>
+
+					<!-- Text -->
+					<p class="section-g__text d-lg-block d-none mt-3">Узнавайте первыми о новинках и скидках, участвуйте в розыгрышах</p>
+
+					<!-- Subscribe -->
+					<div class="section-g__subscribe-text mt-5">
+						Подписаться <i class="fa-solid fa-arrow-down"></i>
+					</div>
+
+					<!-- Socials -->
+					<div class="socials d-flex flex-lg-row flex-column align-items-center mt-4">
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn ms-lg-3 mt-lg-0 mt-2">
+							<i class="fa-brands fa-telegram"></i>
+						</a>
+
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn ms-lg-3 mt-lg-0 mt-2">
+							<i class="fa-brands fa-vk"></i>
+						</a>
+					</div>
+				</div>
+
+				<!-- Column -->
+				<div class="col-lg-7 col-8">
+					<!-- Scroll -->
+					<div class="section-g-scroll">
+						<!-- Wrapper -->
+						<div class="section-g-scroll__wrapper">
+							<!-- Insta row -->
+							<div class="section-g-scroll-insta-row" style="background-image: url('img/section-g/a1.png');"></div>
+
+							<!-- Row -->
+							<a href="https://www.instagram.com/kuhnimoskwa?igsh=MW15eDV3cTJhc3F6OA%3D%3D" class="section-g-scroll-row">
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/1.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/2.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/3.jpg');"></div>
+							</a>
+
+							<!-- Row -->
+							<a href="https://www.instagram.com/kuhnimoskwa?igsh=MW15eDV3cTJhc3F6OA%3D%3D" class="section-g-scroll-row">
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/4.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/5.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/6.jpg');"></div>
+							</a>
+
+							<!-- Row -->
+							<a href="https://www.instagram.com/kuhnimoskwa?igsh=MW15eDV3cTJhc3F6OA%3D%3D" class="section-g-scroll-row">
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/7.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/8.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/9.jpg');"></div>
+							</a>
+
+							<!-- Row -->
+							<a href="https://www.instagram.com/kuhnimoskwa?igsh=MW15eDV3cTJhc3F6OA%3D%3D" class="section-g-scroll-row">
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/10.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/11.jpg');"></div>
+
+								<!-- Item -->
+								<div class="section-g-scroll-row__item" style="background-image: url('img/section-a/12.jpg');"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section About -->
+	<section class="section-about mt-5 pb-5" id="about">
+		<!-- Container -->
+		<div class="container">
+			<!-- Section title -->
+			<h2 class="section-title">О компании</h2>
+
+			<!-- Section text -->
+			<p class="section-text mt-3">M-mebel предлагает широкий выбор корпусной мебели высокого качества собственного производства. Мы уделяем большое внимание индивидуальному подходу к каждому клиенту. Команда профессионалов готова помочь вам воплотить в жизнь любые дизайнерские идеи и создать уютный и стильный интерьер</p>
+
+			<!-- Row -->
+			<div class="row align-items-center">
+				<!-- Column -->
+				<div class="col-lg-6 order-lg-1 order-2 d-flex justify-content-between flex-wrap section-about-video">
+					<!-- Item -->
+					<div class="section-about-video-item" data-video="video/test1.mp4">
+						<!-- Image -->
+						<div class="section-about-video-item__img" style="background-image: url('img/about/1.jpg');">
+							<i class="fa-solid fa-play"></i>
+						</div>
+
+						<!-- Title -->
+						<h4 class="section-about-video-item__title">
+							<i class="fa-solid fa-play"></i> Экскурсия по производству
+						</h4>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-video-item" data-video="video/test1.mp4">
+						<!-- Image -->
+						<div class="section-about-video-item__img" style="background-image: url('img/about/2.jpg');">
+							<i class="fa-solid fa-play"></i>
+						</div>
+
+						<!-- Title -->
+						<h4 class="section-about-video-item__title">
+							<i class="fa-solid fa-play"></i> Объёмы закупаем
+						</h4>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-video-item" data-video="video/test1.mp4">
+						<!-- Image -->
+						<div class="section-about-video-item__img" style="background-image: url('img/about/3.jpg');">
+							<i class="fa-solid fa-play"></i>
+						</div>
+
+						<!-- Title -->
+						<h4 class="section-about-video-item__title">
+							<i class="fa-solid fa-play"></i> Экскурсия по офису
+						</h4>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-video-item" data-video="video/test1.mp4">
+						<!-- Image -->
+						<div class="section-about-video-item__img" style="background-image: url('img/about/4.jpg');">
+							<i class="fa-solid fa-play"></i>
+						</div>
+
+						<!-- Title -->
+						<h4 class="section-about-video-item__title">
+							<i class="fa-solid fa-play"></i> Разгрузка
+						</h4>
+					</div>
+				</div>
+
+				<!-- Column -->
+				<div class="col-lg-6 order-lg-2 order-1 mt-lg-0 mt-4 section-about-content">
+					<!-- Item -->
+					<div class="section-about-content-item">
+						<!-- Title -->
+						<h4 class="section-about-content-item__title">10 лет</h4>
+
+						<!-- Text -->
+						<p class="section-about-content-item__text">работаем и за это время мы зарекомендовали себя как надежного и качественного исполнителя</p>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-content-item">
+						<!-- Title -->
+						<h4 class="section-about-content-item__title">до 30%</h4>
+
+						<!-- Text -->
+						<p class="section-about-content-item__text">наша мебель дешевле конкурентов за счёт собственного производства</p>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-content-item">
+						<!-- Title -->
+						<h4 class="section-about-content-item__title">60%</h4>
+
+						<!-- Text -->
+						<p class="section-about-content-item__text">наших клиентов возвращаются и рекомендуют другим</p>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-content-item">
+						<!-- Title -->
+						<h4 class="section-about-content-item__title">от 7 дней</h4>
+
+						<!-- Text -->
+						<p class="section-about-content-item__text">быстрое производство. У нас большая команда профессионалов</p>
+					</div>
+
+					<!-- Item -->
+					<div class="section-about-content-item">
+						<!-- Title -->
+						<h4 class="section-about-content-item__title">6 месяцев</h4>
+
+						<!-- Text -->
+						<p class="section-about-content-item__text">беспроцентной рассрочки, которая поможет воплотить мечту уже сегодня</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Feedback -->
+	<section class="section-feedback pb-5 mt-5" id="feedback">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row align-items-center justify-content-between section-feedback__row">
+				<!-- Column -->
+				<div class="col-xl-5 col-lg-6">
+					<!-- Title -->
+					<h2 class="section-feedback__title">Рассчитаем стоимость онлайн</h2>
+
+					<!-- Text -->
+					<p class="section-feedback__text mt-lg-4 mt-3">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
+				</div>
+
+				<!-- Column -->
+				<div class="col-lg-6 mt-lg-0 mt-3">
+					<!-- Form -->
+					<form action="#" class="section-feedback-form">
+						<!-- Field -->
+						<input type="text" placeholder="Имя" class="section-feedback-form__field">
+
+						<!-- Field -->
+						<input type="tel" placeholder="+7 (999) 999 99-99" class="section-feedback-form__field tel-field mt-3">
+
+						<!-- Field -->
+						<input type="email" placeholder="E-mail" class="section-feedback-form__field mt-3">
+
+						<!-- Submit -->
+						<button type="submit" class="btn section-feedback-form__btn mt-4">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Reviews -->
+	<section class="section-reviews mt-5 pb-5">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="d-flex justify-content-between align-items-center">
+				<!-- Section title -->
+				<h2 class="section-title d-block">Отзывы</h2>
+
+				<div class="d-flex align-items-center">
+					<!-- Finger -->
+					<div class="section-reviews__finger">
+						<img src="img/reviews/finger.png" alt="">
+					</div>
+
+					<!-- Slider arrows -->
+					<div class="section-reviews__arrows"></div>
+				</div>
+			</div>
+
+			<!-- Slider -->
+			<div class="section-reviews-slider mt-5">
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review1.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review2.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review3.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review4.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review5.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review6.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review7.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review8.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review9.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review10.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-reviews-slider-item">
+					<!-- Video -->
+					<div class="section-reviews-slider-item__video">
+						<video playsinline preload="metadata" class="reviews-plyr">
+							<source src="video/review11.mp4" type="video/mp4" />
+						</video>
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-3">
+						<span>Адрес: </span>г.Москва, ЖК Плаза
+					</div>
+
+					<!-- Property -->
+					<div class="section-reviews-slider-item__property mt-2">
+						<span>Стоимость: </span>323 000₽
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section FAQ -->
+	<section class="section-faq mt-5 pb-5" id="faq">
+		<!-- Container -->
+		<div class="container">
+			<!-- Section title -->
+			<h2 class="section-title">FAQ</h2>
+
+			<div class="mt-5 w-100">
+				<!-- Item -->
+				<div class="section-faq-item opened">
+					<!-- Block -->
+					<div class="w-100 d-flex justify-content-between align-items-sm-center align-items-start">
+						<!-- Name -->
+						<h4 class="section-faq-item__name">Вы работаете только в Москве?</h4>
+
+						<!-- Button -->
+						<button class="section-faq-item__btn">
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+
+					<!-- Value -->
+					<div class="section-faq-item__value">
+						<p>Работаем в Москве, МО, Санкт-Петербурге и ЛО</p>
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-faq-item mt-4">
+					<!-- Block -->
+					<div class="w-100 d-flex justify-content-between align-items-sm-center align-items-start">
+						<!-- Name -->
+						<h4 class="section-faq-item__name">Есть ли доставка и сборка?</h4>
+
+						<!-- Button -->
+						<button class="section-faq-item__btn">
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+
+					<!-- Value -->
+					<div class="section-faq-item__value">
+						<p>Работаем в Москве, МО, Санкт-Петербурге и ЛО</p>
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-faq-item mt-4">
+					<!-- Block -->
+					<div class="w-100 d-flex justify-content-between align-items-sm-center align-items-start">
+						<!-- Name -->
+						<h4 class="section-faq-item__name">Нужна ли предоплата?</h4>
+
+						<!-- Button -->
+						<button class="section-faq-item__btn">
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+
+					<!-- Value -->
+					<div class="section-faq-item__value">
+						<p>Работаем в Москве, МО, Санкт-Петербурге и ЛО</p>
+					</div>
+				</div>
+
+				<!-- Item -->
+				<div class="section-faq-item mt-4">
+					<!-- Block -->
+					<div class="w-100 d-flex justify-content-between align-items-sm-center align-items-start">
+						<!-- Name -->
+						<h4 class="section-faq-item__name">Есть ли договор?</h4>
+
+						<!-- Button -->
+						<button class="section-faq-item__btn">
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+
+					<!-- Value -->
+					<div class="section-faq-item__value">
+						<p>Работаем в Москве, МО, Санкт-Петербурге и ЛО</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Contact -->
+	<section class="section-contact mt-5 pb-5" id="contact">
+		<div class="container">
+			<!-- Section title -->
+			<h2 class="section-title">Контакты</h2>
+
+			<!-- Row -->
+			<div class="row align-items-center">
+				<!-- Column -->
+				<div class="col-xl-3 col-lg-4 mt-lg-0 mt-3">
+					<p class="section-contact__text">Адрес: г. Москва, Рязанский пр. д.2, корпус 3. ТЦ "ГОРОД" (4 этаж)</p>
+
+					<p class="section-contact__text mt-2">Телефон: <a href="tel: +7-937-448-88-86">+7-937-448-88-86</a></p>
+
+					<p class="section-contact__text mt-2">Почта: <a href="mailto: m.mebel.58@mail.ru">m.mebel.58@mail.ru</a></p>
+
+					<p class="section-contact__text mt-3">Мы в соц сетях:</p>
+
+					<!-- Socials -->
+					<div class="socials d-flex align-items-center mt-lg-4 mt-3">
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn ms-3">
+							<i class="fa-brands fa-telegram"></i>
+						</a>
+
+						<!-- Btn -->
+						<a href="#" class="btn socials__btn ms-3">
+							<i class="fa-brands fa-vk"></i>
+						</a>
+					</div>
+				</div>
+
+				<!-- Column -->
+				<div class="col-xl-9 col-lg-8 mt-lg-0 mt-3">
+					<!-- Map -->
+					<div class="section-contact__map" id="map"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer mt-5">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row justify-content-between">
+					<!-- Column -->
+					<div class="col-12 d-flex justify-content-between align-items-center">
+						<!-- Logo -->
+						<h2 class="footer__logo">Kitchen</h2>
+
+						<!-- Social links -->
+						<div class="social-links d-flex">
+							<!-- Item -->
+							<a href="#" class="social-links__item"><i class="fa-brands fa-instagram"></i></a>
+
+							<!-- Item -->
+							<a href="#" class="social-links__item ms-2"><i class="fa-brands fa-telegram"></i></a>
+
+							<!-- Item -->
+							<a href="#" class="social-links__item ms-2"><i class="fa-brands fa-vk"></i></a>
+						</div>
+					</div>
+
+					<!-- Column -->
+					<div class="col-xl-5 col-lg-4 col-12 mt-4">
+						<a href="#" class="footer__link">Юридическая информация</a>
+					</div>
+
+					<!-- Column -->
+					<div class="col-xl-3 col-lg-4 col-12 d-flex flex-column mt-4">
+						<a href="#" class="footer__link">Главная</a>
+						<a href="#catalog" class="footer__link mt-2">Каталог</a>
+						<a href="#faq" class="footer__link mt-2">FAQ</a>
+						<a href="#feedback" class="footer__link mt-2">Онлайн дизайн-проект</a>
+					</div>
+
+					<!-- Column -->
+					<div class="col-lg-4 col-12 mt-4 d-flex justify-content-lg-end align-items-end">
+						<a href="#" class="footer__privacy">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<!--! Global Modals -->
 	<!-- Get price -->
@@ -3320,6 +4011,25 @@
 					<!-- Submit button -->
 					<input type="submit" value="Отправить" class="btn modal-form__btn mt-4">
 				</form>
+
+				<!-- Close modal button -->
+				<button class="modal-close-btn">
+					<div class="modal-close-btn__container">
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quiz -->
+	<div class="modal" id="get-quiz">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Box -->
+			<div class="modal-card-box">
+				<iframe src="https://api.ucalc.pro/api/161404" frameborder="0"></iframe>
 
 				<!-- Close modal button -->
 				<button class="modal-close-btn">

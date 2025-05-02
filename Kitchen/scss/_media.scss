@@ -43,6 +43,29 @@
             }
         }
     }
+
+    // Section g
+    .section-g {
+        &__title {
+            font-size: em(40px);
+        }
+
+        &__text {
+            font-size: em(20px);
+        }
+
+        &-scroll {
+            &-insta-row {
+                height: 220px;
+            }
+
+            &-row {
+                &__item {
+                    height: 240px;
+                }
+            }
+        }
+    }
 }
 
 // ≥992px
@@ -132,6 +155,42 @@
         }
     }
 
+    // Sectio g
+    .section-g {
+        &__subscribe-text {
+            justify-content: center;
+        }
+
+        &-scroll {
+            &-insta-row {
+                height: 200px;
+            }
+
+            &-row {
+                &__item {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    // About
+    .section-about {
+        &-content {
+            padding-left: 100px;
+
+            &::before {
+                left: 15px;
+            }
+
+            &-item {
+                &__title:after {
+                    left: -83px;
+                }
+            }
+        }
+    }
+
     // Modal
     .modal {
         &-card-box {
@@ -149,6 +208,11 @@
                 }
             }
         }
+    }
+
+    // Socials
+    .socials__btn {
+        @include box(45px);
     }
 }
 
@@ -221,6 +285,15 @@
             &__btn {
                 padding: 15px 20px;
             }
+        }
+    }
+
+    // MFP Video
+    .mfp-video-container {
+        max-width: 95vw;
+
+        video {
+            max-height: 70vh;
         }
     }
 
@@ -314,6 +387,60 @@
 
                 font-size: em(12px);
             }
+        }
+    }
+
+    // Section g
+    .section-g {
+        &__title, &__text {
+            text-align: center;
+        }
+
+        &__title {
+            font-size: em(26px);
+        }
+
+        &__text {
+            font-size: em(16px);
+        }
+
+        &__subscribe-text {
+            justify-content: center;
+            font-size: em(12px);
+        }
+
+        &-scroll {
+            &-insta-row {
+                height: 120px;
+            }
+
+            &-row {
+                margin-top: 7px;
+
+                &__item {
+                    @include box(calc(33.3% - 4px), 100px);
+                }
+            }
+        }
+    }
+
+    // Section feedback
+    .section-feedback {
+        &__title, &__text {
+            text-align: center;
+        }
+
+        &__title {
+            font-size: em(26px);
+        }
+    
+        &__text {
+            font-size: em(16px);
+        }
+
+        &__row {
+            margin: 10px;
+            padding: 35px 0;
         }
     }
 }
@@ -470,6 +597,100 @@
             &__img {
                 height: 200px;
             }
+        }
+    }
+
+    // Section g
+    .section-g {
+        &-scroll-insta-row {
+            height: 100px;
+        }
+    }
+
+    // About
+    .section-about {
+        // Content
+        &-content {
+            padding-left: 45px;
+
+            &::before {
+                left: 15px;
+            }
+
+            &-item + &-item {
+                margin-top: 20px;
+            }
+
+            &-item {
+                &__title {
+                    font-size: em(18px);
+
+                    &:after {
+                        left: -30px;
+                        width: 35px;
+                    }
+                }
+
+                &__text {
+                    margin-top: 5px;
+                    font-size: em(14px);
+                }
+            }
+        }
+
+        // Video
+        &-video {
+            &-item {
+                &__img {
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    // Reviews
+    .section-reviews {
+        .section-reviews__arrows {
+            display: none;
+        }
+
+        &__finger {
+            padding-right: 150px;
+        }
+
+        &-slider {
+            .slick-list {
+                margin: 0 -10px;
+            }
+
+            &-item {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    // FAQ
+    .section-faq {
+        &-item {
+            &__title, &__value p {
+                font-size: em(14px);
+            }
+    
+            &__value p {
+                font-weight: 300;
+            }
+
+            &__btn {
+                margin-top: 5px;
+                @include box(20px);
+            }
+        }
+    }
+
+    // Contact
+    .section-contact {
+        &__map {
+            height: 200px;
         }
     }
 }

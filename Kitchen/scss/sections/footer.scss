@@ -1,3 +1,21 @@
-footer {
-    
+.footer {
+    padding-top: 35px;
+    padding-bottom: 60px;
+    background: #f5f5f5;
+
+    &__logo {
+        font-family: 'Montserrat', sans-serif;
+        font-size: em(20px);
+        font-weight: 700;
+    }
+
+    &__link {
+        font-size: em(16px);
+    }
+
+    &__privacy {
+        color: #626262;
+        font-size: em(16px);
+        text-decoration: underline;
+    }
 }

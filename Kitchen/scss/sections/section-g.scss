@@ -1,0 +1,56 @@
+.section-g {
+    //* Left column
+    &__title {
+        color: $maroon;
+        font-size: em(48px);
+    }
+
+    &__text {
+        font-size: em(24px);
+        font-weight: 500;
+    }
+
+    &__subscribe-text {
+        @include flexbox(flex-start, center);
+        font-size: em(20px);
+        font-family: 'Montserrat', sans-serif;
+
+        i {
+            margin-left: 10px;
+            font-size: em(20px);
+        }
+    }
+
+    //* Right column scroll(instagram)
+    &-scroll {
+        position: relative;
+        overflow: hidden;
+        width: 100%; 
+
+        &__wrapper {
+            position: absolute;
+            width: 100%;
+        }
+
+        &-insta-row {
+            @include box(100%, 305px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &-row {
+            margin-top: 15px;
+            @include flexbox(space-between, stretch);
+
+            &__item {
+                @include box(calc(33.3% - 7.5px), 260px);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 10px;
+                transition: transform .5s ease;
+            }
+        }
+    }
+}

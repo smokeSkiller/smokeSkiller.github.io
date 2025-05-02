@@ -1,0 +1,267 @@
+//! Contacts
+.section-contact {
+    &__map {
+        @include box(100%, 480px);
+        overflow: hidden;
+        border-radius: 10px;
+    }
+}
+
+//! Faq
+.section-faq {
+    &-item {
+        // @include flexbox(space-between, center);
+        padding-bottom: 20px;
+        border-bottom: 1px solid $accent;
+        cursor: pointer;
+
+        &.opened {
+            .section-faq-item__value {
+                display: block;
+            }
+
+            .section-faq-item__btn {
+                transform: rotate(45deg);
+            }
+        }
+
+        &__name {   
+            font-family: 'Montserrat', sans-serif;
+            font-size: em(20px);
+            font-weight: 400;
+        }
+
+        &__value {
+            margin-top: 15px;
+            display: none;
+
+            p {
+                font-size: em(16px);
+            }
+        }
+
+        &__btn {
+            position: relative;
+            @include box(30px);
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include box(100%, 2px);
+                background: $text;
+
+                &:first-child {
+                    transform: translate(-50%, -50%);
+                }
+
+                &:last-child {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+//! Reviews
+.section-reviews {
+    // Finger
+    &__finger {
+        position: relative;
+        padding-right: 180px;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            @include box(50px);
+            animation: moveRight 1s infinite ease-out;
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translate(0, -50%);
+            } to {
+                transform: translate(90px, -50%);
+                opacity: .1;
+            }
+        }
+    }
+
+    // Slider
+    &-slider {
+        .slick-list {
+            margin: 0 -15px;
+        }
+
+        &-item {
+            margin: 0 15px;
+
+            &__video {
+                @include box(100%, 435px);
+                background: $text;
+                border-radius: 10px;
+                overflow: hidden;
+                --plyr-control-icon-size: 50px;
+
+                .plyr {
+                    @include box(100%);
+                    justify-content: center;
+                    align-items: center;
+
+                    video {
+                        @include box(100%);
+                        object-fit: cover;
+                    }
+
+                    .plyr__controls {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: 0;
+                        @include box(65px);
+
+                        .plyr__controls__item:first-child {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+
+            &__property {
+                font-family: 'Montserrat', sans-serif;
+                font-size: em(16px);
+
+                span {
+                    color: $native;
+                }
+            }
+        }
+    }
+}
+
+//! Feedback
+.section-feedback {
+    &__title {
+        color: $maroon;
+        font-size: em(48px);
+    }
+
+    &__text {
+        font-size: em(24px);
+        font-weight: 500;
+    }
+
+    &__row {
+        padding: 50px;
+        border: 1px solid $accent;
+        border-radius: 10px;
+    }
+
+    &-form {
+        width: 100%;
+
+        &__field {
+            width: 100%;
+            padding: 25px;
+            font-size: em(16px);
+            font-weight: 300;
+            border: 1px solid $accent;
+            border-radius: 10px;
+        }
+
+        &__btn {
+            padding: 15px;
+            width: 100%;
+        }
+    }
+} 
+
+//! About
+.section-about {
+    // Video
+    &-video {
+        &-item {
+            margin-top: 25px;
+            width: calc(50% - 10px);
+            cursor: pointer;
+
+            &__img {
+                position: relative;
+                @include box(100%, 280px);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 10px;
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fff;
+                    font-size: em(50px);
+                }
+            }
+
+            &__title {
+                margin-top: 10px;
+                font-size: em(16px);
+
+                i {
+                    padding-right: 5px;
+                    color: $maroon;
+                }
+            }
+        }
+    }
+
+    // Content
+    &-content {
+        position: relative;
+        padding-left: 150px;
+
+        &::before {
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 111;
+            display: block;
+            @include box(2px, 105%);
+            content: '';
+            background-image: linear-gradient(0deg, #fff, $maroon, #fff);
+        }
+
+        &-item + &-item {
+            margin-top: 30px;
+        }
+
+        &-item {
+            &__title {
+                position: relative;
+                color: $maroon;
+                font-family: 'Montserrat', sans-serif;
+                font-size: em(32px);
+                font-weight: 700;
+
+                &:after {
+                    position: absolute;
+                    bottom: -3px;
+                    left: -100px;
+                    display: block;
+                    @include box(100px, 2px);
+                    background-image: linear-gradient(to right, $maroon, #fff);
+                    content: '';
+                }
+            }
+
+            &__text {
+                margin-top: 10px;
+                font-size: em(16px);
+            }
+        }
+    }
+}

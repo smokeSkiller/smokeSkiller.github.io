@@ -74,5 +74,14 @@
                 max-height: 100%;
             }
         }
+
+        &__item-light {
+            top: 5px;
+            z-index: 222;
+
+            &.on {
+                display: flex;
+            }
+        }
     }
 }

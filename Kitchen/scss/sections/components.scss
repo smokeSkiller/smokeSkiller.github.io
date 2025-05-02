@@ -1,3 +1,20 @@
+//* MFP Video
+.mfp-video-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 70vw;
+
+    video {
+        max-height: 70vh;
+    }
+
+    .mfp-close {
+        top: -45px;
+        color: #fff;
+        font-size: em(45px);
+    }
+}
+
 //* Modals
 .modal {
     position: fixed;
@@ -194,6 +211,11 @@
             padding: 20px 30px;
         }
     }
+
+    // Quiz iframe
+    iframe {
+        @include box(100%, 100%);
+    }
 }
 
 //* Slick arrows
@@ -281,6 +303,19 @@
     &:hover {
         color: $text;
         background: #fff;
+    }
+}
+
+//* Socials
+.socials {
+    &__btn {
+        @include flexbox(center, center);
+        @include box(60px);
+        border-radius: 50%;
+
+        i {
+            font-size: em(20px);
+        }
     }
 }
 
