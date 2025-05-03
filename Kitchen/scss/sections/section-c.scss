@@ -48,6 +48,7 @@
 
             &__name {
                 margin-left: 15px;
+                color: $text;
                 font-size: em(22px);
             }
         }
@@ -80,7 +81,7 @@
             z-index: 222;
 
             &.on {
-                display: flex;
+                @include flexbox(center, center);
             }
         }
     }

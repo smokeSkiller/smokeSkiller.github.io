@@ -2,6 +2,7 @@ $(function() {
 	//! DOM
 	// Header
 	const header = $('.header');
+	const scrollToLink = $('.scroll-to-link');
 	const topEmptySpace = $('.top-empty-space');
 	const burgerBtn = $('.burger-btn');
 	const headerNavCloseBtn = $('.header-nav__close-btn');
@@ -99,6 +100,22 @@ $(function() {
 
 	// Clicking to close button
 	headerNavCloseBtn.on('click', function() {
+		headerNav.fadeOut();
+	});
+
+	// Smooth scroll of menu links
+	scrollToLink.on("click", (e)=> {
+		e.stopPropagation();
+
+		// Get attribute value of current link
+		let currentLink = $(e.currentTarget).attr("href");
+		// Slice id of the url
+		let currentLinkId = currentLink.slice(currentLink.indexOf("#"), currentLink.length);
+
+		$("html, body").animate({ scrollTop: $('' + currentLinkId + '').position().top - 25 }, "slow");
+	});
+
+	$('.header-nav-mobile-menu__item a').on('click', function() {
 		headerNav.fadeOut();
 	});
 

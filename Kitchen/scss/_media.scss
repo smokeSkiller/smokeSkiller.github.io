@@ -468,7 +468,7 @@
             }
 
             &-mobile-box {
-                @include flexbox(space-between, flex-start, column);
+                @include flexbox(flex-start, flex-start, column);
                 padding: 35px 20px;
                 @include box(70%, 90%);
                 background: #fff;
@@ -529,6 +529,15 @@
         &__btn {
             min-width: 150px;
             padding: 15px;
+        }
+    }
+
+    // Section c
+    .section-c {
+        &-tabs-content {
+            &__item-light {
+                top: 2px;
+            }
         }
     }
 
@@ -665,6 +674,7 @@
 
             &-item {
                 margin: 0 10px;
+                width: 75vw;
             }
         }
     }
