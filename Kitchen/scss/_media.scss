@@ -305,11 +305,16 @@
     // Section title
     .section-title {
         font-size: em(26px);
+        line-height: 1em;
     }
 
     // Section text
     .section-text {
         font-size: em(16px);
+
+        br {
+            display: none;
+        }
     }
 
     // Section b
@@ -447,6 +452,18 @@
 
 // ≥576px
 @include media-breakpoint-down(sm) {
+    // Modal
+    .modal {
+        &-form {
+            &-privacy {
+                &__text {
+                    display: block;
+                    max-width: 240px;
+                }
+            }
+        }
+    }
+
     // Header
     .header {
         &__logo {
