@@ -122,6 +122,8 @@ $(function() {
 	//!  Modals&popup
 	//* Open modal
 	openModalBtn.on('click', function() {
+		modal.fadeOut();
+
 		const modalId = $(this).attr('target');
 		$(`#${modalId}`).fadeIn();
 
