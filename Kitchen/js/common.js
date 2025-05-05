@@ -201,7 +201,7 @@ $(function() {
 
 		// Hide blur effect
 		if($(this).hasClass('blured') == true) {
-			$(this).removeClass('blured');
+			// $(this).removeClass('blured');
 			tabTarget.removeClass('blured');
 		}
 	});
@@ -432,5 +432,12 @@ $(function() {
 		if($(window).width() > 512) {
 			headerNav.css('display', 'flex');
 		}
+	});
+
+	// AOS
+	AOS.init({
+		once: true,
+		duration: 600, // values from 0 to 3000, with step 50ms
+		disable: 'phone',
 	});
 });

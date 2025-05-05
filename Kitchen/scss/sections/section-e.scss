@@ -149,6 +149,10 @@
             background-repeat: no-repeat;
             background-position: center center;
             border-radius: 10px;
+
+            &.half {
+                width: 49%;
+            }
         }
 
         &__title {
