@@ -1,0 +1,73 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+    width: 100%;
+    padding: 45px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 60px;
+
+    &:after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -15px;
+        @include box(41.5555%, 100%);
+        content: '';
+        background-image: url('/img/footer_stickman.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &-logo {
+        img {
+            max-width: 80px;
+        }
+    }
+
+    &-links {
+        li + li {
+            margin-top: 15px;
+        }
+
+        li {
+            text-align: center;
+
+            a {
+                color: $text;
+                text-decoration: underline;
+                font-size: em(18px);
+                font-weight: 300;
+            }
+        }
+    }
+
+    &-social + &-social {
+        margin-left: 20px;
+    }
+
+    &-social {
+        @include flexbox(center, center);
+        @include box(31px);
+        padding-bottom: 0;
+        color: #fff;
+        background: $text;
+        border-radius: 6px;
+
+        i {
+            font-size: em(20px);
+        }
+    }
+
+    &-text + &-text {
+        margin-top: 10px;
+    }
+
+    &-text {
+        text-align: center;
+        font-size: em(14px);
+        font-weight: 300;
+    }
+}

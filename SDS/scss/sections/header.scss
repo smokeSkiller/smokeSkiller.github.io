@@ -1,0 +1,201 @@
+.header {
+    position: fixed;
+    padding-top: 17px;
+    z-index: 333;
+    width: 100%;
+
+    &.fixed {
+        padding-top: 0;
+
+        .header-inner {
+            background: linear-gradient(90deg, $orange, #994609);
+            border-radius: 50px;
+        }
+
+        .header-btn {
+            border-color: #fff;
+
+            &:hover {
+                background: $orange;
+                border-color: $orange;
+
+                span, .arrow {
+                    color: #fff;
+                }
+
+                .arrow {
+                    background: $orange;
+                }
+            }
+
+            .arrow {
+                background: #fff;
+                box-shadow: -3px 0 4px rgba($color: #000000, $alpha: .25);
+            }
+        }
+    }
+
+    // Inner
+    &-inner {
+        padding: 0 10px;
+    }
+
+    // Logo
+    &-logo {
+        img {
+            max-width: 120px;
+        }
+    }
+
+    // Menu
+    &-menu {
+        @include flexbox(flex-start);
+        border: 1px solid #fff;
+        border-radius: 45px;
+
+        &-item {
+            padding: 15px 20px;
+            border-radius: 45px;
+            transition: all .3s ease;
+
+            &:hover a {
+                text-decoration: underline;
+            }
+
+            &.active {
+                background: #fff;
+                box-shadow: 2px 3px 15px rgba($color: #000000, $alpha: .25);
+
+                a {
+                    color: $text;
+                }
+            }
+
+            a {
+                @include flexbox(center);
+                @include box(100%);
+                color: #fff;
+                font-size: em(15px);
+                font-weight: 600;
+            }
+        }
+    }
+
+    // Socials
+    &-social + &-social {
+        margin-left: 10px;
+    }
+
+    &-social {
+        @include flexbox(center, center);
+        @include box(47px);
+        border: 2px solid $orange;
+        border-radius: 50%;
+        background: #fff;
+
+        &:hover {
+            background: $orange;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        i {
+            color: $orange;
+            font-size: em(28px);
+        }
+    }
+
+    // Btn
+    &-btn {
+        position: relative;
+        margin-left: 10px;
+        @include flexbox(flex-start, center);
+        padding: 15px;
+        border: 1px solid $orange;
+        border-radius: 45px;
+        background: #fff;
+
+        &:hover {
+            background: $orange;
+
+            span, .arrow {
+                color: #fff;
+            }
+
+            .arrow {
+                box-shadow: -3px 0 4px rgba($color: #000000, $alpha: .25);
+            }
+        }
+
+        span {
+            display: block;
+            padding-right: 45px;
+            font-size: em(18px);
+            font-weight: 600;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include flexbox(center, center);
+            @include box(50px);
+            border-radius: 50%;
+            background: $orange;
+
+            i {
+                font-size: em(20px);
+            }
+        }
+    }
+
+    // Burger button
+    .burger-btn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include box(47px);
+        border-radius: 50%;
+        border: 1px solid $orange;
+
+        &.active {
+            border-color: #fff;
+            background-color: transparent;
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background: #fff;
+
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+
+        &-inner {
+            position: relative;
+            @include flexbox(space-between, center, column);
+            @include box(60%, 14px);
+
+            span {
+                display: block;
+                @include box(100%, 1px);
+                background: $orange;
+            }
+        }
+    }
+}

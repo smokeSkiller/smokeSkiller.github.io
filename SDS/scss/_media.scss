@@ -1,0 +1,721 @@
+@import "vars";
+
+// ≥1270px
+@include media-breakpoint-down(xl) {
+    // Header
+    .header {
+        &.expanded {
+            &:after {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                display: block;
+                @include box(100vw, 100vh);
+                content: '';
+                background: rgba($color: $orange, $alpha: .8);
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        &.expanded.fixed {
+            .header-inner {
+                background: transparent;
+            }
+        }
+
+        &.fixed {
+            .header-inner {
+                padding: 5px;
+            }
+
+            .burger-btn {
+                margin-bottom: 0;
+            }
+        }
+
+        .burger-btn {
+            display: flex;
+            background: #fff;
+        }
+
+        &-navbar {
+            top: 96px;
+            left: 0;
+            position: absolute;
+            z-index: 444;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @include box(100vw, calc(100vh - 96px));
+        }
+
+        &-menu {
+            flex-direction: column;
+            align-items: center;
+            border: 0;
+
+            &-item {
+                a {
+                    font-size: em(19px);
+                }
+            }
+        }
+
+        &-social, &-btn, &-btn .arrow {
+            background: #fff;
+        }
+
+        &-btn {
+            span, .arrow {
+                color: $orange;
+            }
+
+            .arrow {
+                @include box(52px);
+                border: 3px solid $orange;
+            }
+        }
+    }
+
+	// Section A
+    .section-a {
+        &-box {
+            padding-top: 100px;
+            padding-bottom: 40px;
+            height: auto;
+            border-radius: 45px;
+            background-size: cover;
+
+            &:after {
+                right: -150px;
+            }
+        }
+    }
+
+    // Section C
+    .section-c {
+        &-column {
+            &__btn {
+                width: 56%;
+            }
+        }
+    }
+
+    // Section E
+    .section-e {
+        &-slider {
+            .slick-prev {
+                left: -50px;
+            }
+
+            .slick-next {
+                right: -50px;
+            }
+        }
+
+        &-slide {
+            margin: 0 30px;
+        }
+    }
+}
+
+// ≥992px
+@include media-breakpoint-down(lg) {
+    // Section A
+    .section-a {
+        &-box {
+            &:after {
+                right: -200px;
+                transform: scale(0.8);
+            }
+        }
+
+        &-text {
+            max-width: 450px;
+        }
+    }
+
+    // Section B
+    .section-b {
+        &-item {
+            &:nth-child(1) {
+                .section-b-item-inner:after {
+                    right: -90px;
+                }
+            }
+
+            &:nth-child(2) {
+                .section-b-item-inner:after {
+                    left: -100px;
+                }
+            }
+
+            &:nth-child(3) {
+                .section-b-item-inner:after {
+                    right: -100px;
+                }
+            }
+
+            &-inner {
+                padding: 20px;
+            }
+
+            &-date {
+                &__large {
+                    font-size: em(31px);
+                }
+
+                &__small {
+                    font-size: em(19px);
+                }
+
+                &__type {
+                    font-size: em(19px);
+                }
+            }
+
+            &-content {
+                &__name {
+                    font-size: em(31px);
+                }
+
+                &__text {
+                    font-size: em(12px);
+                }
+
+                .btn {
+                    font-size: em(16px);
+                }
+            }
+        }
+    }
+
+    // Section C
+    .section-c {
+        &-column {
+            &:nth-child(4):after {
+                bottom: 45px;
+            }
+
+            &:nth-child(5):after {
+                bottom: 65px;
+            }
+
+            &.large {
+                .section-c-column-inner {
+                    padding: 20px;
+                }
+
+                .section-c-column__title, .section-c-column__text {
+                    max-width: 350px;
+                }
+            }
+
+            &-inner {
+                height: 370px;
+            }
+
+            &__img {
+                right: -17%;
+            }
+
+            &__title {
+                margin-top: 15px;
+            }
+
+            &__text {
+                margin-top: 20px;
+            }
+
+            &__btn {
+                bottom: 5px;
+                font-size: em(14px);
+            }
+        }
+    }
+
+    // Section E
+    .section-e {
+        &-slide {
+            &__img {
+                @include box(115px);
+            }
+
+            &__name {
+                font-size: em(19px);
+            }
+
+            &__pos {
+                font-size: em(12px);
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        &:after {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            @include box(50%, 90%);
+            background-image: url('../img/footer_stickman_mobile.png');
+        }
+    }
+
+    // Modal
+    .modal {
+        &-inner {
+            padding: 30px;
+        }
+    }
+}
+
+// ≥768px
+@include media-breakpoint-down(md) {
+    // Header
+    .header {
+        // Logo
+        &-logo {
+            img {
+                max-width: 80px;
+            }
+        }
+
+        // Navbar
+        &-navbar {
+            top: 65px;
+            height: calc(100vh - 65px);
+        }
+
+        // Burger btn
+        .burger-btn {
+            margin-bottom: 15px;
+        }
+    }
+
+    // Section A
+    .section-a {
+        // Box
+        &-box {
+            padding-top: 80px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 0;
+            background-size: 100% 100%;
+
+            &:after {
+                right: -17%;
+                bottom: -10px;
+                transform: scale(1);
+                @include box(241px, 356px);
+            }
+        }
+
+        // Icon
+        &-icon + &-icon {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
+        &-icon {
+            img {
+                max-width: 18px;
+            }
+        }
+
+        // Title
+        &-title {
+            font-size: em(31px);
+        }
+
+        // Subtitle
+        &-subtitle {
+            font-size: em(19px);
+        }
+
+        // Text
+        &-text {
+            font-size: em(12px);
+        }
+
+        // Circles
+        &-circles {
+            width: 140px;
+
+            &__item {
+                @include box(35px);
+            }
+        }
+    }
+
+    // Section B
+    .section-b {
+        padding-top: 60px;
+
+        &-item {
+            padding: 20px 0;
+
+            &-inner {
+                padding: 0;
+                flex-direction: column;
+
+                &:after {
+                    top: 30px;
+                    right: 50px !important;
+                    left: auto !important;
+                    bottom: auto !important;
+                }
+            }
+
+            &:nth-child(2n + 2) {
+                .section-b-item-inner:after {
+                    top: 15px;
+                }
+            }
+
+            &-date, &-content {
+                width: 100%;
+            }
+
+            &-date {
+                max-width: 200px;
+            }
+
+            &-content {
+                margin-top: 10px;
+
+                &__name {
+                    font-size: em(28px);
+                }
+            }
+        }
+    }
+
+    // Section C
+    .section-c {
+        padding: 60px 0;
+
+        &-column {
+            &:after {
+                @include box(142px, 189px);
+            }
+
+            &:nth-child(2):after, &:nth-child(3):after {
+                right: 30px;
+                top: auto;
+                bottom: 35px;
+            }
+
+            &:nth-child(4):after {
+                bottom: 0;
+            }
+
+            &:nth-child(5):after {
+                right: 20px;
+                bottom: 50px;
+            }
+
+            &.large {
+                .section-c-column-inner {
+                    @include flexbox(center, flex-start, column);
+                }
+                
+                .section-c-column__title {
+                    max-width: 190px;
+                    font-size: em(19px);
+                }
+
+                .section-c-column__text {
+                    max-width: 190px;
+                    font-size: em(12px);
+                }
+            }
+
+            &-inner {
+                height: 320px;
+            }
+
+            &__img {
+                @include box(350px);
+            }
+
+            &__title {
+                font-size: em(19px);
+            }
+
+            &__text {
+                margin-top: 20px;
+                font-size: em(12px);
+            }
+
+            &__btn {
+                bottom: 0;
+                font-size: em(12px);
+            }
+        }
+    }
+
+    // Section D
+    .section-d {
+        &-item {
+            border-radius: 20px;
+
+            &--img {
+                height: 245px;
+            }
+        }
+    }
+
+    // Section E
+    .section-e {
+        &-slider {
+            .slick-arrow {
+                @include box(37px);
+
+                &::before {
+                    font-size: 20px;
+                }
+            }
+
+            .slick-prev {
+                left: 0;
+            }
+
+            .slick-next {
+                right: 0;
+            }
+        }
+
+        &-slide {
+            margin: 0 50px;
+            align-items: center;
+
+            &__img {
+                flex-grow: 0;
+                @include box(100px);
+            }
+        }
+    }
+
+    // Section head
+    .section-head__title {
+        font-size: em(31px);
+    }
+
+    // Modal
+    .modal {
+        &-inner {
+            border-radius: 20px;
+
+            :after {
+                right: 0;
+                @include box(50%, 60%);
+            }
+        }
+
+        &-close-btn {
+            @include box(35px);
+
+            i {
+                font-size: em(18px);
+            }
+        }
+
+        &-title {
+            font-size: em(31px);
+        }
+
+        h4 {
+            font-size: em(20px);
+        }
+
+        li {
+            font-size: em(12px);
+        }
+    }
+}
+
+// ≥576px
+@include media-breakpoint-down(sm) {
+    // Header
+    .header {
+        padding-top: 13px;
+
+        &-inner {
+            padding: 0;
+        }
+
+        &-logo {
+            img {
+                max-width: vw(76px, 400px);
+            }
+        }
+
+        .burger-btn {
+            margin-bottom: 8px;
+            @include box(vw(44px, 400px));
+        }
+    }
+
+    // Section A
+    .section-a {
+        // Box
+        &-box {
+            height: vw(500px, 400px);
+            padding-top: vw(60px, 400px);
+            padding-left: 15px;
+            padding-right: 15px;
+            background-size: 99% 100%;
+            border-radius: 0;
+
+            &:after {
+                right: -23%;
+                bottom: vw(-25px, 400px);
+                transform: scale(.9);
+            }
+        }
+
+        // Icon 
+        &-icon {
+            padding-top: vw(15px, 400px);
+        }
+
+        // Title
+        &-title {
+            font-size: vw(30px, 400px);
+        }
+
+        // Subtitle
+        &-subtitle {
+            margin-top: vw(20px, 400px);
+            font-size: vw(19px, 400px);
+        }
+
+        // Text
+        &-text {
+            margin-top: vw(20px, 400px);
+            max-width: vw(250px, 400px);
+            font-size: vw(12px, 400px);
+        }
+
+        // Circles
+        &-circles {
+            margin-top: vw(30px, 400px);
+            width: vw(140px, 400px);
+        }
+
+        // Clients
+        &-clients-text {
+            margin-top: vw(10px, 400px);
+        }
+    }
+
+    // Section B
+    .section-b {
+        &-filters {
+            width: 90%;
+        }
+
+        &-item {
+            &-content .btn {
+                font-size: em(12px);
+                height: 30px;
+            }
+        }
+
+        &-more-btn {
+            margin-top: 30px;
+            width: 240px;
+        }
+    }
+
+    // Section C
+    .section-c {
+        padding: 50px 0;
+
+        &:after {
+            top: 30px;
+            height: 100%;
+        }
+
+        &-column {
+            &.large {
+                .section-c-column__title {
+                    max-width: 40%;
+                }
+
+                .section-c-column__text {
+                    max-width: 40%;
+                }
+            }
+
+            &__img {
+                right: -150px;
+                border-width: 15px;
+                background-position: 80%;
+            }
+        }
+    }
+
+    // Section D
+    .section-d {
+        &-item {
+            padding: 20px;
+
+            &__title, h4 {
+                font-size: em(20px);
+            }
+            
+            &__title {
+                margin-bottom: 15px;
+            }
+
+            p + p {
+                margin-top: 15px;
+            }
+
+            p, li {
+                font-size: em(12px);
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        padding: 20px;
+
+        &:after {
+            @include box(70%, 100%);
+            background-size: 100%;
+        }
+    }
+
+    // Form
+    .form {
+        padding: 30px 20px;
+
+        &-title {
+            font-size: em(26px);
+        }
+
+        &-field {
+            font-size: em(12px);
+        }
+
+        &-privacy {
+            font-size: em(9px);
+        }
+    }
+
+    // Section head
+    .section-head__title {
+        font-size: em(26px);
+    }
+
+    // Btn
+    .btn {
+        font-size: em(12px);
+    }
+}

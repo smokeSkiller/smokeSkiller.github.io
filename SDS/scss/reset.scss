@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    font-family: "Exo 2", sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #F5F1E6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: all .3s ease;
+}
+
+input {
+    transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text;
+    font-weight: 700;
+}

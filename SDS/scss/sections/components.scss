@@ -1,0 +1,197 @@
+// Btn
+.btn {
+    @include flexbox(center, center);
+    padding-bottom: 5px;
+    color: $orange;
+    font-size: em(20px);
+    line-height: 100%;
+    background: #fff;
+    border: 1px solid $orange;
+    border-radius: 36px;
+
+    &:hover {
+        color: #fff;
+        background: $orange;
+        border-color: #fff;
+    }
+
+    &.filled {
+        color: #fff;
+        background: $orange;
+        border-color: #fff;
+        box-shadow: 0 4px 4px rgba($color: #000000, $alpha: .25);
+
+        &:hover {
+            color: $orange;
+            background: #fff;
+            border-color: $orange;
+        }
+    }
+}
+
+// Section 
+.section-head {
+    overflow: hidden;
+    @include flexbox(flex-start, center);
+
+    &__title {
+        position: relative;
+        font-size: em(36px);
+    }
+
+    hr {
+        margin-top: 8px;
+        margin-left: 10px;
+        flex-grow: 1;
+        display: block;
+        min-width: 30px;
+        height: 3px;
+        background: $orange;
+    }
+}
+
+// Form
+.form {
+    width: 100%;
+    padding: 30px 40px;
+    border: 2px solid $orange;
+    border-radius: 30px;
+
+    &-title {
+        text-align: center;
+        line-height: 100%;
+        font-size: em(32px);
+
+        span {
+            color: $orange;
+        }
+    }
+
+    &-field {
+        margin-top: 25px;
+        width: 100%;
+        padding: 5px 0;
+        font-size: em(15px);
+        font-weight: 300;
+        background: transparent;
+        border-bottom: 1px solid $orange;
+    }
+
+    &-privacy {
+        margin-top: 10px;
+        color: $accent;
+        font-size: em(12px);
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &-submit {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        @include box(228px, 38px);
+        font-size: em(20px);
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px 0 rgba($color: #000000, $alpha: .25);
+    }
+}
+
+// Modal
+.modal {
+    position: fixed;
+    z-index: 777;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @include box(100vw, 100vh);
+    background-color: rgba($color: #000000, $alpha: .45);
+    backdrop-filter: blur(10px);
+
+    &-inner {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-height: 95vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 45px;
+        background: #fff;
+        border-radius: 30px;
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            top: -5%;
+            right: -5%;
+            @include box(40%, 100%);
+            content: '';
+            background-image: url('/img/stickman1.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &-close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding-bottom: 0;
+        @include box(45px);
+
+        i {
+            font-size: em(20px);
+        }
+    }
+
+    &-title {
+        margin-bottom: 15px;
+        font-size: em(36px);
+
+        span {
+            color: $orange;
+        }
+    }
+
+    h4 {
+        margin-bottom: 15px;
+        font-size: em(24px);
+    }
+
+    li + li {
+        margin-top: 15px;
+    }
+
+    li {
+        font-size: em(18px);
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+}
+
+//! Properties
+.ovf-hidden {
+    overflow: hidden;
+}
+
+// Font weights
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}

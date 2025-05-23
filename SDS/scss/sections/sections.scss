@@ -1,0 +1,512 @@
+// Section A
+.section-a {
+    padding-top: 10px;
+
+    // Box
+    &-box {
+        position: relative;
+        z-index: 1;
+        padding-top: 122px;
+        @include box(100%, 600px);
+        background-size: 99% 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -115px;
+            right: 0;
+            display: block;
+            @include box(455px, 675px);
+            content: '';
+            background-image: url('/img/stickman1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    // Icon
+    &-icon + &-icon {
+        margin-top: 20px;
+    }
+
+    &-icon {
+        img {
+            max-width: 28px;
+        }
+    }
+
+    // Title
+    &-title {
+        color: #fff;
+        font-size: em(48px);
+    }
+
+    // Text
+    &-text, &-subtitle {
+        color: #fff;
+        font-size: em(18px);
+    }
+
+    &-clients-text {
+        color: #fff;
+        font-size: em(12px);
+    }
+
+    // Circles
+    &-circles {
+        position: relative;
+        height: 50px;
+        @include box(185px,50px);
+        @include flexbox(flex-start);
+
+        &__item {
+            position: absolute;
+            @include box(50px);
+            @include flexbox(center, center);
+            font-size: em(10px);
+            background-color: #fff;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+
+            &:nth-child(1) {
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                left: 20%;
+            }
+
+            &:nth-child(3) {
+                left: 40%;
+            }
+
+            &:nth-child(4) {
+                left: 60%;
+            }
+        }
+    }
+}
+
+// Section B
+.section-b {
+    padding-top: 100px;
+
+    &-filters {
+        position: relative;
+        @include box(345px, 40px);
+
+        select {
+            appearance: none;
+            padding: 10px;
+            @include box(100%);
+            border-radius: 5px;
+            border: 1px solid $orange;
+        }
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            display: block;
+            content: "\f107";
+            color: $orange;
+            font-family: "Font Awesome 6 Pro";
+            font-size: em(22px);
+            font-weight: 300;
+        }
+    }
+
+    &-item {
+        border-bottom: 2px solid $orange;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+
+        &:nth-child(2n + 1) {
+            .section-b-item-inner:after {
+                bottom: -50px;
+                right: -50px;
+                background-image: url('/img/b_stickman1.png');
+            }
+        }
+
+        &:nth-child(2n + 2) {
+            .section-b-item-inner:after {
+                bottom: -10px;
+                left: -70px;
+                background-image: url('/img/b_stickman2.png');
+            }
+        }
+
+        &:nth-child(2n + 3) {
+            .section-b-item-inner:after {
+                bottom: -100px;
+                right: -50px;
+                background-image: url('/img/b_stickman3.png');
+            }
+        }
+
+        &-inner {
+            position: relative;
+            @include flexbox(space-between, flex-start);
+            padding: 60px;
+
+            &:after {
+                position: absolute;
+                @include box(121px, 158px);
+                display: block;
+                content: '';
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        &-date {
+            width: 20%;
+            font-weight: 700;
+
+            &__large, &__small {
+                background-color: $orange;
+                background-image: linear-gradient(180deg, $orange, #994609);
+                background-size: 100%;
+                background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+            }
+
+            &__large {
+                font-size: em(48px);
+            }
+
+            &__small {
+                font-size: em(20px);
+            }
+
+            &__type {
+                color: $accent;
+                font-size: em(30px);
+            }
+        }
+
+        &-content {
+            width: 70%;
+
+            &__name {
+                font-size: em(48px);
+            }
+
+            &__text {
+                font-size: em(20px);
+            }
+
+            &__info {
+                border-radius: 9px;
+                padding-bottom: 0;
+            }
+
+            .btn {
+                @include box(228px, 40px);
+            }
+        }
+    }
+
+    &-more-btn {
+        align-self: center;
+        padding: 10px 25px;
+        line-height: 90%;
+    }
+}
+
+// Section C
+.section-c {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    
+    &:after {
+        position: absolute;
+        top: 0;
+        right: -15%;
+        z-index: -1;
+        display: block;
+        @include box(100%, 180%);
+        content: '';
+        border-top-left-radius: 90%;
+        border-top-right-radius: 40%;
+        background: rgba($color: $orange, $alpha: .1);
+    }
+    
+    &-column {
+        position: relative;
+        
+        &:after {
+            position: absolute;
+            display: block;
+            @include box(178px, 237px);
+            content: '';
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2):after, &:nth-child(5):after {
+            right: 20px;
+        }
+
+        &:nth-child(2):after {
+            bottom: 30px;
+            background-image: url('/img/c_stickman1.png');
+        }
+
+        &:nth-child(3):after {
+            top: 20px;
+            right: 20px;
+            background-image: url('/img/c_stickman2.png');
+        }
+
+        &:nth-child(4):after {
+            left: 15px;
+            bottom: 10px;
+            background-image: url('/img/c_stickman3.png');
+        }
+
+        &:nth-child(5):after {
+            bottom: 50px;
+            background-image: url('/img/c_stickman4.png');
+        }
+
+        &.large {
+            .section-c-column-inner {
+                padding: 50px;
+                border-radius: 30px;
+                background: #fff;
+                overflow: hidden;
+            }
+
+            .section-c-column__title, .section-c-column__text {
+                max-width: 490px;
+            }
+
+            .section-c-column__title {
+                margin-top: 0;
+                font-size: em(36px);
+            }
+        }
+
+        &-inner {
+            position: relative;
+            padding: 20px;
+            height: 345px;
+            background-image: url('/img/c_card.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        &__img {
+            position: absolute;
+            top: 50%;
+            right: -11%;
+            transform: translateY(-50%);
+            @include box(420px);
+            border-radius: 45%;
+            border: 20px solid #F5F1E6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &__title {
+            margin-top: 30px;
+            line-height: 100%;
+            font-size: em(24px);
+
+            span {
+                color: $orange;
+            }
+        }
+
+        &__text {
+            margin-top: 30px;
+            font-size: em(18px);
+        }
+
+        &__btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include box(228px, 38px);
+        }
+
+        &__tag {
+            @include flexbox(center, center);
+            width: 32%;
+            padding: 5px 0;
+            text-align: center;
+            color: $orange;
+            font-size: em(12px);
+            font-weight: 600;
+            border: 1px solid $orange;
+            border-radius: 20px;
+        }
+    }
+}
+
+// Section D
+.section-d {
+    position: relative;
+    padding: 60px 0;
+    background: #fff;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: -15px;
+        @include box(100%, 15px);
+        display: block;
+        content: '';
+        background-image: linear-gradient(0deg, #fff, #E5CFB5);
+    }
+
+    &-item {
+        padding: 30px;
+        @include box(100%);
+        border: 1px solid $orange;
+        border-radius: 30px;
+
+        &--img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 0;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            font-size: em(24px);
+        }
+
+        p + p {
+            margin-top: 20px;
+        }
+
+        p, li {
+            font-size: em(18px);
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+            font-size: em(24px);
+        }
+    }
+}
+
+// Section E
+.section-e {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: rgba($color: $orange, $alpha: .1);
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: -15px;
+        @include box(100%, 15px);
+        display: block;
+        content: '';
+        background-image: linear-gradient(180deg, #fff, #E5CFB5);
+    }
+
+    &-slider {
+        margin-top: 50px;
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        .slick-arrow {
+            z-index: 222;
+            @include box(61px);
+            border-radius: 50%;
+            box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: .25);
+            background: #fff;
+
+            &::before {
+                color: $accent;
+                font-family: "Font Awesome 6 Pro";
+                font-size: 30px;
+                font-weight: 300;
+            }
+
+            &.slick-prev::before {
+                content: '\f104';
+            }
+
+            &.slick-next::before {
+                content: '\f105';
+            }
+        }
+    }
+
+    &-slide {
+        margin: 0 100px;
+        display: flex !important;
+        align-items: start;
+
+        &__img {
+            flex-grow: 25;
+            @include box(192px);
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: .25);
+        }
+
+        &-content {
+            flex-shrink: 55;
+            align-self: center;
+        }
+
+        &__name {
+            font-size: em(24px);
+            font-weight: 700;
+        }
+
+        &__pos {
+            margin-top: 10px;
+            font-size: em(18px);
+            font-weight: 300;
+        }
+
+        &__soc + &__soc {
+            margin-left: 5px;
+        }
+
+        &__soc {
+            @include flexbox(center, center);
+            @include box(26px);
+            padding-bottom: 0;
+
+            i {
+                font-size: em(12px);
+            }
+        }
+    }
+}
