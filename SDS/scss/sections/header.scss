@@ -1,15 +1,29 @@
 .header {
-    position: fixed;
+    position: absolute;
     padding-top: 17px;
     z-index: 333;
     width: 100%;
+    transition: all .3s ease;
 
     &.fixed {
+        position: fixed;
         padding-top: 0;
 
         .header-inner {
+            position: relative;
             background: linear-gradient(90deg, $orange, #994609);
             border-radius: 50px;
+
+            &::before {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                display: block;
+                @include box(100%, 50px);
+                content: '';
+                backdrop-filter: blur(10px);
+            }
         }
 
         .header-btn {

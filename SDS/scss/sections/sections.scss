@@ -20,7 +20,7 @@
             display: block;
             @include box(455px, 675px);
             content: '';
-            background-image: url('/img/stickman1.png');
+            background-image: url('../img/stickman1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -103,6 +103,8 @@
             appearance: none;
             padding: 10px;
             @include box(100%);
+            color: $text;
+            background: #fff;
             border-radius: 5px;
             border: 1px solid $orange;
         }
@@ -132,7 +134,7 @@
             .section-b-item-inner:after {
                 bottom: -50px;
                 right: -50px;
-                background-image: url('/img/b_stickman1.png');
+                background-image: url('../img/b_stickman1.png');
             }
         }
 
@@ -140,7 +142,7 @@
             .section-b-item-inner:after {
                 bottom: -10px;
                 left: -70px;
-                background-image: url('/img/b_stickman2.png');
+                background-image: url('../img/b_stickman2.png');
             }
         }
 
@@ -148,7 +150,7 @@
             .section-b-item-inner:after {
                 bottom: -100px;
                 right: -50px;
-                background-image: url('/img/b_stickman3.png');
+                background-image: url('../img/b_stickman3.png');
             }
         }
 
@@ -205,13 +207,14 @@
                 font-size: em(20px);
             }
 
+            .btn {
+                padding-bottom: 3px;
+                @include box(228px, 40px);
+            }
+
             &__info {
                 border-radius: 9px;
                 padding-bottom: 0;
-            }
-
-            .btn {
-                @include box(228px, 40px);
             }
         }
     }
@@ -219,7 +222,7 @@
     &-more-btn {
         align-self: center;
         padding: 10px 25px;
-        line-height: 90%;
+        line-height: 100%;
     }
 }
 
@@ -261,24 +264,24 @@
 
         &:nth-child(2):after {
             bottom: 30px;
-            background-image: url('/img/c_stickman1.png');
+            background-image: url('../img/c_stickman1.png');
         }
 
         &:nth-child(3):after {
             top: 20px;
             right: 20px;
-            background-image: url('/img/c_stickman2.png');
+            background-image: url('../img/c_stickman2.png');
         }
 
         &:nth-child(4):after {
             left: 15px;
             bottom: 10px;
-            background-image: url('/img/c_stickman3.png');
+            background-image: url('../img/c_stickman3.png');
         }
 
         &:nth-child(5):after {
             bottom: 50px;
-            background-image: url('/img/c_stickman4.png');
+            background-image: url('../img/c_stickman4.png');
         }
 
         &.large {
@@ -303,7 +306,7 @@
             position: relative;
             padding: 20px;
             height: 345px;
-            background-image: url('/img/c_card.png');
+            background-image: url('../img/c_card.png');
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
@@ -338,9 +341,9 @@
 
         &__btn {
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             right: 0;
-            @include box(228px, 38px);
+            @include box(228px, 35px);
         }
 
         &__tag {

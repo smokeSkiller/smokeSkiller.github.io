@@ -471,6 +471,10 @@
     // Section E
     .section-e {
         &-slider {
+            .slick-list {
+                overflow: visible;
+            }
+
             .slick-arrow {
                 @include box(37px);
 
@@ -543,6 +547,14 @@
     .header {
         padding-top: 13px;
 
+        &.fixed {
+            padding-top: 13px;
+
+            .header-inner::before {
+                top: -13px;
+            }
+        }
+
         &-inner {
             padding: 0;
         }
@@ -556,6 +568,12 @@
         .burger-btn {
             margin-bottom: 8px;
             @include box(vw(44px, 400px));
+        }
+
+        &-btn {
+            .arrow {
+                right: -2px;
+            }
         }
     }
 
@@ -655,6 +673,11 @@
                 right: -150px;
                 border-width: 15px;
                 background-position: 80%;
+            }
+
+            &__btn {
+                padding-bottom: 0;
+                height: 32px;
             }
         }
     }

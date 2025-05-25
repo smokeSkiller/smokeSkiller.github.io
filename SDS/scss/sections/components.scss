@@ -6,7 +6,7 @@
     font-size: em(20px);
     line-height: 100%;
     background: #fff;
-    border: 1px solid $orange;
+    border: 2px solid $orange;
     border-radius: 36px;
 
     &:hover {
@@ -18,7 +18,7 @@
     &.filled {
         color: #fff;
         background: $orange;
-        border-color: #fff;
+        border-color: #CEC5BC;
         box-shadow: 0 4px 4px rgba($color: #000000, $alpha: .25);
 
         &:hover {
@@ -131,7 +131,7 @@
             right: -5%;
             @include box(40%, 100%);
             content: '';
-            background-image: url('/img/stickman1.png');
+            background-image: url('../img/stickman1.png');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
