@@ -67,7 +67,7 @@
         margin-bottom: -26px;
         padding: 30px 25px;
         height: vw(830);
-        background-image: url('/img/start_banner_mobile.svg');
+        background-image: url('../img/start_banner_mobile.svg');
 
         &:before {
             top: 70px;
@@ -245,12 +245,12 @@
         &-body {
             margin-bottom: vw(-35);
             height: vw(430);
-            mask-image: url('/img/repair_mobile_shape.svg');
+            mask-image: url('../img/repair_mobile_shape.svg');
         }
 
         &-img {
             @include box(100%, vw(220));
-            background-image: url('/img/repair_mobile_img.png');
+            background-image: url('../img/repair_mobile_img.png');
         }
 
         &__title, &__text {
