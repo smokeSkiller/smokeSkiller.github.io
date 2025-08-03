@@ -1,0 +1,13 @@
+$default-font: "Gilroy", sans-serif;
+$gold-gradient: radial-gradient(circle at top left, #fdf5c2, #f5cd55);
+$gold: #FBDD35;
+$light: #ECECEC;
+$text: #161616;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 1365px, xl: 1365px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1382px);
+
+$gutter: $grid-gutter-width;

@@ -1,0 +1,24 @@
+//! Gilroy
+// Regular
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff');
+}
+
+// Medium
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/Gilroy/Gilroy-Medium.woff') format('woff');
+}
+
+// Bold
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/Gilroy/Gilroy-Bold.woff') format('woff');
+}

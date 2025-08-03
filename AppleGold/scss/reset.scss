@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    font-family: "Gilroy", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $text;
+}
+
+ul, menu {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}

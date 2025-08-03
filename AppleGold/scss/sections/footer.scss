@@ -1,0 +1,81 @@
+.footer {
+    padding: 20px 0;
+
+    &-legend {
+        margin-top: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: em(225px);
+        font-weight: 500;
+    }
+
+    &__title {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: em(17px);
+    }
+
+    &__text {
+        color: #7a7a7a;
+        font-weight: 500;
+
+        a {
+            color: #7a7a7a;
+        }
+    }
+
+    &__inner {
+        padding: 30px 0;
+        border-top: 1px solid #7a7a7a;
+        border-bottom: 1px solid #7a7a7a;
+    }
+
+    &__btn {
+        @include flexbox(center, center);
+        @include box(100px, 36px);
+
+        i {
+            margin-left: 50%;
+            font-size: em(22.5px);
+        }
+    }
+    
+    &-column {
+        &__title {
+            color: #7a7a7a;
+            text-transform: uppercase;
+            font-size: em(15px);
+            font-weight: 500;
+        }
+
+        &__menu {
+            margin-top: 10px;
+
+            li + li {
+                margin-top: 5px;
+            }
+
+            li a {
+                position: relative;
+                font-size: em(14px);
+
+                &:after {
+                    position: absolute;
+                    bottom: -2.5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include box(0, 1px);
+                    content: '';
+                    background: #fff;
+                    transition: all .3s ease;
+                }
+
+                &:hover {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

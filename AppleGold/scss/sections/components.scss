@@ -1,0 +1,165 @@
+// Modal
+.modal {
+    position: fixed;
+    z-index: 888;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @include box(100%, 100%);
+    background: rgba($color: #000000, $alpha: .7);
+    backdrop-filter: blur(10px);
+
+    &-inner {
+        position: relative;
+        @include flexbox(center, flex-start);
+        padding: 10px;
+        width: 685px;
+        background: $light;
+        border-radius: 12px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: em(20px);
+    }
+
+    &-form {
+        width: 455px;
+
+        &__field + &__field {
+            margin-top: 5px;
+        }
+
+        &__field {
+            width: 100%;
+            padding: 10px;
+            color: $text;
+            font-size: em(14px);
+        }
+
+        &__submit {
+            margin-top: 5px;
+            padding: 15px;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: em(18px);
+            cursor: pointer;
+        }
+
+        &__text {
+            font-size: em(11px);
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        @include flexbox(center, center);
+        @include box(45px);
+        background: #fff;
+        border-radius: 4px;
+
+        img {
+            max-width: 50%;
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+
+        i {
+            font-size: em(25px);
+        }
+    }
+}
+
+// Main-page-section
+.main-page-section {
+    margin: 100px 0;
+}
+
+// Section title
+.section-title {
+    text-transform: uppercase;
+    color: $text;
+    font-size: em(40px);
+
+    &.light {
+        color: #fff;
+    }
+}
+
+// Button
+.btn {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: em(16px);
+    border-radius: 6px;
+    font-weight: 500;
+
+    &.btn-dark {
+        color: #fff;
+        background: $text;
+
+        &:hover {
+            background: #414141;
+        }
+    }
+
+    &.btn-light {
+        position: relative;
+        z-index: 1;
+        color: $text;
+        background: linear-gradient(0deg, #FBC335, #FBDD35);
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            @include box(100%);
+            content: '';
+            opacity: 0;
+            background: linear-gradient(0deg, #F4D85E, #E2B801);
+            transition: all .3s ease;
+            border-radius: inherit;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Scale wrapper
+.scale-wrapper-body {
+    overflow-x: hidden;
+}
+
+.scale-container {
+    overflow: hidden;
+}
+
+//! Properties
+.text-center {
+    text-align: center;
+}
+
+.ps-r {
+    position: relative;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
