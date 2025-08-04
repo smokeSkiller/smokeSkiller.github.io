@@ -62,6 +62,11 @@
         }
     }
 
+    // Bottom navigation
+    .bottom-nav {
+        @include flexbox(space-between, center);
+    }
+
     //! Start banner
     .start-banner {
         margin-bottom: -26px;
