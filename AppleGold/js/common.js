@@ -17,11 +17,21 @@ $(function() {
 	const startBannerSlider = $('.start-banner-slider');
 	// Main catalog
 	const mainCatalog = $('.main-catalog');
+	// Filters
+	const openFiltersBtn = $('.open-filters');
+	const openSearchBtn = $('.open-search');
+	const mobileFitersItemTitle = $('.filters-mobile .filters-item__title');
 	// Main slider
 	const mainSlider = $('.main-slider__inner');
 	// Modal
 	const modal = $('.modal');
 	const openModalBtn = $('.open-modal-btn');
+	// Card
+	const selectAllProducts = $('.cart-top__select-all input');
+	const cartItemCheckbox = $('.cart-body-item input[type="checkbox"]');
+	// Product page
+	const horizontalSlider = $('.product-page .horizontal-slider__inner');
+	const verticalSlider = $('.product-page .vertical-slider');
 
 	//! AutoScale
 	function autoscale() {
@@ -67,13 +77,15 @@ $(function() {
 
 	// Fixed header
 	$(window).on('scroll', function () {
-		if($(this).scrollTop() >= 100) {
-			header.removeClass('header-dark');
-		} else {
-			header.addClass('header-dark');
-		}
+		if($('.start-banner').length > 0) {
+			if($(this).scrollTop() >= 100) {
+				header.removeClass('header-dark');
+			} else {
+				header.addClass('header-dark');
+			}
 
-		updateLogo();
+			updateLogo();
+		}
 	});
 
 	//* PC menu
@@ -136,6 +148,19 @@ $(function() {
 		]
 	}); 
 
+	//! Select all product in cart
+	selectAllProducts.change(function() {
+		cartItemCheckbox.prop('checked', this.checked);
+	});
+
+	cartItemCheckbox.on('change', function () {
+		if ($('.cart-body-item input[type="checkbox"]:checked').length === cartItemCheckbox.length) {
+			selectAllProducts.prop('checked', true);
+		} else {
+			selectAllProducts.prop('checked', false);
+		}
+	});
+
 	//! Modal
 	// Open
 	openModalBtn.on('click', function () {
@@ -161,4 +186,80 @@ $(function() {
 	$('.modal-inner').on('click', function (e) {
 		e.stopPropagation();
 	});
+
+	//! Filters
+	//* Mobile filters
+	// Open filters
+	openFiltersBtn.on('click', function () {
+		$('.filters-mobile .filters-item').slideToggle(300);
+	});
+
+	// Open search
+	openSearchBtn.on('click', function () {
+		$('.filters-mobile .filters__search').slideToggle(300);
+	});
+
+	// Open mobile item body
+	mobileFitersItemTitle.on('click', function () {
+		$(this).parent().find('.filters-item-body').slideToggle(300);
+	});
+
+	//* Price slider
+	let minPrice = 10000;
+	let maxPrice = 100000;
+
+	$(".filters-price__slider").slider({
+		range: false,
+		min: minPrice,
+		max: maxPrice,
+		values: [10000, 100000],
+		slide: function (event, ui) {
+
+			$("#price-min").val(ui.values[0]);
+			$("#price-max").val(ui.values[1]);
+		}
+	});
+
+	// Синхронизация при ручном вводе
+	$("#price-min, #price-max").on("input", function () {
+		let minVal = parseInt($("#price-min").val()) || minPrice;
+		let maxVal = parseInt($("#price-max").val()) || maxPrice;
+
+		if (minVal > maxVal) {
+			minVal = maxVal;
+			$("#price-min").val(minVal);
+		}
+
+		$("#price-slider").slider("values", [minVal, maxVal]);
+	});
+
+	//! Product page
+	// Horizontal slider
+	horizontalSlider.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		fade: true,
+		asNavFor: '.vertical-slider',
+		draggable: false,
+		// swipe: false,
+		// pauseOnHover: false,
+		// pauseOnFocus: false,
+	}); 
+
+	// Vertical slider
+	verticalSlider.slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		loop: false,
+		vertical: true,
+		verticalSwiping: true,
+		asNavFor: '.horizontal-slider__inner',
+		focusOnSelect: true,
+		draggable: false,
+	}); 
+
 });

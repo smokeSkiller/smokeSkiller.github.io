@@ -1,0 +1,137 @@
+.dashboard {
+    &__edit-profile-btn {
+        width: 320px;
+        padding: 15px;
+        font-size: em(18px);
+        border: 1px solid #fff;
+    }
+
+    &-box {
+        overflow: hidden;
+        padding: 25px;
+        background: #2B2B2B;
+        border-radius: 12px;
+
+        &__title {
+            position: relative;
+            color: #fff;
+            font-size: em(20px);
+            font-weight: 500;
+
+            &:after {
+                position: absolute;
+                bottom: -15px;
+                left: -25px;
+                content: '';
+                @include box(100vw, 1px);
+                background: #7a7a7a;
+            }
+        }
+
+        &__text {
+            color: #fff;
+            font-size: em(14px);
+            font-weight: 500;
+        }
+
+        &__btn {
+            padding: 15px;
+            width: 320px;
+
+            &.btn-dark {
+                border: 1px solid #fff;
+                background-color: transparent
+            }
+        }
+    }
+
+    &-profile {
+        @include flexbox(flex-start, center);
+
+        &__img {
+            @include box(195px);
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &__name {
+            position: relative;
+            color: #fff;
+            font-size: em(40px);
+            font-weight: 500;
+
+            &:after {
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                content: '';
+                display: block;
+                @include box(60%, 1px);
+                background: #fff;
+            }
+        }
+
+        &__lists {
+            li + li {
+                margin-top: 10px;
+            }
+
+            li {
+                color: #7a7a7a;
+                font-size: em(18px);
+
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-card {
+        @include box(370px, 240px);
+        padding: 18px;
+        background: linear-gradient(135deg, #fff8d4 0%, #e3be4f 60%, #cfa72e 100%);
+        border-radius: 12px;
+
+        &__logo {
+            max-width: 47px;
+        }
+        
+        &__count {
+            font-size: em(32px);
+            font-weight: 500;
+        }
+
+        &__text {
+            margin-bottom: 6px;
+            font-size: em(11px);
+            font-weight: 500;
+
+            &.transparent {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &-certificate {
+        margin-top: 10px;
+        width: calc(50% - 5px);
+        padding: 10px;
+        background: #fff;
+        border-radius: 6px;
+
+        &__title {
+            font-size: em(14px);
+            font-weight: 500;
+        }
+
+        &__text {
+            margin-top: 10px;
+            color: #7a7a7a;
+            font-size: em(12px);
+            font-weight: 500;
+        }
+    }
+}

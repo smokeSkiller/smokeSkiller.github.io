@@ -48,11 +48,11 @@
             position: relative;
             @include flexbox(center, center);
             @include box(30px);
-            border: 2px solid #fff;
+            border: 1px solid #fff;
             border-radius: 50%;
 
             &:hover {
-                color: $gold;
+                color: $text;
                 background: #fff;
             }
 
@@ -71,6 +71,11 @@
     }
 }
 
+//* Empty space
+.header-empty-space {
+    height: 60px;
+}
+
 //* PC Menu
 .pc-menu {
     display: flex;
@@ -80,7 +85,7 @@
     }
 
     &-item {
-        padding: 20px 0;
+        padding: 27px 0;
 
         a {
             position: relative;

@@ -10,6 +10,15 @@
 body {
     overflow-x: hidden;
     background-color: $text;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fbde8e;
+        border-radius: 5px;
+    }
 }
 
 ul, menu {

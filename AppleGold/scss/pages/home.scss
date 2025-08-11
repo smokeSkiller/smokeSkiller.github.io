@@ -62,7 +62,7 @@
                 transform: translateY(0px) scale(1);
             }
             50% {
-                transform: translateY(-15px) scale(1.04);
+                transform: translateY(-10px) scale(1.025);
             }
             100% {
                 transform: translateY(0px) scale(1);
@@ -178,8 +178,8 @@
         }
 
         &__img {
-            @include box(100%, 180px);
-            background-size: auto 100%;
+            @include box(100%, 250px);
+            background-size: cover;
             background-position: bottom;
             background-repeat: no-repeat;
         }
