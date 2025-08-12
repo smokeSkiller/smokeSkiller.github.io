@@ -2,6 +2,10 @@
 .product-page {
     border-bottom: 1px solid #656565;
 
+    &__back {
+        font-weight: 500;
+    }
+
     // Horizontal slider
     .horizontal-slider {
         position: relative;
@@ -122,15 +126,16 @@
         }
 
         &__btn {
-            width: 225px;
+            width: 230px;
             height: auto;
             padding: 11px;
+            border-radius: 3px;
         }
 
         &__favorite-btn {
             margin-left: 5px;
-            width: 36px;
-            height: auto;
+            @include box(41px, auto);
+            border-radius: 3px;
         }
 
         &-properties {

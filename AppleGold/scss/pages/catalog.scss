@@ -107,6 +107,10 @@
         &-product {
             margin-top: 60px;
             width: calc(25% - 10px);
+
+            &__img {
+                height: 266px;
+            }
         }
     }
 }

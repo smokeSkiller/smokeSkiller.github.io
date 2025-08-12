@@ -94,6 +94,56 @@
     }
 }
 
+// Button
+.btn {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: em(16px);
+    border-radius: 6px;
+    font-weight: 500;
+
+    &.btn-dark {
+        color: #fff;
+        background: $text;
+
+        &:hover {
+            background: #414141;
+        }
+    }
+
+    &.btn-light {
+        position: relative;
+        z-index: 1;
+        color: $text;
+        background: linear-gradient(0deg, #FBC335, #FBDD35);
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            @include box(100%);
+            content: '';
+            opacity: 0;
+            background: linear-gradient(0deg, #F4D85E, #E2B801);
+            transition: all .3s ease;
+            border-radius: inherit;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Sticky sidebar
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
 // Cart bonus
 .cart-total {
     padding: 12px;
@@ -430,7 +480,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 10px;
+        border-radius: 8px;
     }
 
     &__title {
@@ -458,6 +508,7 @@
         padding: 12px;
         @include flexbox(center, center);
         width: 100%;
+        border-radius: 3px;
     }
 
     &__favorite {
@@ -556,6 +607,7 @@
             padding: 10px;
             color: $text;
             font-size: em(14px);
+            border-radius: 4px;
         }
 
         &__file-upload {
@@ -630,59 +682,6 @@
     &.light {
         color: #fff;
     }
-}
-
-// Button
-.btn {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: em(16px);
-    border-radius: 6px;
-    font-weight: 500;
-
-    &.btn-dark {
-        color: #fff;
-        background: $text;
-
-        &:hover {
-            background: #414141;
-        }
-    }
-
-    &.btn-light {
-        position: relative;
-        z-index: 1;
-        color: $text;
-        background: linear-gradient(0deg, #FBC335, #FBDD35);
-
-        &:after {
-            position: absolute;
-            z-index: -1;
-            left: 0;
-            top: 0;
-            @include box(100%);
-            content: '';
-            opacity: 0;
-            background: linear-gradient(0deg, #F4D85E, #E2B801);
-            transition: all .3s ease;
-            border-radius: inherit;
-        }
-
-        &:hover {
-            &:after {
-                opacity: 1;
-            }
-        }
-    }
-}
-
-// Scale wrapper
-.scale-wrapper-body {
-    overflow-x: hidden;
-}
-
-.scale-container {
-    overflow: hidden;
 }
 
 //! Properties

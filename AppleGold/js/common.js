@@ -92,7 +92,7 @@ $(function() {
 	pcMenuItem.hover(function () {
 		$(this).find('.pc-menu-item-dropdown').stop(false, true).slideDown();
 	}, function () {
-		$(this).find('.pc-menu-item-dropdown').stop(false, true).slideUp();
+		$(this).find('.pc-menu-item-dropdown').stop(false, true).hide();
 	});
 
 	//* Mobile menu
@@ -214,7 +214,6 @@ $(function() {
 		max: maxPrice,
 		values: [10000, 100000],
 		slide: function (event, ui) {
-
 			$("#price-min").val(ui.values[0]);
 			$("#price-max").val(ui.values[1]);
 		}
@@ -260,6 +259,5 @@ $(function() {
 		asNavFor: '.horizontal-slider__inner',
 		focusOnSelect: true,
 		draggable: false,
-	}); 
-
+	});
 });
