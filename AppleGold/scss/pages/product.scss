@@ -6,6 +6,12 @@
         font-weight: 500;
     }
 
+    &__favorite-btn {
+        margin-left: 5px;
+        @include box(41px, auto);
+        border-radius: 3px;
+    }
+
     // Horizontal slider
     .horizontal-slider {
         position: relative;
@@ -16,7 +22,7 @@
         }
 
         &-slugs {
-            top: 10px;
+            top: 5px;
         }
 
         &-item {
@@ -129,12 +135,6 @@
             width: 230px;
             height: auto;
             padding: 11px;
-            border-radius: 3px;
-        }
-
-        &__favorite-btn {
-            margin-left: 5px;
-            @include box(41px, auto);
             border-radius: 3px;
         }
 
