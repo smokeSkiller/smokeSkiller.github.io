@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    font-family: "Saira", sans-serif;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text;
+    font-family: 'Orbitron', sans-serif;
+}

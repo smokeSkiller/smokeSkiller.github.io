@@ -1,0 +1,953 @@
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(xl) {
+    // Start banner
+    .start-banner {
+        padding-top: 160px;
+        height: 700px;
+
+        &-lists {
+            &__item {
+                font-size: em(20px);
+            }
+        }
+    }
+
+    //! Main page
+    // Main banner
+    .main-banner {
+        &__title {
+            font-size: em(48px);
+        }
+    }
+
+    // Main equipment
+    .main-equipment {
+        &-slider {
+            &__wrapper {
+                margin-top: 30px;
+            }
+
+            &__text {
+                top: -15px;
+            }
+
+            &__item {
+                &.swiper-slide-active {
+                    img {
+                        max-height: 350px;
+                    }
+                }
+
+                img {
+                    max-height: 250px;
+                }
+            }
+        }
+    }
+
+    //! Solutions page
+    .solutions-custom {
+        &-slider {
+            &-item {
+                height: 105px;
+            }
+        }
+    }
+}
+
+// ≥992px
+@include media-breakpoint-down(lg) {
+    //! Components
+    // Start banner
+    .start-banner {
+        padding-top: 120px;
+        height: 600px;
+
+        // Lists
+        &-lists {
+            &__item {
+                font-size: em(18px);
+            }
+        }
+
+        // Title
+        &__title {
+            font-size: em(30px);
+        }
+
+        // Grid
+        &-grid {
+            &__top-line, &__left-column, .stripes {
+                height: 90px;
+            }
+
+            .square {
+                top: 80px;
+            }
+        }
+    }
+
+    // Advantages
+    .advantages {
+        &-item {
+            margin-top: 20px;
+            width: calc(50% - 10px);
+        }
+    }
+
+    // Key features
+    .key-features {
+        &-item {
+            &.has-tooltip {
+                &:nth-child(3n) {
+                    .key-features-item-tooltip {
+                        left: 0;
+                        right: auto;
+                    }
+                }
+
+                &:nth-child(2n) {
+                    .key-features-item-tooltip {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        &__lines {
+            width: 100%;
+        }
+    }
+
+    //! Main page
+	// Main banner
+    .main-banner {
+        &__title {
+            font-size: em(36px);
+        }
+    }
+
+    // Intro
+    .intro {
+        &__text {
+            font-size: em(16px);
+        }
+
+        &-column {
+            &__count {
+                font-size: em(70px);
+            }
+
+            &__text {
+                font-size: em(18px);
+            }
+        }
+    }
+
+    // Solutions
+    .solutions {
+        &-row {
+            &:before {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                @include box(100%, 33.33%);
+                border-left: none;
+                border-right: none;
+                border-top: 4px solid rgba($color: #fff, $alpha: .5);
+                border-bottom: 4px solid rgba($color: #fff, $alpha: .5);
+            }
+
+            &:after {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                @include box(4px, 100%);
+            }
+        }
+    }
+
+    // Main equipment
+    .main-equipment {
+        &-slider {
+            &__wrapper {
+                margin-top: 80px;
+            }
+
+            &__text {
+                top: -55px;
+            }
+        }
+    }
+
+    //! About page
+    // About section
+    .about-section {
+        &__img {
+            margin-top: 20px;
+            height: 565px;
+        }
+    }
+
+    // Development
+    .development {
+        &-item {
+            &:nth-child(1) {
+                @include box(100%, auto);
+            }
+
+            &:nth-child(2), &:nth-child(3) {
+                margin-top: 20px;
+                @include box(calc(50% - 10px), 250px);
+            }
+
+            &__img {
+                max-width: 112px;
+            }
+        }
+    }
+
+    //! Catalog page
+    .catalog-equipment {
+        &-item {
+            width: calc(50% - 30px);
+        }
+    }
+
+    //! Equipment page
+    .equipment-banner {
+        &__img {
+            max-width: 40%;
+            top: 10%;
+        }
+    }
+
+    .equipment {
+        // Description
+        .description {
+            &-options {
+                &-item {
+                    width: 32%;
+                }
+            }
+        }
+    }
+
+    //! Solutions
+    .solutions {
+        // Points
+        &-points {
+            &-item + &-item {
+                margin-top: 15px;
+            }
+
+            &-item {
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+
+                &__square {
+                    margin-top: 5px;
+                }
+
+                &__title {
+                    margin-top: 0;
+                    margin-left: 15px;
+                    text-align: left;
+                }
+            }
+        }
+
+        // Custom
+        &-custom {
+            &:after {
+                top: 385px;
+            }
+        }
+
+        // Interface
+        &-interface {
+            &-content {
+                &.active {
+                    flex-direction: column;
+                }
+
+                //* Info
+                &-info {
+                    margin-top: 15px;
+
+                    &.active {
+                        flex-direction: column-reverse;
+                    }
+
+                    &__media {
+                        margin-top: 12px;
+                    }
+
+                    &__text {
+                        position: static;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ≥768px 
+@include media-breakpoint-down(md) {
+    //! Components
+    // Background grid
+    .bg-grid {
+        display: none;
+    }
+
+    // Start-banner
+    .start-banner {
+        height: auto;
+
+        &__text {
+            font-size: em(16px);
+        }
+
+        &__btn {
+            font-size: em(16px);
+        }
+
+        &-breadcrumb {
+            opacity: 1;
+
+            &__item {
+                font-size: em(14px);
+            }
+        }
+
+        &-lists {
+            margin-top: 30px;
+            padding-left: 20px;
+            position: static;
+            display: block;
+
+            &__item {
+                font-size: em(16px);
+                
+                &:after {
+                    top: 6px;
+                    left: -18px;
+                    @include box(12px);
+                }
+            }
+        }
+
+        &-grid {
+            display: none;
+        }
+    }
+
+    // Key Features
+    .key-features {
+        &-item {
+            padding: 20px;
+            height: 95px;
+
+            &__text {
+                font-size: em(16px);
+            }
+
+            &-tooltip {
+                width: 340px;
+            }
+        }
+    }
+
+    // Advantages
+    .advantages {
+        &-nav {
+            &__tab {
+                font-size: em(16px);
+            }
+        }
+
+        &-item {
+            margin-top: 10px;
+            width: calc(50% - 5px);
+
+            &:after {
+                @include box(15px);
+            }
+
+            &__title {
+                font-size: em(16px);
+            }
+
+            &__text {
+                font-size: em(14px);
+            }
+        }
+    }
+
+    // Slider nav
+    .slider-nav {
+        &__btn {
+            @include box(40px);
+
+            i {
+                font-size: em(22px);
+            }
+        }
+
+        &__next {
+            margin-left: 10px;
+        }
+    }
+
+    // Button
+    .btn {
+        padding: 12.5px 20px;
+        font-size: em(16px);
+    }
+
+    // Section
+    .section {
+        padding: 30px 0;
+    }
+
+    // Section title
+    .section-title {
+        font-size: em(24px);
+    }
+
+    // Modal
+    .modal {
+        &-inner {
+            padding: 20px;
+            width: 95%;
+        }
+
+        &-form {
+            &__title {
+                margin-top: 20px;
+                font-size: em(24px);
+            }
+        }
+
+        &-slider {
+            &__item {
+                img {
+                    width: 90%;
+                    max-height: none;
+                }
+            }
+        }
+
+        &__close-btn {
+            top: 15px;
+            right: 20px;
+        }
+    }
+
+    // Footer
+    .footer {
+        padding: 25px 0;
+
+        &-menu {
+            li + li {
+                margin-top: 5px;
+            }
+
+            li a {
+                font-size: em(14px);
+            }
+        }
+
+        &__text {
+            a {
+                font-size: em(12px);
+            }
+        }
+    }
+
+    //! Main page
+    // Main-banner
+    .main-banner {
+        &__supertitle {
+            display: none;
+        }
+    }
+
+    // Intro
+    .intro {
+        &__text {
+            margin-top: 20px;
+            padding: 0;
+            font-size: em(14px);
+        }
+
+        &-row .intro-column {
+            width: 50%;
+        }
+
+        &-column {
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                border-top: none;
+                border-right: none;
+            }
+
+            &:nth-child(5) {
+                border-right: none;
+            }
+
+            &__count, &__text {
+                text-align: center;
+            }
+
+            &__count {
+                font-size: em(50px);
+            }
+
+            &__text {
+                font-size: em(14px);
+            }
+        }
+    }
+
+    // Solutions
+    .solutions {
+        &-item {
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            height: 175px;
+
+            &__title {
+                padding: 5px 10px;
+                font-size: em(16px);
+            }
+        }
+    }
+
+    // Main equipment
+    .main-equipment {
+        &:after {
+            @include box(1000px, 60%);
+        }
+
+        &-slider {
+            &__text {
+                max-width: 70%;
+                font-size: em(16px);
+            }
+
+            &-nav {
+                top: -55px;
+            }
+
+            &__item {
+                align-items: flex-end;
+                max-width: 100%;
+                // width: auto;
+                height: 360px;
+
+                &.swiper-slide-active {
+                    img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                img {
+                    max-height: 80%;
+                }
+            }
+        }
+
+        &__btn {
+            max-width: none;
+        }
+    }
+
+    //! About page
+    // About
+    .about-section {
+        &__text {
+            font-size: em(14px);
+        }
+
+        &__title {
+            font-size: em(16px);
+        }
+
+        &-service {
+            padding: 5px;
+
+            i {
+                font-size: em(25px);
+            }
+
+            &__title {
+                margin-left: 10px;
+                font-size: em(16px);
+            }
+        }
+    }
+
+    // Facilities
+    .facilities {
+        &__text {
+            font-size: em(14px);
+        }
+
+        &-item + &-item {
+            margin-top: 12px;
+        }
+
+        &-item {
+            @include box(100%, 345px);
+        }
+    }
+
+    // Development
+    .development {
+        &-item {
+            &:nth-child(2), &:nth-child(3) {
+                height: 150px;
+            }
+
+            &__text {
+                font-size: em(14px);
+            }
+
+            &__btn {
+                right: 10px;
+                bottom: 10px;
+
+                i {
+                    font-size: em(30px);
+                }
+            }
+        }
+    }
+
+    //! Catalog page
+    .catalog-equipment {
+        // Content
+        &-content {
+            margin-top: -30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &-item {
+            margin: 30px 0 0 0;
+            width: calc(50% - 7.5px);
+
+            &:nth-child(3n) {
+                .catalog-equipment-item__tooltip-content {
+                    left: 0;
+                    right: auto;
+                }
+            }
+
+            &:nth-child(2n) {
+                .catalog-equipment-item__tooltip-content {
+                    left: auto;
+                    right: 0;
+                }
+            }
+
+            &__img {
+                height: 135px;
+            }
+
+            &__tooltip-btn {
+                right: 8px;
+                top: 8px;
+                @include box(18px);
+                font-size: em(10px);
+            }
+
+            &__tooltip-content {
+                width: 330px;
+            }
+
+            &__title {
+                margin-top: 5px;
+                font-size: em(16px);
+            }
+
+            &__text {
+                margin-top: 5px;
+                font-size: em(14px);
+            }
+
+            &__btn {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    //! Equipment page
+    .equipment-banner {
+        &__content {
+            flex-direction: column-reverse;
+        }
+
+        &__img {
+            margin-top: 25px;
+            position: static;
+            max-width: 100%;
+            max-height: 300px;
+        }
+    }
+
+    .equipment {
+        .description {
+            &-slider {
+                overflow: visible;
+                
+                &-item {
+                    height: 275px;
+                }
+            }
+
+            &__title {
+                font-size: em(16px);
+            }
+
+            &-options {
+                &-item {
+                    margin-top: 10px;
+                    width: 49%;
+                    font-size: em(14px);
+                }
+            }
+
+            &-content {
+                table {
+                    tr td {
+                        font-size: em(14px);
+                    }
+                }
+            }
+        }
+    }
+
+    //! Solutions page
+    .solutions {
+        // Title 
+        &__title {
+            font-size: em(18px);
+        }
+        
+        // Tabs
+        &-tabs {
+            &-nav {
+                &__tab {
+                    padding: 10px;
+                }
+            }
+
+            &-content {
+                height: 275px;
+            }
+        }
+
+        // Points
+        &-points {
+            &-item {
+                &__square {
+                    margin-top: 0;
+                }
+
+                &__title {
+                    font-size: em(16px);
+                }
+            }
+        }
+
+        // Custom
+        &-custom {
+            &:after {
+                top: 210px;
+                width: 1500px;
+            }
+
+            &__text {
+                font-size: em(16px);
+            }
+
+            &-slider {
+                margin-top: 60px;
+                height: 70px;
+
+                &-item {
+                    height: 52px;
+
+                    &__icon {
+                        max-width: 60%;
+                    }
+                }
+
+                .swiper-slide-prev,
+                .swiper-slide-next {
+                    transform: translateY(10px) scale(1);
+                }
+            }
+        }
+
+        // Advantages
+        &-advantages {
+            &-item {
+                width: 100%;
+                min-height: 160px;
+            }
+        }
+
+        // Interface
+        &-interface {
+            &-nav {
+                margin-left: -5px;
+                margin-right: -5px;
+
+                &__btn {
+                    margin: 5px;
+                }
+            }
+
+            &-content {
+                //* Nav
+                &-nav {
+                    &__item + &__item {
+                        margin-top: 25px;
+                    }
+
+                    &__item {
+                        font-size: em(16px);
+                    }
+                }
+            }
+        }
+    }
+
+    //! Contacts page
+    .contact-banner {
+        &__title {
+            text-align: start;
+        }
+
+        &-content {
+            width: 70%;
+        }
+
+        &-item + &-item {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+
+        &-item {
+            height: 70px;
+        }
+        
+        .start-banner-grid {
+            display: block;
+
+            .start-banner-grid__right-column {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20%;
+                height: 120%;
+                border: none;
+            }
+
+            .start-banner-grid__bottom-line, .start-banner-grid__top-line, .start-banner-grid__left-column {
+                display: none;
+            }
+        }
+    }
+
+    // Info
+    .contact-info {
+        &-map {
+            &__info {
+                @include box(190px, auto);
+                padding: 12px;
+                font-size: em(14px);
+            }
+
+            iframe {
+                height: 200px;
+            }
+        }
+    }
+}
+
+//  ≥576px
+@include media-breakpoint-down(sm) {
+    // Header
+    .header {
+        padding: 20px 0;
+
+        // Logo
+        &__logo {
+            height: 30px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    //! Equipment page
+    .equipment {
+        .description {
+            &-slider {                
+                &-item {
+                    width: 305px;
+                }
+            }
+
+            &-options {
+                &-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    //! Solutions page
+    .solutions-custom {
+        &:after {
+            top: 230px;
+        }
+
+        &-slider {
+            &-item {
+                @include box(52px);
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:before {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        content: '';
+        @include box(100%);
+        background: rgba($color: #000000, $alpha: .6);
+        backdrop-filter: blur(7px);
+    }
+
+    &-menu {
+        li + li {
+            margin-top: 15px;
+        }
+
+        li a {
+            color: #fff;
+            font-size: em(18px);
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+
+    &__text {
+        color: #fff;
+        font-size: em(18px);
+
+        a {
+            color: #fff;
+            font-size: em(18px);
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+
+    &__lines {
+        @include box(65%, 330px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
