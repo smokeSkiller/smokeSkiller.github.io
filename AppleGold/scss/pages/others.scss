@@ -171,6 +171,8 @@
                 cursor: pointer;
                 box-sizing: border-box;
                 transition: background 0.2s;
+                touch-action: none;
+
 
                 &:hover {
                     background: #DDDDDD;
