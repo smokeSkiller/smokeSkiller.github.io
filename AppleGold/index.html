@@ -270,7 +270,9 @@
 					<a href="#" class="header-panel-item"><i class="fa-regular fa-heart"></i></a>
 
 					<!-- Item:dashboard -->
-					<a href="#" class="header-panel-item"><i class="fa-regular fa-user"></i></a>
+					<a class="header-panel-item open-modal-btn" target-modal="#login-modal">
+						<i class="fa-regular fa-user"></i>
+					</a>
 
 					<!-- Mobile burger -->
 					<button class="burger-btn d-md-none d-flex align-items-center justify-content-center">
@@ -1016,6 +1018,7 @@
 	</nav>
 
 	<!--! Modals -->
+	<!-- Feedback -->
 	<div class="modal" id="feedback-modal">
 		<!-- Inner -->
 		<div class="modal-inner">
@@ -1041,9 +1044,134 @@
 				<input type="text" name="phone" class="modal-form__field" placeholder="+7 (999) 999 99 99">
 
 				<!-- Field -->
-				<input type="text" name="question" class="modal-form__field"placeholder="Ваш вопрос">
+				<input type="text" name="question" class="modal-form__field" placeholder="Ваш вопрос">
 
 				<input type="submit" class="modal-form__submit btn btn-light" value="отправить">
+
+				<!-- Text -->
+				<p class="modal-form__text text-center mt-1">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</p>
+			</form>
+		</div>
+	</div>
+
+	<!-- Login -->
+	<div class="modal" id="login-modal">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Btn -->
+			<button class="modal__close-btn">
+				<i class="fa-light fa-xmark"></i>
+			</button>
+
+			<!-- Logo -->
+			<div class="modal__logo">
+				<img src="img/modal_logo.png" alt="Apple Gold logo">
+			</div>
+			
+			<!-- Form -->
+			<form action="#" class="modal-form pb-4">
+				<!-- Title -->
+				<h3 class="modal-form__title mb-3">Вход</h3>
+
+				<!-- Field -->
+				<input type="email" name="email" class="modal-form__field" placeholder="Почта">
+
+				<!-- Field -->
+				<input type="password" name="password" class="modal-form__field" placeholder="Ваш пароль">
+
+				<input type="submit" class="modal-form__submit btn btn-light" value="войти">
+
+				<!-- Text -->
+				<p class="modal-form__text text-center mt-1">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</p>
+
+				<!-- Links -->
+				<div class="d-flex justify-content-between w-100 mt-4">
+					<!-- Reset password -->
+					<p class="modal-form__link">
+						<a class="open-modal-btn" target-modal="#reset-modal">Восстановить пароль</a>
+					</p>
+
+					<!-- Register -->
+					<p class="modal-form__link">
+						Еще нет аккаунта? <a class="open-modal-btn" target-modal="#register-modal">Регистрация</a>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Register -->
+	<div class="modal" id="register-modal">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Btn -->
+			<button class="modal__close-btn">
+				<i class="fa-light fa-xmark"></i>
+			</button>
+
+			<!-- Logo -->
+			<div class="modal__logo">
+				<img src="img/modal_logo.png" alt="Apple Gold logo">
+			</div>
+			
+			<!-- Form -->
+			<form action="#" class="modal-form pb-4">
+				<!-- Title -->
+				<h3 class="modal-form__title mb-3">Регистрация</h3>
+
+				<!-- Field -->
+				<input type="email" name="email" class="modal-form__field" placeholder="Почта">
+
+				<!-- Field -->
+				<input type="password" name="password" class="modal-form__field" placeholder="Ваш пароль">
+
+				<!-- Field -->
+				<input type="text" name="phone" class="modal-form__field" placeholder="+7 (999) 999 99 99">
+
+				<!-- Submit button -->
+				<input type="submit" class="modal-form__submit btn btn-light" value="зарегистрироваться">
+
+				<!-- Text -->
+				<p class="modal-form__text text-center mt-1">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</p>
+
+				<!-- Links -->
+				<div class="d-flex justify-content-between w-100 mt-4">
+					<!-- Login -->
+					<p class="modal-form__link">
+						УЖЕ ЕСТЬ АККАУНТ? <a class="open-modal-btn" target-modal="#login-modal">ВОЙТИ</a>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Reset password -->
+	<div class="modal" id="reset-modal">
+		<!-- Inner -->
+		<div class="modal-inner">
+			<!-- Btn -->
+			<button class="modal__close-btn">
+				<i class="fa-light fa-xmark"></i>
+			</button>
+
+			<!-- Logo -->
+			<div class="modal__logo">
+				<img src="img/modal_logo.png" alt="Apple Gold logo">
+			</div>
+			
+			<!-- Form -->
+			<form action="#" class="modal-form pb-4">
+				<!-- Title -->
+				<h3 class="modal-form__title mb-3">Восстановление пароля</h3>
+
+				<!-- Field -->
+				<input type="email" name="email" class="modal-form__field" placeholder="Почта">
+
+				<!-- Field -->
+				<input type="text" name="phone" class="modal-form__field" placeholder="+7 (999) 999 99 99">
+
+				<!-- Submit button -->
+				<input type="submit" class="modal-form__submit btn btn-light" value="восстановить">
 
 				<!-- Text -->
 				<p class="modal-form__text text-center mt-1">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</p>

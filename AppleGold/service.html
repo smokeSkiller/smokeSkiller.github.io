@@ -292,347 +292,195 @@
         <!-- Scale wrapper -->
 		<div class="scale-wrapper scale-wrapper-body" id="scaleWrapper">
             <!-- Container -->
-            <div class="container-lg catalog pt-5">
-                <!--! Product page -->
-                <main class="product-page pb-5">
-					<a href="catalog.html" class="product-page__back d-block mb-md-5 mb-4">← НАЗАД</a>
+            <div class="container-lg pt-5">
+                <!--! Service -->
+                <main class="service w-100">
+                    <!-- Section -->
+                    <section class="service-section">
+                        <!-- Section title -->
+                        <h2 class="section-title light">Ремонт техники</h2>
 
-                    <!-- Row -->
-                    <div class="d-md-flex align-items-start w-100 ps-r">
-                        <!-- Column:thumbnail -->
-                        <div class="d-flex ps-md-5 sticky-sidebar">
-                            <!-- Vertical slider -->
-                            <div class="vertical-slider">
-                                <!-- Item -->
-                                <div class="vertical-slider-item" style="background-image: url('img/product/1.jpg');"></div>
+                        <!-- Flex -->
+                        <div class="d-flex flex-md-row flex-column-reverse justify-content-between mt-4">
+                            <!-- Form -->
+                            <form action="#" id="repair-form" class="service-section-form form">
+                                <!-- Field -->
+                                <div>
+                                    <label class="form__label" for="change-akb">Замента АКБ</label>
 
-                                <!-- Item -->
-                                <div class="vertical-slider-item" style="background-image: url('img/product/2.png');"></div>
-
-                                <!-- Item -->
-                                <div class="vertical-slider-item" style="background-image: url('img/product/3.png');"></div>
-
-                                <!-- Item -->
-                                <div class="vertical-slider-item" style="background-image: url('img/product/4.png');"></div>
-                            </div>
-
-                            <!-- Slider -->
-                            <div class="horizontal-slider">
-                                <!-- Inner -->
-                                <div class="horizontal-slider__inner">
-                                    <!-- Item -->
-                                    <div class="horizontal-slider-item" style="background-image: url('img/product/1.jpg');"></div>
-
-                                    <!-- Item -->
-                                    <div class="horizontal-slider-item" style="background-image: url('img/product/2.png');"></div>
-
-                                    <!-- Item -->
-                                    <div class="horizontal-slider-item" style="background-image: url('img/product/3.png');"></div>
-
-                                    <!-- Item -->
-                                    <div class="horizontal-slider-item" style="background-image: url('img/product/4.png');"></div>
-                                </div>
-
-                                <!-- Slugs -->
-                                <div class="product-slugs horizontal-slider-slugs">
-                                    <!-- Item -->
-                                    <span class="product-slugs__item">Клиенты выбирают</span>
-
-                                    <!-- Item -->
-                                    <span class="product-slugs__item">Рассрочка 0%</span>
-                                </div>
-
-								<!-- Favorite(Mobile) -->
-                                <button class="product-page__favorite-btn added add-to-favorite">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Column:content -->
-                        <div class="product-content ms-md-4 mt-md-0 mt-3">
-                            <!-- Title -->
-                            <h1 class="product-content__title">IPhone 16 Pro Max 1 тб White Titanium</h1>
-
-                            <!-- Sku -->
-                            <span class="product-content__sku mt-md-2 mt-3">
-                                арт. 23-345-1
-                            </span>
-
-                            <!-- Filters -->
-                            <div class="mt-md-5 mt-4 pb-md-4">
-                                <!-- Filter -->
-                                <div class="product-content-filter">
-                                    <h3>Объем памяти:</h3>
-
-                                    <!-- Row -->
-                                    <div class="product-content-filter__row d-flex flex-wrap">
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="memory-type" id="memory-type1" value="1 тб">
-                                            <label for="memory-type1">1 тб</label>
-                                        </div>
-
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="memory-type" id="memory-type2" value="512 гб">
-                                            <label for="memory-type2">512 гб</label>
-                                        </div>
-
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="memory-type"  id="memory-type3" value="256 гб">
-                                            <label for="memory-type3">256 гб</label>
-                                        </div>
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="change-akb" id="change-akb">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
                                     </div>
                                 </div>
 
-                                <!-- Filter -->
-                                <div class="product-content-filter">
-                                    <h3>Цвет:</h3>
+                                <!-- Field -->
+                                <div class="mt-1">
+                                    <label class="form__label" for="change-display-original">Замена дисплея (оригининал)</label>
 
-                                    <!-- Row -->
-                                    <div class="product-content-filter__row d-flex flex-wrap">
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="color" id="color1" value="Бежевый">
-                                            <label for="color1">Бежевый</label>
-                                        </div>
-
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="color" id="color2" value="Белый">
-                                            <label for="color2">Белый</label>
-                                        </div>
-
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="color" id="color3" value="Песчаный">
-                                            <label for="color3">Песчаный</label>
-                                        </div>
-
-                                        <!-- Field -->
-                                        <div class="product-content-filter__field">
-                                            <input type="radio" name="color" id="color4" value="Черный">
-                                            <label for="color4">Черный</label>
-                                        </div>
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="change-display-original" id="change-display-original">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Price -->
-                            <div class="d-flex align-items-end mt-5">
+                                <!-- Field -->
+                                <div class="mt-1">
+                                    <label class="form__label" for="change-analog">Замена дисплея (аналог)</label>
+
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="change-analog" id="change-analog">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" placeholder="Ваше имя">
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" placeholder="+7 (999) 999 99 99">
+
                                 <!-- Price -->
-                                <span class="product-content__price">127 990₽</span>
+                                <p class="service-section-form__price">Стоимость 4 500₽</p>
 
-                                <!-- Overprice -->
-                                <span class="product-content__overprice">190 990 ₽</span>
-                            </div>
+                                <!-- Button -->
+                                <button type="submit" class="service-section-form__btn form__btn btn btn-light">отправить</button>
 
-                            <!-- Buttons -->
-                            <div class="d-flex mt-4">
-                                <!-- Cart button -->
-                                <button class="product-content__btn btn btn-light">в корзину</button>
+                                <!-- Policy -->
+                                <span class="service-section-form__policy-text form__policy-text">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</span>
+                            </form>
 
-                                <!-- Favorite(PC) -->
-                                <button class="product-page__favorite-btn d-md-flex d-none added add-to-favorite">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-
-                            <br><br><br>
-
-                            <!-- Table -->
-                            <h2 class="product-content__mini-title mt-md-5">ХАРАКТЕРИСТИКИ:</h2>
-
-                            <table class="product-content-properties mt-2">
-                                <tbody>
-                                    <tr>
-                                        <td>Модель</td>
-                                        <td>iPhone 16 Pro Max</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Диагональ</td>
-                                        <td>6,9 дюйм</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Количество SIM-карт</td>
-                                        <td>nano SIM + eSIM</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Материал корпуса</td>
-                                        <td>Титан, матовое стекло</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Операционная система</td>
-                                        <td>IOS 18</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Размер изображения</td>
-                                        <td>2868x1320</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Разъем</td>
-                                        <td>USB Type-C</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <!-- Image -->
+                            <div class="service-section__img" style="background-image: url('img/service/1.jpg');"></div>
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- Section -->
+                    <section class="service-section">
+                        <!-- Section title -->
+                        <h2 class="section-title light">Trade-in</h2>
+
+                        <!-- Flex -->
+                        <div class="d-flex flex-md-row flex-column-reverse justify-content-between mt-4">
+                            <!-- Form -->
+                            <form action="#" id="repair-form" class="service-section-form form">
+                                <!-- Field -->
+                                <div>
+                                    <label class="form__label" for="sell-phone">Устройство на продажу</label>
+
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="sell-phone" id="sell-phone">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Field -->
+                                <div class="mt-1">
+                                    <label class="form__label" for="buy-phone">Устройство на покупку</label>
+
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="buy-phone" id="buy-phone">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" name="name" placeholder="Ваше имя">
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" name="phone" placeholder="+7 (999) 999 99 99">
+
+                                <!-- Price -->
+                                <p class="service-section-form__price">Оценка вашего устройства составляет~ 4 500₽</p>
+
+                                <!-- Button -->
+                                <button type="submit" class="service-section-form__btn form__btn btn btn-light">отправить</button>
+
+                                <!-- Policy -->
+                                <span class="service-section-form__policy-text form__policy-text">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</span>
+                            </form>
+
+                            <!-- Image -->
+                            <div class="service-section__img" style="background-image: url('img/service/2.png');"></div>
+                        </div>
+                    </section>
+
+                    <!-- Section -->
+                    <section class="service-section">
+                        <!-- Section title -->
+                        <h2 class="section-title light">Выкуп</h2>
+
+                        <!-- Flex -->
+                        <div class="d-flex flex-md-row flex-column-reverse justify-content-between mt-4">
+                            <!-- Form -->
+                            <form action="#" id="repair-form" class="service-section-form form">
+                                <!-- Field -->
+                                <div>
+                                    <label class="form__label" for="sell-to-sell-phone">Устройство на продажу</label>
+
+                                    <!-- Select -->
+                                    <div class="form__select">
+                                        <select name="sell-to-sell-phone" id="sell-to-sell-phone">
+                                            <option value="Iphone 11">Iphone 11</option>
+                                            <option value="Iphone 12">Iphone 12</option>
+                                            <option value="Iphone 13">Iphone 13</option>
+                                            <option value="Iphone 14">Iphone 14</option>
+                                            <option value="Iphone 15">Iphone 15</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" name="name" placeholder="Ваше имя">
+
+                                <!-- Field -->
+                                <input type="text" class="form__field mt-1" name="phone" placeholder="+7 (999) 999 99 99">
+
+                                <!-- Price -->
+                                <p class="service-section-form__price">Оценка вашего устройства составляет~ 4 500₽</p>
+
+                                <!-- Button -->
+                                <button type="submit" class="service-section-form__btn form__btn btn btn-light">отправить</button>
+
+                                <!-- Policy -->
+                                <span class="service-section-form__policy-text form__policy-text">Нажимая на кнопку вы соглашаетесь с нашей политикой конфиденциальности</span>
+                            </form>
+
+                            <!-- Image -->
+                            <div class="service-section__img" style="background-image: url('img/service/3.png');"></div>
+                        </div>
+                    </section>
                 </main>
-
-                <!-- Also bought -->
-                <section class="products-section my-5">
-                    <!-- Section title -->
-                    <h2 class="section-title light mb-md-4">с этим товаром покупают</h2>
-
-                    <!-- Row -->
-                    <div class="products-section-row d-flex justify-content-between flex-wrap pb-5">
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-
-                        <!-- Product -->
-                        <div class="product">
-                            <!-- Image -->
-                            <div class="product__img" style="background-image: url('img/product_img.jpg');">
-                                <!-- Favorite -->
-                                <button class="product__favorite add-to-favorite"><i class="fa-solid fa-heart"></i></button>
-                            </div>
-
-                            <!-- Title -->
-                            <a href="#" class="product__title">IPhone 16 Pro Max 1 тб White Titanium</a>
-
-                            <!-- Price -->
-                            <div class="d-flex flex-md-row flex-column align-items-md-end mt-1">
-                                <span class="product__price">190 990 ₽</span>
-
-                                <!-- Overprice -->
-                                <span class="product__overprice">190 990 ₽</span>
-                            </div>
-
-                            <!-- Button -->
-                            <button class="product__btn btn btn-light">в корзину</button>
-                        </div>
-                    </div>
-                </section>
 
                 <!--! Footer -->
 				<footer class="footer mt-5">

@@ -168,6 +168,8 @@ $(function() {
 	openModalBtn.on('click', function () {
 		const targetModal  = $(this).attr('target-modal');
 
+		modal.hide();
+		
 		$(targetModal).fadeIn({
 			start: function () {
 				$(this).css('display', 'flex');
@@ -244,9 +246,6 @@ $(function() {
 		fade: true,
 		asNavFor: '.vertical-slider',
 		draggable: false,
-		// swipe: false,
-		// pauseOnHover: false,
-		// pauseOnFocus: false,
 	}); 
 
 	// Vertical slider
@@ -262,4 +261,34 @@ $(function() {
 		focusOnSelect: true,
 		draggable: false,
 	});
+
+	//! Certificate page
+	$(".certificate-nominal__slider").slider({
+		range: 'min',
+		min: 5000,
+		max: 200000,
+		value: 45000,
+		step: 5000,
+		create: function() {
+			// Устанавливаем начальное значение
+			// Добавляем подсказку прямо в элемент ползунка
+			const handle = $(".ui-slider-handle", this);
+			let initialValue = $(this).slider("value");
+			handle.append('<div class="certificate-nominal__tooltip">' + formatNumber(initialValue) + ' ₽</div>');
+
+			$('.certificate-nominal__tooltip, .certificate-form__price span').text(formatNumber(initialValue) + ' ₽');
+
+			$('.certificate-nominal__field').val(formatNumber(initialValue) + " ₽");
+		},
+		slide: function(event, ui) {
+			$('.certificate-nominal__tooltip, .certificate-form__price span').text(formatNumber(ui.value) + " ₽");
+
+			$('.certificate-nominal__field').val(formatNumber(ui.value) + " ₽");
+		}
+	});
+
+	// Функция для форматирования числа с пробелами
+	function formatNumber(num) {
+		return num.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+	}
 });

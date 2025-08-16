@@ -50,6 +50,7 @@
             @include box(30px);
             border: 1px solid #fff;
             border-radius: 50%;
+            cursor: pointer;
 
             &:hover {
                 color: $text;

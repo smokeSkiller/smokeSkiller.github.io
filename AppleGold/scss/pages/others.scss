@@ -1,0 +1,202 @@
+//! Service page
+.service {
+    &-section + &-section {
+        margin-top: 100px;
+    }
+
+    &-section {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #7a7a7a;
+
+        &-form {
+            width: 570px;
+
+            &__price {
+                margin-top: 60px;
+                margin-bottom: 10px;
+                color: #fff;
+                font-size: em(20px);
+                font-weight: 500;
+            }
+
+            &__policy-text {
+                margin-top: 5px;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        &__img {
+            @include box(690px, auto);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+        }
+    }
+}
+
+//! Delivery page
+.delivery {
+    &-item {
+        position: relative;
+        z-index: 1;
+        padding: 18px;
+        width: calc(50% - 5px);
+        min-height: 245px;
+        background: rgba($color: #ECECEC4D, $alpha: .3);
+        border-radius: 12px;
+
+        &:nth-child(1) {
+            background: $gold-gradient;
+
+            .delivery-item__text {
+                color: $text;
+            }
+
+            .delivery-item__img {
+                max-width: 360px;
+            }
+        }
+
+        &__text {
+            display: block;
+            max-width: 550px;
+            color: #fff;
+            font-size: em(24px);
+            font-weight: 500;
+        }
+
+        &__img {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 20px;
+            max-width: 320px;
+        }
+    }
+}
+
+//! Certificate page
+.certificate {
+    &-banner {
+        position: relative;
+        @include flexbox(center, center, column);
+        @include box(100%, 530px);
+
+        span {
+            position: absolute;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: em(60px);
+            font-weight: 500;
+
+            &:nth-child(1) {
+                top: 50px;
+                z-index: 100;
+            }
+
+            &:nth-child(2) {
+                top: 120px;
+                margin-left: 90px;
+                z-index: 103;
+            }
+        }
+
+        &__img {
+            position: absolute;
+            z-index: 101;
+            left: 50%;
+            top: 40px;
+            transform: translateX(-50%);
+            max-width: 820px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: em(30px);
+        font-weight: 500;
+    }
+
+    &-form {
+        &__price {
+            margin-top: 45px;
+            color: #fff;
+            font-size: em(20px);
+            font-weight: 500;
+        }
+
+        &__btn {
+            width: 100%;
+            padding: 14px;
+            @include flexbox(center, center);
+        }
+
+        &__policy-text {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &-nominal {
+        &__slider {
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+            @include box(100%, 25px);
+
+            &:after {
+                position: absolute;
+                top: 4px;
+                left: 0;
+                z-index: -1;
+                @include box(100%, 2px);
+                content: '';
+                background: #fff;
+            }
+
+            .ui-slider-handle {
+                position: absolute;
+                top: -6px; /* чтобы выровнять по центру */
+                transform: translateX(-50%); /* центрируем */
+                @include box(18px);
+                background: #fff;
+                border: 3px solid #DDDDDD;
+                border-radius: 50%;
+                cursor: pointer;
+                box-sizing: border-box;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #DDDDDD;
+                }
+
+                &:first-of-type[style*="left: 0%"]  {
+                    transform: translateX(0%);
+                }
+
+                &:last-of-type[style*="left: 100%"] {
+                    transform: translateX(-100%); /* у правого в конце сдвигаем на всю ширину */
+                }
+            }
+        }
+
+        &__tooltip {
+            position: absolute;
+            top: -40px;
+            left: -220%;
+            padding: 6px 10px;
+            min-width: 75px;
+            text-align: center;
+            font-size: em(11px);
+            font-weight: 500;
+            background: #fff;
+            border-radius: 3px;
+        }
+    }
+}

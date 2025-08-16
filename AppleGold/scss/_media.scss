@@ -75,13 +75,9 @@
 
     // Products section
     .products-section {
-        &-row {
-            margin-top: -10px;
-        }
-
         .product {
             margin-top: 50px;
-            width: calc(50% - 5px);
+            width: calc(50% - 10px);
         }
     }
 
@@ -533,6 +529,75 @@
             &__btn {
                 width: 100%;
             }
+        }
+    }
+
+    //! Service page
+    .service {
+        &-section {
+            &-form {
+                margin-top: 40px;
+                width: 100%;
+            }
+
+            &__img {
+                @include box(100%, 315px);
+                border-radius: 12px;
+            }
+        }
+    }
+
+    //! Delivery page
+    .delivery {
+        &-item + &-item {
+            margin-top: 10px;
+        }
+
+        &-item {
+            width: 100%;
+            min-height: 185px;
+
+            &:nth-child(1) {
+                .delivery-item__img {
+                    max-width: 240px;
+                }
+            }
+
+            &__text {
+                font-size: em(20px);
+            }
+            
+            &__img {
+                bottom: 10px;
+                max-width: 220px;
+            }
+        }
+    }
+
+    //! Certificate page
+    .certificate {
+        &-banner {
+            align-items: flex-start;
+            height: auto;
+
+            span, &__img {
+                position: static;
+            }
+
+            span {
+                font-size: em(40px);
+            }
+
+            &__img {
+                width: 100%;
+                transform: none;
+            }
+        }
+
+        &__title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: em(20px);
         }
     }
 
