@@ -116,7 +116,7 @@ $(function() {
 		}
 	});
 
-	//! Main equipment & certificates & Description slider & Solutions slider
+	//! Main equipment & certificates & description-slider
 	$(document).ready(function () {
 		// Main equipment slider
 		const mainEquipmentSlider = new Swiper('.main-equipment-slider', {
@@ -194,80 +194,6 @@ $(function() {
 				prevEl: '.slider-nav__prev',
 			},
 		});
-
-		//! Solutions slider
-		const solutionsSlider = new Swiper('.solutions-custom-slider', {
-			centeredSlides: true,
-			// loopAdditionalSlides: 16,
-			// autoplay: true,
-			initialSlide: 5,
-			spaceBetween: 100,
-			rewind: true,
-			loop: true,
-			allowTouchMove: false,
-
-			// Navigation arrows
-			navigation: {
-				nextEl: '.solutions-custom-slider-nav__next',
-				prevEl: '.solutions-custom-slider-nav__prev',
-			},
-
-			breakpoints: {
-				1200: {
-					slidesPerView: 7,
-				},
-				992: {
-					slidesPerView: 5,
-				},
-				576: {
-					slidesPerView: 4,
-				},
-				320: {
-					loop: false,
-					slidesPerView: 'auto',
-				},
-			},
-
-			on: {
-				slideChange: function () {
-					updateSlideClasses(this);
-				},
-			}
-		});
-
-		// Update slide classes
-		function updateSlideClasses(swiperInstance) {
-			// Удаляем все старые классы
-			$('.swiper-slide').removeClass(function() {
-				return $(this).attr('class').split(' ').filter(c => c.startsWith('prev-group-') || c.startsWith('next-group-')).join(' ');
-			});
-
-			// Находим ближайшие слайды
-			const $activeSlide = $(swiperInstance.slides[swiperInstance.activeIndex]);
-			const $prevSlide = $activeSlide.prev('.swiper-slide');
-			const $nextSlide = $activeSlide.next('.swiper-slide');
-
-			// Добавляем prev-group-* (макс. 4 шт.)
-			if ($prevSlide.length) {
-				$prevSlide.prevAll('.swiper-slide').each(function(index) {
-					if (index < 4) $(this).addClass(`prev-group-${index + 1}`);
-				});
-			}
-
-			// Добавляем next-group-* (макс. 4 шт.)
-			if ($nextSlide.length) {
-				$nextSlide.nextAll('.swiper-slide').each(function(index) {
-					if (index < 4) $(this).addClass(`next-group-${index + 1}`);
-				});
-			}
-
-			$('.solutions-custom-content-item').hide();
-			$('#custom-' + (swiperInstance.realIndex + 1)).fadeIn({
-				start: function () {
-					$(this).css('display', 'flex');
-				}
-			});
-		}
 	});
 
 	//! Modal
@@ -351,5 +277,86 @@ $(function() {
 	showMoreEquipmentsBtn.on('click', function () {
 		$(this).closest('.catalog-equipment-content').find('.catalog-equipment-item.hidden').removeClass('hidden');
 		$(this).parent().removeClass('d-flex').addClass('d-none');
+	});
+
+	//! Solutions slider
+	$(window).on('load', function () {
+		console.log('Loaded!');
+
+		const solutionsSlider = new Swiper('.solutions-custom-slider', {
+			centeredSlides: true,
+			// loopAdditionalSlides: 16,
+			// autoplay: true,
+			initialSlide: 5,
+			spaceBetween: 100,
+			rewind: true,
+			loop: true,
+			allowTouchMove: false,
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.solutions-custom-slider-nav__next',
+				prevEl: '.solutions-custom-slider-nav__prev',
+			},
+
+			breakpoints: {
+				1200: {
+					slidesPerView: 7,
+				},
+				992: {
+					slidesPerView: 5,
+				},
+				576: {
+					slidesPerView: 4,
+				},
+				320: {
+					loop: false,
+					slidesPerView: 'auto',
+				},
+			},
+
+			on: {
+				init: function() {
+					updateSlideClasses(this);
+				},
+				slideChange: function () {
+					updateSlideClasses(this);
+				},
+			}
+		});
+
+		// Update slide classes
+		function updateSlideClasses(swiperInstance) {
+			// Удаляем все старые классы
+			$('.swiper-slide').removeClass(function() {
+				return $(this).attr('class').split(' ').filter(c => c.startsWith('prev-group-') || c.startsWith('next-group-')).join(' ');
+			});
+
+			// Находим ближайшие слайды
+			const $activeSlide = $(swiperInstance.slides[swiperInstance.activeIndex]);
+			const $prevSlide = $activeSlide.prev('.swiper-slide');
+			const $nextSlide = $activeSlide.next('.swiper-slide');
+
+			// Добавляем prev-group-* (макс. 4 шт.)
+			if ($prevSlide.length) {
+				$prevSlide.prevAll('.swiper-slide').each(function(index) {
+					if (index < 4) $(this).addClass(`prev-group-${index + 1}`);
+				});
+			}
+
+			// Добавляем next-group-* (макс. 4 шт.)
+			if ($nextSlide.length) {
+				$nextSlide.nextAll('.swiper-slide').each(function(index) {
+					if (index < 4) $(this).addClass(`next-group-${index + 1}`);
+				});
+			}
+
+			$('.solutions-custom-content-item').hide();
+			$('#custom-' + (swiperInstance.realIndex + 1)).fadeIn({
+				start: function () {
+					$(this).css('display', 'flex');
+				}
+			});
+		}
 	});
 });
