@@ -157,7 +157,7 @@
             }
 
             img {
-                max-height: 318px;
+                max-height: 400px;
             }
         }
 
@@ -380,15 +380,35 @@
             top: 60px;
             left: 0;
             border-collapse: separate; /* Required for border-spacing to work */
-            border-spacing: 20px 15px; /* Horizontal space 0, Vertical space 10px */
+            border-spacing: 0 15px; /* Horizontal space 0, Vertical space 10px */
             width: 535px;
             font-weight: 300;
             font-size: em(14px);
             background: #fff;
             box-shadow: 0 0 4px $text;
 
+            thead {
+                td {
+                    border: none;
+                }
+            }
+
             tr + tr {
                 margin-top: 15px;
+            }
+
+            td {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $accent;
+
+                &:first-child {
+                    width: 50%;
+                    padding-left: 20px;
+                }
+
+                &:last-child {
+                    padding-right: 20px;
+                }
             }
         }
 
@@ -720,6 +740,7 @@
 
                 &__btn {
                     i {
+                        color: $text;
                         font-size: em(30px);
                     }
                 }
@@ -791,9 +812,11 @@
         &-nav {
             margin-left: -20px;
             margin-right: -20px;
+            width: 100%;
 
             &__btn {
                 margin: 10px 20px;
+                flex-grow: 1;
                 border-color: $text;
 
                 &.active {

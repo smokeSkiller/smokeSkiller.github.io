@@ -186,6 +186,7 @@
             position: relative;
             flex-grow: 1;
             padding: 12px;
+            color: $text;
             font-size: em(24px);
             font-weight: 500;
 
@@ -481,7 +482,7 @@
     text-align: center;
     color: $text;
     font-size: em(24px);
-    border: 1px solid $gold;
+    border: 2px solid $gold;
 
     &.filled {
         background: $gold;
