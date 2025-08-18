@@ -281,8 +281,6 @@ $(function() {
 
 	//! Solutions slider
 	$(window).on('load', function () {
-		console.log('Loaded!');
-
 		const solutionsSlider = new Swiper('.solutions-custom-slider', {
 			centeredSlides: true,
 			// loopAdditionalSlides: 16,
@@ -312,6 +310,7 @@ $(function() {
 				320: {
 					loop: false,
 					slidesPerView: 'auto',
+					allowTouchMove: true,
 				},
 			},
 

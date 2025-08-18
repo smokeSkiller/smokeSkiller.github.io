@@ -846,6 +846,8 @@
                 &__item {
                     position: relative;
                     padding-bottom: 10px;
+                    width: 100%;
+                    color: $text;
                     text-align: left;
                     font-size: em(24px);
                     font-weight: 500;

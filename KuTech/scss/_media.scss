@@ -791,6 +791,8 @@
 
         // Custom
         &-custom {
+            min-height: 670px;
+
             &:after {
                 top: 210px;
                 width: 1500px;
@@ -809,6 +811,12 @@
 
                     &__icon {
                         max-width: 60%;
+                    }
+                }
+
+                .swiper-slide {
+                    &.next-group-1, &.prev-group-1, &.next-group-2, &.prev-group-2, &.next-group-3, &.prev-group-3,  &.next-group-4, &.prev-group-4 {
+                        transform: translateY(10px) scale(1);
                     }
                 }
 
