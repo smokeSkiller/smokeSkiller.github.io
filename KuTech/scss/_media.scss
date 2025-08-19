@@ -27,23 +27,19 @@
     // Main equipment
     .main-equipment {
         &-slider {
-            &__wrapper {
-                margin-top: 30px;
+            margin-top: 150px;
+
+            &-nav {
+                top: -80px;
             }
 
             &__text {
-                top: -15px;
+                top: -90px;
             }
 
             &__item {
-                &.swiper-slide-active {
-                    img {
-                        max-height: 350px;
-                    }
-                }
-
                 img {
-                    max-height: 250px;
+                    max-height: 300px;
                 }
             }
         }
@@ -178,12 +174,12 @@
     // Main equipment
     .main-equipment {
         &-slider {
-            &__wrapper {
-                margin-top: 80px;
+            &-nav {
+                top: -120px;
             }
 
             &__text {
-                top: -55px;
+                top: -125px;
             }
         }
     }
@@ -268,8 +264,10 @@
 
         // Custom
         &-custom {
-            &:after {
-                top: 385px;
+            &-slider {
+                &:after {
+                    top: 20px;
+                }
             }
         }
 
@@ -338,6 +336,7 @@
 
             &__item {
                 font-size: em(16px);
+                opacity: 1;
                 
                 &:after {
                     top: 6px;
@@ -545,11 +544,14 @@
     // Main equipment
     .main-equipment {
         &:after {
-            @include box(1000px, 60%);
+            @include box(1000px, 52%);
         }
 
         &-slider {
+            margin-top: 90px;
+
             &__text {
+                top: -50px;
                 max-width: 70%;
                 font-size: em(16px);
             }
@@ -561,18 +563,17 @@
             &__item {
                 align-items: flex-end;
                 max-width: 100%;
-                // width: auto;
                 height: 360px;
 
                 &.swiper-slide-active {
                     img {
-                        max-height: 100%;
-                        max-width: 100%;
+                        transform: none;
                     }
                 }
 
                 img {
-                    max-height: 80%;
+                    max-height: 100%;
+                    max-width: 100%;
                 }
             }
         }
@@ -725,6 +726,8 @@
     }
 
     .equipment {
+        overflow: hidden;
+
         .description {
             &-slider {
                 overflow: visible;
@@ -793,11 +796,6 @@
         &-custom {
             min-height: 670px;
 
-            &:after {
-                top: 210px;
-                width: 1500px;
-            }
-
             &__text {
                 font-size: em(16px);
             }
@@ -805,6 +803,11 @@
             &-slider {
                 margin-top: 60px;
                 height: 70px;
+
+                &:after {
+                    top: 27px;
+                    width: 1500px;
+                }
 
                 &-item {
                     height: 52px;
@@ -948,10 +951,6 @@
 
     //! Solutions page
     .solutions-custom {
-        &:after {
-            top: 230px;
-        }
-
         &-slider {
             &-item {
                 @include box(52px);

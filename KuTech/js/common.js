@@ -24,7 +24,9 @@ $(function() {
 	const solutionsBannerText = $('.solutions-banner__text');
 
 	//! AOS init
-	AOS.init();
+	AOS.init({
+		once: true
+	});
 
 	//! Header & menu
 	// Open mobile menu
@@ -100,9 +102,21 @@ $(function() {
 						});
 					}
 
-					// Show lists
+					// Show lists from bottom to top
 					if(lists.length > 0) {
-						lists.fadeIn(200);
+						let fadeTime = 0;
+						const listsItems = lists.find('li');
+						let i = listsItems.length;
+
+						while (i > 0) {
+							i--;
+							fadeTime += 300;
+
+							const listItem = listsItems.eq(i);
+							setTimeout(function () {
+								listItem.css('opacity', '1');
+							}, fadeTime);
+						}
 					}
 
 					// Show text
@@ -118,7 +132,7 @@ $(function() {
 
 	//! Main equipment & certificates & description-slider
 	$(document).ready(function () {
-		// Main equipment slider
+		//* Main equipment slider
 		const mainEquipmentSlider = new Swiper('.main-equipment-slider', {
 			// Optional parameters
 			// slidesPerView: 'auto',
@@ -157,7 +171,7 @@ $(function() {
 			$('.main-equipment-slider__text').text(title);
 		});
 
-		// Certificates slider
+		//* Certificates slider
 		const certificatesSlider = new Swiper('.modal-slider', {
 			slidesPerView: 1,
 			loop: true,
@@ -168,7 +182,7 @@ $(function() {
 			},
 		});
 
-		// Description slider
+		//* Description slider
 		const descriptionSlider = new Swiper('.description-slider', {
 			// Optional parameters
 			spaceBetween: 20,
@@ -193,6 +207,41 @@ $(function() {
 				nextEl: '.slider-nav__next',
 				prevEl: '.slider-nav__prev',
 			},
+		});
+
+		// Zoom images
+		$('.description-slider-item').on('click', function () {
+			let items = [];
+
+			$('.description-slider-item').each(function() {
+				let slideBgSrc = $(this).css('background-image').replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+
+				items.push({
+					src: slideBgSrc,
+				});
+			});
+
+			var index = $('.description-slider-item').index(this);
+
+			// Открываем попап
+			$.magnificPopup.open({
+				items: items,
+				type: 'image',
+				gallery: {
+					enabled: true
+				},
+				// mainClass: 'mfp-with-zoom',
+				// zoom: {
+				// 	enabled: true,
+				// 	duration: 300
+				// },
+				callbacks: {
+					open: function() {
+						// Устанавливаем начальный индекс
+						this.goTo(index);
+					}
+				}
+			});
 		});
 	});
 
@@ -284,7 +333,7 @@ $(function() {
 		const solutionsSlider = new Swiper('.solutions-custom-slider', {
 			centeredSlides: true,
 			// loopAdditionalSlides: 16,
-			// autoplay: true,
+			autoplay: true,
 			initialSlide: 5,
 			spaceBetween: 100,
 			rewind: true,

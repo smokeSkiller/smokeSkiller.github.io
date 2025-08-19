@@ -349,7 +349,7 @@
         bottom: 0;
         right: 0;
         max-width: 330px;
-        display: none;
+        
 
         &__item + &__item {
             margin-top: 15px;
@@ -357,9 +357,11 @@
 
         &__item {
             position: relative;
+            opacity: 0;
             color: #fff;
             font-size: em(24px);
             font-weight: 500;
+            transition: all .3s ease;
 
             &:after {
                 position: absolute;
