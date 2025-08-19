@@ -273,6 +273,19 @@
 
         // Interface
         &-interface {
+            &-nav {
+                margin-left: -20px;
+                margin-right: -20px;
+
+                &__btn + &__btn {
+                    margin-left: 20px;
+                }
+
+                &__btn {
+                    margin: 10px 20px;
+                }
+            }
+
             &-content {
                 &.active {
                     flex-direction: column;
@@ -843,6 +856,10 @@
             &-nav {
                 margin-left: -5px;
                 margin-right: -5px;
+
+                &__btn + &__btn {
+                    margin-left: 5px;
+                }
 
                 &__btn {
                     margin: 5px;

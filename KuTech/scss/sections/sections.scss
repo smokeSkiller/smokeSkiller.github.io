@@ -709,6 +709,7 @@
 
             &-item {
                 height: 92px;
+                cursor: pointer;
 
                 &__icon {
                     max-width: 62px;
@@ -753,9 +754,16 @@
                 right: 0;
 
                 &__btn {
+                    &:hover {
+                        i {
+                            color: $gold;
+                        }
+                    }
+
                     i {
                         color: $text;
                         font-size: em(30px);
+                        transition: all .3s ease;
                     }
                 }
 
@@ -767,6 +775,8 @@
 
         // Content (Bottom slider)
         &-content {
+            min-height: 500px;
+
             &-item {
                 justify-content: center;
                 align-items: center;
@@ -824,12 +834,14 @@
     &-interface {
         //* Nav 
         &-nav {
-            margin-left: -20px;
-            margin-right: -20px;
+
             width: 100%;
 
+            &__btn + &__btn {
+                margin-left: 30px;
+            }
+
             &__btn {
-                margin: 10px 20px;
                 flex-grow: 1;
                 border-color: $text;
 

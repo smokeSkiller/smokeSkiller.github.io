@@ -332,13 +332,17 @@ $(function() {
 	$(window).on('load', function () {
 		const solutionsSlider = new Swiper('.solutions-custom-slider', {
 			centeredSlides: true,
-			// loopAdditionalSlides: 16,
-			autoplay: true,
+			autoplay: {
+				delay: 5000,
+				pauseOnMouseEnter: true,
+				disableOnInteraction: true,
+			},
 			initialSlide: 5,
 			spaceBetween: 100,
 			rewind: true,
 			loop: true,
 			allowTouchMove: false,
+			slideToClickedSlide: true,
 
 			// Navigation arrows
 			navigation: {
