@@ -128,7 +128,7 @@
         left: 50%;
         transform: translateX(-50%);
         @include box(2000px, 78%);
-        content: '';
+        content: none;
         background-image: url('../img/equipments_slider_bg.png');
         background-size: cover;
         background-position: center;
