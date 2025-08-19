@@ -775,8 +775,6 @@
 
         // Content (Bottom slider)
         &-content {
-            min-height: 500px;
-
             &-item {
                 justify-content: center;
                 align-items: center;
@@ -834,7 +832,6 @@
     &-interface {
         //* Nav 
         &-nav {
-
             width: 100%;
 
             &__btn + &__btn {
