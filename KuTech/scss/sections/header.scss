@@ -54,7 +54,7 @@
     z-index: 889;
     top: 0;
     right: 0;
-    @include box(60vw, 90vh);
+    @include box(60vw, 100vh);
     display: none;
     background: rgba($color: $text, $alpha: .2);
     backdrop-filter: blur(20px);

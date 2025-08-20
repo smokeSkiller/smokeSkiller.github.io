@@ -414,23 +414,25 @@ $(function() {
 		let isAutoplayStopped = false;
 
 		function checkSliderVisibility() {
-			const $sliderSection = $('.solutions-custom-slider'); // Замените на ваш селектор
-			const sliderTop = $sliderSection.offset().top;
-			const sliderBottom = sliderTop + $sliderSection.outerHeight();
-			const windowTop = $(window).scrollTop();
-			
-			// Если прокрутили ВНИЗ и слайдер не виден
-			if (windowTop > sliderBottom) {
-				if (solutionsSlider.autoplay.running && !isAutoplayStopped) {
-					solutionsSlider.autoplay.stop();
-					isAutoplayStopped = true;
-					console.log('Autoplay остановлен - прокрутка вниз');
-				}
-			} else {
-				if (!solutionsSlider.autoplay.running && isAutoplayStopped) {
-					solutionsSlider.autoplay.start();
-					isAutoplayStopped = false;
-					console.log('Autoplay запущен - прокрутка вверх');
+			if($('.solutions-custom-slider').length > 0) {
+				const $sliderSection = $('.solutions-custom-slider'); // Замените на ваш селектор
+				const sliderTop = $sliderSection.offset().top;
+				const sliderBottom = sliderTop + $sliderSection.outerHeight();
+				const windowTop = $(window).scrollTop();
+				
+				// Если прокрутили ВНИЗ и слайдер не виден
+				if (windowTop > sliderBottom) {
+					if (solutionsSlider.autoplay.running && !isAutoplayStopped) {
+						solutionsSlider.autoplay.stop();
+						isAutoplayStopped = true;
+						console.log('Autoplay остановлен - прокрутка вниз');
+					}
+				} else {
+					if (!solutionsSlider.autoplay.running && isAutoplayStopped) {
+						solutionsSlider.autoplay.start();
+						isAutoplayStopped = false;
+						console.log('Autoplay запущен - прокрутка вверх');
+					}
 				}
 			}
 		}
