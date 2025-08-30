@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box !important;
+    outline: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $steel-blue;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $light;
+        border-radius: 5px;
+    }
+}
+
+ul, menu {
+    list-style: none;
+}
+
+a {
+    color: $light;
+    text-decoration: none;
+    outline: none;
+    word-break: break-word;
+    transition: all .3s ease;
+}
+
+input, textarea{
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 400;
+}

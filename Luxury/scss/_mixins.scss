@@ -1,0 +1,51 @@
+@mixin font-face($name, $file) {
+    @font-face {
+        font-family: "#{$name}";
+        // src: url("#{$file}.eot");
+        // src: url("#{$file}.eot?#iefix") format("embedded-opentype"),
+        // url("#{$file}.woff") format("woff"),
+        src: url("#{$file}.ttf") format("truetype");
+        // url("#{$file}.svg?#webfont") format("svg");
+    }
+}
+
+//! ABSOLUTE POSITIONING 
+@mixin abs-position ($top, $right, $bottom, $left) {
+    position: absolute; 
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//! Box
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+//! Centering a block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//! Flexbox
+@mixin flexbox($justifyContent: flex-start, $alignItems: flex-start, $direct: row) {
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+//! Em
+$browser-context: 16px; // Default
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+@function vw($px, $base-vw: 410) {
+  @return #{($px / $base-vw) * 100}vw;
+}

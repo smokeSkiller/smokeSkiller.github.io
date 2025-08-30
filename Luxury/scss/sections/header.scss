@@ -1,0 +1,159 @@
+//! Header
+.header {
+    position: fixed;
+    top: 5px;
+    z-index: 555;
+    width: 100%;
+    background: rgba($color: $steel-blue, $alpha: .3);
+
+    &.active {
+        background: $steel-blue;
+    }
+
+    &-inner {
+        position: relative;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        @include box(100%);
+
+        &:after {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include box(100%, 2px);
+            content: '';
+            background: rgba($color: #CDCDCD, $alpha: .2);
+        }
+    }
+
+    &-logo {
+        font-size: em(25px);
+    }
+
+    &-pc-menu {
+        li + li {
+            margin-left: 85px;
+        }
+
+        a {
+            color: $light;
+            font-size: em(18px);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-burger-btn {
+        position: relative;
+        @include flexbox(space-between, center, column);
+        @include box(130px, 20px);
+
+        &.active {
+            span {
+                position: absolute;
+                top: 50%;
+
+                &:nth-child(1) {
+                    transform: translateY(-50%) rotate(15deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(-50%) rotate(-15deg);
+                }
+            }
+        }
+
+        span {
+            @include box(100%, 3px);
+            background: $light;
+            transition: all .3s ease;
+        }
+    }
+}
+
+// Top empty
+.top-empty {
+    @include box(100%, 30px);
+}
+
+// Main nav
+.main-nav {
+    position: fixed;
+    z-index: 555;
+    top: vw(106, 1920);
+    left: 100%;
+    @include box(100%, calc(100vh - vw(106, 1920)));
+    background: $steel-blue;
+    overflow-y: auto;
+    transition: all .5s ease;
+
+    &.active {
+        left: 0;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gray;
+        border-radius: 5px;
+    }
+
+    &-menu {
+        &:nth-child(1) {
+            width: 70%;
+
+            li a {
+                text-transform: uppercase;
+            }
+        }
+
+        li + li {
+            margin-top: vw(15, 1920);
+        }
+        
+        li {
+            a {
+                position: relative;
+                color: $light;
+                font-size: vw(42, 1920);
+
+                &:hover {
+                    &:after {
+                        width: 103%;
+                    }
+                }
+
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include box(0, 1px);
+                    content: '';
+                    background: $light;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
+    &__text {
+        width: 100%;
+        display: block;
+        color: $light;
+        font-size: vw(16, 1920);
+    }
+
+    &__img {
+        @include box(90%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 80px;
+    }
+}

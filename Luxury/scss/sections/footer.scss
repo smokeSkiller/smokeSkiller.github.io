@@ -1,0 +1,67 @@
+.footer {
+    border-radius: 50px;
+    padding-bottom: 0;
+    
+    * {
+        color: $steel-blue;
+    }
+
+    &-map {
+        height: 650px;
+    }
+
+    &-text + &-text {
+        margin-top: 25px;
+    }
+
+    &-text {
+        font-size: em(20px);
+    }
+
+    &-column {
+        &__title {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: em(25px);
+        }
+    }
+
+    &-menu {
+        li + li {
+            margin-top: 15px;
+        }
+
+        li a {
+            position: relative;
+            text-transform: uppercase;
+            font-size: em(25px);
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                @include box(0%, 1px);
+                content: '';
+                background: $steel-blue;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &-legend {
+        margin-top: 60px;
+        color: rgba($color: $steel-blue, $alpha: .3);
+        font-size: em(196px);
+    }
+
+    &-bottom {
+        border-top: 1px solid rgba($color: #5E5E5E66, $alpha: .4);
+    }
+}
