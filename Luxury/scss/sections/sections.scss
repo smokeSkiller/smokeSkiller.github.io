@@ -3,7 +3,7 @@
     position: relative;
     z-index: 1;
     padding-bottom: 60px;
-    @include box(100%, 950px);
+    @include box(100%, 1050px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 35%;
@@ -37,8 +37,8 @@
         margin-top: 10px;
         margin-left: -25px;
         color: $light;
-        font-size: em(268px);
-        line-height: 200px;
+        font-size: em(210px);
+        line-height: 75%;
     }
 
     &__btn {
@@ -50,12 +50,8 @@
 .section-a {
     margin-top: -40px;
     background: $light;
-
-    &__title {
-        span {
-            margin-left: 14%;
-        }
-    }
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 
     &__text {
         color: $steel-blue;
@@ -87,7 +83,7 @@
     }
 
     &-column {
-        width: calc(50% - 35px);
+        width: calc(50% - 15px);
     }
 
     &__btn {
@@ -122,8 +118,8 @@
         
         &-item {
             position: sticky;
-            top: 0;
-            @include box(100%, 855px);
+            top: 110px;
+            @include box(100%, 700px);
             padding-top: 35px;
             padding-bottom: 35px;
             background-size: cover;
@@ -143,9 +139,9 @@
             // Content
             &-content {
                 @include flexbox(space-between, flex-start, column);
-                @include box(60%, 100%);
+                @include box(50%, 100%);
                 padding: 35px;
-                background-color: rgba($color: $steel-blue, $alpha: .55);
+                background-color: rgba($color: $steel-blue, $alpha: .7);
                 border-radius: 50px;
 
                 * {
@@ -289,7 +285,7 @@
             }
 
             &__text {
-                margin-bottom: 15px;
+                margin-bottom: 5px;
                 color: $light;
                 font-size: em(20px);
             }
@@ -452,13 +448,20 @@
     }
 }
 
+//! Section I
+.section-i {
+    padding-top: 0;
+}
+
 //! Section J
 .section-j {
     border-radius: 50px;
     padding-bottom: 60px;
 
     &__title {
-        width: 80%;
+        span {
+            margin-right: 150px;
+        }
     }
 
     &-slider {
@@ -486,7 +489,7 @@
 
             &__title {
                 color: $light;
-                line-height: 84%;
+                line-height: 100%;
                 font-size: em(33px);
             }
         }
@@ -629,6 +632,7 @@
 
         &-links {
             padding-right: 30px;
+            width: 30%;
 
             li + li {
                 margin-top: 40px;

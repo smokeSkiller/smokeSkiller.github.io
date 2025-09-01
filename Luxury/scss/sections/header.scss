@@ -1,10 +1,11 @@
 //! Header
 .header {
     position: fixed;
-    top: 5px;
+    top: 0;
     z-index: 555;
     width: 100%;
-    background: rgba($color: $steel-blue, $alpha: .3);
+    background: rgba($color: $steel-blue, $alpha: .55);
+    border-bottom: 1px solid rgba($color: #CDCDCD, $alpha: .5);
 
     &.active {
         background: $steel-blue;
@@ -15,33 +16,37 @@
         padding-top: 35px;
         padding-bottom: 35px;
         @include box(100%);
-
-        &:after {
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            @include box(100%, 2px);
-            content: '';
-            background: rgba($color: #CDCDCD, $alpha: .2);
-        }
     }
 
     &-logo {
-        font-size: em(25px);
+        font-size: em(20px);
     }
 
     &-pc-menu {
         li + li {
-            margin-left: 85px;
+            margin-left: 50px;
         }
 
         a {
+            position: relative;
             color: $light;
             font-size: em(18px);
 
+            &:after {
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include box(0, 1px);
+                content: '';
+                background: $light;
+                transition: all .3s ease;
+            }
+
             &:hover {
-                text-decoration: underline;
+                &:after {
+                    width: 100%;
+                }
             }
         }
     }

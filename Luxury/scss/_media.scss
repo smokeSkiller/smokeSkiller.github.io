@@ -124,6 +124,18 @@
     .faq {
         width: 100%;
 
+        &.faq-light {
+            .faq-item {
+                &.opened {
+                    padding-bottom: 15px;
+                }
+
+                &-question {
+                    padding: 15px 0;
+                }
+            }
+        }
+
         &-column {
             width: 100%;
 
@@ -181,7 +193,13 @@
     .start-banner {
         height: 750px;
         padding-bottom: 30px;
-        border-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        &:after {
+            border-radius: inherit;
+            height: inherit;
+        }
 
         &-inner {
             justify-content: flex-end;
@@ -209,6 +227,8 @@
     // Section A
     .section-a {
         margin-top: -10px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
 
         &__text {
             font-size: em(16px);
@@ -246,11 +266,11 @@
     .section-b {
         &-slider {
             &-item + &-item {
-                margin-top: 10px;
+                margin-top: 0;
             }
 
             &-item {
-                top: 20px;
+                top: 50px;
                 height: auto;
                 background: $light;
                 border-radius: 15px;
@@ -350,6 +370,10 @@
     // Section E
     .section-e {
         &-slider {
+            &-wrapper {
+                justify-content: flex-start;
+            }
+
             &-item {
                 padding: 20px;
                 height: 550px;
@@ -585,6 +609,7 @@
 
             &-links {
                 margin-top: 30px;
+                width: 100%;
 
                 li {
                     a {

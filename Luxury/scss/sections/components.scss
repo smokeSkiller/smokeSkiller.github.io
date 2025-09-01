@@ -31,10 +31,17 @@
         margin-left: 35px;
     }
 
-    button i {
-        color: $steel-blue;
-        font-size: em(40px);
+    button {
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
+
+        i {
+            color: $steel-blue;
+            font-size: em(40px);
+        }
     }
+
 }
 
 // Slide link
@@ -81,7 +88,23 @@
         }
 
         .faq-item {
-            border-color: rgba($color: $gray, $alpha: .3);
+            padding: 0;
+            border-top: none;
+            border-bottom: none;
+
+            &:first-child {
+                border-top: 1px solid rgba($color: $gray, $alpha: .3);
+            }
+
+            &.opened {
+                padding-bottom: 35px;
+                border-bottom: 1px solid rgba($color: $gray, $alpha: .3);
+            }
+
+            &-question {
+                padding: 35px 0;
+                border-bottom: 1px solid rgba($color: $gray, $alpha: .3);
+            }
 
             &-answer {
                 padding-top: 30px;
@@ -171,11 +194,7 @@
                     font-size: em(25px);
 
                     &:nth-child(1) {
-                        width: 70%;
-                    }
-
-                    &:nth-child(2) {
-                        text-align: end;
+                        width: 80%;
                     }
 
                     span {
@@ -209,6 +228,7 @@
     font-size: em(25px);
     border: 1px solid $light;
     border-radius: 20px;
+    transition: all .5s ease;
 
     &.dark {
         color: $steel-blue;
@@ -236,15 +256,15 @@
 // Section title
 .section-title {
     display: block;
-    width: 75%;
-    padding-right: 180px;
     font-size: em(53px);
     line-height: 45px;
     text-align: left;
     color: $steel-blue;
 
     span {
+        margin-left: 155px;
         display: block;
+        font-family: 'Century Gothic', sans-serif;
     }
 
     &.light {
