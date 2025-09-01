@@ -88,7 +88,7 @@
 .main-nav {
     position: fixed;
     z-index: 555;
-    top: vw(106, 1920);
+    top: vw(96, 1920);
     left: 100%;
     @include box(100%, calc(100vh - vw(106, 1920)));
     background: $steel-blue;
