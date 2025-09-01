@@ -410,7 +410,7 @@
 
     &-item {
         position: sticky;
-        top: 20px;
+        top: 100px;
         margin-top: 70px;
         @include flexbox(space-between, stretch);
 
@@ -419,7 +419,7 @@
         }
 
         &__img {
-            height: 825px;
+            height: 750px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
