@@ -1,10 +1,14 @@
 const qr = document.querySelector('.qr');
+const qrContainer = document.querySelector('.qr-container');
 const openQrBtn = document.querySelector('.session-box-qr-btn');
 const qrBackBtn = document.querySelector('.qr-back-btn');
 const video = document.querySelector('.scan-video');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const text = document.querySelector('.qr-text');
+
+// Устанавливаем высоту контейнера исходя из высоты окна
+qrContainer.style.height = (window.innerHeight - 40) + 'px';
 
 // Открытие при нажатии
 openQrBtn.addEventListener('click', function () {
@@ -22,8 +26,8 @@ openQrBtn.addEventListener('click', function () {
     .catch(err => {
         text.textContent = "Камера не доступна: " + err;
         console.error("Камера не доступна:", err);
-        qr.classList.remove('opened');
-        openPopup('#error-qr');
+        // qr.classList.remove('opened');
+        // openPopup('#error-qr');
     });
 
     function scan() {

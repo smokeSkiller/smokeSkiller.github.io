@@ -34,6 +34,13 @@ if(autoCompleteField) {
         }
     });
 
+    // Фикс фокуса
+    autoCompleteField.addEventListener('focusin', function () {
+        document.querySelector('body').scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+
     //! Авто заполнение
     const autoCompleteJS = new autoComplete({ 
         placeHolder: "A 000 AA 777",
@@ -70,9 +77,9 @@ if(autoCompleteField) {
                     }, 100);
                 } else {
                     setTimeout(() => {
-                        document.querySelector('.search-box-bottom').scrollIntoView(
-                            {block: 'nearest'}
-                        );
+                        document.querySelector('body').scrollIntoView({
+                            behavior: 'smooth',
+                        });
                     }, 100);
                 }
             },
