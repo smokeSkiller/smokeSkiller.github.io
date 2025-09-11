@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Загрузка парковочной сессии</title>
+
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!--! Search message  -->
+        <main class="message payment-loading-msg">
+            <!-- Loader -->
+            <div class="message-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Title -->
+            <h1>Проводим оплату</h1>
+
+            <!-- Text -->
+            <p class="message-text">Это займет немного времени!</p>
+        </main>
+    </div>
+
+    <!-- Анимация прелоадера -->
+    <script>
+        const bars = document.querySelectorAll('.message-loader span');
+        const totalBars = bars.length;
+        const duration = 1600; // 3 секунды
+        const delayBetweenBars = 200; // 0.2 секунды между каждым
+
+        function startAnimation() {
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.backgroundColor = '#F5CB5C';
+                }, index * delayBetweenBars);
+            });
+
+            // Через 3 секунды сбрасываем все
+            setTimeout(() => {
+                bars.forEach(bar => {
+                bar.style.backgroundColor = '#A6A6A6';
+                });
+                // Запускаем снова
+                setTimeout(startAnimation, 100); // небольшая задержка для стабильности
+            }, duration);
+        }
+
+        // Запускаем анимацию
+        startAnimation();
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Поиск</title>
+
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!--! Header -->
+        <header class="header w-100">
+            <!-- Panel -->
+            <a class="panel" href="#">
+                <!-- User -->
+                <div class="panel-user">
+                    <img src="img/user_icon.png">
+                </div>
+
+                <!-- Text -->
+                <span>Вход или регистрация</span>
+
+                <!-- Arrow -->
+                <img src="img/arrow_icon.png" class="panel-arrow">
+            </a>
+
+            <!-- Link -->
+            <a href="#" class="header-link">Для чего нужна регистрация?</a>
+        </header>
+
+        <!--! Search -->
+        <main class="search w-100">
+            <!-- Title -->
+            <h1>Парковка ЖК Жайна</h1>
+
+            <!-- Subtitle -->
+            <p class="search-subtitle text-center">адрес парковки</p>
+            
+            <!-- Box -->
+            <div class="search-box w-100">
+                <!-- Top -->
+                <div class="search-box-top">
+                    <!-- Title -->
+                    <span class="search-box-title">Введите номер вашего авто:</span>
+
+                    <!-- Field -->
+                    <input type="text" id="autoComplete">
+                </div>
+
+                <!-- Bottom -->
+                <div class="search-box-bottom"></div>
+            </div>
+        </main>
+    </div>
+
+    <!--! Scripts -->
+    <!-- Autocomplete -->
+    <script src="js/autoComplete.min.js"></script>
+
+    <!-- Search -->
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.qr {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 666;
+    width: 100vw;
+    height: 100vh;
+    background: var(--text);
+}
+
+.qr.opened {
+    display: block;
+}
+
+/* Inner */
+.qr-inner {
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video */
+.scan-video {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container */
+.qr-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Content */
+.qr-title, .qr-subtitle, .qr-text {
+    text-align: center;
+    color: #fff;
+}
+
+.qr-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.qr-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Subtitle */
+.qr-subtitle {
+    font-size: 14px;
+}
+
+/* Text */
+.qr-text {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Scan */
+.qr-scan {
+    position: relative;
+    margin-top: 30px;
+    align-self: center;
+    max-width: 220px;
+}

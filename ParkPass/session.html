@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Поиск</title>
+
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!--! Session -->
+        <main class="session">
+            <!-- Box -->
+            <div class="session-box">
+                <!-- Image -->
+                <div class="session-box-img" style="background-image: url('img/session.jpg');">
+                    <!-- Car number -->
+                    <span class="session-box-car-number">Т 319 ОН 31</span>
+                </div>
+
+                <!-- Info -->
+                <ul class="session-box-info">
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon1.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Въезд</span>
+                            <span>сегодня 14:08</span>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon2.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Парковочная зона</span>
+                            <span>ТЦ Метрополис</span>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon3.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Время на парковке</span>
+                            <b>05ч 23м</b>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Row -->
+                <div class="d-flex justify-content-between" style="margin-top: 10px;">
+                    <b>Сумма к оплате</b>
+                    <b>800 ₽</b>
+                </div>
+
+                <!-- Row -->
+                <div class="d-flex justify-content-between" style="margin-top: 10px;">
+                    <span>Комиссию сервиса</span>
+                    <span>320 ₽</span>
+                </div>
+
+                <!-- Row -->
+                <div class="d-flex justify-content-between" style="margin-top: 5px;">
+                    <span>Скидка по чеку</span>
+                    <span>120 ₽</span>
+                </div>
+
+                <!-- Checkbox -->
+                <label for="get-bill" class="session-box-checkbox">
+                    Получить чек об оплате на почту
+
+                    <!-- Field -->
+                    <div class="session-box-checkbox-field">
+                        <input type="checkbox" name="get-bill" id="get-bill">
+                        <div class="session-box-checkbox-field-wrapper"></div>
+                    </div>
+
+                    <!-- Email -->
+                    <input type="email" placeholder="example@gmail.com" id="get-bill-email" name="get-bill-email" class="session-box-checkbox-email">
+
+                    <!-- Error message -->
+                    <span class="session-box-checkbox-error-msg"></span>
+                </label>
+
+                <!--* Вариант, когда есть QR код -->
+                <!-- Row -->
+                <div class="d-flex justify-content-between" style="margin-top: 10px;">
+                    <!-- Button -->
+                    <button class="session-box-btn session-box-qr-btn" style="width: 64%;">
+                        <img src="img/scan-qr.png" alt="">
+                        <span>Отсканировать QR-код чека для получения скидки</span>
+                    </button>
+
+                    <!-- Button -->
+                    <button class="session-box-btn session-box-tarif-btn open-modal-btn" target-modal="#tarif-modal" style="width: calc(36% - 10px);">
+                        <img src="img/tarif.png" alt="">
+                        <span>Тарифы</span>
+                    </button>
+                </div>
+
+                <!--* Вариант, когда нет сканирования QR кода -->
+                <button class="session-box-btn session-box-tarif-btn justify-content-center open-modal-btn" target-modal="#tarif-modal" style="width: 100%; margin-top: 10px;">
+                    <img src="img/tarif.png" alt="">
+                    <span>Тарифы</span>
+                </button>
+            </div>
+
+            <!-- Bottom -->
+            <div class="session-bottom">
+                <div class="container w-100">
+                    <button class="btn gold session-bottom-btn">Оплатить 800 ₽</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!--! Modal -->
+    <div class="modal" id="tarif-modal">
+        <div class="modal-inner">
+            <!-- Title -->
+            <h2 class="modal-title">Тарифы парковочной зоны:</h2>
+
+            <!-- Text -->
+            <p class="modal-text"> 
+                Первый час - БЕСПЛАТНО
+                <br>
+                с 1 по 2 час - 200 руб/час
+                <br>
+                далее 300 руб/час
+            </p>
+
+            <!-- Close button -->
+            <button class="modal-close-btn btn gold">
+                <img src="img/close-mark.png">
+            </button>
+        </div>
+    </div>
+
+    <!--! Popups -->
+    <!-- Успешно -->
+    <div class="popup" id="success-qr">
+        <!-- Content -->
+        <div class="popup-content">
+            <!-- Image -->
+            <img src="img/popup-success.png" class="popup-img">
+
+            <!-- Title -->
+            <h3 class="popup-title">Скидка 126 ₽ применена</h3>
+
+            <div class="popup-line"></div>
+
+            <button class="popup-close">Ок</button>
+        </div>
+    </div>
+
+    <!-- Просрочен -->
+    <div class="popup" id="expired-qr">
+        <!-- Content -->
+        <div class="popup-content">
+            <!-- Image -->
+            <img src="img/popup-danger.png" class="popup-img">
+
+            <!-- Title -->
+            <h3 class="popup-title">Чек просрочен</h3>
+
+            <!-- Text -->
+            <p class="popup-text">Срок действия скидки истёк</p>
+
+            <div class="popup-line"></div>
+
+            <button class="popup-close">Ок</button>
+        </div>
+    </div>
+
+    <!-- Не соответствие условиям -->
+    <div class="popup" id="wrong-condition-qr">
+        <!-- Content -->
+        <div class="popup-content">
+            <!-- Image -->
+            <img src="img/popup-danger.png" class="popup-img">
+
+            <!-- Title -->
+            <h3 class="popup-title">Сумма на чеке не соответствует условиям акции</h3>
+
+            <!-- Text -->
+            <p class="popup-text">Сумма в чеке меньше <br> минимальной для скидки</p>
+
+            <div class="popup-line"></div>
+
+            <button class="popup-close">Ок</button>
+        </div>
+    </div>
+
+    <!-- Чек уже использован -->
+    <div class="popup" id="wrong-condition-qr">
+        <!-- Content -->
+        <div class="popup-content">
+            <!-- Image -->
+            <img src="img/popup-danger.png" class="popup-img">
+
+            <!-- Title -->
+            <h3 class="popup-title">Чек уже использован</h3>
+
+            <!-- Text -->
+            <p class="popup-text">Этот QR-код уже активировали <br> для скидки ранее</p>
+
+            <div class="popup-line"></div>
+
+            <button class="popup-close">Ок</button>
+        </div>
+    </div>
+
+    <!-- Неизвестная ошибка -->
+    <div class="popup" id="error-qr">
+        <!-- Content -->
+        <div class="popup-content">
+            <!-- Image -->
+            <img src="img/popup-danger.png" class="popup-img">
+
+            <!-- Title -->
+            <h3 class="popup-title">Неизвестная ошибка</h3>
+
+            <!-- Text -->
+            <p class="popup-text">Что-то пошло не так</p>
+
+            <div class="popup-line"></div>
+
+            <button class="popup-close">Ок</button>
+        </div>
+    </div>
+
+    <!--! QR Window -->
+    <div class="qr">
+        <!-- Inner -->
+        <div class="qr-inner">
+            <!-- Container -->
+            <div class="container qr-container">
+                <!-- Title -->
+                <h2 class="qr-title">Парковка ЖК Жайна</h2>
+
+                <!-- Content -->
+                <div class="qr-content">
+                    <!-- Subtitle -->
+                    <h3 class="qr-subtitle">Активация скидки</h3>
+
+                    <!-- Text -->
+                    <span class="qr-text">Наведите камеру на QR-код в чеке</span>
+
+                    <!-- Scan -->
+                    <img class="qr-scan" src="img/scanner-qr.png">
+                </div>
+
+                <!-- Btn -->
+                <button class="btn light qr-back-btn">Вернуться назад</button>
+            </div>
+
+            <!-- Video -->
+            <video class="scan-video"></video>
+
+            <!-- Canvas -->
+            <canvas id="canvas" hidden></canvas>
+        </div>
+    </div>
+
+    <!--! Scripts -->
+    <!-- Email validation -->
+    <script src="js/email-validation.js"></script>
+
+    <!--* Модальные окна -->
+    <!-- Hammer -->
+    <script src="js/hammer.min.js"></script>
+    <!-- Modal -->
+    <script src="js/modal.js"></script>
+
+    <!--* Считывание qr кода -->
+    <!-- jsQR -->
+    <script src="js/jsQR.min.js"></script>
+    <!-- Qr -->
+    <script src="js/qr.js"></script>
+</body>
+</html>

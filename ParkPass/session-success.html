@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Успешная сессия</title>
+
+    <!-- Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!--! Session -->
+        <main class="session">
+            <!-- Box -->
+            <div class="session-box">
+                <!-- Image -->
+                <div class="session-box-img" style="background-image: url('img/session.jpg');">
+                    <!-- Car number -->
+                    <span class="session-box-car-number">Т 319 ОН 31</span>
+                </div>
+
+                <!-- Info -->
+                <ul class="session-box-info">
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon1.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Въезд</span>
+                            <span>сегодня 14:08</span>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon2.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Парковочная зона</span>
+                            <span>ТЦ Метрополис</span>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- Icon -->
+                        <div class="icon">
+                            <img src="img/session_icon3.png">
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column">
+                            <span>Время на парковке</span>
+                            <b>05ч 23м</b>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Timer -->
+                <div class="session-timer">
+                    <!-- Text -->
+                    <span class="session-timer-text">Бесплатный выезд в течении:</span>
+
+                    <!-- Секунды вводите в атрибуте data-total-seconds -->
+                    <div class="session-timer-inner" id="timer" data-total-seconds="745">
+                        <div class="session-timer-decimal">
+                            <span class="min" id="min1">1</span>
+                            <span class="min" id="min2">2</span>
+                        </div>
+                        <div class="divider">:</div>
+                        <div class="session-timer-decimal">
+                            <span class="sec" id="sec1">2</span>
+                            <span class="sec" id="sec2">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--* Тарифы -->
+                <button class="session-box-btn session-box-tarif-btn justify-content-center open-modal-btn" target-modal="#tarif-modal" style="width: 100%; margin-top: 10px;">
+                    <img src="img/tarif.png" alt="">
+                    <span>Тарифы и оплата</span>
+                </button>
+
+                <!-- Text -->
+                <span class="session-box-bottom-text">После завершения бесплатного периода, <br> начнется платная парковка</span>
+            </div>
+        </main>
+    </div>
+
+    <!--! Modal -->
+    <div class="modal" id="tarif-modal">
+        <div class="modal-inner">
+            <!-- Title -->
+            <h2 class="modal-title">Тарифы парковочной зоны:</h2>
+
+            <!-- Text -->
+            <p class="modal-text"> 
+                Первый час - БЕСПЛАТНО
+                <br>
+                с 1 по 2 час - 200 руб/час
+                <br>
+                далее 300 руб/час
+            </p>
+
+            <!-- Close button -->
+            <button class="modal-close-btn btn gold">
+                <img src="img/close-mark.png">
+            </button>
+        </div>
+    </div>
+
+    <!--! Scripts -->
+    <!--* Модальные окна -->
+    <!-- Hammer -->
+    <script src="js/hammer.min.js"></script>
+    <!-- Modal -->
+    <script src="js/modal.js"></script>
+
+    <!--* Таймер -->
+    <script src="js/timer.js"></script>
+</body>
+</html>

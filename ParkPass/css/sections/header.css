@@ -1,0 +1,52 @@
+/** Panel */
+.header .panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 6px; 
+    width: 100%;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .15);
+}
+
+/* User */
+.header .panel-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+}
+
+.header .panel-user img {
+    max-width: 12px;
+}
+
+/* Text */
+.header .panel span {
+    margin-left: 13px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Arrow */
+.header .panel-arrow {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 7px;
+}
+
+/** Link */
+.header-link {
+    margin-top: 15px;
+    display: block;
+    color: var(--accent);
+    font-size: 10px;
+    text-decoration: underline;
+}
