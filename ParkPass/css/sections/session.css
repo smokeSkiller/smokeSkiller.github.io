@@ -7,6 +7,10 @@
     border-radius: 30px;
 }
 
+.session-box + .session-box {
+    margin-top: 15px;
+}
+
 /* Image */
 .session-box-img {
     position: relative;

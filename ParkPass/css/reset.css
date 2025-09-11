@@ -9,16 +9,10 @@
     font-weight: 400;
 }
 
- /* Предотвращаем прыжки */
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     position: relative;
     z-index: 1;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: #F0F0F0;
 }
 
