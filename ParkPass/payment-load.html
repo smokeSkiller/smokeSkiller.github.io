@@ -37,6 +37,15 @@
             <!-- Text -->
             <p class="message-text">Это займет немного времени!</p>
         </main>
+
+        <!-- Фикс прыжков на ios -->
+        <style>
+            /* Предотвращаем прыжки */
+            html, body {
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
     </div>
 
     <!-- Анимация прелоадера -->
@@ -55,11 +64,12 @@
 
             // Через 3 секунды сбрасываем все
             setTimeout(() => {
-                bars.forEach(bar => {
-                bar.style.backgroundColor = '#A6A6A6';
+                bars.forEach((bar, index) => {
+                    setTimeout(() => {
+                        bar.style.backgroundColor = '#A6A6A6';
+                    }, index * delayBetweenBars);
                 });
-                // Запускаем снова
-                setTimeout(startAnimation, 100); // небольшая задержка для стабильности
+                setTimeout(startAnimation, duration); // небольшая задержка для стабильности
             }, duration);
         }
 
