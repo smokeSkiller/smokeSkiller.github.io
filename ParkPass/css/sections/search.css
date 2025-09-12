@@ -16,6 +16,10 @@
     border-radius: 30px;
 }
 
+.search .search-box.top {
+    margin-top: 15px;
+}
+
 /* Top */
 .search .search-box-top {
     padding: 16px;

@@ -12,11 +12,12 @@ const popups = document.querySelectorAll('.popup');
 openModalBtns.forEach(function (openModalBtn) {
     openModalBtn.addEventListener('click', function () {
         const targetModal = document.querySelector(this.getAttribute('target-modal'));
+        const dataY = targetModal.getAttribute('data-y');
 
         targetModal.classList.add('opened');
-        
+
         setTimeout(function (params) {
-            targetModal.firstElementChild.style.transform = "translateY(65%)";
+            targetModal.firstElementChild.style.transform = `translateY(${dataY})`;
         }, 50);
     });
 });
@@ -31,8 +32,11 @@ closeModalBtns.forEach(function (closeModalBtn) {
 //* Закрытие модалки
 function closeModal() {
     modals.forEach(modal => {
-        modal.classList.remove('opened');
         modal.firstElementChild.style.transform = "translateY(100%)";
+
+        setTimeout(function () {
+            modal.classList.remove('opened');
+        }, 200)
     });
 }
 
@@ -54,6 +58,7 @@ modalInners.forEach(modalInner => {
 
     let startY = 0;
     let isOpened = false;
+    const modalY = modalInner.parentElement.getAttribute('data-y');
 
     hammer.on('panstart', (e) => {
         startY = e.deltaY;
@@ -62,7 +67,7 @@ modalInners.forEach(modalInner => {
     hammer.on('pandown', (e) => {
         const deltaY = (e.deltaY - startY);
 
-        modalInner.style.transform = `translateY(calc(${deltaY}px + 65%))`;
+        modalInner.style.transform = `translateY(calc(${deltaY}px + ${modalY}))`;
     });
 
     hammer.on('panend', (e) => {

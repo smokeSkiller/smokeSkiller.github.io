@@ -1,5 +1,6 @@
 //! DOM
 const autoCompleteField = document.getElementById('autoComplete');
+const searchBox = document.querySelector('.search-box');
 
 if(autoCompleteField) {
     //! Маска ввода
@@ -39,6 +40,8 @@ if(autoCompleteField) {
         document.querySelector('body').scrollIntoView({
             behavior: 'smooth',
         });
+
+        searchBox.classList.add('top');
     });
 
     //! Авто заполнение
@@ -63,25 +66,25 @@ if(autoCompleteField) {
                 }
 
                 // Фикс клавиатуры на мобилках
-                if (data.results.length > 0) {
-                    // Ждем немного пока отрендерятся результаты
-                    setTimeout(() => {
-                        const lastResult = list.lastElementChild;
-                        if (lastResult) {
-                            // Прокручиваем к последнему результату
-                            lastResult.scrollIntoView({ 
-                                behavior: 'smooth',
-                                block: 'nearest'
-                            });
-                        }
-                    }, 100);
-                } else {
-                    setTimeout(() => {
-                        document.querySelector('body').scrollIntoView({
-                            behavior: 'smooth',
-                        });
-                    }, 100);
-                }
+                // if (data.results.length > 0) {
+                //     // Ждем немного пока отрендерятся результаты
+                //     setTimeout(() => {
+                //         const lastResult = list.lastElementChild;
+                //         if (lastResult) {
+                //             // Прокручиваем к последнему результату
+                //             lastResult.scrollIntoView({ 
+                //                 behavior: 'smooth',
+                //                 block: 'nearest'
+                //             });
+                //         }
+                //     }, 100);
+                // } else {
+                //     setTimeout(() => {
+                //         document.querySelector('body').scrollIntoView({
+                //             behavior: 'smooth',
+                //         });
+                //     }, 100);
+                // }
             },
         },
         events: {
