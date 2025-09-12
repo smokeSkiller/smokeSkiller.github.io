@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(img) {
         setTimeout(() => {
-            img.setAttribute('src', 'img/car.png');
+            img.setAttribute('src', 'img/car_static.png');
             imgMark.style.display = "block";
             title.innerHTML = "Есть! Сессия найдена!";
             text.innerHTML = "<br><br>";
