@@ -163,10 +163,11 @@
 
 /*! Message */
 .message {
-    margin-top: 160px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    height: 85vh;
 }
 
 .message-text {

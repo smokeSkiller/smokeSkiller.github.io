@@ -1,6 +1,7 @@
 //! DOM
 const autoCompleteField = document.getElementById('autoComplete');
 const searchBox = document.querySelector('.search-box');
+const body = document.querySelector('body');
 
 if(autoCompleteField) {
     //! Маска ввода
@@ -44,6 +45,17 @@ if(autoCompleteField) {
         searchBox.classList.add('top');
     });
 
+    autoCompleteField.addEventListener('focusout', function () {
+        searchBox.classList.remove('top');
+    });
+
+    document.addEventListener('touchmove', (e) => {
+        if (document.activeElement && 
+            document.activeElement.matches('input, textarea, select')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
     //! Авто заполнение
     const autoCompleteJS = new autoComplete({ 
         placeHolder: "A 000 AA 777",
@@ -66,25 +78,25 @@ if(autoCompleteField) {
                 }
 
                 // Фикс клавиатуры на мобилках
-                // if (data.results.length > 0) {
-                //     // Ждем немного пока отрендерятся результаты
-                //     setTimeout(() => {
-                //         const lastResult = list.lastElementChild;
-                //         if (lastResult) {
-                //             // Прокручиваем к последнему результату
-                //             lastResult.scrollIntoView({ 
-                //                 behavior: 'smooth',
-                //                 block: 'nearest'
-                //             });
-                //         }
-                //     }, 100);
-                // } else {
-                //     setTimeout(() => {
-                //         document.querySelector('body').scrollIntoView({
-                //             behavior: 'smooth',
-                //         });
-                //     }, 100);
-                // }
+                if (data.results.length > 0) {
+                    // Ждем немного пока отрендерятся результаты
+                    setTimeout(() => {
+                        const lastResult = list.lastElementChild;
+                        if (lastResult) {
+                            // Прокручиваем к последнему результату
+                            lastResult.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'nearest'
+                            });
+                        }
+                    }, 100);
+                } else {
+                    setTimeout(() => {
+                        document.querySelector('body').scrollIntoView({
+                            behavior: 'smooth',
+                        });
+                    }, 100);
+                }
             },
         },
         events: {
