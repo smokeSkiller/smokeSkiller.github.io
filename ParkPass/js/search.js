@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img.setAttribute('src', 'img/car.png');
             imgMark.style.display = "block";
             title.innerHTML = "Есть! Сессия найдена!";
-            text.style.display = "none";
-        }, 4000);
+            text.innerHTML = "<br><br>";
+        }, 3000);
     }
 });
