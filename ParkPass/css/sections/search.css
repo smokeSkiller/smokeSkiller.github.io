@@ -6,7 +6,7 @@
 .search .search-subtitle {
     margin-top: 2px;
     color: var(--accent);
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 /** Box */
@@ -32,7 +32,7 @@
 .search .search-box-title {
     margin-bottom: 20px;
     display: block;
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 /* Field */
@@ -40,7 +40,7 @@
     margin-bottom: 10px;
     width: 100%;
     padding: 6px;
-    font-size: 18px;
+    font-size: calc(18 / var(--base-width) * 100vw);
     text-align: center;
     background: #F0F0F0;
     border-radius: 30px;
@@ -70,13 +70,13 @@
 }
 
 .search-box-no-results .icon {
-    width: 23px;
-    height: 23px;
+    width: calc(23 / var(--base-width) * 100vw);
+    height: calc(23 / var(--base-width) * 100vw);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 16px;
+    font-size: calc(16 / var(--base-width) * 100vw);
     font-weight: 900;
     background-color: #FF6B6B;
     border-radius: 50%;
@@ -84,13 +84,13 @@
 
 .search-box-no-results .text {
     margin-left: 7.5px;
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 /*! Search msg */
 /* Image */
 .search-msg .message-img img {
-    max-width: 103px;
+    max-width: calc(103 / var(--base-width) * 100vw);
 }
 
 /* Mark */
@@ -99,8 +99,8 @@
     top: -21px;
     right: -15px;
     display: none;
-    width: 38px;
-    height: 38px;
+    width: calc(38 / var(--base-width) * 100vw);
+    height: calc(38 / var(--base-width) * 100vw);
     border: 2px solid #5EE381;
     border-radius: 50%;
 }
@@ -124,8 +124,8 @@
     top: 49%;
     left: 17.5%;
     transform: rotate(50deg);
-    width: 13.85px;
-    height: 5.35px;
+    width: calc(13.85 / var(--base-width) * 100vw);
+    height: calc(5.35 / var(--base-width) * 100vw);
     animation-name: firstLine;
 }
 
@@ -135,8 +135,8 @@
         height: 0;
     }
     to {
-        width: 13.85px;
-        height: 5.35px;
+        width: calc(13.85 / var(--base-width) * 100vw);
+        height: calc(5.35 / var(--base-width) * 100vw);
     }
 }
 
@@ -145,8 +145,8 @@
     top: 43%;
     right: 14.5%;
     transform: rotate(-50deg);
-    width: 18.41px;
-    height: 5.35px;
+    width: calc(18.41 / var(--base-width) * 100vw);
+    height: calc(5.35 / var(--base-width) * 100vw);
     animation-name: secondLine;
 }
 
@@ -156,7 +156,7 @@
         height: 0;
     }
     to {
-        width: 18.41px;
-        height: 5.35px;
+        width: calc(18.41 / var(--base-width) * 100vw);
+        height: calc(5.35 / var(--base-width) * 100vw);
     }
 }

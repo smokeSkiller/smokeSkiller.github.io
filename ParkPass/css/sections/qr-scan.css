@@ -53,19 +53,19 @@
 
 /* Title */
 .qr-title {
-    font-size: 24px;
+    font-size: calc(24 / var(--base-width) * 100vw);
     font-weight: 500;
 }
 
 /* Subtitle */
 .qr-subtitle {
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 /* Text */
 .qr-text {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: calc(12 / var(--base-width) * 100vw);
 }
 
 /* Scan */
@@ -73,10 +73,10 @@
     position: relative;
     margin-top: 30px;
     align-self: center;
-    max-width: 220px;
+    max-width: calc(220 / var(--base-width) * 100vw);
 }
 
-/* Back btn */
+/* Back btn
 .qr-back-btn {
     
-}
+} */

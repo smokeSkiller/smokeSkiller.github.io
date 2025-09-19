@@ -67,5 +67,5 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: calc(24 / var(--base-width) * 100vw);
 }

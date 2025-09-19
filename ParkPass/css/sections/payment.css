@@ -1,4 +1,4 @@
 /** Payment success */
 .payment-success-msg img {
-    max-width: 211px;
+    max-width: calc(211 / var(--base-width) * 100vw);
 }

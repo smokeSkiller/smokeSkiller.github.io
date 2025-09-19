@@ -4,7 +4,7 @@
     text-align: center;
     width: 100%;
     color: var(--text);
-    font-size: 18px;
+    font-size: calc(18 / var(--base-width) * 100vw);
     font-weight: 500;
     border: 1px solid #E9E9E9;
     border-radius: 30px;
@@ -59,7 +59,7 @@
 .popup-title {
     margin-top: 20px;
     color: var(--text);
-    font-size: 16px;
+    font-size: calc(16 / var(--base-width) * 100vw);
     font-weight: 500;
 }
 
@@ -67,7 +67,7 @@
 .popup-text {
     margin-top: 7px;
     color: #938F99;
-    font-size: 12px;
+    font-size: calc(12 / var(--base-width) * 100vw);
 }
 
 /* Hr */
@@ -83,7 +83,7 @@
     margin-top: 15px;
     padding: 15px;
     text-align: center;
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 /*! Modal */
@@ -134,14 +134,14 @@
 
 /* Modal content */
 .modal-title {
-    font-size: 18px;
+    font-size: calc(18 / var(--base-width) * 100vw);
 }
 
 .modal-text {
     margin-top: 25px;
     text-align: center;
     color: var(--accent);
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
     line-height: 130%;
 }
 
@@ -173,7 +173,7 @@
 .message-text {
     margin-top: 8px;
     text-align: center;
-    font-size: 14px;
+    font-size: calc(14 / var(--base-width) * 100vw);
 }
 
 .message-img {
@@ -244,7 +244,6 @@
     transform: rotate(-45deg);
 }
 
-
 @keyframes fill {
     0% {
         background-color: #A6A6A6;
@@ -260,7 +259,7 @@
 /*! Properties */
 .container {
     margin: 0 auto;
-    max-width: 512px;
+    max-width: calc(512 / var(--base-width) * 100vw);
     padding: 15px;
 }
 

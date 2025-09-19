@@ -15,21 +15,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28px;
-    height: 28px;
+    width: calc(28 / var(--base-width) * 100vw);
+    height: calc(28 / var(--base-width) * 100vw);
     border: 1px solid var(--gold);
     border-radius: 50%;
 }
 
 .header .panel-user img {
-    max-width: 12px;
+    max-width: calc(12 / var(--base-width) * 100vw);
 }
 
 /* Text */
 .header .panel span {
     margin-left: 13px;
     color: var(--accent);
-    font-size: 12px;
+    font-size: calc(12 / var(--base-width) * 100vw);
     font-weight: bold;
 }
 
@@ -39,7 +39,7 @@
     right: 17px;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 7px;
+    max-width: calc(7 / var(--base-width) * 100vw);
 }
 
 /** Link */
@@ -47,6 +47,6 @@
     margin-top: 15px;
     display: block;
     color: var(--accent);
-    font-size: 10px;
+    font-size: calc(10 / var(--base-width) * 100vw);
     text-decoration: underline;
 }
