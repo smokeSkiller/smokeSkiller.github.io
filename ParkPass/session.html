@@ -128,13 +128,14 @@
             <!-- Bottom -->
             <div class="session-bottom">
                 <div class="container w-100">
-                    <button class="btn gold session-bottom-btn">Оплатить 800 ₽</button>
+                    <button class="btn gold session-bottom-btn open-modal-btn" target-modal="#payment-modal">Оплатить 800 ₽</button>
                 </div>
             </div>
         </main>
     </div>
 
     <!--! Modal -->
+    <!-- Tarif -->
     <div class="modal" id="tarif-modal" data-y="65%">
         <div class="modal-inner">
             <!-- Title -->
@@ -148,6 +149,214 @@
                 <br>
                 далее 300 руб/час
             </p>
+
+            <!-- Close button -->
+            <button class="modal-close-btn">
+                <img src="img/close-mark.png">
+            </button>
+        </div>
+    </div>
+
+    <!-- Payment -->
+    <div class="modal payment" id="payment-modal" data-y="65%">
+        <div class="modal-inner">
+            <!-- Button -->
+            <button class="payment-btn btn open-modal-btn" target-modal="#sbp-modal">
+                <!-- Icon -->
+                <img src="img/sbp-logo.png" alt="sbp logo">
+
+                <!-- Text -->
+                <span>Оплатить через СБП</span>
+            </button>
+
+            <!-- Button -->
+            <button class="payment-btn btn" id="another-payment-btn">
+                <!-- Text -->
+                <span>Другой способ оплаты</span>
+            </button>
+
+            <!--* Payment card -->
+            <form class="payment-card d-none" style="background-image: url(img/card-bg.png);">
+                <!-- Top row -->
+                <div class="w-100">
+                    <!-- Field -->
+                    <label for="card-number" class="payment-card-field">
+                        <span>Номер карты</span>
+
+                        <input type="text" id="card-number" name="card-number" class="w-100" placeholder="4277 4900 1382 5770" maxlength="19">
+                    </label>
+                </div>
+
+                <!-- Row -->
+                <div class="d-flex w-100" style="margin-top: 16px;">
+                    <!-- Field -->
+                    <label for="month-year" class="payment-card-field">
+                        <span>Месяц/год</span>
+                        
+                        <input type="text" id="month-year" name="month-year" maxlength="5" style="width: 42px;" placeholder="ММ/ГГ">
+                    </label>
+
+                    <!-- Field -->
+                    <label for="cvc" class="payment-card-field">
+                        <span>CVC/CVV</span>
+                        
+                        <input type="password" id="cvc" name="cvc" maxlength="3" style="width: 21.8px;" placeholder="000">
+                    </label>
+                </div>
+
+                <!-- Btn -->
+                <button class="payment-card-btn payment-btn btn">Оплатить 800 ₽</button>
+
+                <!-- Logo -->
+                <img src="img/mir-logo.png" alt="Мир логотип" class="payment-card-logo">
+            </form>
+
+            <!-- Close button -->
+            <button class="modal-close-btn" id="close-payment-modal">
+                <img src="img/close-mark.png">
+            </button>
+        </div>
+    </div>
+
+    <!-- SBP -->
+    <div class="modal" id="sbp-modal" data-y="5%">
+        <div class="modal-inner sbp">
+            <!-- Title -->
+            <h2 class="modal-title">Выберите банк</h2>
+
+            <!-- Search -->
+            <div class="sbp-search">
+                <input type="search" id="sbp-search-field" placeholder="Введите название банка">
+
+                <!-- Icon -->
+                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66203 1.93696C11.7688 3.71922 12.148 6.78649 10.6217 9.01487C10.5195 9.16401 10.4082 9.30957 10.2887 9.45081C10.1694 9.59189 10.0447 9.72533 9.91468 9.85068C7.97028 11.7255 4.88264 11.8602 2.77563 10.0781C0.527498 8.17651 0.246064 4.81261 2.14755 2.56441C4.04924 0.316201 7.41382 0.035262 9.66203 1.93696ZM11.0835 10.0566L12.3436 11.3296L12.3745 11.3596L12.4099 11.3858C12.4166 11.3912 12.4284 11.4011 12.4421 11.4143C12.4717 11.4427 12.5006 11.4767 12.5193 11.509C12.5296 11.5268 12.534 11.5378 12.5353 11.543C12.533 11.5499 12.5254 11.5668 12.5022 11.5943C12.4809 11.6194 12.4663 11.6303 12.4591 11.6346C12.4551 11.6345 12.4431 11.6336 12.4209 11.6253C12.3859 11.6122 12.3477 11.5894 12.3147 11.5649C12.2994 11.5535 12.2884 11.5428 12.2819 11.5371L10.9578 10.2022L11.0522 10.0966C11.0631 10.0838 11.0728 10.0695 11.0835 10.0566Z" stroke="#C1C1C1"/>
+                </svg>
+            </div>
+
+            <!-- Box -->
+            <div class="sbp-box">
+                <!-- Title -->
+                <h4 class="sbp-box-title">Популярные банки</h4>
+
+                <!-- Lists -->
+                <ul class="sbp-box-lists">
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/sber.png" alt="Сбербанк логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Сбербанк</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/alpha.png" alt="АЛЬФА-БАНК логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>АЛЬФА-БАНК</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/vtb.png" alt="Банк ВТБ логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Банк ВТБ</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/tbank.png" alt="Т-Банк логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Т-Банк</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Box -->
+            <div class="sbp-box">
+                <!-- Title -->
+                <h4 class="sbp-box-title">Популярные банки</h4>
+
+                <!-- Lists -->
+                <ul class="sbp-box-lists">
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/ray.png" alt="Райфайзенбанк логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Райфайзенбанк</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/gazprom.png" alt="Газпромбанк логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Газпромбанк</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/psb.png" alt="Банк ПСБ логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Банк ПСБ</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon -->
+                            <img src="img/sbp/sovkom.png" alt="Совкомбанк логотип" class="icon">
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h5>Совкомбанк</h5>
+
+                                <img src="img/arrow-right.png" class="arrow">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Close button -->
             <button class="modal-close-btn">
@@ -291,6 +500,9 @@
     <script src="js/hammer.min.js"></script>
     <!-- Modal -->
     <script src="js/modal.js"></script>
+
+    <!--* Оплата UI -->
+    <script src="js/payment.js"></script>
 
     <!--* Считывание qr кода -->
     <!-- jsQR -->

@@ -1,5 +1,10 @@
 /* For PC and Tablets */
 @media (min-width: 512px) {
+    /*! Reset */
+    h1 {
+        font-size: 24px;
+    }
+
     /*! Components */
     /* Buttons */
     .btn {
@@ -37,8 +42,146 @@
         max-width: 512px;
     }
 
+    /*! Header */
+    /** Panel */
+    /* User */
+    .header .panel-user {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header .panel-user img {
+        max-width: 12px;
+    }
+
+    /* Text */
+    .header .panel span {
+        font-size: 12px;
+    }
+
+    /* Arrow */
+    .header .panel-arrow {
+        max-width: 7px;
+    }
+
+    /** Link */
+    .header-link {
+        font-size: 10px;
+    }
+
     /*! Sections */
-    /* Session */
+    /** Search */
+    .search .search-subtitle {
+        font-size: 14px;
+    }
+
+    /* Title */
+    .search .search-box-title {
+        font-size: 14px;
+    }
+
+    /* Field */
+    .search .search-box input {
+        font-size: 18px;
+    }
+
+    .search-box-no-results .icon {
+        width: 23px;
+        height: 23px;
+        font-size: 16px;
+    }
+
+    .search-box-no-results .text {
+        font-size: 14px;
+    }
+
+    /* Image */
+    .search-msg .message-img img {
+        max-width: 103px;
+    }
+
+    /* Mark */
+    .search-msg-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+    .search-msg-mark-inner span:first-child {
+        width: 13.85px;
+        height: 5.35px;
+    }
+
+    @-webkit-keyframes firstLine {
+        from {
+            width: 0;
+            height: 0;
+        }
+        to {
+            width: 13.85px;
+            height: 5.35px;
+        }
+    }
+
+    @keyframes firstLine {
+        from {
+            width: 0;
+            height: 0;
+        }
+        to {
+            width: 13.85px;
+            height: 5.35px;
+        }
+    }
+
+    .search-msg-mark-inner span:last-child {
+        width: 18.41px;
+        height: 5.35px;
+    }
+
+    @-webkit-keyframes secondLine {
+        from {
+            width: 0;
+            height: 0;
+        }
+        to {
+            width: 18.41px;
+        height: 5.35px;
+        }
+    }
+
+    @keyframes secondLine {
+        from {
+            width: 0;
+            height: 0;
+        }
+        to {
+            width: 18.41px;
+            height: 5.35px;
+        }
+    }
+
+    /** QR */
+    /* Title */
+    .qr-title {
+        font-size: 24px;
+    }
+
+    /* Subtitle */
+    .qr-subtitle {
+        font-size: 14px;
+    }
+
+    /* Text */
+    .qr-text {
+        font-size: 12px;
+    }
+
+    /* Scan */
+    .qr-scan {
+        max-width: 220px;
+    }
+
+    /** Session */
     .session-box-img {
         height: 180px;
     }

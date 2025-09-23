@@ -37,6 +37,14 @@ function closeModal() {
         setTimeout(function () {
             modal.classList.remove('opened');
         }, 200)
+
+        // Payment modal
+        const paymentCard = document.querySelector('.payment-card');
+
+        if(paymentCard) {
+            paymentCard.classList.add('d-none');
+            document.getElementById('another-payment-btn').classList.remove('d-none');
+        }
     });
 }
 
