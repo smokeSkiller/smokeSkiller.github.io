@@ -16,6 +16,9 @@ openModalBtns.forEach(function (openModalBtn) {
 
         targetModal.classList.add('opened');
 
+        // Устанавливаем высоту контейнера исходя из высоты окна
+        targetModal.style.height = window.innerHeight + 'px';
+
         setTimeout(function (params) {
             targetModal.firstElementChild.style.transform = `translateY(${dataY})`;
         }, 50);
@@ -64,19 +67,19 @@ modalInners.forEach(modalInner => {
     const hammer = new Hammer(modalInner);
     hammer.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
 
-    let startY = 0;
-    let isOpened = false;
-    const modalY = modalInner.parentElement.getAttribute('data-y');
+    // let startY = 0;
+    // let isOpened = false;
+    // const modalY = modalInner.parentElement.getAttribute('data-y');
 
-    hammer.on('panstart', (e) => {
-        startY = e.deltaY;
-    });
+    // hammer.on('panstart', (e) => {
+    //     startY = e.deltaY;
+    // });
 
-    hammer.on('pandown', (e) => {
-        const deltaY = (e.deltaY - startY);
+    // hammer.on('pandown', (e) => {
+    //     const deltaY = (e.deltaY - startY);
 
-        modalInner.style.transform = `translateY(calc(${deltaY}px + ${modalY}))`;
-    });
+    //     modalInner.style.transform = `translateY(calc(${deltaY}px + ${modalY}))`;
+    // });
 
     hammer.on('panend', (e) => {
         if (e.deltaY > 0) {

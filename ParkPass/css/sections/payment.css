@@ -86,6 +86,10 @@
     transform: translateY(-50%);
 }
 
+.sbp-container {
+    overflow-y: auto;
+}
+
 /* Box */
 .sbp-box {
     margin-top: 20px;
@@ -127,6 +131,7 @@
 
 .sbp-box-lists .content .arrow {
     width: 5px;
+    margin-right: 10px;
 }
 
 /*! Message */
