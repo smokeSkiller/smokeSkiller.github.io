@@ -1,1 +1,0 @@
-import{_ as t,c as n,o,j as s,a}from"./index-U6MHBe1r.js";const c={},r={class:"btn-text"};function d(e,_){return o(),n("button",null,[s(e.$slots,"icon",{},void 0),a("span",r,[s(e.$slots,"default",{},void 0)])])}const f=t(c,[["render",d],["__scopeId","data-v-1f18475d"]]);export{f as B};
