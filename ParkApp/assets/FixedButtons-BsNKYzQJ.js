@@ -1,0 +1,1 @@
+import{_ as t,c as s,o,g as n}from"./index-C-DNLVWH.js";const c={},d={class:"fixed-buttons"};function r(e,a){return o(),s("div",d,[n(e.$slots,"default",{},void 0,!0)])}const f=t(c,[["render",r],["__scopeId","data-v-b27d8a3d"]]);export{f as F};
