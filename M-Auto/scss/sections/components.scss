@@ -1,0 +1,190 @@
+// Section
+.section {
+    padding: vw(80) 0;
+    overflow: hidden;
+
+    &-title, &-text {
+        color: $text;
+    }
+
+    &-title {
+        font-size: vw(55);
+        font-weight: 400;
+    }
+
+    &-text {
+        font-size: vw(26);
+    }
+}
+
+// Dots
+.dots {
+    @include flexbox(center);
+
+    .swiper-pagination-bullet {
+        @include box(vw(8));
+        background: #D9D9D9;
+        border-radius: 50%;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+            background: linear-gradient(60deg,#2E8C6D, #7DCEB3);
+        }
+    }
+}
+
+// Button
+.btn {
+    position: relative;
+    z-index: 1;
+    min-width: vw(500);
+    display: block;
+    background-image: url('/img/btn-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background: linear-gradient(90deg,#38B088, #184A39);
+    // border: 1px solid silver;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba($color: #46BB94, $alpha: .4);
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include box(calc(100% - 3px));
+        content: '';
+        border-radius: inherit;
+        border: 3px solid rgba($color: #fff, $alpha: .15);
+    }
+
+    &-flare {
+        position: absolute;
+        z-index: -1;
+        top: -41%;
+        left: vw(50);
+        max-width: vw(225);
+    }
+
+    &-inner {
+        position: relative;
+        z-index: 1;
+        @include flexbox(center, center);
+        @include box(100%);
+        padding: vw(37);
+        overflow: hidden;
+        border-radius: inherit;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -30%;
+            @include box(vw(35), 100%);
+            content: "";
+            background-color: rgba($color: #fff, $alpha: .5);
+            transform: skewX(30deg);
+            // box-shadow: 0 0 5px #fff;
+        }
+
+        &:hover {
+            &::before {
+                animation: move-light .8s;
+            }
+        }
+        
+        @keyframes move-light {
+            from {
+                left: -30%;
+            }
+            to {
+                left: 130%;
+            }
+        }
+
+        // .small-circle {
+        //     position: absolute;
+        //     z-index: -1;
+        //     top: vw(33);
+        //     left: -30%;
+        //     @include box(85%, 240%);
+        //     opacity: 0.6;
+        //     background: radial-gradient(circle,rgba(56, 170, 132, 1) 100%, rgba(66, 182, 144, 1) 0%);
+        //     border-radius: 50%;
+        // }
+
+        // .big-circle {
+        //     position: absolute;
+        //     z-index: -1;
+        //     top: 94%;
+        //     left: -40%;
+        //     transform: scale(2.1) rotate(180deg);
+        //     @include box(85%, 240%);
+        //     opacity: 0.5;
+        //     background: radial-gradient(circle,rgba(56, 170, 132, 1) 100%, rgba(66, 182, 144, 1) 0%);
+        //     border-radius: 50%;
+        // }
+    }
+
+    &-content {
+        color: #fff;
+        font-size: vw(21);
+        font-weight: 600;
+
+        img {
+            margin-right: vw(20);
+            max-width: vw(16);
+        }
+    }
+}
+
+// Burger button
+.burger-btn {
+    display: none;
+    @include box(vw(40, 320));
+    backdrop-filter: blur(10px);
+    border: 1px solid silver;
+    border-radius: 50%;
+
+    span + span {
+        margin-top: 3px;
+    }
+
+    span {
+        display: block;
+        @include box(vw(15, 320), vw(2, 320));
+        background: #1FFFA5;
+        border-radius: 4px;
+    }
+}
+
+// Work schedule
+.work-schedule {
+    position: relative;
+    display: block;
+    padding-left: vw(15);
+    color: rgba($color: #fff, $alpha: .7);
+    font-size: vw(13);
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: '';
+        @include box(vw(8));
+        border-radius: 50%;
+        background: $accent;
+    }
+}
+
+// Properties
+.w-100 {
+    width: 100%;
+}
+
+// Container
+.m-container {
+    width: 100%;
+    padding: 0 vw(150);
+}

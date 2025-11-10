@@ -1,0 +1,122 @@
+.header {
+    position: fixed;
+    z-index: 777;
+    top: vw(30);
+    left: 50%;
+    transform: translateX(-50%);
+    width: vw(1200);
+
+    &-inner {
+        position: relative;
+        @include flexbox(space-between, center);
+        @include box(100%);
+        padding: vw(20) vw(95);
+        backdrop-filter: blur(10px);
+        border-radius: 105px;
+        border: 1px solid rgba($color: #fff, $alpha: .7);
+        box-shadow: 2px 2px 4px #343434 inset;
+        background: rgba($color: $text, $alpha: .5);
+    }
+
+    // Logo
+    &-logo {
+        display: flex;
+
+        img {
+            max-width: vw(65);
+        }
+    }
+
+    // Menu
+    &-menu {
+        &-item + &-item {
+            margin-left: vw(64);
+        }
+
+        &-item a {
+            position: relative;
+            color: rgba($color: #fff, $alpha: .7);
+            font-size: vw(18);
+            font-weight: 500;
+
+            &:after {
+                position: absolute;
+                left: 50%;
+                bottom: -8px;
+                transform: translateX(-50%);
+                @include box(0, 1px);
+                display: block;
+                content: '';
+                background: #1FFFA5;
+                transition: all .3s ease;
+            }
+
+            &:hover {
+                color: #1FFFA5;
+
+                &:after {
+                    width: 105%;
+                }
+            }
+        }
+    }
+
+    // Info
+    &-info {
+        &-phone {
+            margin-bottom: 5px;
+            display: block;
+            color: #fff;
+            font-size: vw(20);
+            font-weight: 500;
+        }
+    }
+}
+
+// Mobile navigation
+.mobile-nav {
+    position: fixed;
+    z-index: 777;
+    top: 0;
+    right: -100%;
+    padding: vw(40, 320) vw(30, 320);
+    @include box(70%, 100%);
+    background: rgba($color: #04070BED, $alpha: .8);
+    backdrop-filter: blur(10px);
+    transition: all .4s ease;
+
+    &.opened {
+        right: 0;
+    }
+
+    &-menu {
+        li + li {
+            margin-top: vw(20, 320);
+        }
+
+        li a {
+            color: #fff;
+            font-size: vw(18, 320);
+
+            &:hover {
+                color: #1FFFA5;
+            }
+        }
+    }
+
+    &-logo {
+        margin-top: vw(60, 320);
+        max-width: vw(40, 320);
+    }
+
+    &-info {
+        margin-top: vw(30, 320);
+        
+        .phone {
+            margin-bottom: vw(6, 320);
+            display: block;
+            color: #fff;
+            font-size: vw(16, 320);
+        }
+    }
+}

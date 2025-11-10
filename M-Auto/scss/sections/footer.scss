@@ -1,0 +1,115 @@
+.footer {
+    padding-top: vw(80);
+    background: #14191F;
+
+    &-logo {
+        max-width: vw(150);
+    }
+
+    &-addresses {
+        margin-left: vw(60);
+    }
+
+    &-address + &-address {
+        margin-top: vw(19);
+    }
+
+    &-address {
+        color: #fff;
+        font-size: vw(17);
+        font-weight: 300;
+
+        b {
+            font-weight: 400;
+        }
+    }
+
+    &-label {
+        display: block;
+        color: #fff;
+        opacity: .6;
+        font-size: vw(24);
+    }
+
+    &-info {
+        margin-left: vw(110);
+
+        &-phone {
+            a {
+                margin-top: vw(15);
+                display: block;
+                color: #fff;
+                font-size: vw(33);
+                font-weight: 500;
+            }
+        }
+
+        .work-schedule {
+            margin-top: vw(15);
+            font-size: vw(22);
+        }
+    }
+
+    &-social-buttons {
+        margin-left: vw(155);
+
+        &-row {
+            margin-top: vw(25);
+        }
+
+        &-item + &-item {
+            margin-left: vw(30);
+        }
+
+        &-item {
+            @include flexbox(center, center);
+            @include box(vw(55));
+            background-image: linear-gradient(20deg, #38B088, #184A39);
+            border-radius: 50%;
+
+            &:nth-child(2) img {
+                max-width: vw(40);
+            }
+
+            img {
+                max-width: vw(22);
+            }
+        }
+    }
+
+    &-bottom {
+        margin-top: vw(20);
+        @include flexbox(space-between, center);
+        padding: vw(60) 0;
+    }
+
+    &-copyright {
+        color: #fff;
+        font-size: vw(16);
+        font-weight: 500;
+    }
+
+    &-policy {
+        position: relative;
+        margin-left: vw(90);
+        display: block;
+        color: #fff;
+        font-size: vw(16);
+
+        &:after {
+            position: absolute;
+            bottom: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include box(100%, 2px);
+            content: '';
+            background: #fff;
+        }
+    }
+
+    &-developer {
+        color: #fff;
+        font-size: vw(16);
+        font-weight: 300;
+    }
+}
