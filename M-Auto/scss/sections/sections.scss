@@ -258,7 +258,7 @@
                 transform: translate(-50%, -50%);
                 @include box(calc(100% + 2px));
                 content: '';
-                background: url('/img/nav-arrow-bg.jpg');
+                background: url('../img/nav-arrow-bg.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
