@@ -76,8 +76,9 @@ $(function() {
 	// Popups
 	$('.start-banner-slider-item').on('click', function(e) {
 		e.preventDefault();
-		const baseURL = window.location.origin;
-		const videoSrc = window.location.origin + '/' + $(this).attr('video-src');
+
+		const videoSrc = $(this).find('source').attr('src');
+		// const videoSrc = $(this).attr('video-src');
 		$('#dynamicVideo').attr('src', videoSrc);
 	});
 
