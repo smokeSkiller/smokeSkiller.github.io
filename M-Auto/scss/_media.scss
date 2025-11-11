@@ -56,9 +56,12 @@
     .header {
         top: vw(20, 320);
         width: calc(100% - 20px);
+        padding: vw(15, 320) vw(20, 320);
 
-        &-inner {
-            padding: vw(15, 320) vw(20, 320);
+        &.fixed {
+            .header-inner {
+                width: 100%;
+            }
         }
 
         &-logo {
@@ -110,7 +113,7 @@
             margin-top: vw(25, 320);
             margin-left: auto;
             margin-right: auto;
-            width: 75%;
+            width: 100%;
         }
 
         &-slider {
@@ -211,6 +214,7 @@
         }
 
         &-btn {
+            margin-top: vw(30, 320);
             width: 100%;
         }
     }
@@ -231,6 +235,10 @@
 
         &-slider-dots {
             margin-top: vw(30, 320);
+
+            .swiper-pagination-bullet {
+                @include box(vw(12, 320));
+            }
         }
 
         &-nav {
@@ -412,7 +420,7 @@
     .footer {
         padding-top: vw(25, 320);
 
-        &-logo {
+        &-logo img {
             max-width: vw(90, 320);
         }
 
@@ -485,6 +493,7 @@
         }
 
         &-policy {
+            margin-left: 0;
             order: 1;
         }
 
@@ -494,12 +503,18 @@
         }
 
         &-developer {
+            padding-right: 0;
             margin-top: vw(15, 320);
         }
 
         &-policy, &-copyright, &-developer {
             font-size: vw(14, 320);
         }
+    }
+
+    .mfp-wrap {
+        top: 0;
+        position: fixed;
     }
 
     //! Components
@@ -524,6 +539,17 @@
     .dots {
         .swiper-pagination-bullet {
             @include box(vw(6, 320));
+        }
+    }
+
+    // Scroll top
+    .scroll-top {
+        right: 4%;
+        bottom: 4%;
+        @include box(vw(60, 320));
+        
+        svg {
+            width: vw(18, 320);
         }
     }
 

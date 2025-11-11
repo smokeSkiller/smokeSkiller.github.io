@@ -1,21 +1,37 @@
 .header {
-    position: fixed;
+    position: absolute;
     z-index: 777;
     top: vw(30);
     left: 50%;
     transform: translateX(-50%);
     width: vw(1200);
+    padding: vw(20) vw(95);
+    backdrop-filter: blur(10px);
+    border-radius: 105px;
+    border: 1px solid rgba($color: #fff, $alpha: .7);
+    box-shadow: 2px 2px 4px #343434 inset;
+    background: rgba($color: $text, $alpha: .5);
+    transition: all .3s ease;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+
+        .header-inner {
+            margin: 0 auto;
+            width: vw(1200);
+        }
+    }
 
     &-inner {
         position: relative;
         @include flexbox(space-between, center);
         @include box(100%);
-        padding: vw(20) vw(95);
-        backdrop-filter: blur(10px);
-        border-radius: 105px;
-        border: 1px solid rgba($color: #fff, $alpha: .7);
-        box-shadow: 2px 2px 4px #343434 inset;
-        background: rgba($color: $text, $alpha: .5);
     }
 
     // Logo
@@ -80,7 +96,7 @@
     top: 0;
     right: -100%;
     padding: vw(40, 320) vw(30, 320);
-    @include box(70%, 100%);
+    @include box(63%, 100%);
     background: rgba($color: #04070BED, $alpha: .8);
     backdrop-filter: blur(10px);
     transition: all .4s ease;

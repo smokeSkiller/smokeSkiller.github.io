@@ -3,7 +3,9 @@
     background: #14191F;
 
     &-logo {
-        max-width: vw(150);
+        img {
+            max-width: vw(150);
+        }
     }
 
     &-addresses {
@@ -108,6 +110,7 @@
     }
 
     &-developer {
+        padding-right: vw(50);
         color: #fff;
         font-size: vw(16);
         font-weight: 300;

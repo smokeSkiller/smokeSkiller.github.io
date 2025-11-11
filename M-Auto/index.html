@@ -21,7 +21,7 @@
 		<!-- Inner -->
 		<div class="header-inner">
 			<!-- Logo -->
-			<a href="index.html" class="header-logo">
+			<a href="index.html" class="header-logo logo">
 				<img src="img/logo.png" alt="Start banner">
 			</a>
 
@@ -111,12 +111,12 @@
 							<!-- Item -->
 							<div class="swiper-slide start-banner-slider-item" video-src="video/1.mp4">
 								<!-- Play button -->
-								<div class="play-btn">
+								<!-- <div class="play-btn">
 									<img src="img/play-icon.svg" alt="Play icon">
-								</div>
+								</div> -->
 
 								<!-- Video -->
-								<video>
+								<video autoplay muted loop>
 									<source src="video/1.mp4" type="video/mp4">
 								</video>
 							</div>
@@ -124,12 +124,12 @@
 							<!-- Item -->
 							<div class="swiper-slide start-banner-slider-item" video-src="video/2.mp4">
 								<!-- Play button -->
-								<div class="play-btn">
+								<!-- <div class="play-btn">
 									<img src="img/play-icon.svg" alt="Play icon">
-								</div>
+								</div> -->
 
 								<!-- Video -->
-								<video>
+								<video autoplay muted loop>
 									<source src="video/2.mp4" type="video/mp4">
 								</video>
 							</div>
@@ -137,12 +137,12 @@
 							<!-- Item -->
 							<div class="swiper-slide start-banner-slider-item" video-src="video/1.mp4">
 								<!-- Play button -->
-								<div class="play-btn">
+								<!-- <div class="play-btn">
 									<img src="img/play-icon.svg" alt="Play icon">
-								</div>
+								</div> -->
 
 								<!-- Video -->
-								<video>
+								<video autoplay muted loop>
 									<source src="video/1.mp4" type="video/mp4">
 								</video>
 							</div>
@@ -241,7 +241,7 @@
 			<!-- Row -->
 			<div class="services-row d-flex justify-content-between flex-wrap w-100">
 				<!-- Service -->
-				<div class="service" style="background-image: url('img/service1.webp');" data-aos="fade-down">
+				<div class="service" style="background-image: url('img/service1.webp');" data-aos="fade-right">
 					<!-- Title -->
 					<h3 class="service-title">Русификация</h3>
 
@@ -250,7 +250,7 @@
 				</div>
 
 				<!-- Column -->
-				<div class="services-column" data-aos="fade-down">
+				<div class="services-column" data-aos="fade-left">
 					<div class="service" style="background-image: url('img/service2.webp');">
 						<!-- Title -->
 						<h3 class="service-title">Смена региона</h3>
@@ -273,7 +273,7 @@
 				</div>
 
 				<!-- Column -->
-				<div class="services-column" data-aos="fade-down">
+				<div class="services-column" data-aos="fade-right">
 					<div class="service" style="background-image: url('img/service4.webp'); background-position-y: 30%;">
 						<!-- Title -->
 						<h3 class="service-title">Активация Apple CarPlay</h3>
@@ -296,7 +296,7 @@
 				</div>
 
 				<!-- Service -->
-				<div class="service last" style="background-image: url('img/service6.webp');" data-aos="fade-down">
+				<div class="service last" style="background-image: url('img/service6.webp');" data-aos="fade-left">
 					<!-- Title -->
 					<h3 class="service-title">Вызов специалиста</h3>
 
@@ -358,22 +358,22 @@
 					<!-- Wrapper -->
 					<div class="swiper-wrapper">
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio1.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio1.webp');" data-full-image="img/portfolio1.webp"></div>
 
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio2.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio2.webp');" data-full-image="img/portfolio2.webp"></div>
 
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio3.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio3.webp');" data-full-image="img/portfolio3.webp"></div>
 
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio1.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio1.webp');" data-full-image="img/portfolio1.webp"></div>
 
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio2.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio2.webp');" data-full-image="img/portfolio2.webp"></div>
 
 						<!-- Item -->
-						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio3.webp');"></div>
+						<div class="portfolio-slider-item swiper-slide" style="background-image: url('img/portfolio3.webp');" data-full-image="img/portfolio3.webp"></div>
 					</div>
 				</div>
 
@@ -548,8 +548,10 @@
 		<div class="m-container">
 			<!-- Row -->
 			<div class="d-flex flex-md-row flex-column align-items-md-start align-items-center w-100">
-				<!-- Logo -->
-				<img src="img/logo.png" alt="Logo" class="footer-logo">
+				<a href="index.html" class="footer-logo logo">
+					<!-- Logo -->
+					<img src="img/logo.png" alt="Logo">
+				</a>
 
 				<!-- Addressess -->
 				<div class="footer-addresses">
@@ -617,6 +619,13 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Scroll-top -->
+	<button class="scroll-top">
+		<svg viewBox="0 0 23 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12.1066 0.439341C11.5208 -0.146446 10.571 -0.146446 9.98524 0.439341L0.439296 9.98528C-0.146491 10.5711 -0.146491 11.5208 0.439296 12.1066C1.02508 12.6924 1.97483 12.6924 2.56062 12.1066L11.0459 3.62132L19.5312 12.1066C20.117 12.6924 21.0667 12.6924 21.6525 12.1066C22.2383 11.5208 22.2383 10.5711 21.6525 9.98528L12.1066 0.439341ZM11.0459 30.5L12.5459 30.5L12.5459 1.5L11.0459 1.5L9.5459 1.5L9.5459 30.5L11.0459 30.5Z" fill="white"/>
+		</svg>
+	</button>
 
 	<!-- Mobile navigation -->
 	<nav class="mobile-nav">
