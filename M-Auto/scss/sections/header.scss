@@ -96,7 +96,7 @@
     top: 0;
     right: -100%;
     padding: vw(40, 320) vw(30, 320);
-    @include box(63%, 100%);
+    @include box(63%, 100vh);
     background: rgba($color: #04070BED, $alpha: .8);
     backdrop-filter: blur(10px);
     transition: all .4s ease;
@@ -128,10 +128,23 @@
     &-info {
         margin-top: vw(30, 320);
         
-        .phone {
+        .phone, .mail {
             margin-bottom: vw(6, 320);
             display: block;
             color: #fff;
+            font-size: vw(16, 320);
+        }
+
+        .mail {
+            margin-top: vw(20, 320);
+            text-decoration: underline;
+        }
+
+        .address {
+            margin-top: vw(10, 320);
+            display: block;
+            color: #fff;
+            font-weight: 500;
             font-size: vw(16, 320);
         }
     }

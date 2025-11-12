@@ -352,9 +352,10 @@
         overflow: hidden;
         cursor: pointer;
         transition: all .3s ease;
+        // box-shadow: 0 10px 15px -3px #5c1e13;
 
         &:hover {
-            box-shadow: 0 0 45px #46BB94;
+            box-shadow: 0 5px 20px -3px #00616e;
         }
 
         &.last {

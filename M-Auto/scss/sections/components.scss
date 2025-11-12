@@ -7,7 +7,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    @include box(vw(100));
+    @include box(vw(85));
     background: linear-gradient(90deg, #38B088, #184A39);
     border: 3px solid #fff;
     border-radius: 50%;
@@ -23,7 +23,7 @@
     }
 
     svg {
-        width: vw(25);
+        width: vw(22.5);
         transition: all .3s ease;
     }
 }
@@ -83,7 +83,6 @@
         content: "";
         background-color: rgba($color: #fff, $alpha: .5);
         transform: skewX(30deg);
-        // box-shadow: 0 0 5px #fff;
     }
 }
 
@@ -143,7 +142,7 @@
 
         &:hover {
             &::before {
-                animation: move-light .8s;
+                animation: move-light 2s;
             }
         }
 
@@ -229,7 +228,16 @@
         content: '';
         @include box(vw(8));
         border-radius: 50%;
-        background: #1FFFA5;
+        background-color: #1FFFA5;
+        animation: flashCircle .8s infinite ease;
+    }
+
+    @keyframes flashCircle {
+        from {
+            background-color: #106342;
+        } to {
+            background-color: #1FFFA5;
+        }
     }
 }
 

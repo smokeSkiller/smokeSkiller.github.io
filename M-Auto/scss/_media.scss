@@ -72,7 +72,7 @@
 
         &-info {
             &-phone {
-                font-size: vw(13, 320);
+                font-size: vw(10, 320);
             }
         }
 
@@ -165,6 +165,10 @@
 
                 svg {
                     max-width: vw(9, 320);
+
+                    path {
+                        fill: white;
+                    }
                 }
             }
 
@@ -546,10 +550,18 @@
     .scroll-top {
         right: 4%;
         bottom: 4%;
-        @include box(vw(60, 320));
+        @include box(vw(55, 320));
         
         svg {
             width: vw(18, 320);
+        }
+    }
+
+    // Logo
+    .logo {
+        &::before {
+            animation: move-light-logo 12s infinite;
+            animation-delay: 12s;
         }
     }
 
@@ -563,6 +575,12 @@
 
         &-inner {
             padding: vw(22, 320);
+
+            &::before {
+                @include box(vw(20, 320), 100%);
+                animation: move-light-btn 12s infinite;
+                animation-delay: 10s;
+            }
         }
 
         &-content {
@@ -572,6 +590,30 @@
                 margin-right: vw(12, 320);
                 max-width: vw(9, 320);
             }
+        }
+    }
+
+    @keyframes move-light-btn {
+        0% {
+            left: -30%;
+        }
+        20% {
+            left: 130%;
+        }
+        100% {
+            left: 130%;
+        }
+    }
+
+    @keyframes move-light-logo {
+        0% {
+            left: -30%;
+        }
+        10% {
+            left: 130%;
+        }
+        100% {
+            left: 130%;
         }
     }
 
