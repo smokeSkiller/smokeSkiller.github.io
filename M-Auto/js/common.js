@@ -34,6 +34,10 @@ $(function() {
 		mobileNav.removeClass('opened');
 	});
 
+	$('.mobile-nav-close').on('click', function () {
+		mobileNav.removeClass('opened');
+	})
+
 	mobileNav.on('click', function (e) {
 		e.stopPropagation();
 	});
@@ -73,13 +77,23 @@ $(function() {
 		centeredSlides: true,
 		rewind: true,
 		slidesPerView: 1.6,
-		// loop: true,
 		autoplay: {
-			delay: 8000,
+			delay: 5500,
+			// reverseDirection: true,
+		}, 
+		on: {
+			reachEnd() {
+				this.params.autoplay.reverseDirection = true;
+				this.autoplay.start();
+			},
+			reachBeginning() {
+				this.params.autoplay.reverseDirection = false;
+				this.autoplay.start();
+			},
 		},
 		coverflowEffect: {
 			rotate: 0,
-			stretch: '50%',
+			stretch: '63.5%',
 			slideShadows: true,
 		},
 		pagination: {
@@ -93,6 +107,11 @@ $(function() {
 			},
 			320: {
 				slidesPerView: 1.85,
+				coverflowEffect: {
+					rotate: 0,
+					stretch: '50%',
+					slideShadows: true,
+				},
 			}
 		}
 	})

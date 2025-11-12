@@ -96,7 +96,7 @@
     top: 0;
     right: -100%;
     padding: vw(40, 320) vw(30, 320);
-    @include box(63%, 100vh);
+    @include box(63%, 140vh);
     background: rgba($color: #04070BED, $alpha: .8);
     backdrop-filter: blur(10px);
     transition: all .4s ease;
@@ -147,5 +147,20 @@
             font-weight: 500;
             font-size: vw(16, 320);
         }
+    }
+
+    &-close {
+        position: absolute;
+        top: vw(12.5, 320);
+        right: vw(12.5, 320);
+        @include flexbox(center, center);
+        @include box(vw(30, 320));
+        padding-bottom: vw(2.5, 320);
+        color: #fff;
+        font-size: vw(18, 320);
+        line-height: 100%;
+        opacity: 1;
+        border-radius: 50%;
+        background: linear-gradient(60deg,#2E8C6D, #7DCEB3);
     }
 }

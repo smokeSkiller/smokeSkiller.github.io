@@ -4,46 +4,9 @@
 /*==========  Desktop First  ==========*/
 
 // ≥1200px
-// @include media-breakpoint-down(xl) {
-//     // Header
-// 	.header {
-//         width: 90%;
+@include media-breakpoint-down(xl) {
 
-//         &-inner {
-//             padding: vw(20, 1200) vw(65, 1200);
-//         }
-
-//         // Logo
-//         &-logo {
-//             img {
-//                 max-width: vw(65, 1200);
-//             }
-//         }
-
-//         // Menu
-//         &-menu {
-//             &-item + &-item {
-//                 margin-left: vw(64, 1200);
-//             }
-
-//             &-item a {
-//                 font-size: vw(20, 1200);
-//             }
-//         }
-
-//         // Info
-//         &-info {
-//             &-phone {
-//                 font-size: vw(20, 1200);
-//             }
-//         }
-//     }
-
-//     // Start banner
-//     .start-banner {
-//         height: vw(920, 1200);
-//     }
-// }
+}
 
 // ≥992px
 @include media-breakpoint-down(lg) {
@@ -71,8 +34,8 @@
         }
 
         &-info {
-            &-phone {
-                font-size: vw(10, 320);
+            &-phone, .work-schedule {
+                font-size: vw(8, 320);
             }
         }
 
@@ -164,7 +127,7 @@
                 @include box(vw(26, 320));
 
                 svg {
-                    max-width: vw(9, 320);
+                    width: vw(9, 320);
 
                     path {
                         fill: white;
@@ -516,9 +479,16 @@
         }
     }
 
+    //! Magnific popup
     .mfp-wrap {
         top: 0;
         position: fixed;
+    }
+
+    .mfp-gallery {
+        figure {
+            @include box(90vw, 50vh);
+        }
     }
 
     //! Components
@@ -557,14 +527,6 @@
         }
     }
 
-    // Logo
-    .logo {
-        &::before {
-            animation: move-light-logo 12s infinite;
-            animation-delay: 12s;
-        }
-    }
-
     // Button
     .btn {
         &-flare {
@@ -598,18 +560,6 @@
             left: -30%;
         }
         20% {
-            left: 130%;
-        }
-        100% {
-            left: 130%;
-        }
-    }
-
-    @keyframes move-light-logo {
-        0% {
-            left: -30%;
-        }
-        10% {
             left: 130%;
         }
         100% {

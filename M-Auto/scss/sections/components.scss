@@ -64,27 +64,6 @@
 }
 
 // Logo
-.logo {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-
-    &:hover {
-        &::before {
-            animation: move-light .8s;
-        }
-    }
-
-    &::before {
-        position: absolute;
-        top: 0;
-        left: -50%;
-        @include box(17%, 100%);
-        content: "";
-        background-color: rgba($color: #fff, $alpha: .5);
-        transform: skewX(30deg);
-    }
-}
 
 // Button
 .btn {
@@ -229,14 +208,16 @@
         @include box(vw(8));
         border-radius: 50%;
         background-color: #1FFFA5;
-        animation: flashCircle .8s infinite ease;
+        animation: flashCircle 1.3s infinite ease;
     }
 
     @keyframes flashCircle {
-        from {
-            background-color: #106342;
-        } to {
+        0% {
+            background-color: #0e5337;
+        } 50% {
             background-color: #1FFFA5;
+        } 100% {
+            background-color: #0e5337;
         }
     }
 }
