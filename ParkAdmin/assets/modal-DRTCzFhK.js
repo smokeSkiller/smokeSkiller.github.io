@@ -1,0 +1,1 @@
+const e=o=>{o?o.open():console.error("openSwipeModal: sheetRef is invalid or does not have open() method")},s=o=>{o?o.close():console.error("closeSwipeModal: sheetRef is invalid or does not have close() method")};export{s as c,e as o};

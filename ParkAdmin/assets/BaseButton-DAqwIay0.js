@@ -1,0 +1,1 @@
+import{_ as t,c as n,o,q as r}from"./index-CPlaCTx-.js";const s={};function c(e,a){return o(),n("button",null,[r(e.$slots,"default",{},void 0,!0)])}const d=t(s,[["render",c],["__scopeId","data-v-707061f0"]]);export{d as B};
