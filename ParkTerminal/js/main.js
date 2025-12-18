@@ -50,6 +50,18 @@ detectionSensorsCheckbox.addEventListener('change', () => {
 disableButtonsOnCheck(detectionSensorsCheckbox, detectionSensorsBtns)
 selectSingleButton(detectionSensorsBtns)
 
+detectionSensorsBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Удаляем класс btn-filled со всех кнопок
+        detectionSensorsBtns.forEach((btn) => {
+            btn.classList.remove('btn-filled')
+        })
+
+        // Добавляем класс btn-filled к нажатой кнопке
+        btn.classList.add('btn-filled')
+    })
+})
+
 // Barrier
 selectSingleButton(barrierBtns)
 
@@ -111,19 +123,19 @@ function selectSingleButton (buttons) {
             const dataValue = button.getAttribute('data-value')
             const equipment = button.closest('.equipment')
 
-            // Удаляем класс btn-filled со всех кнопок
-            buttons.forEach((btn) => {
-                btn.classList.remove('btn-filled')
-            })
-
-            // Добавляем класс btn-filled к нажатой кнопке
-            button.classList.add('btn-filled')
-
             // Добавляем значение кнопки в поле
             equipment.querySelector('.value').textContent = dataValue
 
             // Если кнопки находятся в dropdown
             if(equipment.querySelector('.selected-btn')) {
+                // Удаляем класс btn-filled со всех кнопок
+                buttons.forEach((btn) => {
+                    btn.classList.remove('btn-filled')
+                })
+
+                // Добавляем класс btn-filled к нажатой кнопке
+                button.classList.add('btn-filled')
+
                 equipment.querySelector('.selected-btn').textContent = button.textContent
             }
         })
