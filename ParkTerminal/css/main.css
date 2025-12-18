@@ -1,0 +1,157 @@
+/* Fonts */
+@import './fonts.css';
+
+/* Vars */
+@import './vars.css';
+
+/* Reset css */
+@import './reset.css';
+
+/* Components */
+@import './components.css';
+
+/* Terminal */
+.terminal {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background-image: linear-gradient(#4C5A5A, #1E2A42);
+
+    /* Top */
+    .top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+
+    /* Status */
+    .status {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .title {
+            margin-top: 30px;
+            text-align: center;
+            color: #fff;
+            font-size: 64px;
+        }
+    }
+
+    /* Menu */
+    .menu {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 260px;
+        padding: 20px 20px 60px 20px;
+        background: #fff;
+
+        /* Text */
+        .text {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: relative;
+            width: 15px;
+            height: 15px;
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 2px;
+                border-radius: 5px;
+                background: #000;
+
+                &:nth-child(1) {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+
+        /* Equipment type */
+        .equipment-type {
+            .title {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        /* Equipment */
+        .equipment + .equipment {
+            margin-left: 24px;
+        }
+
+        .equipment {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .value {
+                margin-left: 5px;
+                padding: 4px;
+                text-align: center;
+                font-size: 8px;
+                background: #EFEFEF;
+                border-radius: 4px;
+            }
+
+            .btn + .btn {
+                margin-left: 8px;
+            }
+
+            .ok-btn {
+                margin-left: 8px;
+                padding: 4px 6px;
+                opacity: 0;
+                font-size: 8px;
+            }
+
+            .ok-btn.show {
+                color: #fff;
+                opacity: 1;
+                background-color: var(--orange);
+            }
+
+            .dropdown {
+                right: auto;
+                left: calc(100% + 8px);
+
+                .btn {
+                    width: 100%;
+                    font-size: 8px;
+                }
+            }
+        }
+
+        /* Slave controller */
+        .slave-controller {
+            margin-top: 15px;
+        }
+    }
+}

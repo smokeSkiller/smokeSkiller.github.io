@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box !important;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+/* Предотвращаем прыжки */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+ul, menu {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  word-break: break-word;
+  transition: all .3s ease;
+}
+
+input, textarea{
+  border: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+  transition: all .3s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}

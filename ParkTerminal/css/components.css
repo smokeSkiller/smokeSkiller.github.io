@@ -1,0 +1,137 @@
+/* Has dropdown */
+.has-dropdown {
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+        .dropdown {
+            display: block;
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        z-index: 333;
+        top: 0;
+        right: -100%;
+        display: none;
+        padding: 8px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+        .dropdown-item + .dropdown-item {
+            margin-top: 5px;
+        }
+
+        .dropdown-item {
+            cursor: pointer;
+        }
+    }
+
+    .dropdown.dropdown-centered {
+        top: 50%;
+        transform: translateY(-50%);
+        min-width: 105px;
+    }
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input {
+        appearance: none;
+    }
+
+    input:checked + .box {
+        background: var(--orange);
+        border-color: var(--orange);
+    }
+
+    .box {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #a5a5a5;
+        border-radius: 2px;
+
+        svg {
+            position: absolute;
+            top: 55%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    span {
+        margin-left: 6px;
+        font-size: 10px;
+    }
+}
+
+/* Button */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    color: #242423;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    background-color: var(--gray);
+}
+
+.btn:active, .btn.btn-filled {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.btn:disabled {
+    color: #CFCFCF;
+    cursor: not-allowed;
+    border-color: #CFCFCF;
+    background-color: transparent;
+}
+
+.btn.btn-filled:disabled {
+    border-color: var(--orange);
+}
+
+/* Field */
+.field {
+    padding: 4px 6px;
+    font-size: 8px;
+    border: 1px solid var(--orange);
+    border-radius: 4px;
+}
+
+.field:disabled {
+    cursor: not-allowed;
+    color: #B3B3B3;
+    border-color: #B3B3B3;
+}
+
+/*! Other properties */
+/* Flexbox */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.w-100 {
+    width: 100%;
+}

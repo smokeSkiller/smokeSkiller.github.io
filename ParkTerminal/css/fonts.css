@@ -1,0 +1,15 @@
+/* Regular */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/inter-regular.ttf') format('truetype');
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/inter-medium.ttf') format('truetype');
+}

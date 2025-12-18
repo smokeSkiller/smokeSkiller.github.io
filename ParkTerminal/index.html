@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking terminal</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <!-- Terminal -->
+    <div class="terminal">
+        <!-- Top -->
+        <div class="top">
+            <p>RPS Device №5090</p>
+
+            <p>05 декабря 2025 16:17:40</p>
+        </div>
+
+        <!-- Status -->
+        <div class="status">
+            <!-- Icon -->
+            <img src="/img/warning.svg" class="icon">
+
+            <!-- Title -->
+            <h1 class="title">
+                Терминал временно
+                <br>
+                не обслуживает
+            </h1>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+            <!-- Top row -->
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <!-- Has dropdown -->
+                <div class="equipment-type has-dropdown">
+                    <!-- Title -->
+                    <p class="title">
+                        <span>Оборудование</span>
+
+                        <!-- Icon -->
+                        <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.19617 4.5L1.52588e-05 0L10.3923 0L5.19617 4.5Z" fill="black"/>
+                        </svg>
+                    </p>
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Slave контроллер</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Ридер внешний</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Ридер внутренний</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Диспенсер</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Штрихкод</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Дисплей</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Дисплей №2</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Хоппер</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>RFID</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Коллектор</span>
+                            </label>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="dropdown-item">
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span>Коллектор</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Close button -->
+                <button class="close-btn">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Slave controller -->
+            <div class="slave-controller">
+                <p class="text" style="margin-bottom: 10px;">Слейв контроллер</p>
+
+                <!-- Row -->
+                <div class="d-flex w-100">
+                    <!-- Equipment: Detection sensors -->
+                    <div class="equipment" id="detection-sensors">
+                        <!-- Checkbox -->
+                        <label class="checkbox">
+                            <input type="checkbox">
+
+                            <div class="box">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <span class="text">Датчики проезда</span>
+                        </label>
+
+                        <!-- Row -->
+                        <div class="d-flex" style="margin-top: 8px;">
+                            <button class="btn">A</button>
+                            <button class="btn">B</button>
+                            <button class="btn">C</button>
+                            <button class="btn">D</button>
+                        </div>
+                    </div>
+
+                    <!-- Equipment: Barrier -->
+                    <div class="equipment" id="barrier">
+                        <!-- Row -->
+                        <div class="d-flex align-items-center">
+                            <!-- Checkbox -->
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span class="text">Шлагбаум</span>
+                            </label>
+
+                            <span class="value">Открыт</span>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="d-flex" style="margin-top: 8px;">
+                            <button class="btn" data-value="Открыт">Открыть</button>
+                            <button class="btn" data-value="Закрыт">Закрыть</button>
+                        </div>
+                    </div>
+
+                    <!-- Equipment: Trafic light -->
+                    <div class="equipment" id="traffic-lights">
+                        <!-- Row -->
+                        <div class="d-flex align-items-center">
+                            <!-- Checkbox -->
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span class="text">Светофор</span>
+                            </label>
+
+                            <span class="value">Зеленый</span>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="d-flex" style="margin-top: 8px;">
+                            <button class="btn" data-value="Зелёный">Зелёный</button>
+                            <button class="btn" data-value="Красный">Красный</button>
+                        </div>
+                    </div>
+
+                    <!-- Equipment: Button -->
+                    <div class="equipment" id="button">
+                        <!-- Row -->
+                        <div class="d-flex align-items-center">
+                            <!-- Checkbox -->
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span class="text">Кнопка</span>
+                            </label>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="d-flex" style="margin-top: 10px;">
+                            <button class="btn">Нажать</button>
+                        </div>
+                    </div>
+
+                    <!-- Equipment: Block -->
+                    <div class="equipment" id="block">
+                        <!-- Row -->
+                        <div class="d-flex align-items-center">
+                            <!-- Checkbox -->
+                            <label class="checkbox">
+                                <input type="checkbox">
+
+                                <div class="box">
+                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <span class="text">Блокировка</span>
+                            </label>
+
+                            <span class="value">Есть</span>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="d-flex" style="margin-top: 8px;">
+                            <button class="btn btn-filled" data-value="Есть">Вкл</button>
+                            <button class="btn" data-value="Нет">Выкл</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row -->
+            <div class="d-flex flex-wrap w-100" style="margin-top: 40px;">
+                <!-- Equipment: Reader internal -->
+                <div class="equipment" id="reader-internal">
+                    <!-- Row -->
+                    <div class="d-flex align-items-center">
+                        <!-- Checkbox -->
+                        <label class="checkbox">
+                            <input type="checkbox">
+
+                            <div class="box">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <span class="text">Ридер внутр</span>
+                        </label>
+
+                        <!-- Value -->
+                        <span class="value">Чтение</span>
+                    </div>
+
+                    <!-- Has dropdown -->
+                    <div class="has-dropdown" style="margin-top: 8px;">
+                        <!-- Button -->
+                        <button class="btn selected-btn">Чтение</button>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <!-- Button -->
+                                <button class="btn btn-filled" data-value="Чтение">Чтение</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <!-- Button -->
+                                <button class="btn" data-value="Запись">Запись</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row -->
+                    <div class="d-flex" style="margin-top: 4px;">
+                        <!-- Input -->
+                        <input type="text" class="field" value="888888888888" disabled>
+
+                        <!-- Button -->
+                        <button class="btn btn-filled ok-btn" disabled>Ок</button>
+                    </div>
+                </div>
+
+                <!-- Equipment: Reader external -->
+                <div class="equipment" id="reader-external">
+                    <!-- Row -->
+                    <div class="d-flex align-items-center">
+                        <!-- Checkbox -->
+                        <label class="checkbox">
+                            <input type="checkbox">
+
+                            <div class="box">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <span class="text">Ридер внешн</span>
+                        </label>
+
+                        <span class="value">Прочитана</span>
+                    </div>
+
+                    <!-- Has dropdown -->
+                    <div class="has-dropdown" style="margin-top: 8px;">
+                        <!-- Button -->
+                        <button class="btn selected-btn">Чтение</button>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <!-- Button -->
+                                <button class="btn btn-filled" data-value="Прочитана">Чтение</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <!-- Button -->
+                                <button class="btn" data-value="Записана">Запись</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row -->
+                    <div class="d-flex" style="margin-top: 4px;">
+                        <!-- Input -->
+                        <input type="text" class="field" value="888888888888" placeholder="Введите номер карты" disabled>
+
+                        <!-- Button -->
+                        <button class="btn btn-filled ok-btn" disabled>Ок</button>
+                    </div>
+                </div>
+
+                <!-- Equipment: Dispenser -->
+                <div class="equipment" id="dispenser">
+                    <!-- Row -->
+                    <div class="d-flex align-items-center">
+                        <!-- Checkbox -->
+                        <label class="checkbox">
+                            <input type="checkbox">
+
+                            <div class="box">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <span class="text">Диспенсер</span>
+                        </label>
+
+                        <!-- Value -->
+                        <span class="value">Под ридером</span>
+                    </div>
+
+                    <!-- Has dropdown -->
+                    <div class="has-dropdown" style="margin-top: 8px;">
+                        <!-- Button -->
+                        <button class="btn selected-btn">Выдать под ридер</button>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown dropdown-centered">
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn btn-filled" data-value="Под ридером">Выдать под ридер</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="В губы">Выдать в губы</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Выброс карты">Выбросить карту</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="В отказник">Карту в отказник</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Втянуть карту">Втянуть карту</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Опять под ридер">Опять под ридер</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment: Collector -->
+                <div class="equipment" id="collector">
+                    <!-- Row -->
+                    <div class="d-flex align-items-center">
+                        <!-- Checkbox -->
+                        <label class="checkbox">
+                            <input type="checkbox">
+
+                            <div class="box">
+                                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 3.16667L2.5 5.16667L7.16667 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <span class="text">Коллектор</span>
+                        </label>
+
+                        <span class="value">Втян</span>
+                    </div>
+
+                    <!-- Has dropdown -->
+                    <div class="has-dropdown" style="margin-top: 8px;">
+                        <!-- Button -->
+                        <button class="btn selected-btn">Выдать под ридер</button>
+
+                        <!-- Dropdown -->
+                        <div class="dropdown dropdown-centered">
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn btn-filled" data-value="Под ридером">Выдать под ридер</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="В губы">Выдать в губы</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Выброс карты">Выбросить карту</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="В отказник">Карту в отказник</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Втянуть карту">Втянуть карту</button>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="dropdown-item">
+                                <button class="btn" data-value="Опять под ридер">Опять под ридер</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
