@@ -1,0 +1,1 @@
+import{_ as e,c,o}from"./index-CkweRrl9.js";const p=["type"],s={__name:"AuthField",props:{type:{type:String,default:"text"}},setup(t){return(_,a)=>(o(),c("input",{type:t.type},null,8,p))}},r=e(s,[["__scopeId","data-v-6c50c8ad"]]);export{r as A};
