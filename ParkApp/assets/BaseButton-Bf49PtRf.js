@@ -1,1 +1,0 @@
-import{_ as s,c as n,o,g as t,a}from"./index-C-DNLVWH.js";const c={},r={class:"btn-text"};function d(e,_){return o(),n("button",null,[t(e.$slots,"icon",{},void 0,!0),a("span",r,[t(e.$slots,"default",{},void 0,!0)])])}const u=s(c,[["render",d],["__scopeId","data-v-93079eab"]]);export{u as B};
