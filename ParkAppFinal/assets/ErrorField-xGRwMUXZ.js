@@ -1,1 +1,0 @@
-/* empty css                                                                   */import{_ as r,b as o,o as s,g as t}from"./index-C-0smXwk.js";const n={},c={class:"error-field"};function a(e,d){return s(),o("span",c,[t(e.$slots,"default",{},void 0,!0)])}const l=r(n,[["render",a],["__scopeId","data-v-2f906b9d"]]);export{l as E};
