@@ -1,1 +1,0 @@
-/* empty css                                                                   */import{_ as r,c as o,o as n,l as t}from"./index-CZ-t3VQx.js";const c={};function s(e,a){return n(),o("span",null,[t(e.$slots,"default",{},void 0,!0)])}const d=r(c,[["render",s],["__scopeId","data-v-f77284c2"]]);export{d as E};

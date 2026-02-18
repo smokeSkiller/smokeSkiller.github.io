@@ -1,1 +1,0 @@
-/* empty css                                                                   */import{_ as r,c as o,o as n,j as c}from"./index-DHYjdD9u.js";const s={};function t(e,a){return n(),o("span",null,[c(e.$slots,"default",{},void 0)])}const l=r(s,[["render",t],["__scopeId","data-v-fe0224c8"]]);export{l as E};
