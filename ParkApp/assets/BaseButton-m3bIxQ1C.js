@@ -1,0 +1,1 @@
+import{_ as s,b as n,o,g as t,h as a}from"./index-NaFIEOMq.js";const r={},c={class:"btn-text"};function d(e,_){return o(),n("button",null,[t(e.$slots,"icon",{},void 0,!0),a("span",c,[t(e.$slots,"default",{},void 0,!0)])])}const u=s(r,[["render",d],["__scopeId","data-v-40be421e"]]);export{u as B};

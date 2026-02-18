@@ -1,0 +1,1 @@
+import{_ as t,b as s,o,g as n}from"./index-NaFIEOMq.js";const c={},r={class:"fixed-buttons"};function a(e,d){return o(),s("div",r,[n(e.$slots,"default",{},void 0,!0)])}const f=t(c,[["render",a],["__scopeId","data-v-2c7113a1"]]);export{f as F};
