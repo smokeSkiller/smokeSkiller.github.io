@@ -1,0 +1,1 @@
+const e=o=>{o&&typeof o.open=="function"?o.open():console.warn("openSwipeModal: sheetRef is invalid or does not have open() method")},n=o=>{o&&typeof o.close=="function"?o.close():console.warn("closeSwipeModal: sheetRef is invalid or does not have close() method")};export{n as c,e as o};
