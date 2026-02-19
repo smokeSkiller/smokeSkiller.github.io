@@ -1,1 +1,0 @@
-import{_ as n,b as r,o as a}from"./index-C-0smXwk.js";const s=["type"],l={__name:"FormField",props:{type:{type:String,default:"text"}},setup(t){return(o,e)=>(a(),r("input",{type:t.type,onInput:e[0]||(e[0]=p=>o.$emit("update:modelValue",p.target.value))},null,40,s))}},_=n(l,[["__scopeId","data-v-d544cce0"]]);export{_ as F};
