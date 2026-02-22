@@ -1,0 +1,1 @@
+import{_ as o,b as t,o as c,g as r}from"./index.js";const n={},s={action:"#"};function a(e,_){return c(),t("form",s,[r(e.$slots,"default",{},void 0,!0)])}const f=o(n,[["render",a],["__scopeId","data-v-cce60419"]]);export{f as A};
