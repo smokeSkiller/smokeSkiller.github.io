@@ -1,0 +1,88 @@
+.memorial-form .form-control {
+    margin-top: 10px;
+    background: #fff;
+}
+
+.memorial-form .form-group label {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.memorial-form .form-group span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.memorial-form .btn-default {
+    padding-right: 24px;
+}
+
+.memorial-form .btn-default:before {
+    content: none;
+}
+
+.memorial-form label + label {
+    margin-top: 10px;
+}
+
+.memorial-form .radio-field {
+    width: 70%;
+    padding-right: 10px;
+    line-height: 120%;
+}
+
+.memorial-form .radio-field input {
+    margin-right: 5px;
+}
+
+/* Memorial notes */
+.post-content .memorial-notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #f00;
+    background-color: #fff;
+}
+
+.post-content .contact-form .memorial-notes img {
+    max-width: 70%;
+}
+
+.post-content .memorial-notes ol {
+    margin-bottom: 15px;
+}
+
+.post-content .memorial-notes li + li {
+    margin-top: 5px;
+}
+
+.post-content .memorial-notes li {
+    color: rgb(202, 0, 0);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.post-content .memorial-notes input {
+    color: rgb(202, 0, 0);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom-color: rgb(202, 0, 0);
+}
+
+/* Dark */
+.post-content .memorial-notes.dark {
+    border-color: #000;
+}
+
+.post-content .memorial-notes.dark li {
+    color: #000;
+}
+
+.post-content .memorial-notes.dark input {
+    color: #000;
+    border-bottom-color: #000;
+}

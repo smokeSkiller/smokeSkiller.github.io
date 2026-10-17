@@ -1,0 +1,175 @@
+:root {
+    --dp-green: #2a5444;
+    --dp-green-dark: #1f3f33;
+    --dp-bg: #f5f2ea;
+    --dp-text: #fff;
+    --dp-shadow: 0 6px 20px rgba(0, 0, 0, .22);
+}
+
+/* ---------- Общее ---------- */
+.dp-cards,
+.dp-bar,
+.dp-bar-tab { display: none; }
+.dp-close,
+.dp-bar__close,
+.dp-tab,
+.dp-bar-tab {
+    font-family: inherit;
+    cursor: pointer;
+    border: 0;
+}
+
+/* ===== ПК: карточки справа (от 1100px) ===== */
+@media (min-width: 1100px) {
+    .dp-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+    }
+
+    .dp-item { position: relative; }
+
+    .dp-card {
+        position: relative;
+        width: 200px;
+        border-radius: 14px 0 0 14px;       /* прижата к краю экрана */
+        overflow: hidden;
+        box-shadow: var(--dp-shadow);
+        transition: transform .3s ease, opacity .3s ease;
+    }
+
+    .dp-card__link { display: block; }
+
+    .dp-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform .3s ease;
+    }
+    .dp-card__link:hover img,
+    .dp-card__link:focus-visible img { transform: scale(1.05); }
+
+    .dp-card__link:focus-visible {
+        outline: 3px solid var(--dp-green);
+        outline-offset: -3px;
+    }
+
+    /* Крестик */
+    .dp-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border-color: rgba(0, 0, 0, .55);
+        background-color: rgba(0, 0, 0, .8); */
+        font-size: 26px;
+        line-height: 1;
+        padding: 0;
+        border-radius: 50%;
+        transition: background .2s;
+    }
+
+    .dp-close i {
+        color: red;
+        font-size: 16px;
+    }
+
+    .dp-close:hover { background: rgba(0, 0, 0, .8); }
+    
+    /* Вкладка-иконка для возврата карточки */
+    .dp-tab {
+        display: none;
+        width: 44px;
+        height: 48px;
+        margin-left: auto;
+        background: var(--dp-green);
+        color: #fff;
+        border-radius: 12px 0 0 12px;
+        box-shadow: var(--dp-shadow);
+        align-items: center;
+        justify-content: center;
+    }
+    .dp-tab:hover { background: var(--dp-green-dark); }
+
+    /* Состояние «закрыто» */
+    .dp-item.is-closed .dp-card { display: none; }
+    .dp-item.is-closed .dp-tab  { display: flex; }
+}
+
+/* ===== Планшеты и телефоны: нижняя панель (до 1099px) ===== */
+@media (max-width: 1099px) {
+    .dp-bar {
+        display: flex;
+        align-items: stretch;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        gap: 8px;
+        padding: 8px 52px calc(8px + env(safe-area-inset-bottom, 0px)) 8px;
+        background: var(--dp-bg);
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, .15);
+    }
+    
+    .dp-bar__btn {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 8px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+    }
+    .dp-bar__btn--main { background: var(--dp-green); color: #fff; }
+    .dp-bar__btn--alt  { background: #fff; color: var(--dp-green); border: 2px solid var(--dp-green); }
+    
+    .dp-bar__close {
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        color: var(--dp-green);
+        font-size: 30px;
+        line-height: 1;
+    }
+    
+    /* Вкладка возврата */
+    .dp-bar-tab {
+        display: none;
+        position: fixed;
+        right: 8px;
+        bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        z-index: 999;
+        min-height: 44px;
+        padding: 0 14px;
+        border-radius: 22px;
+        background: var(--dp-green);
+        color: #fff;
+        font-size: 15px;
+        box-shadow: var(--dp-shadow);
+    }
+    
+    /* Состояние «закрыто» (класс ставится на <body>) */
+    body.dp-bar-closed .dp-bar     { display: none; }
+    body.dp-bar-closed .dp-bar-tab { display: block; }
+    
+    /* Отступ внизу страницы, чтобы панель не перекрывала подвал */
+    body:not(.dp-bar-closed) { padding-bottom: 72px; }
+}
