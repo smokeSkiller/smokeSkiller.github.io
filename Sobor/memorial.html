@@ -45,7 +45,7 @@
 				<div class="container">
 					<!-- Logo Start -->
 					<a class="navbar-brand" href="./">
-						<img src="images/logo/logo4.png" class="logo" alt="Logo">
+						<img src="images/logo/logo5.png" class="logo" alt="Logo">
 					</a>
 
                     <!-- Main Menu Start -->
@@ -182,16 +182,18 @@
                                 </li>
                             </ul>
                         </div>
-                        
-                        <!-- Header Btn Start -->
-                        <button class="header-btn header-search-btn search-open-btn">
-                            <i class="fa-solid fa-search"></i>
-                        </button>
                     </div>
 
-					<button class="mobile-toggle d-lg-none" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobilePanel">
-                        <span></span><span></span><span></span>
-                    </button>
+                    <!-- Search Btn -->
+                    <div class="d-flex align-items-center">
+                        <button class="header-search-btn search-open-btn">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+
+                        <button class="mobile-toggle d-lg-none" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobilePanel">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
 				</div>
 			</nav>
 
@@ -435,7 +437,7 @@
 
                                 <p>Заказав поминовение своих родных и близких за церковным богослужением, важно приходить на службы в храм самим, вместе со всей Церковью молиться о дорогих и близких Вам людях, а также не оставлять домашней молитвы о них!</p>
 
-                                <div class="col-md-5">
+                                <div class="col-md-5 mx-auto">
                                     <!-- Amount -->
                                     <div class="form-group mb-4">
                                         <label for="value1">Сумма пожертвования (в руб.):</label>
@@ -445,7 +447,7 @@
                                     <!-- Name -->
                                     <div class="form-group mb-4">
                                         <label for="name">Ваше имя:</label>
-                                        <input type="name" id="name" name="text" class="form-control" required>
+                                        <input type="name" id="name" name="name" class="form-control" required>
                                     </div>
 
                                     <!-- Email -->
@@ -455,7 +457,7 @@
                                         <span>Если Вы хотите получить уведомление о получении поминовения, оставьте Ваш e-mail</span>
                                     </div>
 
-                                    <button class="btn-default">Заказать поминовение</button>
+                                    <button class="btn-default" type="submit" disabled>Заказать поминовение</button>
 
                                     <!-- Term checkbox -->
                                     <label class="term-checkbox mt-3">
@@ -487,11 +489,13 @@
         </div>
     </div>
 
-    <!-- Main Footer -->
+    <!-- Main Footer Start -->
     <footer class="main-footer bg-section dark-section">
+        <!-- Container -->
         <div class="container">
+            <!-- Row -->
             <div class="row">
-                <div class="col-xl-3">
+                <div class="col-xl-4">
                     <!-- About Footer Start -->
                     <div class="about-footer">
                         <div class="footer-logo">
@@ -505,10 +509,10 @@
                                         +7 (8112) 72-71-52
                                     </a>
                                     <a href="tel:+7 (921) 505-93-05" class="ps-4 d-block">
-                                        +7 (921) 505-93-05 - экскурсии
+                                        +7 (921) 505-93-05 (экскурсии)
                                     </a>
                                     <a href="tel:+7 (8112) 72-40-59" class="ps-4 d-block">
-                                        +7 (8112) 72-40-59 - администрация
+                                        +7 (8112) 72-40-59 (администрация)
                                     </a>
                                 </li>
                                 <li>
@@ -536,7 +540,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-9">
+                <div class="col-xl-8">
                     <!-- Footer Links Box Start -->
                     <div class="footer-links-box">
                         <!-- Footer Links Start -->
@@ -604,17 +608,29 @@
         </div>
 
         <!-- Footer Copyright Start -->
-        <!-- <div class="footer-copyright">
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
+                <div class="row justify-content-between align-items-center">
+                    <!-- Block -->
+                    <div class="col-xl-8 d-lg-flex justify-content-xl-start justify-content-center align-items-center">
+                        <!-- Copyright -->
                         <div class="footer-copyright-text">
-                            <p>© 2026</p>
+                            <p>© 2026 Все права защищены</p>
                         </div>
+
+                        <!-- Policy -->
+                        <a href="#" class="footer-copyright-link mt-lg-0 mt-3" target="_blank">Политика конфиденциальности</a>
+
+                        <!-- PdN accept -->
+                        <a href="#" class="footer-copyright-link mt-lg-0 mt-3" target="_blank">Согласие на обработку ПДн</a>
+                    </div>
+
+                    <div class="col-xl-4 d-flex justify-content-xl-end justify-content-center mt-xl-0 mt-3">
+                        <a href="https://d-option.ru/" class="footer-copyright-link" target="_blank">Разработка сайта Digital Option | Цифровая опция</a>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </footer>
 
     <!-- Mobile menu -->
@@ -630,30 +646,59 @@
         </div>
 
         <div class="mobile-panel__body">
-            <!-- Поиск -->
-            <form class="mobile-search" action="/search" method="get">
-                <input type="text" name="q" placeholder="Поиск...">
-                <button type="submit" aria-label="Найти"><i class="fa-solid fa-search"></i></button>
-            </form>
-
             <!-- Сюда JS вставит меню -->
             <nav class="mobile-nav" data-mobile-nav aria-label="Мобильное меню"></nav>
         </div>
 
         <div class="mobile-panel__foot">
             <ul class="mobile-contacts">
-                <li><i class="fa-solid fa-location-dot"></i> г. Псков, ул. Примерная, 1</li>
-                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@example.ru">info@example.ru</a></li>
-                <li><i class="fa-solid fa-phone"></i> <a href="tel:+78120000000">+7 (812) 000-00-00</a></li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i> 180000, г. Псков, Кремль
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i> 
+                    <a href="mailto:info@example.ru">info@example.ru</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+78120000000">+7 (812) 000-00-00</a>
+                </li>
             </ul>
             <a href="#" class="mobile-btn">Пожертвовать</a>
             <a href="#" class="mobile-btn">Заказать поминовение</a>
         </div>
     </aside>
 
+    <!-- Scroll to top -->
+    <button class="scroll-top">
+        <i class="fa-solid fa-arrow-up-long"></i>
+    </button>
+
     <!--! Donation panel -->
     <!-- PC -->
     <aside class="dp-cards" aria-label="Пожертвование и поминовение">
+        <!-- Item -->
+        <div class="dp-item" data-dp-key="memorial">
+            <div class="dp-card">
+                <a class="dp-card__link" href="memorial.html">
+                    <!-- Картинку рисуйте 400×240, выводится 200×120 (для Retina) -->
+                    <img src="./images/donation/memorial-panel.jpg" width="200" height="120"
+                        alt="Заказать поминовение">
+                </a>
+
+                <button class="dp-close" type="button" aria-label="Закрыть: поминовение">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <button class="dp-tab" type="button" aria-label="Показать: поминовение">
+                <!-- иконка свечи (замените на свою) -->
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2c1.5 2 2.5 3.3 2.5 4.7A2.5 2.5 0 0 1 12 9.2a2.5 2.5 0 0 1-2.5-2.5C9.5 5.300 10.500 4 12 2zM10 11h4v11h-4z"/>
+                </svg>
+            </button>
+        </div>
+
         <!-- Item -->
         <div class="dp-item" data-dp-key="donate">
             <div class="dp-card">
@@ -678,15 +723,13 @@
 
     <!-- Mobile -->
     <div class="dp-bar" data-dp-key="bar" role="region" aria-label="Пожертвование и поминовение">
-        <a class="dp-bar__btn dp-bar__btn--main" href="donation.html">Пожертвовать</a>
-        <button class="dp-bar__close" type="button" aria-label="Закрыть панель">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <a class="dp-bar__btn dp-bar__btn--alt" href="memorial.html"><span>Заказать поминовение</span></a>
+        <a class="dp-bar__btn dp-bar__btn--main" href="donation.html"><span>Пожертвовать</span></a>
     </div>
 
     <!-- Маленькая вкладка для возврата панели после закрытия -->
     <button class="dp-bar-tab" type="button" data-dp-key="bar" aria-label="Показать панель пожертвований">
-        Пожертвовать
+        Пожертвовать&nbsp;/&nbsp;Помянуть
     </button>
 
     <!-- Jquery Library File -->

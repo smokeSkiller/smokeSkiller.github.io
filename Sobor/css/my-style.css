@@ -7,9 +7,47 @@
 /*! Memorial */
 @import url('custom/memorial.css');
 
+/*! Sacraments */
+.sacraments-intro {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 3px solid var(--gold-color);
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.sacraments-intro p {
+    color: #010101;
+    margin-bottom: 0;
+}
+
+/*! Tourist stone */
+.tourist-top {
+    padding-bottom: 0;
+}
+
+.tourist-stone {
+    padding-top: 15px;
+}
+
+.tourist-stone .service-item-body-stone {
+    justify-content: flex-start;
+    padding-bottom: 0;
+}
+
+.tourist-stone .service-item-content-stone {
+    margin-bottom: 0;
+}
+
 /*! News single */
 .news-single .post-content img {
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-single .post-content a {
+    text-decoration: underline;
 }
 
 /*! Blog Slider */
@@ -93,9 +131,54 @@
 }
 
 /*! Components */
+/* Text clamp */
+.text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;          /* количество видимых строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.text-clamp.is-open {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+/* Scroll top */
+.scroll-top {
+    position: fixed;
+    z-index: 777;
+    bottom: 20px;
+    right: 17px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 57px;
+    color: #fff;
+    font-size: 21px;
+    background-color: var(--accent-color);
+    border: 1px solid #fff;
+    border-radius: 12px;
+}
+
+.scroll-top i {
+    transition: all .3s ease;
+}
+
+.scroll-top:hover i {
+    transform: translateY(-5px);
+}
+
 /* Term checkbox */
 .term-checkbox {
     display: flex;
+}
+
+.term-checkbox a {
+    color: var(--accent-color);
 }
 
 .term-checkbox span {
@@ -137,6 +220,20 @@
     img.logo {
         max-width: 170px;
     }
+    
+    /* Search */
+    .header-search-btn {
+        font-size: 18px;
+    }
+    
+    .search__popup {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .search__input input {
+        font-size: 20px;
+    }
 
     /*! News single */
     .news-single .post-content img {
@@ -154,11 +251,20 @@
         width: calc(100% - 10px);
     }
 
+    /* Term checkbox */
     .term-checkbox span {
         font-size: 12px;
     }
 
     /* Components */
+    .scroll-top {
+        bottom: 70px;
+    }
+
+    /* .scroll-top.ended {
+        bottom: 80px;
+    } */
+
     .section-text {
         font-size: 16px;
     }

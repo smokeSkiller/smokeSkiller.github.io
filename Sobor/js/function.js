@@ -4,11 +4,6 @@
 	var $window = $(window); 
 	var $body = $('body'); 
 
-	/* Preloader Effect */
-	$window.on('load', function(){
-		$(".preloader").fadeOut(600);
-	});
-
 	// Search
 	if( $( '.search-close-btn' ).length ){
 
@@ -190,119 +185,9 @@
 		});
 	}
 
-	/* Testimonial Slider JS */
-	if ($('.testimonial-slider').length) {
-		const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
-			slidesPerView : 1,
-			speed: 1500,
-			spaceBetween: 30,
-			loop: true,
-			autoplay: {
-				delay: 5000,
-			},
-			navigation: {
-				nextEl: '.testimonial-button-next',
-				prevEl: '.testimonial-button-prev',
-			},
-			breakpoints: {
-				768:{
-					slidesPerView: 1,
-				},
-			}
-		});
-	}
-
-	/* testimonial Slider Royal JS */
-	if ($('.testimonial-slider-royal').length) {
-		const testimonial_slider_royal = new Swiper('.testimonial-slider-royal .swiper', {
-			slidesPerView : 1,
-			speed: 1500,
-			spaceBetween: 30,
-			loop: true,
-			autoplay: {
-				delay: 5000,
-			},
-			navigation: {
-				nextEl: '.testimonial-button-next-royal',
-				prevEl: '.testimonial-button-prev-royal',
-			},
-			breakpoints: {
-				768:{
-					slidesPerView: 2,
-				},
-				1300:{
-					slidesPerView: 3,
-				}
-			}
-		});
-	}
-
-	/* Company Supports Slider stone JS */
-	if ($('.company-supports-slider-stone').length) {
-		const company_supports_slider_stone = new Swiper('.company-supports-slider-stone .swiper', {
-			slidesPerView : 2,
-			speed: 1500,
-			spaceBetween: 30,
-			loop: true,
-			autoplay: {
-				delay: 5000,
-			},
-			breakpoints: {
-				768:{
-					slidesPerView: 4,
-				},
-				1300:{
-					slidesPerView: 5,
-				}
-			}
-		});
-	}
-
-	/* Testimonial Slider Stone JS */
-	if ($('.testimonial-slider-stone').length) {
-		const testimonial_slider_stone = new Swiper('.testimonial-slider-stone .swiper', {
-			slidesPerView : 1,
-			speed: 1500,
-			spaceBetween: 30,
-			loop: true,
-			autoplay: {
-				delay: 5000,
-			},
-			breakpoints: {
-				768:{
-					slidesPerView: 2,
-				},
-				1300:{
-					slidesPerView: 3,
-				}
-			}
-		});
-	}
-	
-	/* Skill Bar */
-	if ($('.skills-progress-bar').length) {
-		$('.skills-progress-bar').waypoint(function() {
-			$('.skillbar').each(function() {
-				$(this).find('.count-bar').animate({
-				width:$(this).attr('data-percent')
-				},2000);
-			});
-		},{
-			offset: '70%'
-		});
-	}
-
 	/* Youtube Background Video JS */
 	if ($('#herovideo').length) {
 		var myPlayer = $("#herovideo").YTPlayer();
-	}
-
-	/* Audio JS */
-	const player = new Plyr('#player');
-
-	/* Init Counter */
-	if ($('.counter').length) {
-		$('.counter').counterUp({ delay: 6, time: 3000 });
 	}
 
 	/* Image Reveal Animation */
@@ -488,46 +373,6 @@
 		}
 	});
 
-	/* Contact form validation */
-	var $contactform = $("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
-
-	function submitForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-process.php",
-			data: $contactform.serialize(),
-			success : function(text){
-				if (text === "success"){
-					formSuccess();
-				} else {
-					submitMSG(false,text);
-				}
-			}
-		});
-	}
-
-	function formSuccess(){
-		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
-	}
-
-	function submitMSG(valid, msg){
-		if(valid){
-			var msgClasses = "h4 text-success";
-		} else {
-			var msgClasses = "h4 text-danger";
-		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-	}
-	/* Contact form validation end */
-
 	/* Animated Wow Js */	
 	new WOW().init();
 
@@ -542,7 +387,7 @@
 		});
 	}
 
-	/* What We Item List Start */
+	/* What We Item List */
 	var $what_we_item_list = $('.what-we-item-list');
 	if ($what_we_item_list.length) {
 		var $what_we_item = $what_we_item_list.find('.what-we-item');
@@ -561,7 +406,6 @@
 			});
 		}
 	}
-	/* What We Item List End */
 
 	//! Search
 	if( $( '.search-open-btn' ).length ){
@@ -666,6 +510,77 @@
 				mainClass: 'mfp-fade',
 				removalDelay: 300
 			}, index);
+		});
+	}
+
+	//! Scroll top
+	if($('.scroll-top').length) {
+		const scrollTop = $('.scroll-top');
+
+		$(window).on('scroll', function() {
+			if($(this).scrollTop() > 500) {
+				scrollTop.show()
+			} else {
+				scrollTop.hide()
+			}
+
+			if(isMobile) {
+				const scrollBottom = $(this).scrollTop() + $(window).height()
+				const dpBarTab = $('.dp-bar-tab')
+
+				if(scrollBottom >= $('.main-footer').offset().top + ($('.main-footer').height() / 3)) {
+					scrollTop.addClass('ended')
+					dpBarTab.addClass('ended')
+				} else {
+					scrollTop.removeClass('ended')
+					dpBarTab.removeClass('ended')
+				}
+			}
+		})
+
+		scrollTop.on('click', function() {
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+		});
+	}
+
+	//! For all forms
+	// Name
+	if($('input[name="name"]').length) {
+		$('input[name="name"]').on('input', function () {
+			var value = $(this).val();
+			// Оставляем только кириллицу, латиницу, пробелы и дефисы
+			value = value.replace(/[^а-яА-ЯёЁa-zA-Z\s\-]/g, '');
+			$(this).val(value); // Устанавливаем отфильтрованное значение обратно в поле    
+		});
+	}
+
+	// Email
+	if($('input[name="email"]').length) {
+		$('input[name="email"]').on('input', function() {
+			var value = $(this).val();
+			// Удаляем кириллицу и всё, что не входит в валидный формат email
+			value = value.replace(/[а-яА-ЯёЁ]/g, '');
+			$(this).val(value);
+		});
+	}
+
+	// Phone
+	if($('input[name="phone"]').length) {
+		$('input[name="phone"]').mask('+7 (999) 999-99-99');
+	}
+
+	// Policy accepting
+	if($('.term-checkbox').length) {
+		// Disable submit button if privacy checkbox is not checked
+		let disableSubmit = true;
+		const privacyCheckbox = $('.term-checkbox input');
+
+		privacyCheckbox.on('change', function () {
+			const $submit = $('button[type="submit"]');
+
+			const allChecked = privacyCheckbox.filter(':checked').length === privacyCheckbox.length;
+
+			$submit.prop('disabled', !allChecked);
 		});
 	}
 
@@ -792,6 +707,11 @@
 		// });
 	}
 
+	//! Donate form
+	if($('#donateForm').length) {
+		
+	}
+
 	//! Donation panel
 	if($('.dp-cards').length) {
 		var PREFIX = 'dp_closed_';
@@ -851,6 +771,55 @@
 			$body.removeClass('dp-bar-closed');
 			remove('bar');
 		});
+	}
+
+	//! Ministry cards
+	if($('.ministries-item').length && !isMobile) {
+		const ministryItem = $('.ministries-item');
+
+		ministryItem.hover(
+			function() {
+				// Код при наведении мыши (туда)
+				$(this).find('p').slideDown()
+			}, 
+			function() {
+				// Код при уходе мыши (обратно)
+				$(this).find('p').slideUp()
+			}
+		);
+	}
+
+	//! Text clamp
+	if($('.text-clamp').length) {
+		$('.text-clamp').each(function () {
+			var $p = $(this);
+
+			// Если текст помещается в 3 строки, раскрытие не нужно
+			if (this.scrollHeight <= this.clientHeight) {
+				$p.css('cursor', 'default').removeAttr('role tabindex title');
+				return;
+			}
+
+			function toggle() {
+				var open = $p.toggleClass('is-open').hasClass('is-open');
+				$p.attr('aria-expanded', open);
+			}
+
+			$p.on('click', toggle);
+
+			$p.on('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					toggle();
+				}
+			});
+		});
+	}
+
+	if($('.google-map-iframe')) {
+		$('.google-map-iframe').on('click', function() {
+			$(this).addClass('active')
+		})
 	}
 
 	/**

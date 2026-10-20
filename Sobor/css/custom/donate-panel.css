@@ -26,7 +26,7 @@
         flex-direction: column;
         gap: 12px;
         position: fixed;
-        right: 0;
+        right: 5px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 999;
@@ -37,7 +37,7 @@
     .dp-card {
         position: relative;
         width: 200px;
-        border-radius: 14px 0 0 14px;       /* прижата к краю экрана */
+        border-radius: 14px;       /* прижата к краю экрана */
         overflow: hidden;
         box-shadow: var(--dp-shadow);
         transition: transform .3s ease, opacity .3s ease;
@@ -79,11 +79,16 @@
     }
 
     .dp-close i {
-        color: red;
+        color: #fff;
         font-size: 16px;
+        transition: all .3s ease;
     }
 
-    .dp-close:hover { background: rgba(0, 0, 0, .8); }
+    /* .dp-close:hover { background: rgba(0, 0, 0, .8); } */
+
+    .dp-close:hover i {
+        color: red;
+    }
     
     /* Вкладка-иконка для возврата карточки */
     .dp-tab {
@@ -93,7 +98,7 @@
         margin-left: auto;
         background: var(--dp-green);
         color: #fff;
-        border-radius: 12px 0 0 12px;
+        border-radius: 12px;
         box-shadow: var(--dp-shadow);
         align-items: center;
         justify-content: center;
@@ -109,31 +114,38 @@
 @media (max-width: 1099px) {
     .dp-bar {
         display: flex;
-        align-items: stretch;
+        flex-direction: column;
         position: fixed;
-        left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 25%;
         z-index: 999;
-        gap: 8px;
-        padding: 8px 52px calc(8px + env(safe-area-inset-bottom, 0px)) 8px;
-        background: var(--dp-bg);
-        box-shadow: 0 -4px 16px rgba(0, 0, 0, .15);
+        /* gap: 8px; */
+        /* padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px)) 8px;
+        background: var(--dp-bg); */
+        /* box-shadow: 0 -4px 16px rgba(0, 0, 0, .15); */
     }
     
     .dp-bar__btn {
-        flex: 1 1 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 8px;
+        /* min-height: 48px; */
+        padding: 10px;
         border-radius: 10px;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 600;
         text-decoration: none;
         text-align: center;
+        writing-mode: vertical-rl;
     }
+
+    .dp-bar__btn span {
+        transform: rotate(180deg);
+    }
+
+    .dp-bar__btn + .dp-bar__btn {
+        margin-top: 15px;
+    }
+
     .dp-bar__btn--main { background: var(--dp-green); color: #fff; }
     .dp-bar__btn--alt  { background: #fff; color: var(--dp-green); border: 2px solid var(--dp-green); }
     
@@ -165,11 +177,16 @@
         font-size: 15px;
         box-shadow: var(--dp-shadow);
     }
+
+    .dp-bar-tab.ended {
+        bottom: calc(120px + env(safe-area-inset-bottom, 0px));;
+    }
+    
     
     /* Состояние «закрыто» (класс ставится на <body>) */
     body.dp-bar-closed .dp-bar     { display: none; }
     body.dp-bar-closed .dp-bar-tab { display: block; }
     
     /* Отступ внизу страницы, чтобы панель не перекрывала подвал */
-    body:not(.dp-bar-closed) { padding-bottom: 72px; }
+    /* body:not(.dp-bar-closed) { padding-bottom: 72px; } */
 }
