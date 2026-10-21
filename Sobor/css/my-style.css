@@ -7,6 +7,15 @@
 /*! Memorial */
 @import url('custom/memorial.css');
 
+/*! Body */
+body {
+    background-image: url('../images/test-bg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 /*! Sacraments */
 .sacraments-intro {
     margin-bottom: 30px;
@@ -130,6 +139,15 @@
     font-size: 14px;
 }
 
+/*! Footer */
+.footer-img {
+    position: absolute;
+    z-index: -1;
+    bottom: 160px;
+    left: 5%;
+    max-width: 550px;
+}
+
 /*! Components */
 /* Text clamp */
 .text-clamp {
@@ -239,6 +257,10 @@
     .news-single .post-content img {
         margin-bottom: 15px;
         width: 100%;
+    }
+
+    .footer-img {
+        display: none;
     }
 
     /*! Blog slider */
