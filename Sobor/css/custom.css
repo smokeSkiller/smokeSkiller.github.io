@@ -589,7 +589,7 @@ header.main-header .header-sticky.active{
 }
 
 img.logo {
-	max-width: 225px;
+	max-width: 210px;
 }
 
 .main-menu .nav-menu-wrapper{
@@ -611,7 +611,7 @@ img.logo {
 .main-menu ul li a {
 	font-size: 16px;
 	font-weight: 500;
-	padding: 12px 10px !important;
+	padding: 12px 7px !important;
 	line-height: 150%;
 	display: flex;
 	align-items: center;
@@ -948,7 +948,10 @@ img.logo {
 /************************************/
 
 .about-us{
+	margin-left: auto;
+	margin-right: auto;
 	padding: 70px 0;
+	max-width: 1850px;
 }
 
 .about-us-image-box{
@@ -1338,7 +1341,7 @@ img.logo {
 }
 
 .section-footer-text{
-	margin-top: 30px;
+	margin-top: 100px;
 	text-align: center;
 }
 
@@ -4226,8 +4229,12 @@ img.logo {
 }
 
 .post-intro	{
-	font-size: 20px;
-	font-weight: 600;
+    padding: 15px;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #020202;
+    border: 2px solid var(--gold-color);
 }
 
 .post-image{
@@ -5391,7 +5398,7 @@ img.logo {
 
 .error-page-image img{
 	width: 100%;
-	max-width: 400px;
+	max-width: 450px;
 }
 
 .error-page-content{
@@ -7254,6 +7261,10 @@ img.logo {
 	max-width: 920px;
 	text-align: center;
 	margin: 0 auto;
+}
+
+.hero-content-royal .section-title h1 {
+	font-size: 40px;
 }
 
 .hero-content-royal .section-title p{
@@ -10060,11 +10071,16 @@ img.logo {
 }
 
 .our-service-stone {
-	background-image: url('../images/tourist/tourist-bg4.png');
+	background-image: url('../images/tourist/tourist-bg5.png');
 	background-repeat: no-repeat;
-	background-position: bottom -95px center;
-	background-size: auto;
-	padding: 70px 0;
+	background-position: center bottom;
+	background-size: 60%;
+	padding: 70px 0 100px;
+}
+
+.our-service-stone.no-bg {
+	background-image: none;
+	padding-bottom: 70px;
 }
 
 .service-item-stone {
@@ -11279,6 +11295,10 @@ img.logo {
 
 	.our-service-stone{
 		padding: 40px 0;
+	}
+
+	.our-service-stone.no-bg {
+		padding-bottom: 40px;
 	}
 
 	.service-item-body-stone{
